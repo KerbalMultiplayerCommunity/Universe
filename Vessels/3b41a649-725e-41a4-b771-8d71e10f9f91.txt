@@ -1,42 +1,42 @@
-pid = cf130b563b91496f800e5b6131b13b41
-name = OASIS Core Stack Lifter-S
+pid = 3b41a649725e41a4b7718d71e10f9f91
+name = Polar Fuel Core Ship
 type = Ship
 sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 11757.8775901198
-lct = 137973485.554772
+met = 160.980086356401
+lct = 137985321.092404
 root = 0
-lat = -61.6105399205655
-lon = 29.8565179544915
-alt = 99500.8643849562
+lat = -16.5123088175912
+lon = 28.090730307713
+alt = 102486.542107351
 hgt = -1
-nrm = -0.1611731,0.9367418,0.3107058
-rot = 0.8921593,0.2703114,0.2792332,0.2302444
-CoM = 5.873745E-05,1.469382,-0.01165208
+nrm = -0.7105135,0.01085103,0.7035998
+rot = 0.1602244,0.7846062,0.07077926,0.5947365
+CoM = 0.0001205289,-2.044436,-0.022106
 stg = 0
 prst = False
-ref = 3600418689
+ref = 2419898698
 ctrl = True
-cPch = 0.806
-cHdg = 2.217999
+cPch = 1.298
+cHdg = 5.664001
 cMod = 0
 ORBIT
 {
-	SMA = 699030.747867412
-	ECC = 0.000738715005717209
-	INC = 89.2990536029448
-	LPE = 142.433158588249
-	LAN = 204.579448923633
-	MNA = 2.72127467478521
-	EPH = 137985243.472362
+	SMA = 986715.336040104
+	ECC = 0.290532716041795
+	INC = 84.0858820802253
+	LPE = 333.310135960757
+	LAN = 207.253555154632
+	MNA = 0.0928583386295033
+	EPH = 137985482.11249
 	REF = 1
 }
 PART
 {
-	name = probeStackLarge
-	uid = 3756296390
+	name = dockingPortLarge
+	uid = 1219304082
 	mid = 197034606
 	launchID = 1
 	parent = 0
@@ -49,1928 +49,13 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = bottom, 78
-	attN = top, 1
-	mass = 0.5
-	temp = -203.7734
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = probeStackLarge
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = Operational
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleReactionWheel
-		isEnabled = True
-		stateString = Operational
-		WheelState = Active
-		EVENTS
-		{
-			OnToggle
-			{
-				active = True
-				guiActive = True
-				guiIcon = Toggle Torque
-				guiName = Toggle Torque
-				category = Toggle Torque
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			Activate
-			{
-				actionGroup = None
-			}
-			Deactivate
-			{
-				actionGroup = None
-			}
-			Toggle
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSAS
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 16.9777203832323
-		maxAmount = 30
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = dockingPortLarge
-	uid = 1219304082
-	mid = 197034606
-	launchID = 1
-	parent = 0
-	position = 0,0.190000534057617,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 2
+	attN = None, -1
 	attN = None, -1
 	mass = 0.2
-	temp = -201.6732
+	temp = -199.033
 	expt = 0.5
 	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = dockingPortLarge
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		state = PreAttached
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-			Undock
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = False
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MakeReferenceTransform
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleConfigBackup
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = dockingPortLarge
-	uid = 3417730056
-	mid = 197034606
-	launchID = 1
-	parent = 1
-	position = 0,0.770000457763672,0
-	rotation = 0.7071068,0,0.7071068,0
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 1
-	attN = bottom, 3
-	mass = 0.2
-	temp = -200.8577
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = dockingPortLarge
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		state = PreAttached
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-			Undock
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = False
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableXFeed
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MakeReferenceTransform
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleConfigBackup
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = crewCabin
-	uid = 3811727661
-	mid = 197034606
-	launchID = 1
-	parent = 2
-	position = 0,1.75689888000488,0
-	rotation = 0,-0.1305262,0,0.9914449
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 4
-	attN = bottom, 2
-	mass = 2.5
-	temp = -200.5308
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = crewCabin
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Crew Report
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Report
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = False
-				guiActive = True
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = False
-				guiActive = False
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		EVENTS
-		{
-			StoreDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Store Experiments (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Stored Data (0)
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-		}
-	}
-}
-PART
-{
-	name = crewCabin
-	uid = 1379947914
-	mid = 197034606
-	launchID = 1
-	parent = 3
-	position = 0,3.73069190979004,0
-	rotation = 0,-0.1305263,0,0.9914449
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 5
-	attN = bottom, 3
-	mass = 2.5
-	temp = -200.511
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = crewCabin
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Crew Report
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Report
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = False
-				guiActive = True
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = False
-				guiActive = False
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		EVENTS
-		{
-			StoreDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Store Experiments (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Stored Data (0)
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-		}
-	}
-}
-PART
-{
-	name = crewCabin
-	uid = 3774539045
-	mid = 197034606
-	launchID = 1
-	parent = 4
-	position = 0,5.70448875427246,0
-	rotation = 0,-0.1305263,0,0.9914449
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 6
-	attN = bottom, 4
-	mass = 2.5
-	temp = -200.6993
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = crewCabin
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Crew Report
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Report
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = False
-				guiActive = True
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = False
-				guiActive = False
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		EVENTS
-		{
-			StoreDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Store Experiments (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Stored Data (0)
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-		}
-	}
-}
-PART
-{
-	name = crewCabin
-	uid = 2915593922
-	mid = 197034606
-	launchID = 1
-	parent = 5
-	position = 0,7.67827796936035,0
-	rotation = 0,-0.1305264,0,0.9914449
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 7
-	attN = bottom, 5
-	mass = 2.5
-	temp = -200.7417
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = crewCabin
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Crew Report
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Report
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = False
-				guiActive = True
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = False
-				guiActive = False
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		EVENTS
-		{
-			StoreDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Store Experiments (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Stored Data (0)
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-		}
-	}
-}
-PART
-{
-	name = crewCabin
-	uid = 3276065327
-	mid = 197034606
-	launchID = 1
-	parent = 6
-	position = 0,9.6520938873291,0
-	rotation = 0.1305263,0,-0.9914449,0
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 6
-	attN = bottom, 12
-	mass = 2.5
-	temp = -201.2645
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = crewCabin
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Crew Report
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Report
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = False
-				guiActive = True
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = False
-				guiActive = False
-				guiIcon = Reset
-				guiName = Discard Crew Report
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		EVENTS
-		{
-			StoreDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Store Experiments (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Stored Data (0)
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-		}
-	}
-}
-PART
-{
-	name = spotLight1
-	uid = 1886853648
-	mid = 197034606
-	launchID = 1
-	parent = 7
-	position = -1.39840710163116,10.4630489349365,0.0159233938902617
-	rotation = -3.973368E-08,-0.7071071,6.882083E-08,-0.7071068
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 9
-	sym = 10
-	sym = 11
-	srfN = srfAttach, 7
-	mass = 0.015
-	temp = -200.354
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = spotLight1
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light, Custom05
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = spotLight1
-	uid = 2017160414
-	mid = 197034606
-	launchID = 1
-	parent = 7
-	position = 0.0159184616059065,10.4630489349365,1.39840495586395
-	rotation = 2.056774E-08,-1,7.67599E-08,4.636154E-07
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 8
-	sym = 10
-	sym = 11
-	srfN = srfAttach, 7
-	mass = 0.015
-	temp = -200.1504
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = spotLight1
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light, Custom05
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = spotLight1
-	uid = 2460341451
-	mid = 197034606
-	launchID = 1
-	parent = 7
-	position = 1.3984078168869,10.4630489349365,-0.015924621373415
-	rotation = 6.882083E-08,-0.7071068,3.973368E-08,0.7071071
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 8
-	sym = 9
-	sym = 11
-	srfN = srfAttach, 7
-	mass = 0.015
-	temp = -199.9473
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = spotLight1
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light, Custom05
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = spotLight1
-	uid = 3030345364
-	mid = 197034606
-	launchID = 1
-	parent = 7
-	position = -0.0159201100468636,10.4630489349365,-1.39840507507324
-	rotation = 7.67599E-08,4.636154E-07,-2.056774E-08,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 8
-	sym = 9
-	sym = 10
-	srfN = srfAttach, 7
-	mass = 0.015
-	temp = -199.7446
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = spotLight1
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light, Custom05
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = dockingPortLarge
-	uid = 3600418689
-	mid = 197034606
-	launchID = 1
-	parent = 7
-	position = 0,10.6389904022217,0
-	rotation = 0,-4.214685E-08,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = None, -1
-	attN = bottom, 7
-	mass = 0.2
-	temp = -199.5126
-	expt = 0.5
-	state = 1
-	connected = True
+	connected = False
 	attached = True
 	flag = Squad/Flags/default
 	rTrf = dockingPortLarge
@@ -2105,28 +190,30 @@ PART
 }
 PART
 {
-	name = mumech.MJ2.AR202
-	uid = 2597151017
+	name = probeStackLarge
+	uid = 3756296390
 	mid = 197034606
 	launchID = 1
-	parent = 5
-	position = -0.841069877147675,6.40435981750488,-0.782762289047241
-	rotation = 3.52363E-08,0.3826849,-8.506756E-08,-0.923879
+	parent = 0
+	position = -1.04000218925648E-06,-0.190001472830772,-3.97626808990026E-06
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
-	attm = 1
-	srfN = srfAttach, 5
-	mass = 1E-05
-	temp = -199.8888
-	expt = 0.5
+	attm = 0
+	srfN = None, -1
+	attN = bottom, 66
+	attN = top, 0
+	mass = 0.5
+	temp = -200.5476
+	expt = 0
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = mumech.MJ2.AR202
+	rTrf = probeStackLarge
 	modCost = 0
 	EVENTS
 	{
@@ -2170,18 +257,43 @@ PART
 	}
 	MODULE
 	{
-		name = MechJebCore
+		name = ModuleReactionWheel
 		isEnabled = True
+		stateString = Operational
+		WheelState = Active
 		EVENTS
 		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
 	{
-		name = MechJebAR202
+		name = ModuleSAS
 		isEnabled = True
 		EVENTS
 		{
@@ -2217,22 +329,11 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleConfigBackup
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 2.98337576284588
-		maxAmount = 5
+		amount = 29.9764956182087
+		maxAmount = 30
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -2245,21 +346,21 @@ PART
 	uid = 3848421106
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 1.35832941532135,-0.0175094604492188,8.00937414169312E-08
-	rotation = 0.5000001,0.4999999,-0.5000001,0.4999999
+	parent = 1
+	position = 1.35832405090332,-0.207514762878418,-7.7942677307874E-06
+	rotation = 0.5000002,0.5000001,-0.5000002,0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 46
-	srfN = srfAttach, 0
-	attN = top, 15
+	sym = 34
+	srfN = srfAttach, 1
+	attN = top, 3
 	attN = None, -1
 	mass = 0.001
-	temp = -201.5409
+	temp = -199.218
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2280,21 +381,21 @@ PART
 	uid = 1471959010
 	mid = 197034606
 	launchID = 1
-	parent = 14
-	position = 1.61579942703247,-0.0175094604492188,1.01514160633087E-06
-	rotation = 0,0,-0.7071068,0.7071068
+	parent = 2
+	position = 1.61579525470734,-0.207514613866806,-2.83183544524945E-06
+	rotation = -1.481583E-08,-3.788741E-09,-0.7071071,0.7071071
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 47
+	sym = 35
 	srfN = None, -1
 	attN = None, -1
-	attN = bottom, 14
+	attN = bottom, 2
 	mass = 0.001
-	temp = -200.8432
+	temp = -198.7654
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2315,21 +416,21 @@ PART
 	uid = 110134301
 	mid = 197034606
 	launchID = 1
-	parent = 15
-	position = 1.63954138755798,0.218158721923828,2.10292637348175E-06
-	rotation = 6.562715E-07,0.7071068,-2.34803E-07,0.7071068
+	parent = 3
+	position = 1.63953948020935,0.028155442327261,1.64419998327503E-06
+	rotation = 6.724615E-07,0.7071071,-1.959046E-07,0.707107
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 48
-	srfN = srfAttach, 15
-	attN = top, 17
+	sym = 36
+	srfN = srfAttach, 3
+	attN = top, 5
 	attN = None, -1
 	mass = 0.001
-	temp = -200.5813
+	temp = -198.5958
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2350,21 +451,21 @@ PART
 	uid = 336756968
 	mid = 197034606
 	launchID = 1
-	parent = 16
-	position = 1.63954138755798,0.475620269775391,1.87382102012634E-06
-	rotation = 0,0,-2.4869E-14,1
+	parent = 4
+	position = 1.63954210281372,0.285620212554932,-3.12774159283435E-06
+	rotation = 2.777156E-08,-4.196531E-08,4.208144E-08,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 49
-	srfN = srfAttach, 15
-	attN = top, 18
-	attN = bottom, 16
+	sym = 37
+	srfN = srfAttach, 3
+	attN = top, 6
+	attN = bottom, 4
 	mass = 0.001
-	temp = -200.4923
+	temp = -198.542
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2385,21 +486,21 @@ PART
 	uid = 2802787370
 	mid = 197034606
 	launchID = 1
-	parent = 17
-	position = 1.63954138755798,0.733098983764648,1.88499689102173E-06
-	rotation = 0,0,1.192093E-07,1
+	parent = 5
+	position = 1.63953626155853,0.543094456195831,-2.44612380129183E-07
+	rotation = -8.85992E-09,-1.336636E-08,1.264194E-07,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 50
-	srfN = srfAttach, 15
-	attN = top, 19
-	attN = bottom, 17
+	sym = 38
+	srfN = srfAttach, 3
+	attN = top, 7
+	attN = bottom, 5
 	mass = 0.001
-	temp = -200.4869
+	temp = -198.5499
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2420,21 +521,21 @@ PART
 	uid = 2804121705
 	mid = 197034606
 	launchID = 1
-	parent = 18
-	position = 1.63954126834869,0.990560531616211,1.51805579662323E-06
-	rotation = -5.777114E-07,-0.7071069,2.230788E-07,0.7071069
+	parent = 6
+	position = 1.63953995704651,0.800559222698212,-5.01655085827224E-06
+	rotation = -5.964631E-07,-0.7071069,1.916456E-07,0.707107
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 51
-	srfN = srfAttach, 15
-	attN = top, 20
-	attN = bottom, 18
+	sym = 39
+	srfN = srfAttach, 3
+	attN = top, 8
+	attN = bottom, 6
 	mass = 0.001
-	temp = -200.5593
+	temp = -198.627
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2455,21 +556,21 @@ PART
 	uid = 2578597598
 	mid = 197034606
 	launchID = 1
-	parent = 19
-	position = 1.63954126834869,1.2480297088623,1.12131237983704E-06
-	rotation = -5.960464E-08,1.24345E-14,2.980229E-08,1
+	parent = 7
+	position = 1.63953876495361,1.05802774429321,-2.17343745134713E-06
+	rotation = -6.17901E-08,1.45053E-08,4.216854E-08,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 52
-	srfN = srfAttach, 15
-	attN = top, 21
-	attN = bottom, 19
+	sym = 40
+	srfN = srfAttach, 3
+	attN = top, 9
+	attN = bottom, 7
 	mass = 0.001
-	temp = -200.7815
+	temp = -198.8487
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2490,21 +591,21 @@ PART
 	uid = 1573046430
 	mid = 197034606
 	launchID = 1
-	parent = 20
-	position = 1.63954031467438,1.5054988861084,5.62518835067749E-07
-	rotation = -9.284182E-07,-0.7071068,-2.226089E-08,0.7071071
+	parent = 8
+	position = 1.63953769207001,1.31549727916718,-6.90830665917019E-06
+	rotation = -9.331492E-07,-0.7071071,-4.029429E-08,0.7071073
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 53
-	srfN = srfAttach, 15
-	attN = top, 22
-	attN = bottom, 20
+	sym = 41
+	srfN = srfAttach, 3
+	attN = top, 10
+	attN = bottom, 8
 	mass = 0.001
-	temp = -200.838
+	temp = -198.9056
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2525,21 +626,21 @@ PART
 	uid = 2044332128
 	mid = 197034606
 	launchID = 1
-	parent = 21
-	position = 1.63954019546509,1.76296997070313,-4.4703483581543E-08
-	rotation = -6.249716E-07,-0.7071076,9.152495E-08,0.7071064
+	parent = 9
+	position = 1.63953566551209,1.57296776771545,-4.05557784688426E-06
+	rotation = -5.761424E-07,-0.7071077,8.507666E-08,0.7071065
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 54
-	srfN = srfAttach, 15
-	attN = top, 23
-	attN = bottom, 21
+	sym = 42
+	srfN = srfAttach, 3
+	attN = top, 11
+	attN = bottom, 9
 	mass = 0.001
-	temp = -200.8153
+	temp = -198.8835
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2560,21 +661,21 @@ PART
 	uid = 4278969545
 	mid = 197034606
 	launchID = 1
-	parent = 22
-	position = 1.6395411491394,2.02045059204102,-5.81145286560059E-07
-	rotation = -1.162291E-06,-1,4.768371E-07,4.172326E-07
+	parent = 10
+	position = 1.6395411491394,1.83045256137848,-7.08553488948382E-06
+	rotation = -1.137378E-06,-1,4.835013E-07,3.817401E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 55
-	srfN = srfAttach, 15
-	attN = top, 24
-	attN = bottom, 22
+	sym = 43
+	srfN = srfAttach, 3
+	attN = top, 12
+	attN = bottom, 10
 	mass = 0.001
-	temp = -200.6796
+	temp = -198.75
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2595,21 +696,21 @@ PART
 	uid = 1140427240
 	mid = 197034606
 	launchID = 1
-	parent = 23
-	position = 1.6395411491394,2.27791023254395,-7.69272446632385E-07
-	rotation = 4.470343E-08,-2.533198E-07,4.470346E-08,1
+	parent = 11
+	position = 1.63954484462738,2.08791637420654,-4.2794904402399E-06
+	rotation = 4.752647E-08,-3.040658E-07,4.167657E-08,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 56
-	srfN = srfAttach, 15
-	attN = top, 25
-	attN = bottom, 23
+	sym = 44
+	srfN = srfAttach, 3
+	attN = top, 13
+	attN = bottom, 11
 	mass = 0.001
-	temp = -200.8157
+	temp = -198.8838
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2630,21 +731,21 @@ PART
 	uid = 150104387
 	mid = 197034606
 	launchID = 1
-	parent = 24
-	position = 1.6395411491394,2.53537940979004,-1.32806599140167E-06
-	rotation = -7.794066E-07,-0.7071067,1.267507E-07,0.7071072
+	parent = 12
+	position = 1.63954377174377,2.3453848361969,-1.43637680594111E-06
+	rotation = -7.64333E-07,-0.7071068,6.546286E-08,0.7071074
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 57
-	srfN = srfAttach, 15
-	attN = top, 26
-	attN = bottom, 24
+	sym = 45
+	srfN = srfAttach, 3
+	attN = top, 14
+	attN = bottom, 12
 	mass = 0.001
-	temp = -200.8376
+	temp = -198.9054
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2665,21 +766,21 @@ PART
 	uid = 1307358781
 	mid = 197034606
 	launchID = 1
-	parent = 25
-	position = 1.6395400762558,2.79285049438477,-2.17556953430176E-06
-	rotation = -8.110168E-07,-0.7071072,1.583609E-07,0.7071068
+	parent = 13
+	position = 1.63954162597656,2.60285544395447,-6.1645773712371E-06
+	rotation = -7.651177E-07,-0.7071074,2.331412E-07,0.7071069
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 58
-	srfN = srfAttach, 15
-	attN = top, 27
-	attN = bottom, 25
+	sym = 46
+	srfN = srfAttach, 3
+	attN = top, 15
+	attN = bottom, 13
 	mass = 0.001
-	temp = -200.7801
+	temp = -198.8483
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2700,21 +801,21 @@ PART
 	uid = 1986113803
 	mid = 197034606
 	launchID = 1
-	parent = 26
-	position = 1.6395400762558,3.05031967163086,-2.55368649959564E-06
-	rotation = -7.30157E-07,-1,4.023313E-07,1.639129E-07
+	parent = 14
+	position = 1.63954055309296,2.86032390594482,-3.32146396431199E-06
+	rotation = -7.162776E-07,-1,3.713038E-07,1.431072E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 59
-	srfN = srfAttach, 15
-	attN = top, 28
-	attN = bottom, 26
+	sym = 47
+	srfN = srfAttach, 3
+	attN = top, 16
+	attN = bottom, 14
 	mass = 0.001
-	temp = -200.5571
+	temp = -198.6279
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2735,21 +836,21 @@ PART
 	uid = 3440448864
 	mid = 197034606
 	launchID = 1
-	parent = 27
-	position = 1.6395400762558,3.30778884887695,-3.30992043018341E-06
-	rotation = -7.583332E-07,-0.7071074,1.056773E-07,0.7071067
+	parent = 15
+	position = 1.63954043388367,3.11779356002808,-8.06378102424787E-06
+	rotation = -8.283387E-07,-0.7071076,6.426093E-08,0.7071069
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 60
-	srfN = srfAttach, 15
-	attN = top, 29
-	attN = bottom, 27
+	sym = 48
+	srfN = srfAttach, 3
+	attN = top, 17
+	attN = bottom, 15
 	mass = 0.001
-	temp = -200.4836
+	temp = -198.5549
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2770,21 +871,21 @@ PART
 	uid = 2489665771
 	mid = 197034606
 	launchID = 1
-	parent = 28
-	position = 1.63953995704651,3.56525039672852,-4.10899519920349E-06
-	rotation = -1.102686E-06,-1,2.682209E-07,1.490117E-07
+	parent = 16
+	position = 1.63954305648804,3.37525725364685,-5.25401401318959E-06
+	rotation = -1.053507E-06,-1,2.27446E-07,1.079011E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 61
-	srfN = srfAttach, 15
-	attN = top, 30
-	attN = bottom, 28
+	sym = 49
+	srfN = srfAttach, 3
+	attN = top, 18
+	attN = bottom, 16
 	mass = 0.001
-	temp = -200.4845
+	temp = -198.5557
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2805,21 +906,21 @@ PART
 	uid = 3164944514
 	mid = 197034606
 	launchID = 1
-	parent = 29
-	position = 1.63953995704651,3.82271957397461,-4.93600964546204E-06
-	rotation = -1.341105E-06,-1,3.874301E-07,3.874303E-07
+	parent = 17
+	position = 1.63954293727875,3.63272666931152,-9.99260555545334E-06
+	rotation = -1.305995E-06,-1,4.07556E-07,3.633139E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 62
-	srfN = srfAttach, 15
-	attN = top, 31
-	attN = bottom, 29
+	sym = 50
+	srfN = srfAttach, 3
+	attN = top, 19
+	attN = bottom, 17
 	mass = 0.001
-	temp = -200.5606
+	temp = -198.6314
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2840,21 +941,21 @@ PART
 	uid = 2436298718
 	mid = 197034606
 	launchID = 1
-	parent = 30
-	position = 1.63953995704651,4.0801887512207,-5.01237809658051E-06
-	rotation = -6.373161E-07,-0.7071069,-1.634741E-07,-0.7071072
+	parent = 18
+	position = 1.63954186439514,3.89019536972046,-7.14762973075267E-06
+	rotation = -6.307696E-07,-0.7071071,-1.833499E-07,-0.7071073
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 63
-	srfN = srfAttach, 15
-	attN = top, 32
-	attN = bottom, 30
+	sym = 51
+	srfN = srfAttach, 3
+	attN = top, 20
+	attN = bottom, 18
 	mass = 0.001
-	temp = -200.7878
+	temp = -198.856
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2875,21 +976,21 @@ PART
 	uid = 980217679
 	mid = 197034606
 	launchID = 1
-	parent = 31
-	position = 1.63953900337219,4.33765983581543,-4.09036874771118E-06
-	rotation = -2.533198E-07,-2.533197E-07,-1.490126E-08,1.000001
+	parent = 19
+	position = 1.63953876495361,4.14766597747803,-4.29117835665238E-06
+	rotation = -2.166042E-07,-1.945342E-07,-4.245026E-08,1.000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 64
-	srfN = srfAttach, 15
-	attN = top, 33
-	attN = bottom, 31
+	sym = 52
+	srfN = srfAttach, 3
+	attN = top, 21
+	attN = bottom, 19
 	mass = 0.001
-	temp = -200.8586
+	temp = -198.9263
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2910,21 +1011,21 @@ PART
 	uid = 2359094198
 	mid = 197034606
 	launchID = 1
-	parent = 32
-	position = 1.63953495025635,4.59512901306152,-4.72739338874817E-06
-	rotation = -6.529661E-07,-0.7071069,3.101571E-10,0.7071072
+	parent = 20
+	position = 1.63953673839569,4.40513706207275,-9.01643215911463E-06
+	rotation = -6.166911E-07,-0.7071072,6.48441E-08,0.7071075
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 65
-	srfN = srfAttach, 15
+	sym = 53
+	srfN = srfAttach, 3
 	attN = None, -1
-	attN = bottom, 32
+	attN = bottom, 20
 	mass = 0.001
-	temp = -200.8809
+	temp = -198.947
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2945,19 +1046,19 @@ PART
 	uid = 1943701027
 	mid = 197034606
 	launchID = 1
-	parent = 33
-	position = 1.74719297885895,4.51828956604004,-5.52646815776825E-06
-	rotation = 0.5000003,0.4999997,-0.5000004,0.500001
+	parent = 21
+	position = 1.74718487262726,4.32828760147095,-1.18466350613744E-05
+	rotation = 0.5000003,0.4999998,-0.5000005,0.500001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 66
-	srfN = srfAttach, 33
+	sym = 54
+	srfN = srfAttach, 21
 	mass = 0.05
-	temp = -200.1629
+	temp = -198.2362
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3016,18 +1117,18 @@ PART
 	uid = 1685380831
 	mid = 197034606
 	launchID = 1
-	parent = 33
-	position = 1.93451511859894,4.81316947937012,-5.94556331634521E-06
-	rotation = 0.683015,0.1830122,-0.6830114,0.1830126
+	parent = 21
+	position = 1.93450772762299,4.6231689453125,-1.35609661811031E-05
+	rotation = 0.6830152,0.1830122,-0.6830116,0.1830127
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	srfN = srfAttach, 33
+	srfN = srfAttach, 21
 	mass = 0.015
-	temp = -199.9242
+	temp = -197.9991
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3045,7 +1146,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -3074,7 +1175,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -3086,7 +1187,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -3120,20 +1221,19 @@ PART
 	uid = 2553053514
 	mid = 197034606
 	launchID = 1
-	parent = 33
-	position = 1.58341383934021,4.70512962341309,0.0134221520274878
-	rotation = -0.4999997,0.5000008,-0.5000001,0.5000007
+	parent = 21
+	position = 1.58340835571289,4.5151309967041,0.0134187834337354
+	rotation = -0.4999997,0.5000009,-0.5000001,0.5000007
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: crewCabin_5; pos: -1.053211,0.002330079,-0.3976142; dir: -0.9355445,0.002159331,-0.3532021
-	sym = 68
-	srfN = srfAttach, 33
+	sym = 56
+	srfN = srfAttach, 21
 	mass = 0.05
-	temp = -199.685
+	temp = -197.7613
 	expt = 0
 	state = 1
 	connected = True
@@ -3154,19 +1254,19 @@ PART
 	uid = 3078261329
 	mid = 197034606
 	launchID = 1
-	parent = 32
-	position = 1.80368006229401,4.32454872131348,-0.000747289508581162
-	rotation = 2.980233E-07,1,4.470349E-07,-3.874301E-07
+	parent = 20
+	position = 1.80367565155029,4.13455057144165,-0.000750019564293325
+	rotation = 2.522395E-07,1.000001,4.447248E-07,-4.168341E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 69
-	srfN = srfAttach, 32
+	sym = 57
+	srfN = srfAttach, 20
 	mass = 0.05
-	temp = -199.9125
+	temp = -197.9876
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3236,19 +1336,19 @@ PART
 	uid = 2051941260
 	mid = 197034606
 	launchID = 1
-	parent = 31
-	position = 1.74717807769775,4.1567497253418,-6.05545938014984E-06
-	rotation = 0.5000002,0.5000005,-0.5,0.5000005
+	parent = 19
+	position = 1.74717819690704,3.96675562858582,-9.42671067605261E-06
+	rotation = 0.5000002,0.5000005,-0.5000001,0.5000005
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 70
-	srfN = srfAttach, 31
+	sym = 58
+	srfN = srfAttach, 19
 	mass = 0.05
-	temp = -199.877
+	temp = -197.9521
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3307,19 +1407,19 @@ PART
 	uid = 2564786016
 	mid = 197034606
 	launchID = 1
-	parent = 26
-	position = 1.74732613563538,2.71538925170898,-2.06194818019867E-06
-	rotation = 0.5000003,0.5000003,-0.5,0.5000002
+	parent = 14
+	position = 1.74731945991516,2.52538681030273,-7.53344238546561E-06
+	rotation = 0.5000004,0.5000005,-0.5000001,0.5000002
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 71
-	srfN = srfAttach, 26
+	sym = 59
+	srfN = srfAttach, 14
 	mass = 0.05
-	temp = -199.8735
+	temp = -197.9487
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3378,19 +1478,19 @@ PART
 	uid = 3401419648
 	mid = 197034606
 	launchID = 1
-	parent = 25
-	position = 1.80356621742249,2.54895973205566,-0.000744068995118141
-	rotation = 2.235174E-07,1,-4.470354E-08,2.533197E-07
+	parent = 13
+	position = 1.80356824398041,2.35896396636963,-0.000748121296055615
+	rotation = 2.111256E-07,1,-7.068146E-08,2.526374E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 72
-	srfN = srfAttach, 25
+	sym = 60
+	srfN = srfAttach, 13
 	mass = 0.05
-	temp = -199.9021
+	temp = -197.977
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3460,19 +1560,19 @@ PART
 	uid = 990359149
 	mid = 197034606
 	launchID = 1
-	parent = 24
-	position = 1.74724817276001,2.37648010253906,-1.00210309028625E-06
-	rotation = 0.5000002,0.5000001,-0.5000003,0.5000001
+	parent = 12
+	position = 1.74724721908569,2.18648171424866,-5.26882377016591E-06
+	rotation = 0.5000003,0.5000002,-0.5000005,0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 73
-	srfN = srfAttach, 24
+	sym = 61
+	srfN = srfAttach, 12
 	mass = 0.05
-	temp = -199.8909
+	temp = -197.9661
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3531,19 +1631,19 @@ PART
 	uid = 513891485
 	mid = 197034606
 	launchID = 1
-	parent = 22
-	position = 1.74649024009705,1.66238021850586,1.86264514923096E-08
-	rotation = 0.5000001,0.5000002,-0.5000005,0.5
+	parent = 10
+	position = 1.74648725986481,1.47237837314606,-6.26185783403344E-06
+	rotation = 0.5000002,0.5000003,-0.5000005,0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 74
-	srfN = srfAttach, 22
+	sym = 62
+	srfN = srfAttach, 10
 	mass = 0.05
-	temp = -199.891
+	temp = -197.9659
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3602,19 +1702,19 @@ PART
 	uid = 1079770086
 	mid = 197034606
 	launchID = 1
-	parent = 21
-	position = 1.80300426483154,1.49749946594238,-0.000741956755518913
-	rotation = -8.940695E-08,1,1.788133E-07,3.308058E-06
+	parent = 9
+	position = 1.80300319194794,1.30749940872192,-0.000746079371310771
+	rotation = -7.922279E-08,1.000001,1.913986E-07,3.281573E-06
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 75
-	srfN = srfAttach, 21
+	sym = 63
+	srfN = srfAttach, 9
 	mass = 0.05
-	temp = -199.9022
+	temp = -197.9769
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3684,19 +1784,19 @@ PART
 	uid = 2900399020
 	mid = 197034606
 	launchID = 1
-	parent = 20
-	position = 1.74715530872345,1.32892036437988,9.89064574241638E-07
-	rotation = 0.5000001,0.5000002,-0.5000001,0.5000002
+	parent = 8
+	position = 1.74715995788574,1.13892436027527,-5.29446151631419E-06
+	rotation = 0.5000002,0.5000003,-0.5000002,0.5000003
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 76
-	srfN = srfAttach, 20
+	sym = 64
+	srfN = srfAttach, 8
 	mass = 0.05
-	temp = -199.8737
+	temp = -197.9485
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3755,19 +1855,19 @@ PART
 	uid = 1628416783
 	mid = 197034606
 	launchID = 1
-	parent = 14
-	position = 1.61697840690613,0.218709945678711,-0.0204793624579906
-	rotation = 0.6743795,0.212631,-0.6743801,0.2126306
+	parent = 2
+	position = 1.61697459220886,0.0287053491920233,-0.0204839631915092
+	rotation = 0.6743797,0.212631,-0.6743803,0.2126306
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 77
-	srfN = srfAttach, 14
+	sym = 65
+	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -200.2533
+	temp = -198.1345
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3785,7 +1885,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -3814,7 +1914,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -3826,7 +1926,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -3860,21 +1960,21 @@ PART
 	uid = 1047058859
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = -1.35833060741425,-0.0175094604492188,5.02914190292358E-08
-	rotation = -0.5000001,0.4999999,-0.5000001,-0.4999999
+	parent = 1
+	position = -1.35833323001862,-0.207512035965919,-6.56606744087185E-06
+	rotation = -0.5000002,0.5000001,-0.5000002,-0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 14
-	srfN = srfAttach, 0
-	attN = top, 47
+	sym = 2
+	srfN = srfAttach, 1
+	attN = top, 35
 	attN = None, -1
 	mass = 0.001
-	temp = -201.4037
+	temp = -199.0828
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3895,21 +1995,21 @@ PART
 	uid = 3271107976
 	mid = 197034606
 	launchID = 1
-	parent = 46
-	position = -1.61579859256744,-0.0175094604492188,1.01514160633087E-06
-	rotation = -0.7071068,0.7071068,-1.926561E-08,-4.033904E-08
+	parent = 34
+	position = -1.61580538749695,-0.207514107227325,-3.95346569348476E-06
+	rotation = -0.707107,0.7071071,-1.727045E-08,-5.727573E-08
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 15
+	sym = 3
 	srfN = None, -1
 	attN = None, -1
-	attN = bottom, 46
+	attN = bottom, 34
 	mass = 0.001
-	temp = -200.791
+	temp = -198.7135
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3930,21 +2030,21 @@ PART
 	uid = 2110804565
 	mid = 197034606
 	launchID = 1
-	parent = 47
-	position = -1.63954257965088,0.218158721923828,1.69314444065094E-06
-	rotation = -2.838709E-07,0.7071068,-7.860174E-07,-0.7071068
+	parent = 35
+	position = -1.63954937458038,0.0281526353210211,-1.96544624486705E-06
+	rotation = -2.886837E-07,0.707107,-8.237837E-07,-0.707107
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 16
-	srfN = srfAttach, 47
-	attN = top, 49
+	sym = 4
+	srfN = srfAttach, 35
+	attN = top, 37
 	attN = None, -1
 	mass = 0.001
-	temp = -200.5614
+	temp = -198.576
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3965,21 +2065,21 @@ PART
 	uid = 1936532124
 	mid = 197034606
 	launchID = 1
-	parent = 48
-	position = -1.63954257965088,0.475620269775391,3.34158539772034E-06
-	rotation = -1.24345E-14,1,-1.24345E-14,-5.960464E-08
+	parent = 36
+	position = -1.63954663276672,0.285616427659988,8.44320538817556E-07
+	rotation = 1.025041E-11,1,-4.397302E-09,6.338595E-09
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
-	srfN = srfAttach, 15
-	attN = top, 50
-	attN = bottom, 48
+	sym = 5
+	srfN = srfAttach, 3
+	attN = top, 38
+	attN = bottom, 36
 	mass = 0.001
-	temp = -200.4848
+	temp = -198.5345
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4000,21 +2100,21 @@ PART
 	uid = 253165638
 	mid = 197034606
 	launchID = 1
-	parent = 49
-	position = -1.63954257965088,0.733098983764648,5.19119203090668E-06
-	rotation = -7.450582E-08,1,-7.450582E-08,-7.450579E-08
+	parent = 37
+	position = -1.63954019546509,0.543101191520691,-2.18935883822269E-06
+	rotation = -4.231302E-08,1,-5.17468E-08,-1.080185E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 18
-	srfN = srfAttach, 15
-	attN = top, 51
-	attN = bottom, 49
+	sym = 6
+	srfN = srfAttach, 3
+	attN = top, 39
+	attN = bottom, 37
 	mass = 0.001
-	temp = -200.4841
+	temp = -198.547
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4035,21 +2135,21 @@ PART
 	uid = 3269568737
 	mid = 197034606
 	launchID = 1
-	parent = 50
-	position = -1.63954246044159,0.990560531616211,7.0035457611084E-06
-	rotation = 7.949058E-08,0.707107,8.513557E-07,0.7071068
+	parent = 38
+	position = -1.63954889774323,0.800555467605591,-1.04448872662033E-06
+	rotation = 3.993286E-08,0.7071072,8.579609E-07,0.7071068
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 19
-	srfN = srfAttach, 15
-	attN = top, 52
-	attN = bottom, 50
+	sym = 7
+	srfN = srfAttach, 3
+	attN = top, 40
+	attN = bottom, 38
 	mass = 0.001
-	temp = -200.5582
+	temp = -198.6259
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4070,21 +2170,21 @@ PART
 	uid = 974372605
 	mid = 197034606
 	launchID = 1
-	parent = 51
-	position = -1.63954246044159,1.2480297088623,9.21450555324554E-06
-	rotation = -5.960469E-08,1,8.940684E-08,-6.258488E-07
+	parent = 39
+	position = -1.63953852653503,1.05803453922272,3.46646811522078E-06
+	rotation = -8.518288E-08,1,1.118387E-07,-5.756833E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 20
-	srfN = srfAttach, 15
-	attN = top, 53
-	attN = bottom, 51
+	sym = 8
+	srfN = srfAttach, 3
+	attN = top, 41
+	attN = bottom, 39
 	mass = 0.001
-	temp = -200.7812
+	temp = -198.8483
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4105,21 +2205,21 @@ PART
 	uid = 1844370889
 	mid = 197034606
 	launchID = 1
-	parent = 52
-	position = -1.63954246044159,1.5054988861084,1.13658607006073E-05
-	rotation = 3.197169E-07,0.7071063,6.743496E-07,0.7071077
+	parent = 40
+	position = -1.63953971862793,1.31550300121307,6.30958174951957E-06
+	rotation = 3.362904E-07,0.7071062,6.246518E-07,0.7071077
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 21
-	srfN = srfAttach, 15
-	attN = top, 54
-	attN = bottom, 52
+	sym = 9
+	srfN = srfAttach, 3
+	attN = top, 42
+	attN = bottom, 40
 	mass = 0.001
-	temp = -200.8379
+	temp = -198.9055
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4140,21 +2240,21 @@ PART
 	uid = 4253539212
 	mid = 197034606
 	launchID = 1
-	parent = 53
-	position = -1.63954150676727,1.76296997070313,1.33756548166275E-05
-	rotation = 6.714605E-08,0.7071072,7.794066E-07,0.7071068
+	parent = 41
+	position = -1.63954269886017,1.57297158241272,9.1564143076539E-06
+	rotation = 8.198187E-08,0.7071072,7.94676E-07,0.7071068
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 22
-	srfN = srfAttach, 15
-	attN = top, 55
-	attN = bottom, 53
+	sym = 10
+	srfN = srfAttach, 3
+	attN = top, 43
+	attN = bottom, 41
 	mass = 0.001
-	temp = -200.8152
+	temp = -198.8834
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4175,21 +2275,21 @@ PART
 	uid = 4063590565
 	mid = 197034606
 	launchID = 1
-	parent = 54
-	position = -1.63954138755798,2.02043914794922,1.59367918968201E-05
-	rotation = 4.023313E-07,2.235175E-07,1.356006E-06,1
+	parent = 42
+	position = -1.63954377174377,1.83044016361237,1.19958031064016E-05
+	rotation = 3.737572E-07,2.479966E-07,1.349085E-06,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 23
-	srfN = srfAttach, 15
-	attN = top, 56
-	attN = bottom, 54
+	sym = 11
+	srfN = srfAttach, 3
+	attN = top, 44
+	attN = bottom, 42
 	mass = 0.001
-	temp = -200.6796
+	temp = -198.7499
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4210,21 +2310,21 @@ PART
 	uid = 1976969046
 	mid = 197034606
 	launchID = 1
-	parent = 55
-	position = -1.63954031467438,2.27791023254395,1.84457749128342E-05
-	rotation = 2.533197E-07,1,1.93715E-07,-3.427268E-07
+	parent = 43
+	position = -1.63954496383667,2.08790969848633,1.48455883390852E-05
+	rotation = 2.102475E-07,1,2.20796E-07,-3.148614E-07
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 24
-	srfN = srfAttach, 15
-	attN = top, 57
-	attN = bottom, 55
+	sym = 12
+	srfN = srfAttach, 3
+	attN = top, 45
+	attN = bottom, 43
 	mass = 0.001
-	temp = -200.8156
+	temp = -198.8838
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4245,21 +2345,21 @@ PART
 	uid = 3422686460
 	mid = 197034606
 	launchID = 1
-	parent = 56
-	position = -1.63954031467438,2.53537940979004,2.05673277378082E-05
-	rotation = 2.405365E-07,0.7071069,4.163553E-07,0.7071072
+	parent = 44
+	position = -1.63954603672028,2.34537816047668,1.76887024281314E-05
+	rotation = 2.512191E-07,0.7071068,3.726851E-07,0.7071072
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 25
-	srfN = srfAttach, 15
-	attN = top, 58
-	attN = bottom, 56
+	sym = 13
+	srfN = srfAttach, 3
+	attN = top, 46
+	attN = bottom, 44
 	mass = 0.001
-	temp = -200.8376
+	temp = -198.9054
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4280,21 +2380,21 @@ PART
 	uid = 2056495930
 	mid = 197034606
 	launchID = 1
-	parent = 57
-	position = -1.63954031467438,2.79285049438477,2.28378921747208E-05
-	rotation = 1.830499E-07,0.7071072,8.953104E-07,0.7071068
+	parent = 45
+	position = -1.63954710960388,2.60284781455994,2.0538487660815E-05
+	rotation = 1.874789E-07,0.7071072,9.632955E-07,0.7071068
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 26
-	srfN = srfAttach, 15
-	attN = top, 59
-	attN = bottom, 57
+	sym = 14
+	srfN = srfAttach, 3
+	attN = top, 47
+	attN = bottom, 45
 	mass = 0.001
-	temp = -200.7801
+	temp = -198.8483
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4315,21 +2415,21 @@ PART
 	uid = 779955798
 	mid = 197034606
 	launchID = 1
-	parent = 58
-	position = -1.63953936100006,3.05031967163086,2.51103192567825E-05
-	rotation = 1.341105E-07,-1.639127E-07,1.41561E-06,1
+	parent = 46
+	position = -1.63954830169678,2.86031627655029,2.33816008403664E-05
+	rotation = 1.168021E-07,-2.264661E-07,1.390497E-06,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 27
-	srfN = srfAttach, 15
-	attN = top, 60
-	attN = bottom, 58
+	sym = 15
+	srfN = srfAttach, 3
+	attN = top, 48
+	attN = bottom, 46
 	mass = 0.001
-	temp = -200.5571
+	temp = -198.6279
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4350,21 +2450,21 @@ PART
 	uid = 222764681
 	mid = 197034606
 	launchID = 1
-	parent = 59
-	position = -1.63953936100006,3.30778884887695,2.73585319519043E-05
-	rotation = 5.162989E-07,0.7071074,7.517223E-07,0.7071068
+	parent = 47
+	position = -1.63954937458038,3.11778473854065,2.62247140199179E-05
+	rotation = 4.612722E-07,0.7071075,7.740591E-07,0.7071067
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 28
-	srfN = srfAttach, 15
-	attN = top, 61
-	attN = bottom, 59
+	sym = 16
+	srfN = srfAttach, 3
+	attN = top, 49
+	attN = bottom, 47
 	mass = 0.001
-	temp = -200.4836
+	temp = -198.5548
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4385,21 +2485,21 @@ PART
 	uid = 3164913535
 	mid = 197034606
 	launchID = 1
-	parent = 60
-	position = -1.63954019546509,3.56525039672852,2.97706574201584E-05
-	rotation = 3.57628E-07,-5.364417E-07,1.311302E-06,1
+	parent = 48
+	position = -1.63954663276672,3.375248670578,2.90344814857235E-05
+	rotation = 3.513857E-07,-5.550332E-07,1.305695E-06,1.000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 29
-	srfN = srfAttach, 15
-	attN = top, 62
-	attN = bottom, 60
+	sym = 17
+	srfN = srfAttach, 3
+	attN = top, 50
+	attN = bottom, 48
 	mass = 0.001
-	temp = -200.4845
+	temp = -198.5557
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4420,21 +2520,21 @@ PART
 	uid = 1081398407
 	mid = 197034606
 	launchID = 1
-	parent = 61
-	position = -1.63953924179077,3.82271957397461,3.21418046951294E-05
-	rotation = 3.129244E-07,1.490123E-08,9.685756E-07,1
+	parent = 49
+	position = -1.63954782485962,3.63271808624268,2.42921614699299E-05
+	rotation = 3.387118E-07,-5.760653E-08,1.053582E-06,1.000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 30
-	srfN = srfAttach, 15
-	attN = top, 63
-	attN = bottom, 61
+	sym = 18
+	srfN = srfAttach, 3
+	attN = top, 51
+	attN = bottom, 49
 	mass = 0.001
-	temp = -200.5606
+	temp = -198.6314
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4455,21 +2555,21 @@ PART
 	uid = 477768602
 	mid = 197034606
 	launchID = 1
-	parent = 62
-	position = -1.63953924179077,4.0801887512207,3.42726707458496E-05
-	rotation = 2.384187E-07,-0.7071077,5.930513E-07,0.7071067
+	parent = 50
+	position = -1.63954699039459,3.89018678665161,2.71352801064495E-05
+	rotation = 2.459158E-07,-0.7071075,5.489852E-07,0.7071066
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 31
-	srfN = srfAttach, 15
-	attN = top, 64
-	attN = bottom, 62
+	sym = 19
+	srfN = srfAttach, 3
+	attN = top, 52
+	attN = bottom, 50
 	mass = 0.001
-	temp = -200.7878
+	temp = -198.8561
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4490,21 +2590,21 @@ PART
 	uid = 4232677308
 	mid = 197034606
 	launchID = 1
-	parent = 63
-	position = -1.63953924179077,4.33765983581543,3.75732779502869E-05
-	rotation = -4.023314E-07,1,1.341101E-07,-1.624227E-06
+	parent = 51
+	position = -1.63953852653503,4.14766550064087,3.16499572363682E-05
+	rotation = -4.239201E-07,1.000001,1.447289E-07,-1.588496E-06
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 32
-	srfN = srfAttach, 15
-	attN = top, 65
-	attN = bottom, 63
+	sym = 20
+	srfN = srfAttach, 3
+	attN = top, 53
+	attN = bottom, 51
 	mass = 0.001
-	temp = -200.8586
+	temp = -198.9263
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4525,21 +2625,21 @@ PART
 	uid = 2776161684
 	mid = 197034606
 	launchID = 1
-	parent = 64
-	position = -1.63953816890717,4.59512901306152,3.99034470319748E-05
-	rotation = 3.654794E-07,0.7071055,8.393214E-07,0.7071089
+	parent = 52
+	position = -1.63953971862793,4.4051342010498,3.44912077707704E-05
+	rotation = 3.801255E-07,0.7071055,7.919961E-07,0.7071088
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 33
-	srfN = srfAttach, 15
+	sym = 21
+	srfN = srfAttach, 3
 	attN = None, -1
-	attN = bottom, 64
+	attN = bottom, 52
 	mass = 0.001
-	temp = -200.8811
+	temp = -198.9473
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4560,19 +2660,19 @@ PART
 	uid = 1853356458
 	mid = 197034606
 	launchID = 1
-	parent = 65
-	position = -1.74719417095184,4.51828956604004,4.12911176681519E-05
-	rotation = -0.5,0.5000013,-0.4999993,-0.5000005
+	parent = 53
+	position = -1.74719703197479,4.32829284667969,3.67280008504167E-05
+	rotation = -0.5,0.5000014,-0.4999993,-0.5000006
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 34
-	srfN = srfAttach, 65
+	sym = 22
+	srfN = srfAttach, 53
 	mass = 0.05
-	temp = -200.163
+	temp = -198.2363
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4631,18 +2731,18 @@ PART
 	uid = 85393043
 	mid = 197034606
 	launchID = 1
-	parent = 65
-	position = -1.8983142375946,4.8227481842041,4.35374677181244E-05
-	rotation = 0.6830144,-0.183014,0.6830119,0.1830113
+	parent = 53
+	position = -1.89832448959351,4.63274478912354,3.98054253309965E-05
+	rotation = 0.6830145,-0.1830141,0.6830119,0.1830113
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	srfN = srfAttach, 65
+	srfN = srfAttach, 53
 	mass = 0.015
-	temp = -199.9242
+	temp = -197.9988
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4660,7 +2760,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -4689,7 +2789,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -4701,7 +2801,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -4735,20 +2835,19 @@ PART
 	uid = 1607203539
 	mid = 197034606
 	launchID = 1
-	parent = 65
-	position = -1.58342409133911,4.70512962341309,-0.0133860148489475
-	rotation = -0.5000009,0.5000013,0.4999989,-0.5000001
+	parent = 53
+	position = -1.5834299325943,4.51513147354126,-0.0133927315473557
+	rotation = -0.500001,0.5000012,0.499999,-0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: crewCabin_5; pos: -1.053246,0.002534173,-0.397661; dir: -0.9355445,0.002159331,-0.3532021
-	sym = 36
-	srfN = srfAttach, 65
+	sym = 24
+	srfN = srfAttach, 53
 	mass = 0.05
-	temp = -199.6849
+	temp = -197.7612
 	expt = 0
 	state = 1
 	connected = True
@@ -4769,19 +2868,19 @@ PART
 	uid = 1500590578
 	mid = 197034606
 	launchID = 1
-	parent = 64
-	position = -1.80368232727051,4.32454872131348,0.000781921669840813
-	rotation = -1.043081E-07,-3.427267E-07,-2.533198E-07,-1
+	parent = 52
+	position = -1.80368137359619,4.13455295562744,0.000781349313911051
+	rotation = -5.820605E-08,-2.990809E-07,-2.533404E-07,-1.000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 37
-	srfN = srfAttach, 64
+	sym = 25
+	srfN = srfAttach, 52
 	mass = 0.05
-	temp = -199.9125
+	temp = -197.9877
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4851,19 +2950,19 @@ PART
 	uid = 3312637636
 	mid = 197034606
 	launchID = 1
-	parent = 63
-	position = -1.74717926979065,4.1567497253418,3.63271683454514E-05
-	rotation = -0.5000001,0.5000011,-0.5000001,-0.4999998
+	parent = 51
+	position = -1.74718928337097,3.96674633026123,3.14539247483481E-05
+	rotation = -0.5000001,0.5000011,-0.5000002,-0.4999998
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 38
-	srfN = srfAttach, 63
+	sym = 26
+	srfN = srfAttach, 51
 	mass = 0.05
-	temp = -199.877
+	temp = -197.9521
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4922,19 +3021,19 @@ PART
 	uid = 3791862628
 	mid = 197034606
 	launchID = 1
-	parent = 58
-	position = -1.74732637405396,2.71538925170898,2.3476779460907E-05
-	rotation = -0.4999999,0.5000008,-0.5000002,-0.4999999
+	parent = 46
+	position = -1.74732458591461,2.52539491653442,2.03515810426325E-05
+	rotation = -0.4999999,0.5000007,-0.5000001,-0.4999999
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 39
-	srfN = srfAttach, 58
+	sym = 27
+	srfN = srfAttach, 46
 	mass = 0.05
-	temp = -199.8735
+	temp = -197.9487
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4993,19 +3092,19 @@ PART
 	uid = 2593670224
 	mid = 197034606
 	launchID = 1
-	parent = 57
-	position = -1.80356550216675,2.54895973205566,0.000764248892664909
-	rotation = 1.490121E-08,-2.533197E-07,4.470339E-08,-1
+	parent = 45
+	position = -1.8035740852356,2.3589551448822,0.000761157367378473
+	rotation = 2.008789E-08,-2.524518E-07,4.175807E-08,-1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 40
-	srfN = srfAttach, 57
+	sym = 28
+	srfN = srfAttach, 45
 	mass = 0.05
-	temp = -199.9021
+	temp = -197.977
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5075,19 +3174,19 @@ PART
 	uid = 2328654986
 	mid = 197034606
 	launchID = 1
-	parent = 56
-	position = -1.74724841117859,2.37648010253906,1.97850167751312E-05
-	rotation = -0.4999993,0.5000014,-0.5000002,-0.5000001
+	parent = 44
+	position = -1.74724805355072,2.18648219108582,1.8536280549597E-05
+	rotation = -0.4999992,0.5000014,-0.5000001,-0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 41
-	srfN = srfAttach, 56
+	sym = 29
+	srfN = srfAttach, 44
 	mass = 0.05
-	temp = -199.8909
+	temp = -197.966
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5146,19 +3245,19 @@ PART
 	uid = 3548599247
 	mid = 197034606
 	launchID = 1
-	parent = 54
-	position = -1.74649047851563,1.66238021850586,1.37686729431152E-05
-	rotation = -0.5000001,0.5000005,-0.5000002,-0.5000001
+	parent = 42
+	position = -1.74648880958557,1.47238337993622,8.07456217444269E-06
+	rotation = -0.5,0.5000004,-0.5000001,-0.5000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 42
-	srfN = srfAttach, 54
+	sym = 30
+	srfN = srfAttach, 42
 	mass = 0.05
-	temp = -199.8909
+	temp = -197.9659
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5217,19 +3316,19 @@ PART
 	uid = 400667554
 	mid = 197034606
 	launchID = 1
-	parent = 53
-	position = -1.80300557613373,1.49749946594238,0.000754363834857941
-	rotation = -1.341104E-07,-3.725291E-07,-4.619361E-07,-1
+	parent = 41
+	position = -1.80300915241241,1.30749917030334,0.000753841770347208
+	rotation = -1.148524E-07,-4.383673E-07,-4.642935E-07,-1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 43
-	srfN = srfAttach, 53
+	sym = 31
+	srfN = srfAttach, 41
 	mass = 0.05
-	temp = -199.9021
+	temp = -197.9769
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5299,19 +3398,19 @@ PART
 	uid = 3007558773
 	mid = 197034606
 	launchID = 1
-	parent = 52
-	position = -1.74715650081635,1.32892036437988,1.04811042547226E-05
-	rotation = -0.5000002,0.5000006,-0.5,-0.5
+	parent = 40
+	position = -1.74716365337372,1.13891518115997,8.41976452647941E-06
+	rotation = -0.5000001,0.5000006,-0.5,-0.5
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 44
-	srfN = srfAttach, 52
+	sym = 32
+	srfN = srfAttach, 40
 	mass = 0.05
-	temp = -199.8735
+	temp = -197.9484
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5370,19 +3469,19 @@ PART
 	uid = 1795105663
 	mid = 197034606
 	launchID = 1
-	parent = 46
-	position = -1.61697959899902,0.218709945678711,0.0204821601510048
-	rotation = -0.6743801,0.2126306,-0.6743795,-0.212631
+	parent = 34
+	position = -1.61698544025421,0.0287052057683468,0.0204756800085306
+	rotation = -0.6743803,0.2126307,-0.6743798,-0.2126311
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 45
-	srfN = srfAttach, 46
+	sym = 33
+	srfN = srfAttach, 34
 	mass = 0.015
-	temp = -200.1851
+	temp = -198.0669
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5400,7 +3499,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -5429,7 +3528,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -5441,7 +3540,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -5475,8 +3574,8 @@ PART
 	uid = 714691842
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 0,-0.690000534057617,0
+	parent = 1
+	position = 4.11760720453458E-06,-0.879998803138733,-2.94348251372867E-06
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -5485,10 +3584,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 0
-	attN = bottom, 79
+	attN = top, 1
+	attN = bottom, 67
 	mass = 0.4
-	temp = -201.862
+	temp = -189.5322
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5505,7 +3604,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 726.144101745012
+		amount = 706.397069323446
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -5519,8 +3618,8 @@ PART
 	uid = 1038220081
 	mid = 197034606
 	launchID = 1
-	parent = 78
-	position = 0,-1.65875053405762,0
+	parent = 66
+	position = -4.14023452321999E-06,-1.84875559806824,-1.2715782986561E-06
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -5529,10 +3628,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 78
-	attN = bottom, 80
+	attN = top, 66
+	attN = bottom, 68
 	mass = 0.5
-	temp = -202.8763
+	temp = -172.2848
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5549,7 +3648,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 319.471412034978
+		amount = 255.875690705326
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -5559,7 +3658,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 390.465056768117
+		amount = 312.736949177182
 		maxAmount = 440
 		flowState = True
 		isTweakable = True
@@ -5573,9 +3672,9 @@ PART
 	uid = 2419898698
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = 0,-2.60674095153809,0
-	rotation = -1,0,0,0
+	parent = 67
+	position = 4.03236799684237E-06,-2.79674029350281,-4.05525224778103E-06
+	rotation = -1,-1.580225E-17,0,0
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
@@ -5583,10 +3682,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = bottom, 79
-	attN = top, 81
+	attN = bottom, 67
+	attN = top, 69
 	mass = 4
-	temp = -201.3587
+	temp = 1.36378
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5869,7 +3968,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 136.977720383308
+		amount = 149.976495618204
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -5879,7 +3978,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 6.14410174501154
+		amount = 0
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -5893,8 +3992,8 @@ PART
 	uid = 869728013
 	mid = 197034606
 	launchID = 1
-	parent = 80
-	position = 0,-3.99896049499512,0
+	parent = 68
+	position = -1.03952095287241E-06,-4.18896484375,-6.56919883113005E-06
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -5903,10 +4002,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 80
-	attN = bottom, 82
+	attN = top, 68
+	attN = bottom, 70
 	mass = 0.1
-	temp = -200.6698
+	temp = 350.1136
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5974,8 +4073,8 @@ PART
 	uid = 3175177891
 	mid = 197034606
 	launchID = 1
-	parent = 81
-	position = 0,-5.60181045532227,0
+	parent = 69
+	position = 5.02995180795551E-06,-5.79181146621704,-2.30519208344049E-06
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -5984,10 +4083,10 @@ PART
 	sidx = 0
 	attm = 0
 	srfN = None, -1
-	attN = top, 83
+	attN = top, 71
 	attN = None, -1
 	mass = 2.25
-	temp = -200.3311
+	temp = 736.4714
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6009,7 +4108,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 0
+		currentThrottle = 1
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -6199,7 +4298,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00295999993383884
+		amount = 0.0999749977653846
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -6213,8 +4312,8 @@ PART
 	uid = 3200655421
 	mid = 197034606
 	launchID = 1
-	parent = 82
-	position = 0,-4.52478981018066,0
+	parent = 70
+	position = 2.02602086574188E-06,-4.71479320526123,-5.50443610336515E-06
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -6223,10 +4322,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 82
+	attN = top, 70
 	attN = None, -1
 	mass = 0.08
-	temp = -199.9012
+	temp = 612.8046
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6245,7 +4344,7 @@ PART
 		name = ModuleGenerator
 		isEnabled = True
 		generatorIsActive = True
-		throttle = 0
+		throttle = 1
 		EVENTS
 		{
 			Activate
@@ -6305,18 +4404,18 @@ PART
 	uid = 2164735689
 	mid = 197034606
 	launchID = 1
-	parent = 80
-	position = -0.810559153556824,-3.01698112487793,-0.35681089758873
-	rotation = 0.9740779,0.1965616,0.109752,0.02214714
+	parent = 68
+	position = -0.81056147813797,-3.20698547363281,-0.356812626123428
+	rotation = 0.9740779,0.1965616,0.109752,0.02214712
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	srfN = srfAttach, 80
+	srfN = srfAttach, 68
 	mass = 1E-05
-	temp = -200.1846
+	temp = -86.28889
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6386,151 +4485,37 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleAscentGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = flightControl
-			}
-			MechJebModuleAscentAutopilot
+			MechJebModuleWaypointWindow
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleNodeExecutor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleInfoItems
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentPathEditor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLandingAutopilot
-			{
-				deployGears = True
-				deployChutes = False
-				unlockParts = 
-				unlockTechs = 
-				touchdownSpeed
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				limitGearsStage
-				{
-					val = 0
-					_text = 0
-				}
-				limitChutesStage
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = True
-				overrideSafeDistance = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					_val = 90
-					_text = 90
-				}
-			}
-			MechJebModuleDockingGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleManeuverPlanner
+			MechJebModuleWarpHelper
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingGuidance
-			{
-				landingSiteIdx = 0
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleRCSBalancerWindow
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleNodeEditor
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingPredictions
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = True
-				StabilityControl = False
-				LimitAcceleration = False
-				unlockParts = 
-				unlockTechs = 
-				heading
+				phaseAngle
 				{
 					_val = 0
 					_text = 0
 				}
-				speed
-				{
-					_val = 10
-					_text = 10
-				}
 			}
-			MechJebModuleRendezvousAutopilotWindow
+			MechJebModuleJokeObscurePanel
 			{
 				unlockParts = 
-				unlockTechs = advUnmanned
+				unlockTechs = 
 			}
-			MechJebModuleRoverWindow
+			MechJebModuleRendezvousAutopilot
 			{
 				unlockParts = 
-				unlockTechs = fieldScience
+				unlockTechs = 
 			}
-			MechJebModuleSettings
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSpaceplaneAutopilot
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -6540,10 +4525,11 @@ PART
 				unlockParts = 
 				unlockTechs = advUnmanned
 			}
-			MechJebModuleSpaceplaneAutopilot
+			MechJebModuleSpaceplaneGuidance
 			{
+				runwayIndex = 0
 				unlockParts = 
-				unlockTechs = 
+				unlockTechs = unmannedTech
 			}
 			MechJebModuleSmartASS
 			{
@@ -6590,38 +4576,24 @@ PART
 					_text = 0
 				}
 			}
-			MechJebModuleSpaceplaneGuidance
+			MechJebModuleCustomInfoWindow
 			{
-				runwayIndex = 0
-				unlockParts = 
-				unlockTechs = unmannedTech
 			}
-			MechJebModuleStageStats
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = 
 			}
-			MechJebModuleWarpHelper
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-				phaseAngle
-				{
-					_val = 0
-					_text = 0
-				}
 			}
-			MechJebModuleWaypointWindow
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleWaypointHelpWindow
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleRendezvousAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleJokeObscurePanel
+			ModExtensionDemo
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -6632,25 +4604,152 @@ PART
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			ModExtensionDemo
+			MechJebModuleThrustWindow
 			{
 				unlockParts = 
-				unlockTechs = 
+				unlockTechs = advFlightControl
 			}
 			MechJebModuleTargetController
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleThrustWindow
+			MechJebModuleSettings
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = False
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
+				{
+					_val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
+					_text = 0
+				}
+				limitChutesStage
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleAscentPathEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleDockingGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = True
+				overrideSafeDistance = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					_val = 90
+					_text = 90
+				}
+			}
+			MechJebModuleInfoItems
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleNodeExecutor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					_val = 0
+					_text = 0
+				}
+				speed
+				{
+					_val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleAttitudeAdjustment
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleWaypointHelpWindow
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
+			}
+			MechJebModuleLandingPredictions
 			{
 				unlockParts = 
 				unlockTechs = 
+			}
+			MechJebModuleLandingGuidance
+			{
+				landingSiteIdx = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRCSBalancerWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
 			}
 			MechJebModuleWarpController
 			{
@@ -6696,10 +4795,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 137973485.554772
-				deltaVExpended = 126.941953180777
+				deltaVExpended = 519.151279858358
 				dragLosses = 2.28748947664265E-11
-				gravityLosses = -0.152137940774112
-				steeringLosses = 127.387882858773
+				gravityLosses = 8.58854466268498
+				steeringLosses = 805.331397735957
 				markLatitude = -0.0972109007610876
 				markLongitude = -74.557670874565
 				markAltitude = 84.0925271817483
@@ -6762,7 +4861,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 2.98337576284588
+		amount = 4.97649561820856
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -6776,18 +4875,18 @@ PART
 	uid = 424612420
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = -6.89178705215454E-08,-2.04158020019531,-0.890597641468048
-	rotation = -0.09898034,0.7001449,0.09898034,-0.7001449
+	parent = 67
+	position = -3.40509723173454E-06,-2.23158502578735,-0.890601277351379
+	rotation = -0.09898037,0.700145,0.09898037,-0.700145
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	srfN = srfAttach, 79
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -200.9116
+	temp = -184.0602
 	expt = 0
 	state = 1
 	connected = True
@@ -6808,20 +4907,20 @@ PART
 	uid = 3474417262
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = -1.09896063804626E-07,-2.03287124633789,-1.33727204799652
-	rotation = -3.090862E-08,0.7071068,-0.7071068,-3.090862E-08
+	parent = 67
+	position = -1.88688989055663E-06,-2.22287487983704,-1.33727872371674
+	rotation = -7.457229E-08,0.7071069,-0.7071069,-3.668399E-08
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	srfN = srfAttach, 79
-	attN = top, 87
+	srfN = srfAttach, 67
+	attN = top, 75
 	attN = None, -1
 	mass = 0.001
-	temp = -201.0093
+	temp = -188.3004
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6842,9 +4941,9 @@ PART
 	uid = 3828514197
 	mid = 197034606
 	launchID = 1
-	parent = 86
-	position = -1.19209289550781E-07,-2.03287124633789,-1.64028000831604
-	rotation = -0.7071068,-1.421656E-13,-1.421656E-13,0.7071068
+	parent = 74
+	position = 3.84940676667611E-06,-2.22287034988403,-1.64028215408325
+	rotation = -0.707107,-5.332439E-09,-9.786716E-09,0.707107
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
@@ -6852,10 +4951,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 89
-	attN = bottom, 86
+	attN = top, 77
+	attN = bottom, 74
 	mass = 0.015
-	temp = -200.6892
+	temp = -195.0993
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6896,19 +4995,19 @@ PART
 	uid = 3617439306
 	mid = 197034606
 	launchID = 1
-	parent = 87
-	position = 0.0214238744229078,-2.33450126647949,-1.56032514572144
-	rotation = -0.7071075,-0.7071062,2.68616E-06,3.128702E-06
+	parent = 75
+	position = 0.0214275885373354,-2.52450227737427,-1.56032872200012
+	rotation = -0.7071076,-0.7071063,2.652927E-06,3.122111E-06
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: nuclearEngine_82; pos: -1.941272,-0.01386355,-0.9887099; dir: -0.8911046,-0.006383508,-0.4537532; rot: -0.4999999,0.4999989,0.5000012,0.5000001
-	srfN = srfAttach, 87
+	cData = tgt: nuclearEngine_70; pos: -1.939695,-0.01392874,-0.988403; dir: -0.8911046,-0.006383508,-0.4537532; rot: -0.4999999,0.4999989,0.5000012,0.5000001
+	srfN = srfAttach, 75
 	mass = 0.05
-	temp = -200.0684
+	temp = -196.3034
 	expt = 0
 	state = 1
 	connected = True
@@ -6929,9 +5028,9 @@ PART
 	uid = 2544318866
 	mid = 197034606
 	launchID = 1
-	parent = 87
-	position = -1.19209289550781E-07,-2.03287124633789,-1.81455421447754
-	rotation = -0.7071068,1.0268E-15,1.0268E-15,0.7071068
+	parent = 75
+	position = 2.49874074143008E-06,-2.22287178039551,-1.8145614862442
+	rotation = -0.707107,-5.332439E-09,-9.786716E-09,0.707107
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
@@ -6940,9 +5039,9 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
-	attN = bottom, 87
+	attN = bottom, 75
 	mass = 0.02
-	temp = -199.8292
+	temp = -196.0674
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7073,19 +5172,19 @@ PART
 	uid = 947326090
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = -9.87201929092407E-08,-1.58382987976074,-1.20786607265472
-	rotation = 0,0.7071068,0,-0.7071068
+	parent = 67
+	position = 4.31895477959188E-06,-1.77382862567902,-1.20787358283997
+	rotation = -3.564184E-08,0.7071069,-2.051432E-09,-0.7071069
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: miniFuelTank_87; pos: -0.3209796,-0.1473787,0.01466196; dir: -0.9079472,-0.4170263,0.04148294; rot: 4.250978E-11,-0.7071068,-9.693886E-07,0.7071069
-	srfN = srfAttach, 79
+	cData = tgt: miniFuelTank_75; pos: -0.3209448,-0.1474568,0.01468206; dir: -0.9079472,-0.4170263,0.04148294; rot: 4.250978E-11,-0.7071068,-9.693886E-07,0.7071069
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -200.4638
+	temp = -183.8459
 	expt = 0
 	state = 1
 	connected = True
@@ -7106,21 +5205,21 @@ PART
 	uid = 3606893554
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = 0,-1.38579940795898,1.2074099779129
-	rotation = 0,0.7071068,0,0.7071068
+	parent = 67
+	position = -2.27191026169749E-06,-1.57580375671387,1.20740389823914
+	rotation = -2.051432E-09,0.7071069,3.564184E-08,0.7071069
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_78; pos: -1.656453E-05,0.5103218,0.004805798; dir: 4.272275E-06,0.9999554,0.009441936
-	sym = 92
-	sym = 93
-	srfN = srfAttach, 79
+	cData = tgt: RCSTank1-2_66; pos: -3.452898E-06,0.5103527,0.004814264; dir: 4.272275E-06,0.9999554,0.009441936
+	sym = 80
+	sym = 81
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -200.244
+	temp = -183.6821
 	expt = 0
 	state = 1
 	connected = True
@@ -7141,21 +5240,21 @@ PART
 	uid = 1056561487
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = 1.04564738273621,-1.38579940795898,-0.603704988956451
-	rotation = 0,0.9659259,0,-0.2588191
+	parent = 67
+	position = 1.0456485748291,-1.57580077648163,-0.603708624839783
+	rotation = -4.340421E-08,0.9659261,-1.215862E-09,-0.2588191
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_78; pos: 3.298008E-05,0.6259985,0.005909349; dir: 4.272275E-06,0.9999554,0.009441936
-	sym = 91
-	sym = 93
-	srfN = srfAttach, 79
+	cData = tgt: RCSTank1-2_66; pos: 6.059833E-06,0.6259403,0.005934973; dir: 4.272275E-06,0.9999554,0.009441936
+	sym = 79
+	sym = 81
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -200.0256
+	temp = -183.4979
 	expt = 0
 	state = 1
 	connected = True
@@ -7176,21 +5275,21 @@ PART
 	uid = 1066405644
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = -1.04564762115479,-1.38579940795898,-0.603704929351807
-	rotation = 0,0.258819,0,-0.9659259
+	parent = 67
+	position = -1.04565012454987,-1.57580268383026,-0.603711009025574
+	rotation = 1.137903E-08,0.2588191,-2.646758E-08,-0.9659261
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_78; pos: 6.543055E-06,0.6570246,0.006265725; dir: 4.272275E-06,0.9999554,0.009441936
-	sym = 91
-	sym = 92
-	srfN = srfAttach, 79
+	cData = tgt: RCSTank1-2_66; pos: 3.590246E-06,0.6569569,0.006249474; dir: 4.272275E-06,0.9999554,0.009441936
+	sym = 79
+	sym = 80
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -199.8076
+	temp = -183.314
 	expt = 0
 	state = 1
 	connected = True
@@ -7211,19 +5310,19 @@ PART
 	uid = 3198640066
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = 1.26399040222168,-1.97566986083984,-0.000742198899388313
-	rotation = 0,1,0,0
+	parent = 67
+	position = 1.26399278640747,-2.1656711101532,-0.000746500154491514
+	rotation = -5.993428E-12,1,1.028977E-08,-3.86889E-09
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 95
-	srfN = srfAttach, 79
+	sym = 83
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -199.5927
+	temp = -183.1857
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7293,19 +5392,19 @@ PART
 	uid = 1778717491
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = -1.26399052143097,-1.97566986083984,0.000742310658097267
-	rotation = 0,-4.371139E-08,0,-1
+	parent = 67
+	position = -1.2639867067337,-2.16566848754883,0.000735670269932598
+	rotation = -5.121254E-09,-4.937362E-08,4.20704E-08,-1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 94
-	srfN = srfAttach, 79
+	sym = 82
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -199.3783
+	temp = -183.0045
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7375,19 +5474,19 @@ PART
 	uid = 4254504245
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = 1.20824038982391,-1.82526016235352,7.07805156707764E-08
-	rotation = 0.5,0.5,-0.5,0.5
+	parent = 67
+	position = 1.20824062824249,-2.01526236534119,-4.93032075610245E-06
+	rotation = 0.5000001,0.5000001,-0.5000001,0.5000002
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 97
-	srfN = srfAttach, 79
+	sym = 85
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -199.1586
+	temp = -182.7528
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7446,19 +5545,19 @@ PART
 	uid = 611024301
 	mid = 197034606
 	launchID = 1
-	parent = 79
-	position = -1.20824062824249,-1.82526016235352,3.16649675369263E-08
-	rotation = -0.5000001,0.4999999,-0.4999999,-0.5000001
+	parent = 67
+	position = -1.20824098587036,-2.01526188850403,-4.86736837501667E-07
+	rotation = -0.5000002,0.5,-0.5000001,-0.5000002
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 96
-	srfN = srfAttach, 79
+	sym = 84
+	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -198.9417
+	temp = -182.5701
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7517,22 +5616,22 @@ PART
 	uid = 750866065
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 1.17971646785736,0.0570087432861328,-0.681109845638275
-	rotation = 0.3535535,0.6123724,-0.6123726,0.3535533
+	parent = 1
+	position = 1.17971813678741,-0.13299086689949,-0.681111574172974
+	rotation = 0.3535536,0.6123725,-0.6123727,0.3535533
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 100
-	sym = 102
-	srfN = srfAttach, 0
+	sym = 88
+	sym = 90
+	srfN = srfAttach, 1
 	attN = None, -1
 	attN = None, -1
 	mass = 0.001
-	temp = -200.8086
+	temp = -198.3968
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7553,21 +5652,20 @@ PART
 	uid = 2543701096
 	mid = 197034606
 	launchID = 1
-	parent = 98
-	position = 1.22834837436676,0.1639404296875,-0.71244490146637
-	rotation = -0.1830127,0.1830127,-0.6830128,0.6830128
+	parent = 86
+	position = 1.22834241390228,-0.0260653104633093,-0.71245288848877
+	rotation = -0.1830127,0.1830127,-0.683013,0.6830129
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: crewCabin_3; pos: -1.33759,-0.2344752,-0.009106727; dir: -0.9849597,-0.1726544,-0.006696203
-	sym = 101
-	sym = 103
-	srfN = srfAttach, 98
+	sym = 89
+	sym = 91
+	srfN = srfAttach, 86
 	mass = 0.05
-	temp = -200.1281
+	temp = -197.9611
 	expt = 0
 	state = 1
 	connected = True
@@ -7588,22 +5686,22 @@ PART
 	uid = 279863027
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = -1.17971658706665,0.0570087432861328,-0.681109428405762
-	rotation = -0.3535535,0.6123723,-0.6123726,-0.3535534
+	parent = 1
+	position = -1.17972421646118,-0.132997587323189,-0.681114673614502
+	rotation = -0.3535536,0.6123724,-0.6123727,-0.3535534
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 98
-	sym = 102
-	srfN = srfAttach, 0
+	sym = 86
+	sym = 90
+	srfN = srfAttach, 1
 	attN = None, -1
 	attN = None, -1
 	mass = 0.001
-	temp = -200.638
+	temp = -198.2284
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7624,21 +5722,20 @@ PART
 	uid = 1681498102
 	mid = 197034606
 	launchID = 1
-	parent = 100
-	position = -1.23116958141327,0.1639404296875,-0.707558691501617
-	rotation = -0.6830128,0.6830128,-0.1830126,0.1830127
+	parent = 88
+	position = -1.23116993904114,-0.0260594133287668,-0.707560122013092
+	rotation = -0.6830128,0.6830129,-0.1830126,0.1830127
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: crewCabin_3; pos: -1.337562,-0.2344466,-0.009104952; dir: -0.9849597,-0.1726544,-0.006696203
-	sym = 99
-	sym = 103
-	srfN = srfAttach, 100
+	sym = 87
+	sym = 91
+	srfN = srfAttach, 88
 	mass = 0.05
-	temp = -200.0429
+	temp = -197.8767
 	expt = 0
 	state = 1
 	connected = True
@@ -7659,22 +5756,22 @@ PART
 	uid = 140111402
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 2.10478901863098E-07,0.0570087432861328,1.36221992969513
-	rotation = -0.7071069,-8.019536E-08,4.05545E-08,-0.7071067
+	parent = 1
+	position = -9.78415641839092E-07,-0.132992699742317,1.36221468448639
+	rotation = -0.7071071,-5.349788E-08,3.671624E-08,-0.7071069
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 98
-	sym = 100
-	srfN = srfAttach, 0
+	sym = 86
+	sym = 88
+	srfN = srfAttach, 1
 	attN = None, -1
 	attN = None, -1
 	mass = 0.001
-	temp = -200.4679
+	temp = -198.0605
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7695,21 +5792,20 @@ PART
 	uid = 2774739948
 	mid = 197034606
 	launchID = 1
-	parent = 102
-	position = 0.00282097980380058,0.1639404296875,1.42000389099121
-	rotation = -0.4999999,0.5000001,0.5000001,-0.5000001
+	parent = 90
+	position = 0.00282474304549396,-0.0260569024831057,1.42000305652618
+	rotation = -0.5000001,0.5000002,0.5000003,-0.5000002
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: crewCabin_3; pos: -1.337605,-0.2344692,-0.009090267; dir: -0.9849597,-0.1726544,-0.006696203
-	sym = 99
-	sym = 101
-	srfN = srfAttach, 102
+	sym = 87
+	sym = 89
+	srfN = srfAttach, 90
 	mass = 0.05
-	temp = -199.958
+	temp = -197.7926
 	expt = 0
 	state = 1
 	connected = True
@@ -7730,24 +5826,24 @@ PART
 	uid = 1405169467
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 0.0299674700945616,-0.0999698638916016,-1.24197006225586
-	rotation = 4.711668E-08,0.7933537,-3.615386E-08,-0.6087611
+	parent = 1
+	position = 0.029970146715641,-0.289968639612198,-1.24197471141815
+	rotation = 1.476959E-08,0.7933539,-3.210852E-08,-0.6087612
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_78; pos: 0.03069616,-0.2844715,-0.01903552; dir: 0.1070226,-0.992039,-0.06636803
-	sym = 105
-	sym = 106
-	sym = 107
-	sym = 108
-	sym = 109
-	srfN = srfAttach, 0
+	cData = tgt: RCSTank1-2_66; pos: 0.03068586,-0.284417,-0.01902932; dir: 0.1070226,-0.992039,-0.06636803
+	sym = 93
+	sym = 94
+	sym = 95
+	sym = 96
+	sym = 97
+	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -200.0172
+	temp = -197.4861
 	expt = 0
 	state = 1
 	connected = True
@@ -7768,24 +5864,24 @@ PART
 	uid = 3290571370
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = -1.06059455871582,-0.0999698638916016,-0.646937847137451
-	rotation = 2.272731E-08,0.3826839,-5.48685E-08,-0.9238794
+	parent = 1
+	position = -1.06059384346008,-0.289969354867935,-0.646944344043732
+	rotation = -3.675566E-09,0.382684,-7.791792E-08,-0.9238796
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: probeStackLarge_0; pos: 3.203156E-06,-7.294119E-06,-3.708926E-06; dir: 0.1070226,-0.992039,-0.06636803
-	sym = 104
-	sym = 106
-	sym = 107
-	sym = 108
-	sym = 109
-	srfN = srfAttach, 0
+	cData = tgt: probeStackLarge_1; pos: -6.743462E-07,-5.401671E-06,3.877511E-06; dir: 0.1070226,-0.992039,-0.06636803
+	sym = 92
+	sym = 94
+	sym = 95
+	sym = 96
+	sym = 97
+	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -199.7996
+	temp = -197.2712
 	expt = 0
 	state = 1
 	connected = True
@@ -7806,24 +5902,24 @@ PART
 	uid = 3898505987
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = -1.09056162834167,-0.0999698638916016,0.595032811164856
-	rotation = -7.751844E-09,-0.1305258,-5.888117E-08,-0.9914449
+	parent = 1
+	position = -1.0905613899231,-0.289969712495804,0.595029890537262
+	rotation = 1.375931E-08,-0.1305258,-5.704514E-08,-0.9914451
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_78; pos: 0.0306884,-0.2844135,-0.0190088; dir: 0.1070226,-0.992039,-0.06636803
-	sym = 104
-	sym = 105
-	sym = 107
-	sym = 108
-	sym = 109
-	srfN = srfAttach, 0
+	cData = tgt: RCSTank1-2_66; pos: 0.03069631,-0.2844273,-0.01902859; dir: 0.1070226,-0.992039,-0.06636803
+	sym = 92
+	sym = 93
+	sym = 95
+	sym = 96
+	sym = 97
+	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -199.5824
+	temp = -197.0567
 	expt = 0
 	state = 1
 	connected = True
@@ -7844,24 +5940,24 @@ PART
 	uid = 3937480016
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = -0.0299673583358526,-0.0999698638916016,1.24197089672089
-	rotation = -3.615386E-08,-0.6087611,-4.711667E-08,-0.7933536
+	parent = 1
+	position = -0.0299657415598631,-0.289969325065613,1.2419661283493
+	rotation = -3.098167E-08,-0.6087613,-6.962223E-08,-0.7933538
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: probeStackLarge_0; pos: -4.896086E-06,9.715557E-06,3.375245E-06; dir: 0.1070226,-0.992039,-0.06636803
-	sym = 104
-	sym = 105
-	sym = 106
-	sym = 108
-	sym = 109
-	srfN = srfAttach, 0
+	cData = tgt: probeStackLarge_1; pos: -2.89088E-06,-3.784894E-06,-1.953503E-07; dir: 0.1070226,-0.992039,-0.06636803
+	sym = 92
+	sym = 93
+	sym = 94
+	sym = 96
+	sym = 97
+	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -199.3656
+	temp = -196.8428
 	expt = 0
 	state = 1
 	connected = True
@@ -7882,24 +5978,24 @@ PART
 	uid = 3264990364
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 1.06059443950653,-0.0999698638916016,0.646937906742096
-	rotation = -5.486849E-08,-0.9238794,-2.27273E-08,-0.3826838
+	parent = 1
+	position = 1.06059730052948,-0.289968580007553,0.646935760974884
+	rotation = -4.839243E-08,-0.9238796,-4.588813E-08,-0.3826839
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: probeStackLarge_0; pos: -9.019425E-06,4.298986E-06,2.528882E-07; dir: 0.1070226,-0.992039,-0.06636803
-	sym = 104
-	sym = 105
-	sym = 106
-	sym = 107
-	sym = 109
-	srfN = srfAttach, 0
+	cData = tgt: probeStackLarge_1; pos: 5.057625E-06,-1.178682E-05,6.069143E-06; dir: 0.1070226,-0.992039,-0.06636803
+	sym = 92
+	sym = 93
+	sym = 94
+	sym = 95
+	sym = 97
+	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -199.1494
+	temp = -196.6292
 	expt = 0
 	state = 1
 	connected = True
@@ -7920,24 +6016,24 @@ PART
 	uid = 616919494
 	mid = 197034606
 	launchID = 1
-	parent = 0
-	position = 1.0905613899231,-0.0999698638916016,-0.595032513141632
-	rotation = -5.888117E-08,-0.991445,7.751821E-09,0.1305257
+	parent = 1
+	position = 1.09056484699249,-0.289968222379684,-0.595038414001465
+	rotation = -6.966403E-08,-0.9914452,-1.264683E-08,0.1305257
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_78; pos: 0.03067501,-0.2844366,-0.0190477; dir: 0.1070226,-0.992039,-0.06636803
-	sym = 104
-	sym = 105
-	sym = 106
-	sym = 107
-	sym = 108
-	srfN = srfAttach, 0
+	cData = tgt: RCSTank1-2_66; pos: 0.03068392,-0.284424,-0.01903174; dir: 0.1070226,-0.992039,-0.06636803
+	sym = 92
+	sym = 93
+	sym = 94
+	sym = 95
+	sym = 96
+	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -198.9337
+	temp = -196.4161
 	expt = 0
 	state = 1
 	connected = True
@@ -7954,11 +6050,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 137973499.695502
+	Stage = True, 0.06
 	Gear = True, 0
-	Light = False, 0
-	RCS = True, 137985180.672329
-	SAS = False, 0
+	Light = True, 137985307.672397
+	RCS = True, 137985330.752409
+	SAS = False, 0.06
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -7985,18 +6081,16 @@ FLIGHTPLAN
 }
 TARGET
 {
-	type = PartModule
-	vesselID = 9a9c5c6a-65df-4460-8478-a20b6df07c86
-	partID = 3418612667
-	moduleIdx = 0
+	type = Generic
+	tgtId = New Game Object
 }
 CTRLSTATE
 {
-	pitch = -0.03502572
-	yaw = 0.1335948
-	roll = -0.0226508
+	pitch = 0.1080447
+	yaw = 0.06231377
+	roll = 0.001271691
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 1
 }
