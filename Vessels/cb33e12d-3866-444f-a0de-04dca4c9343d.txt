@@ -5,32 +5,32 @@ sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 1.04000055789948
+met = 279.15174806118
 lct = 137961870.108891
 root = 0
-lat = 0.273723620364362
-lon = 200.927550915876
-alt = 2838649.39406205
+lat = 0.27584564726885
+lon = 201.071779698318
+alt = 2833477.57772463
 hgt = -1
-nrm = 0.3363454,-0.9385605,0.07730497
-rot = -0.5858373,-0.6406549,0.3219301,-0.377779
-CoM = -0.000454843,-0.8427619,-0.0003024042
+nrm = -0.07148271,-0.7355641,-0.6736735
+rot = 0.1214542,-0.1390966,0.6609581,-0.7273483
+CoM = -4.874542E-06,-0.8411889,3.701448E-05
 stg = 1
 prst = False
 ref = 1205069243
 ctrl = True
-cPch = 0
-cHdg = 0
+cPch = 0.1059999
+cHdg = -7.421999
 cMod = 0
 ORBIT
 {
-	SMA = 3438222.51590492
-	ECC = 0.0141685724803026
-	INC = 0.273771684723134
-	LPE = 182.405664981378
-	LAN = 253.722375236626
-	MNA = 4.71778373798609
-	EPH = 137961871.168891
+	SMA = 3583511.93879378
+	ECC = 0.0469066568824531
+	INC = 0.276351457747008
+	LPE = 114.567580871489
+	LAN = 263.065036760218
+	MNA = 5.8365726506663
+	EPH = 137962149.300639
 	REF = 1
 }
 PART
@@ -379,7 +379,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 251.857004070153
+		amount = 229.94305166906
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -427,9 +427,9 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 0
+		currentThrottle = 0.02999997
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -443,7 +443,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -454,7 +454,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -571,7 +571,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0698817521333694
+		amount = 0.0762424298743873
 		maxAmount = 2
 		flowState = True
 		isTweakable = False
@@ -1847,7 +1847,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.4521884, 0.4519204, -0.5437709, 0.5436973)
+		currentRotation = (-0.6575009, -0.6572319, 0.2604798, -0.2605556)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -1929,7 +1929,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (-0.543708, -0.5437932, 0.4519049, -0.4521644)
+		currentRotation = (0.2605497, 0.2604856, -0.6572314, 0.6575013)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -2385,7 +2385,7 @@ PART
 	{
 		name = ModuleDockingNode
 		isEnabled = True
-		state = Disengage
+		state = Ready
 		dockUId = 1489560211
 		dockNodeIdx = 0
 		EVENTS
@@ -2490,12 +2490,6 @@ PART
 				actionGroup = None
 			}
 		}
-		DOCKEDVESSEL
-		{
-			vesselName = Orbiter Two
-			vesselType = 6
-			rootUId = 1205069243
-		}
 	}
 }
 ACTIONGROUPS
@@ -2504,7 +2498,7 @@ ACTIONGROUPS
 	Gear = True, 0
 	Light = False, 0
 	RCS = False, 0
-	SAS = False, 0
+	SAS = True, 137961879.728896
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -2529,13 +2523,18 @@ DISCOVERY
 FLIGHTPLAN
 {
 }
+TARGET
+{
+	type = Vessel
+	vesselID = 3af5141b-346e-4402-88a5-efd7398c32ae
+}
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = -0.0003500945
+	yaw = 0.1488665
+	roll = -0.001292698
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 0.02999997
 }
