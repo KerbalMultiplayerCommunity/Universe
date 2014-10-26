@@ -5,32 +5,32 @@ sit = SUB_ORBITAL
 landed = False
 landedAt = 
 splashed = False
-met = 302.248906418681
+met = 420.808881685138
 lct = 105996645.225613
 root = 0
-lat = -0.102239021362758
-lon = -52.1849081750199
-alt = 73271.1424053414
+lat = -0.27479203350787
+lon = -33.7270236206987
+alt = 74465.8402190558
 hgt = -1
-nrm = 0.0620464,0.9968815,0.04876019
-rot = -0.6928814,-0.2035848,-0.2128297,0.6581582
-CoM = 0.000264651,-12.83764,-0.0001392998
-stg = 1
+nrm = -0.9697825,0.2438303,0.008284578
+rot = -0.2931812,-0.6358055,-0.6567312,0.2801788
+CoM = 0.0001851476,-6.863301,2.908671E-06
+stg = 0
 prst = False
 ref = 3527727959
 ctrl = True
-cPch = 0.7179999
-cHdg = 0.6759999
+cPch = -0.4146829
+cHdg = -3.391122
 cMod = 0
 ORBIT
 {
-	SMA = 441332.187508338
-	ECC = 0.529548143354765
-	INC = 0.102337821439129
-	LPE = 89.1980371620463
-	LAN = 227.676877774713
-	MNA = 3.33047897644851
-	EPH = 105996947.514519
+	SMA = 740245.211035116
+	ECC = 0.115410441161356
+	INC = 0.818931940089082
+	LPE = 155.528601211192
+	LAN = 321.633223114564
+	MNA = 0.618404243669318
+	EPH = 105997066.074494
 	REF = 1
 }
 PART
@@ -50,11 +50,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = bottom, 1
-	attN = top, 14
+	attN = top, 6
 	mass = 0.5
-	temp = -93.95636
+	temp = -82.11687
 	expt = 0
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -178,7 +178,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 29.9998716769136
+		amount = 28.742930617464
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -205,9 +205,9 @@ PART
 	attN = top, 0
 	attN = bottom, 2
 	mass = 1.87
-	temp = -93.76483
+	temp = -81.97237
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -222,7 +222,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 1518.289
+		amount = 369.744445321071
 		maxAmount = 1518.289
 		flowState = True
 		isTweakable = True
@@ -232,7 +232,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 1855.686
+		amount = 451.909254445743
 		maxAmount = 1855.686
 		flowState = True
 		isTweakable = True
@@ -259,9 +259,9 @@ PART
 	attN = top, 1
 	attN = bottom, 3
 	mass = 10
-	temp = -93.40981
+	temp = -81.71164
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -312,846 +312,15 @@ PART
 	srfN = None, -1
 	attN = None, -1
 	attN = top2, 2
-	attN = bottom, 4
+	attN = None, -1
 	mass = 8
-	temp = -93.77953
+	temp = -26.9418
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
 	rTrf = KW3mengineWildcarXR
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		EVENTS
-		{
-			LockGimbal
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Gimbal
-				guiName = Lock Gimbal
-				category = Lock Gimbal
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			FreeGimbal
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Free Gimbal
-				guiName = Free Gimbal
-				category = Free Gimbal
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAlternator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		EVENTS
-		{
-			Jettison
-			{
-				active = True
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 0.00800826893559601
-		maxAmount = 0.239999994635582
-		flowState = True
-		isTweakable = False
-		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = size3Decoupler
-	uid = 1855052097
-	mid = 1800481918
-	launchID = 1
-	parent = 3
-	position = 0,-15.1428871154785,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 1
-	sqor = 0
-	sidx = 1
-	attm = 0
-	srfN = None, -1
-	attN = top, 3
-	attN = bottom, 5
-	mass = 0.8
-	temp = -93.71429
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = size3Decoupler
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = KWFuelAdapter5x3
-	uid = 2575801293
-	mid = 1800481918
-	launchID = 1
-	parent = 4
-	position = 0,-16.765697479248,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 4
-	attN = bottom, 10
-	mass = 2.9
-	temp = -93.75932
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KWFuelAdapter5x3
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 0
-		maxAmount = 2383.379
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 0
-		maxAmount = 2913.019
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = rtg
-	uid = 4244167499
-	mid = 1800481918
-	launchID = 1
-	parent = 5
-	position = -2.01191711425781,-17.5137786865234,1.07288360595703E-06
-	rotation = -0.567039,-0.4224533,-0.567039,0.4224533
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 8
-	srfN = srfAttach, 5
-	attN = top, 7
-	attN = None, -1
-	mass = 0.08
-	temp = -93.61607
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = rtg
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleGenerator
-		isEnabled = True
-		generatorIsActive = True
-		throttle = 0
-		EVENTS
-		{
-			Activate
-			{
-				active = False
-				guiActive = True
-				guiIcon = Activate Generator
-				guiName = Activate Generator
-				category = Activate Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Generator
-				guiName = Shutdown Generator
-				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = probeCoreSphere
-	uid = 2399131915
-	mid = 1800481918
-	launchID = 1
-	parent = 6
-	position = -1.37457609176636,-17.7040977478027,1.07288360595703E-06
-	rotation = 2.761446E-09,-3.706558E-09,-0.8019143,0.5974392
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 9
-	srfN = None, -1
-	attN = bottom, 6
-	mass = 0.05
-	temp = -93.40044
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = probeCoreSphere
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = Operational
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleReactionWheel
-		isEnabled = True
-		stateString = Operational
-		WheelState = Active
-		EVENTS
-		{
-			OnToggle
-			{
-				active = True
-				guiActive = True
-				guiIcon = Toggle Torque
-				guiName = Toggle Torque
-				category = Toggle Torque
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			Activate
-			{
-				actionGroup = None
-			}
-			Deactivate
-			{
-				actionGroup = None
-			}
-			Toggle
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSAS
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-			at = Kerbin
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-		}
-		SubOrbited
-		{
-			at = Kerbin
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 9.99987167691363
-		maxAmount = 10
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = rtg
-	uid = 3574791394
-	mid = 1800481918
-	launchID = 1
-	parent = 5
-	position = 2.0119149684906,-17.5137786865234,0
-	rotation = -0.567039,0.4224533,0.567039,0.4224532
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 6
-	srfN = srfAttach, 5
-	attN = top, 9
-	attN = None, -1
-	mass = 0.08
-	temp = -93.54871
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = rtg
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleGenerator
-		isEnabled = True
-		generatorIsActive = True
-		throttle = 0
-		EVENTS
-		{
-			Activate
-			{
-				active = False
-				guiActive = True
-				guiIcon = Activate Generator
-				guiName = Activate Generator
-				category = Activate Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Generator
-				guiName = Shutdown Generator
-				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = probeCoreSphere
-	uid = 1846089213
-	mid = 1800481918
-	launchID = 1
-	parent = 8
-	position = 1.37457597255707,-17.7040977478027,0
-	rotation = -0.8019143,0.5974392,-2.29538E-08,-5.348391E-08
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 7
-	srfN = None, -1
-	attN = bottom, 8
-	mass = 0.05
-	temp = -93.36614
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = probeCoreSphere
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = Operational
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleReactionWheel
-		isEnabled = True
-		stateString = Operational
-		WheelState = Active
-		EVENTS
-		{
-			OnToggle
-			{
-				active = True
-				guiActive = True
-				guiIcon = Toggle Torque
-				guiName = Toggle Torque
-				category = Toggle Torque
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			Activate
-			{
-				actionGroup = None
-			}
-			Deactivate
-			{
-				actionGroup = None
-			}
-			Toggle
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSAS
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-			at = Kerbin
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-		}
-		SubOrbited
-		{
-			at = Kerbin
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 9.99987167691363
-		maxAmount = 10
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = KW5mtankL1.5
-	uid = 2123427896
-	mid = 1800481918
-	launchID = 1
-	parent = 5
-	position = 0,-21.6006965637207,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 5
-	attN = bottom, 11
-	mass = 12.7
-	temp = -93.40717
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW5mtankL1.5
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 2459.48543816793
-		maxAmount = 10368
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 3006.03729219614
-		maxAmount = 12672
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = KW5mengineTitanV
-	uid = 3597051708
-	mid = 1800481918
-	launchID = 1
-	parent = 10
-	position = 0,-29.0256080627441,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 1
-	dstg = 2
-	sqor = 1
-	sidx = 0
-	attm = 0
-	srfN = None, -1
-	attN = None, -1
-	attN = top2, 10
-	attN = None, -1
-	mass = 22
-	temp = -93.4096
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW5mengineTitanV
 	modCost = 0
 	EVENTS
 	{
@@ -1310,7 +479,7 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.639999985694885
+		maxAmount = 0.239999994635582
 		flowState = True
 		isTweakable = False
 		hideFlow = True
@@ -1332,12 +501,12 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 13
+	sym = 5
 	srfN = srfAttach, 1
 	mass = 1E-05
-	temp = -93.48362
+	temp = -81.74908
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1697,10 +866,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 105996645.225613
-				deltaVExpended = 3727.60241187894
-				dragLosses = 928.779298004137
-				gravityLosses = 1270.92889338003
-				steeringLosses = 159.757336533864
+				deltaVExpended = 4761.46531378307
+				dragLosses = 929.110795432044
+				gravityLosses = 1260.24666150621
+				steeringLosses = 388.362046934515
 				markLatitude = -0.0970745868523649
 				markLongitude = -74.5576170462986
 				markAltitude = 117.552592443069
@@ -1753,7 +922,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4.99987167691363
+		amount = 3.74293061746554
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -1776,12 +945,12 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 12
+	sym = 4
 	srfN = srfAttach, 1
 	mass = 1E-05
-	temp = -93.38666
+	temp = -81.67662
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1880,7 +1049,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4.99987167691363
+		amount = 3.74293061746554
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -1905,11 +1074,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = top, 0
-	attN = bottom, 15
+	attN = bottom, 7
 	mass = 0.08
-	temp = -93.59502
+	temp = -81.83376
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1928,7 +1097,7 @@ PART
 	uid = 3511630211
 	mid = 1800481918
 	launchID = 1
-	parent = 14
+	parent = 6
 	position = 0,0.568443298339844,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -1939,11 +1108,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
-	attN = bottom, 14
+	attN = bottom, 6
 	mass = 0.05
-	temp = -93.38725
+	temp = -81.67949
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2068,11 +1237,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 105996695.125602
+	Stage = True, 105996998.914508
 	Gear = True, 0
 	Light = False, 0
 	RCS = True, 105996638.565614
-	SAS = False, 0
+	SAS = False, 105997058.294496
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -2098,15 +1267,20 @@ FLIGHTPLAN
 {
 	MANEUVER
 	{
-		UT = 105996918.067155
-		dV = 0.451946645187064,2.22044604925031E-16,718.456046389478
+		UT = 105998135.457221
+		dV = -0.0102080581683644,-25.3893302874664,-0.162674494383999
 	}
+}
+TARGET
+{
+	type = Vessel
+	vesselID = 7c77ee80-42a7-48f4-aa9f-302cd979302c
 }
 CTRLSTATE
 {
-	pitch = -0.1421425
-	yaw = 1
-	roll = 0.0002108162
+	pitch = 0.9999998
+	yaw = 0.1212689
+	roll = -0.0001779481
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
