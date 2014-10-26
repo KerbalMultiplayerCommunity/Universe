@@ -1,21 +1,21 @@
-pid = 3052e9f7f5434f549345012e1906425b
+pid = 940e502cef864c91a461ebcb37244624
 name = TEst of something Debris
 type = Debris
-sit = SUB_ORBITAL
+sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 0.140000075101852
-lct = 137972581.476904
+met = 20.0800107717514
+lct = 137972924.911786
 root = 0
-lat = -0.298987423061974
-lon = -69.2177418258293
-alt = 95481.6303333471
+lat = -1.59697513835704
+lon = -372.621935226025
+alt = 111907.195923348
 hgt = -1
-nrm = -0.9715752,-0.04701395,0.2320159
-rot = 0.4627038,0.6242378,0.5482851,-0.309218
-CoM = -5.225608E-06,-8.910964,1.426047E-05
-stg = 4
+nrm = -0.252159,0.9411075,0.2252401
+rot = 0.5537811,0.4417627,0.5674717,-0.4197002
+CoM = -0.0001276757,-6.962729,-4.744616E-06
+stg = 3
 prst = False
 ref = 0
 ctrl = False
@@ -24,41 +24,41 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 370468.169866559
-	ECC = 0.89605449742669
-	INC = 1.67247729314152
-	LPE = 13.0569966971211
-	LAN = 62.8816839774158
-	MNA = 2.75449424071954
-	EPH = 137972581.656904
+	SMA = 1816808.67764752
+	ECC = 0.615407276707504
+	INC = 1.6713123511235
+	LPE = 234.906043509257
+	LAN = 63.0012556046269
+	MNA = 0.0594732826802502
+	EPH = 137972945.031796
 	REF = 1
 }
 PART
 {
-	name = size3Decoupler
-	uid = 2986178006
+	name = decoupler1-2
+	uid = 473019616
 	mid = 3806688602
 	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
-	istg = 3
+	istg = 2
 	dstg = 1
-	sqor = 3
+	sqor = 2
 	sidx = 1
 	attm = 0
 	srfN = None, -1
-	attN = None, -1
 	attN = bottom, 1
-	mass = 0.8
-	temp = -124.7267
+	attN = None, -1
+	mass = 0.4
+	temp = -183.0325
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = False
 	flag = Squad/Flags/default
-	rTrf = size3Decoupler
+	rTrf = decoupler1-2
 	modCost = 0
 	EVENTS
 	{
@@ -95,6 +95,28 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
 		name = FARBasicDragModel
 		isEnabled = True
 		EVENTS
@@ -107,12 +129,12 @@ PART
 }
 PART
 {
-	name = KW3mtankL2
-	uid = 4109656761
+	name = KWFuelAdapter3x2
+	uid = 1972925825
 	mid = 3806688602
 	launchID = 2
 	parent = 0
-	position = 0,-4.18656158447266,0
+	position = 0,-1.71234893798828,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 2
@@ -123,14 +145,14 @@ PART
 	srfN = None, -1
 	attN = top, 0
 	attN = bottom, 2
-	mass = 7.15
-	temp = -167.6003
+	mass = 1.87
+	temp = -186.7408
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = KW3mtankL2
+	rTrf = KWFuelAdapter3x2
 	modCost = 0
 	EVENTS
 	{
@@ -153,7 +175,7 @@ PART
 	{
 		name = LiquidFuel
 		amount = 0
-		maxAmount = 5832
+		maxAmount = 1518.289
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -163,7 +185,7 @@ PART
 	{
 		name = Oxidizer
 		amount = 0
-		maxAmount = 7128
+		maxAmount = 1855.686
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -172,31 +194,96 @@ PART
 }
 PART
 {
-	name = KW3mengineGriffonXX
-	uid = 1654966621
+	name = KW3mtankL1
+	uid = 1169715098
 	mid = 3806688602
 	launchID = 2
 	parent = 1
-	position = 0,-11.4465599060059,0
+	position = 0,-4.93172073364258,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
-	istg = 3
+	istg = 2
 	dstg = 2
-	sqor = 3
-	sidx = 2
+	sqor = -1
+	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = None, -1
-	attN = top2, 1
-	attN = None, -1
-	mass = 18
-	temp = 424.5949
+	attN = top, 1
+	attN = bottom, 3
+	mass = 3.58
+	temp = -189.1263
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = KW3mengineGriffonXX
+	rTrf = KW3mtankL1
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 0
+		maxAmount = 2916
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 3564
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = KW3mengineWildcarXR
+	uid = 649092514
+	mid = 3806688602
+	launchID = 2
+	parent = 2
+	position = 0,-10.3167304992676,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = 2
+	sidx = 2
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = top2, 2
+	attN = None, -1
+	mass = 8
+	temp = -91.08615
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mengineWildcarXR
 	modCost = 0
 	EVENTS
 	{
@@ -212,7 +299,7 @@ PART
 		flameout = True
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 0.8364912
+		currentThrottle = 1
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -366,7 +453,7 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.699999984353781
+		maxAmount = 0.239999994635582
 		flowState = True
 		isTweakable = False
 		hideFlow = True
@@ -376,11 +463,11 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 1939919521
+	uid = 3161377701
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = 1.81115186214447,-1.4570426940918,1.09896063804626E-07
+	parent = 2
+	position = 1.81744182109833,-6.05812072753906,1.09896063804626E-07
 	rotation = 0,1,0,0
 	mirror = 1,1,1
 	istg = 2
@@ -388,16 +475,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 4
 	sym = 5
 	sym = 6
 	sym = 7
 	sym = 8
-	srfN = srfAttach, 1
+	sym = 9
+	srfN = srfAttach, 2
 	mass = 0.08
-	temp = -180.1043
+	temp = -188.0772
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -462,11 +549,11 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 4291936302
+	uid = 552274555
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = 0.905576109886169,-1.4570426940918,-1.5685031414032
+	parent = 2
+	position = 0.908720910549164,-6.05812072753906,-1.57395017147064
 	rotation = 0,0.8660254,0,-0.5
 	mirror = 1,1,1
 	istg = 2
@@ -474,16 +561,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 3
-	sym = 5
+	sym = 4
 	sym = 6
 	sym = 7
 	sym = 8
-	srfN = srfAttach, 1
+	sym = 9
+	srfN = srfAttach, 2
 	mass = 0.08
-	temp = -180.0249
+	temp = -187.9222
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -548,11 +635,11 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 87965445
+	uid = 1095186744
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = -0.905576109886169,-1.4570426940918,-1.5685031414032
+	parent = 2
+	position = -0.908721208572388,-6.05812072753906,-1.57395017147064
 	rotation = 0,0.5,0,-0.8660254
 	mirror = 1,1,1
 	istg = 2
@@ -560,16 +647,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 3
 	sym = 4
-	sym = 6
+	sym = 5
 	sym = 7
 	sym = 8
-	srfN = srfAttach, 1
+	sym = 9
+	srfN = srfAttach, 2
 	mass = 0.08
-	temp = -179.9457
+	temp = -187.7678
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -634,11 +721,11 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 977076478
+	uid = 1343588215
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = -1.81115210056305,-1.4570426940918,5.02914190292358E-08
+	parent = 2
+	position = -1.81744110584259,-6.05812072753906,5.02914190292358E-08
 	rotation = 0,-4.371139E-08,0,-1
 	mirror = 1,1,1
 	istg = 2
@@ -646,16 +733,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 3
 	sym = 4
 	sym = 5
-	sym = 7
+	sym = 6
 	sym = 8
-	srfN = srfAttach, 1
+	sym = 9
+	srfN = srfAttach, 2
 	mass = 0.08
-	temp = -179.8663
+	temp = -187.6134
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -720,11 +807,11 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3978932083
+	uid = 2798408017
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = -0.905576109886169,-1.4570426940918,1.56850385665894
+	parent = 2
+	position = -0.908721208572388,-6.05812072753906,1.57395088672638
 	rotation = 0,-0.5000001,0,-0.8660254
 	mirror = 1,1,1
 	istg = 2
@@ -732,16 +819,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 3
 	sym = 4
 	sym = 5
 	sym = 6
-	sym = 8
-	srfN = srfAttach, 1
+	sym = 7
+	sym = 9
+	srfN = srfAttach, 2
 	mass = 0.08
-	temp = -179.7875
+	temp = -187.4597
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -806,11 +893,11 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3866563188
+	uid = 372748825
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = 0.905575752258301,-1.4570426940918,1.56850385665894
+	parent = 2
+	position = 0.90872049331665,-6.05812072753906,1.57395088672638
 	rotation = 0,-0.8660254,0,-0.5000001
 	mirror = 1,1,1
 	istg = 2
@@ -818,16 +905,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 3
 	sym = 4
 	sym = 5
 	sym = 6
 	sym = 7
-	srfN = srfAttach, 1
+	sym = 8
+	srfN = srfAttach, 2
 	mass = 0.08
-	temp = -179.7085
+	temp = -187.3059
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -891,471 +978,13 @@ PART
 }
 PART
 {
-	name = deltaWing
-	uid = 1881030627
+	name = KWSASmodule3mHalf
+	uid = 2042501616
 	mid = 3806688602
 	launchID = 2
-	parent = 1
-	position = 1.29782176017761,-6.54629135131836,-1.29782211780548
-	rotation = 7.309772E-08,0.9238796,-4.220298E-08,-0.3826835
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 12
-	sym = 15
-	sym = 18
-	srfN = srfAttach, 1
-	mass = 0.1
-	temp = -180.0219
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = deltaWing
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = StandardCtrlSrf
-	uid = 187445785
-	mid = 3806688602
-	launchID = 2
-	parent = 9
-	position = 3.30559897422791,-7.5749397277832,-3.30559873580933
-	rotation = 6.973674E-08,-0.3826835,6.169286E-08,-0.9238796
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 13
-	sym = 16
-	sym = 19
-	srfN = srfAttach, 9
-	mass = 0.02
-	temp = -179.8465
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARControllableSurface
-		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = StandardCtrlSrf
-	uid = 2100431022
-	mid = 3806688602
-	launchID = 2
-	parent = 9
-	position = 1.99668192863464,-7.57762145996094,-1.99668216705322
-	rotation = 6.973674E-08,-0.3826835,6.169286E-08,-0.9238796
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 14
-	sym = 17
-	sym = 20
-	srfN = srfAttach, 9
-	mass = 0.02
-	temp = -179.6835
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARControllableSurface
-		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = deltaWing
-	uid = 1220398895
-	mid = 3806688602
-	launchID = 2
-	parent = 1
-	position = -1.29782116413116,-6.54629135131836,-1.29782211780548
-	rotation = 2.184588E-08,0.3826834,-8.15299E-08,-0.9238796
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 9
-	sym = 15
-	sym = 18
-	srfN = srfAttach, 1
-	mass = 0.1
-	temp = -179.9583
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = deltaWing
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = StandardCtrlSrf
-	uid = 589264532
-	mid = 3806688602
-	launchID = 2
-	parent = 12
-	position = -3.30559825897217,-7.5749397277832,-3.30559825897217
-	rotation = 9.293476E-08,-0.9238796,-5.687878E-09,-0.3826834
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 10
-	sym = 16
-	sym = 19
-	srfN = srfAttach, 12
-	mass = 0.02
-	temp = -179.8251
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARControllableSurface
-		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = StandardCtrlSrf
-	uid = 233964046
-	mid = 3806688602
-	launchID = 2
-	parent = 12
-	position = -1.99668109416962,-7.57762145996094,-1.99668216705322
-	rotation = 9.293476E-08,-0.9238796,-5.687878E-09,-0.3826834
+	parent = 2
+	position = 1.86938488483429,-3.76136016845703,1.09896063804626E-07
+	rotation = 0,0.7071068,0,0.7071068
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
@@ -1363,17 +992,15 @@ PART
 	sidx = -1
 	attm = 1
 	sym = 11
-	sym = 17
-	sym = 20
-	srfN = srfAttach, 12
-	mass = 0.02
-	temp = -179.6566
-	expt = 0.1
-	state = 0
+	srfN = srfAttach, 2
+	mass = 0.5625
+	temp = -187.1599
+	expt = 0.5
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
+	rTrf = KWSASmodule3mHalf
 	modCost = 0
 	EVENTS
 	{
@@ -1383,70 +1010,30 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleSAS
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
 		EVENTS
 		{
-			DeflectMore
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Not enough ElectricCharge
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
 			{
-				active = False
+				active = True
 				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1454,58 +1041,23 @@ PART
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
+			Activate
 			{
 				actionGroup = None
 			}
-			DecreaseDeflect
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
 			{
 				actionGroup = None
 			}
 		}
 	}
-}
-PART
-{
-	name = deltaWing
-	uid = 1015289176
-	mid = 3806688602
-	launchID = 2
-	parent = 1
-	position = -1.29782116413116,-6.54629135131836,1.2978218793869
-	rotation = -4.220298E-08,-0.3826835,-7.309772E-08,-0.9238796
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 9
-	sym = 12
-	sym = 18
-	srfN = srfAttach, 1
-	mass = 0.1
-	temp = -179.8946
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = deltaWing
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
 	MODULE
 	{
-		name = FARWingAerodynamicModel
+		name = FARBasicDragModel
 		isEnabled = True
 		EVENTS
 		{
@@ -1517,13 +1069,13 @@ PART
 }
 PART
 {
-	name = StandardCtrlSrf
-	uid = 3380922438
+	name = KWSASmodule3mHalf
+	uid = 2548274558
 	mid = 3806688602
 	launchID = 2
-	parent = 15
-	position = -3.30559825897217,-7.5749397277832,3.30559825897217
-	rotation = 6.169286E-08,-0.9238796,-6.973674E-08,0.3826835
+	parent = 2
+	position = -1.86938416957855,-3.76136016845703,5.02914190292358E-08
+	rotation = 0,0.7071068,0,-0.7071068
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
@@ -1531,17 +1083,15 @@ PART
 	sidx = -1
 	attm = 1
 	sym = 10
-	sym = 13
-	sym = 19
-	srfN = srfAttach, 15
-	mass = 0.02
-	temp = -179.8038
-	expt = 0.1
-	state = 0
+	srfN = srfAttach, 2
+	mass = 0.5625
+	temp = -187.0104
+	expt = 0.5
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
+	rTrf = KWSASmodule3mHalf
 	modCost = 0
 	EVENTS
 	{
@@ -1551,192 +1101,30 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleSAS
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
-	}
-}
-PART
-{
-	name = StandardCtrlSrf
-	uid = 1964126078
-	mid = 3806688602
-	launchID = 2
-	parent = 15
-	position = -1.99668180942535,-7.57762145996094,1.99668192863464
-	rotation = 6.169286E-08,-0.9238796,-6.973674E-08,0.3826835
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 11
-	sym = 14
-	sym = 20
-	srfN = srfAttach, 15
-	mass = 0.02
-	temp = -179.6298
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleReactionWheel
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
+		stateString = Not enough ElectricCharge
+		WheelState = Active
 		EVENTS
 		{
-			DeflectMore
+			OnToggle
 			{
-				active = False
+				active = True
 				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1744,94 +1132,61 @@ PART
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
+			Activate
 			{
 				actionGroup = None
 			}
-			DecreaseDeflect
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
 			{
 				actionGroup = None
 			}
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
-	name = deltaWing
-	uid = 2217264672
+	name = vernierEngine
+	uid = 3873879459
 	mid = 3806688602
 	launchID = 2
 	parent = 1
-	position = 1.29782176017761,-6.54629135131836,1.2978218793869
-	rotation = -8.15299E-08,-0.9238796,-2.184588E-08,-0.3826834
+	position = 1.31007206439972,-0.877029418945313,8.00937414169312E-08
+	rotation = -0.117869,0.9930292,-1.580507E-08,0
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 9
-	sym = 12
+	sym = 13
+	sym = 14
 	sym = 15
-	srfN = srfAttach, 1
-	mass = 0.1
-	temp = -179.8312
-	expt = 0.1
-	state = 0
-	connected = False
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = deltaWing
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = StandardCtrlSrf
-	uid = 379785896
-	mid = 3806688602
-	launchID = 2
-	parent = 18
-	position = 3.30559945106506,-7.5749397277832,3.30559825897217
-	rotation = -5.687878E-09,-0.3826834,-9.293476E-08,0.9238796
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 10
-	sym = 13
 	sym = 16
-	srfN = srfAttach, 18
-	mass = 0.02
-	temp = -179.7828
-	expt = 0.1
-	state = 0
+	sym = 17
+	srfN = srfAttach, 1
+	mass = 0.08
+	temp = -185.7575
+	expt = 0.5
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
+	rTrf = vernierEngine
 	modCost = 0
 	EVENTS
 	{
@@ -1841,70 +1196,29 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleRCS
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
+		isEnabled = True
 		EVENTS
 		{
-			DeflectMore
+			Disable
 			{
-				active = False
+				active = True
 				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			DeflectLess
+			Enable
 			{
 				active = False
 				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1912,48 +1226,53 @@ PART
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
+			ToggleAction
 			{
 				actionGroup = None
 			}
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
-	name = StandardCtrlSrf
-	uid = 1940662178
+	name = vernierEngine
+	uid = 3183843228
 	mid = 3806688602
 	launchID = 2
-	parent = 18
-	position = 1.99668192863464,-7.57762145996094,1.99668216705322
-	rotation = -5.687878E-09,-0.3826834,-9.293476E-08,0.9238796
+	parent = 1
+	position = 0.655036091804504,-0.877029418945313,-1.13455522060394
+	rotation = -0.1020775,0.8599885,0.05893448,-0.4965146
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 11
+	sym = 12
 	sym = 14
+	sym = 15
+	sym = 16
 	sym = 17
-	srfN = srfAttach, 18
-	mass = 0.02
-	temp = -179.603
-	expt = 0.1
-	state = 0
+	srfN = srfAttach, 1
+	mass = 0.08
+	temp = -185.5811
+	expt = 0.5
+	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = StandardCtrlSrf
+	rTrf = vernierEngine
 	modCost = 0
 	EVENTS
 	{
@@ -1963,70 +1282,29 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleRCS
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		yawaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		rollaxis_UIEditor
-		{
-			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
-		}
+		isEnabled = True
 		EVENTS
 		{
-			DeflectMore
+			Disable
 			{
-				active = False
+				active = True
 				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			DeflectLess
+			Enable
 			{
 				active = False
 				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2034,18 +1312,365 @@ PART
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
+			ToggleAction
 			{
 				actionGroup = None
 			}
-			DecreaseDeflect
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = vernierEngine
+	uid = 1482779030
+	mid = 3806688602
+	launchID = 2
+	parent = 1
+	position = -0.655036211013794,-0.877029418945313,-1.13455617427826
+	rotation = -0.0589345,0.4965146,0.1020775,-0.8599886
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 12
+	sym = 13
+	sym = 15
+	sym = 16
+	sym = 17
+	srfN = srfAttach, 1
+	mass = 0.08
+	temp = -185.405
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = vernierEngine
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = vernierEngine
+	uid = 3400757213
+	mid = 3806688602
+	launchID = 2
+	parent = 1
+	position = -1.31007218360901,-0.877029418945313,4.09781932830811E-08
+	rotation = -1.065285E-08,-4.340669E-08,0.117869,-0.9930292
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 16
+	sym = 17
+	srfN = srfAttach, 1
+	mass = 0.08
+	temp = -185.2293
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = vernierEngine
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = vernierEngine
+	uid = 419208638
+	mid = 3806688602
+	launchID = 2
+	parent = 1
+	position = -0.655036211013794,-0.877029418945313,1.13455581665039
+	rotation = 0.05893448,-0.4965147,0.1020775,-0.8599885
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 17
+	srfN = srfAttach, 1
+	mass = 0.08
+	temp = -185.0539
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = vernierEngine
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = vernierEngine
+	uid = 3255344187
+	mid = 3806688602
+	launchID = 2
+	parent = 1
+	position = 0.655035793781281,-0.877029418945313,1.13455581665039
+	rotation = 0.1020775,-0.8599885,0.05893451,-0.4965147
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
+	srfN = srfAttach, 1
+	mass = 0.08
+	temp = -184.879
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = vernierEngine
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -2055,7 +1680,7 @@ ACTIONGROUPS
 	Gear = True, 0
 	Light = False, 0
 	RCS = True, 137972425.407891
-	SAS = False, 0
+	SAS = True, 137972913.111779
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -2082,9 +1707,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = -0.2109064
+	yaw = 1
+	roll = -0.2393218
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
