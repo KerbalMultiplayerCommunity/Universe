@@ -5,32 +5,32 @@ sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 83781046.554998
+met = 83794100.513341
 lct = 54167724.8217888
 root = 0
-lat = -0.217723129112197
-lon = -159.114726174867
-alt = 2806590.75449249
+lat = 0.277393343657733
+lon = 202.38503291127
+alt = 2857962.16930684
 hgt = -1
-nrm = 0.7200898,0.5799645,0.3809353
-rot = 0.4224594,-0.1256895,-0.8482629,-0.2935646
-CoM = 9.024856,-5.680624,2.891703
-stg = 3
+nrm = 0.9635193,-0.1997405,-0.178141
+rot = 0.04821617,0.8741789,0.4331956,0.2140748
+CoM = 9.03249,-5.732387,2.873439
+stg = 1
 prst = False
 ref = 150664424
 ctrl = True
-cPch = -0.124
-cHdg = -1.218
-cMod = 0
+cPch = 0.5685373
+cHdg = -3.543442
+cMod = 1
 ORBIT
 {
-	SMA = 3439321.23842595
-	ECC = 0.00996764766566289
-	INC = 0.277419490560154
-	LPE = 214.15272891572
-	LAN = 254.790635460205
-	MNA = 0.299457138048723
-	EPH = 137948771.436787
+	SMA = 3438845.38238404
+	ECC = 0.0100421523336536
+	INC = 0.277416786093389
+	LPE = 213.684293246768
+	LAN = 255.932241575732
+	MNA = 4.13378220042362
+	EPH = 137961825.37513
 	REF = 1
 }
 PART
@@ -1109,7 +1109,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.7012708, 0.7013152, -0.0906814, 0.09029539)
+		currentRotation = (-0.05911409, -0.05950171, 0.7046342, -0.7045962)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -1191,7 +1191,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.09029684, 0.09069814, -0.7012899, 0.7012938)
+		currentRotation = (-0.7045723, -0.7046584, 0.05950218, -0.05910946)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -1324,115 +1324,76 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleAscentGuidance
+			MechJebModuleSmartASS
 			{
+				mode = ORBITAL
+				target = OFF
+				advReference = INERTIAL
+				advDirection = FORWARD
+				forceRol = False
+				unlockParts = 
+				unlockTechs = flightControl
+				srfHdg
+				{
+					_val = 90
+					_text = 90
+				}
+				srfPit
+				{
+					_val = 90
+					_text = 90
+				}
+				srfRol
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelYaw
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelPit
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelRol
+				{
+					_val = 0
+					_text = 0
+				}
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSpaceplaneGuidance
+			{
+				runwayIndex = 1
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = flightControl
-			}
-			MechJebModuleAscentAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleNodeExecutor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleInfoItems
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentPathEditor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLandingAutopilot
-			{
-				deployGears = True
-				deployChutes = False
-				unlockParts = 
-				unlockTechs = 
-				touchdownSpeed
-				{
-					val = 0.5
-					_text = 0.5
-				}
-				limitGearsStage
-				{
-					val = 0
-					_text = 0
-				}
-				limitChutesStage
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleDockingGuidance
+			MechJebModuleRendezvousGuidance
 			{
 				unlockParts = 
 				unlockTechs = advUnmanned
 			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleManeuverPlanner
+			MechJebModuleRendezvousAutopilotWindow
 			{
 				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleRCSBalancerWindow
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleNodeEditor
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingPredictions
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
+				unlockTechs = advUnmanned
 			}
 			MechJebModuleRoverController
 			{
@@ -1447,76 +1408,64 @@ PART
 				unlockTechs = 
 				heading
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 				speed
 				{
-					val = 10
+					_val = 10
 					_text = 10
 				}
-			}
-			MechJebModuleRendezvousAutopilotWindow
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleRoverWindow
-			{
-				unlockParts = 
-				unlockTechs = fieldScience
 			}
 			MechJebModuleSettings
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleRendezvousGuidance
+			MechJebModuleRoverWindow
 			{
 				unlockParts = 
-				unlockTechs = advUnmanned
+				unlockTechs = fieldScience
 			}
-			MechJebModuleSpaceplaneAutopilot
+			MechJebModuleTargetController
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleSmartASS
-			{
-				mode = ORBITAL
-				target = OFF
-				advReference = INERTIAL
-				advDirection = FORWARD
-				forceRol = False
-				unlockParts = 
-				unlockTechs = flightControl
-				srfHdg
-				{
-					val = 90
-					_text = 90
-				}
-				srfPit
-				{
-					val = 90
-					_text = 90
-				}
-				srfRol
-				{
-					val = 0
-					_text = 0
-				}
-				rol
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleSpaceplaneGuidance
+			ModExtensionDemo
 			{
 				unlockParts = 
-				unlockTechs = unmannedTech
+				unlockTechs = 
 			}
-			MechJebModuleStageStats
+			MechJebModuleWaypointHelpWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleThrustWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleTranslatron
+			{
+				trans_spd = 0
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleWaypointWindow
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -1527,14 +1476,9 @@ PART
 				unlockTechs = advFlightControl
 				phaseAngle
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
-			}
-			MechJebModuleWaypointWindow
-			{
-				unlockParts = 
-				unlockTechs = 
 			}
 			MechJebModuleRendezvousAutopilot
 			{
@@ -1546,31 +1490,105 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleTranslatron
-			{
-				trans_spd = 0
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			ModExtensionDemo
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleTargetController
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleThrustWindow
+			MechJebModuleAttitudeAdjustment
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleWaypointHelpWindow
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = False
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
+				{
+					_val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
+					_text = 0
+				}
+				limitChutesStage
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleAscentPathEditor
 			{
 				unlockParts = 
 				unlockTechs = 
+			}
+			MechJebModuleDockingGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = False
+				overrideSafeDistance = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleInfoItems
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleNodeExecutor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRCSBalancerWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleLandingGuidance
+			{
+				landingSiteIdx = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleLandingPredictions
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
 			}
 			MechJebModuleWarpController
 			{
@@ -1584,7 +1602,7 @@ PART
 				unlockTechs = 
 				maxThrottle
 				{
-					val = 1
+					_val = 1
 					_text = 100
 				}
 			}
@@ -1594,7 +1612,7 @@ PART
 				unlockTechs = 
 				Tf
 				{
-					val = 1
+					_val = 1
 					_text = 1
 				}
 			}
@@ -1618,7 +1636,7 @@ PART
 				markUT = 137947871.354321
 				deltaVExpended = 0
 				dragLosses = 0
-				gravityLosses = 0.647860168885334
+				gravityLosses = 0.579611839455555
 				steeringLosses = 0
 				markLatitude = -0.0163125736143163
 				markLongitude = -15.9608504659699
@@ -2273,7 +2291,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.09498782,0.01268318,0.005584092; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.09500235,0.0126816,0.005549545; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 23
 	sym = 24
 	sym = 25
@@ -2309,7 +2327,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.08880556,0.01894926,0.0001269267; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.08882748,0.01891791,0.000125846; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 22
 	sym = 24
 	sym = 25
@@ -2345,7 +2363,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.09331817,0.0137831,-0.006422734; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.09332651,0.01378828,-0.006395921; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 22
 	sym = 23
 	sym = 25
@@ -2381,7 +2399,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.09941894,0.007138324,-0.0008812629; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.09941249,0.007171195,-0.0008917606; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 22
 	sym = 23
 	sym = 24
@@ -2449,7 +2467,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 0
+	sidx = 1
 	attm = 0
 	srfN = None, -1
 	attN = top, 26
@@ -2667,7 +2685,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0540483437119601
+		amount = 0.0421148884603863
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -3172,7 +3190,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (-0.5794536, -0.5793598, 0.4052647, -0.4053842)
+		currentRotation = (0.5388772, 0.5389666, 0.4578415, -0.4577199)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -3254,7 +3272,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.4053499, 0.4052364, -0.5794234, 0.5794337)
+		currentRotation = (0.5795524, 0.579561, 0.4051665, -0.4050534)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -5889,7 +5907,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 0
+	sidx = 1
 	attm = 1
 	sym = 62
 	sym = 63
@@ -5898,7 +5916,7 @@ PART
 	mass = 0.09
 	temp = NaN
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -5914,9 +5932,9 @@ PART
 	{
 		name = ModuleEngines
 		isEnabled = True
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -5932,7 +5950,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -5943,7 +5961,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -5983,7 +6001,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 1
+	sidx = 2
 	attm = 1
 	sym = 61
 	sym = 63
@@ -5992,7 +6010,7 @@ PART
 	mass = 0.09
 	temp = NaN
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -6008,9 +6026,9 @@ PART
 	{
 		name = ModuleEngines
 		isEnabled = True
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -6026,7 +6044,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -6037,7 +6055,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -6077,7 +6095,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 2
+	sidx = 3
 	attm = 1
 	sym = 61
 	sym = 62
@@ -6086,7 +6104,7 @@ PART
 	mass = 0.09
 	temp = NaN
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -6102,9 +6120,9 @@ PART
 	{
 		name = ModuleEngines
 		isEnabled = True
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -6120,7 +6138,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -6131,7 +6149,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -6171,7 +6189,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 3
+	sidx = 4
 	attm = 1
 	sym = 61
 	sym = 62
@@ -6180,7 +6198,7 @@ PART
 	mass = 0.09
 	temp = NaN
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -6196,9 +6214,9 @@ PART
 	{
 		name = ModuleEngines
 		isEnabled = True
-		staged = False
+		staged = True
 		flameout = False
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -6214,7 +6232,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -6225,7 +6243,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -6265,7 +6283,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 1
+	sidx = 2
 	attm = 1
 	sym = 66
 	srfN = srfAttach, 56
@@ -6390,7 +6408,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 2
+	sidx = 3
 	attm = 1
 	sym = 65
 	srfN = srfAttach, 56
@@ -6619,7 +6637,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 735.451069538971
+		amount = 734.906291133767
 		maxAmount = 800
 		flowState = True
 		isTweakable = True
@@ -8105,7 +8123,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 737.015653497707
+		amount = 736.470875092504
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -8126,7 +8144,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 3
+	sidx = 0
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
@@ -8297,7 +8315,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.021354149899673
+		amount = 0.0193373928581876
 		maxAmount = 2
 		flowState = True
 		isTweakable = False
@@ -8489,14 +8507,14 @@ PART
 	istg = 1
 	dstg = 2
 	sqor = 1
-	sidx = 4
+	sidx = 0
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
 	attN = top2, 86
 	attN = None, -1
 	mass = 8
-	temp = -199.9968
+	temp = -110.7795
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8660,7 +8678,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.021354149899673
+		amount = 0.0193373928581876
 		maxAmount = 0.239999994635582
 		flowState = True
 		isTweakable = False
@@ -9936,7 +9954,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.2808233, 0.280869, 0.6490576, -0.6488261)
+		currentRotation = (-0.5787072, -0.5784705, 0.4064923, -0.4064897)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -10018,7 +10036,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.6488413, 0.6490403, 0.280864, -0.280833)
+		currentRotation = (0.3827344, 0.3827355, -0.5944707, 0.5946701)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -10358,11 +10376,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 0.06
+	Stage = True, 137961808.155121
 	Gear = True, 0
 	Light = False, 0.06
-	RCS = True, 137947943.065283
-	SAS = False, 137945461.912391
+	RCS = False, 137961825.13513
+	SAS = True, 137961824.075129
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -10389,9 +10407,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = 0.06685377
+	yaw = -0.01222133
+	roll = -0.02844735
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0

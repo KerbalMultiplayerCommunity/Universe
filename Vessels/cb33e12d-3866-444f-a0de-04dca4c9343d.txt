@@ -1,44 +1,44 @@
-pid = dc05649f8e454cdb8b06f192d4d1317a
-name = pusher
-type = Probe
+pid = cb33e12d3866444fa0de04dca4c9343d
+name = Orbiter Two
+type = Ship
 sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 13225.0321712792
-lct = 137948620.236706
+met = 1.04000055789948
+lct = 137961870.108891
 root = 0
-lat = 0.283511992382815
-lon = 202.687741067082
-alt = 2852302.75178608
+lat = 0.273723620364362
+lon = 200.927550915876
+alt = 2838649.39406205
 hgt = -1
-nrm = 0.3437338,-0.5821686,-0.7368358
-rot = 0.001799666,0.3942314,-0.652692,0.6469712
-CoM = -4.792213E-05,-2.753303,-4.351139E-05
+nrm = 0.3363454,-0.9385605,0.07730497
+rot = -0.5858373,-0.6406549,0.3219301,-0.377779
+CoM = -0.000454843,-0.8427619,-0.0003024042
 stg = 1
 prst = False
-ref = 0
+ref = 1205069243
 ctrl = True
-cPch = 0.572
-cHdg = -0.46
+cPch = 0
+cHdg = 0
 cMod = 0
 ORBIT
 {
-	SMA = 3436481.00115323
-	ECC = 0.00921875131388621
-	INC = 0.283505434830661
-	LPE = 210.510238381529
-	LAN = 256.054271934333
-	MNA = 4.19739037739132
-	EPH = 137961845.328877
+	SMA = 3438222.51590492
+	ECC = 0.0141685724803026
+	INC = 0.273771684723134
+	LPE = 182.405664981378
+	LAN = 253.722375236626
+	MNA = 4.71778373798609
+	EPH = 137961871.168891
 	REF = 1
 }
 PART
 {
-	name = probeStackLarge
-	uid = 269965674
-	mid = 2279738730
-	launchID = 3
+	name = Mark1-2Pod
+	uid = 1205069243
+	mid = 1388211008
+	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -50,16 +50,18 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = bottom, 1
-	attN = top, 28
-	mass = 0.5
-	temp = -51.42461
-	expt = 0
+	attN = top, 25
+	mass = 4
+	temp = NaN
+	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = probeStackLarge (pusher)
+	rTrf = Mark1-2Pod
 	modCost = 0
+	crew = Dunbree Kerman
+	crew = Edfel Kerman
 	EVENTS
 	{
 	}
@@ -95,6 +97,17 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -138,10 +151,143 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleSAS
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Crew Report
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Report
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = False
+				guiActive = True
+				guiIcon = Reset
+				guiName = Discard Crew Report
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = False
+				guiActive = False
+				guiIcon = Reset
+				guiName = Discard Crew Report
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
 		isEnabled = True
 		EVENTS
 		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -159,7 +305,6 @@ PART
 		}
 		Surfaced
 		{
-			at = Kerbin
 		}
 		Flew
 		{
@@ -180,7 +325,17 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 30
+		amount = 150
+		maxAmount = 150
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 0
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -190,12 +345,12 @@ PART
 }
 PART
 {
-	name = fuelTank1-2
-	uid = 946026055
-	mid = 2279738730
-	launchID = 3
+	name = RCSTank1-2
+	uid = 1135693357
+	mid = 1388211008
+	launchID = 2
 	parent = 0
-	position = -2.14209740079241E-05,-2.06494927406311,-0.000218442190089263
+	position = 1.93587629837566E-06,-0.979238510131836,8.76266085469979E-07
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -206,14 +361,14 @@ PART
 	srfN = None, -1
 	attN = top, 0
 	attN = bottom, 2
-	mass = 2
-	temp = -52.16355
+	mass = 0.4
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = fuelTank1-2
+	rTrf = RCSTank1-2
 	modCost = 0
 	EVENTS
 	{
@@ -223,19 +378,9 @@ PART
 	}
 	RESOURCE
 	{
-		name = LiquidFuel
-		amount = 398.913452923711
-		maxAmount = 1440
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 487.535685577316
-		maxAmount = 1760
+		name = MonoPropellant
+		amount = 251.857004070153
+		maxAmount = 750
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -244,46 +389,12 @@ PART
 }
 PART
 {
-	name = largeAdapter2
-	uid = 2744356727
-	mid = 2279738730
-	launchID = 3
+	name = KW2mengineSPS
+	uid = 3739790172
+	mid = 1388211008
+	launchID = 2
 	parent = 1
-	position = 1.96774726646254E-05,-4.12928104400635,0.000213437349884771
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 1
-	attN = bottom, 3
-	mass = 0.08
-	temp = -51.62556
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = largeAdapter2
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = nuclearEngine
-	uid = 1304783085
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = 6.36436698187026E-06,-5.72226619720459,5.29115750396159E-05
+	position = -4.58071440334606E-07,-2.72923994064331,7.26481488300124E-08
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -292,16 +403,17 @@ PART
 	sidx = 0
 	attm = 0
 	srfN = None, -1
-	attN = top, 2
 	attN = None, -1
-	mass = 2.25
-	temp = -51.2858
+	attN = top2, 1
+	attN = None, -1
+	mass = 2
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = nuclearEngine
+	rTrf = KW2mengineSPS
 	modCost = 0
 	EVENTS
 	{
@@ -311,11 +423,11 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -331,7 +443,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -342,7 +454,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -363,58 +475,6 @@ PART
 				actionGroup = None
 			}
 			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		EVENTS
-		{
-			Jettison
-			{
-				active = False
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		EVENTS
-		{
-			Jettison
-			{
-				active = False
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			JettisonAction
 			{
 				actionGroup = None
 			}
@@ -484,17 +544,17 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTestSubject
+		name = ModuleJettison
 		isEnabled = True
 		EVENTS
 		{
-			RunTestEvent
+			Jettison
 			{
 				active = False
 				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -502,13 +562,17 @@ PART
 		}
 		ACTIONS
 		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0277499993797381
-		maxAmount = 0.0999999977648258
+		amount = 0.0698817521333694
+		maxAmount = 2
 		flowState = True
 		isTweakable = False
 		hideFlow = True
@@ -517,235 +581,706 @@ PART
 }
 PART
 {
-	name = strutConnectorMedium
-	uid = 972457803
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = -1.05398857593536,-4.05062675476074,-8.32703517517075E-05
-	rotation = -4.957765E-08,-3.110798E-08,-0.5302259,-0.8478565
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 5
-	sym = 6
-	sym = 7
-	sym = 8
-	sym = 9
-	srfN = srfAttach, 2
-	mass = 0.1
-	temp = -51.27079
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutConnectorMedium
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = strutConnectorMedium
-	uid = 1744448023
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = -0.526988387107849,-4.05065870285034,0.912816762924194
-	rotation = -0.2651129,-0.4239283,-0.4591891,-0.7342653
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 4
-	sym = 6
-	sym = 7
-	sym = 8
-	sym = 9
-	srfN = srfAttach, 2
-	mass = 0.1
-	temp = -51.25453
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutConnectorMedium
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = strutConnectorMedium
-	uid = 1348804301
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = 0.526983559131622,-4.05063343048096,0.912710666656494
-	rotation = -0.4591891,-0.7342655,-0.265113,-0.4239281
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 4
-	sym = 5
-	sym = 7
-	sym = 8
-	sym = 9
-	srfN = srfAttach, 2
-	mass = 0.1
-	temp = -51.23831
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutConnectorMedium
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = strutConnectorMedium
-	uid = 122221516
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = 1.05399739742279,-4.05069208145142,0.000177104113390669
-	rotation = -0.5302259,-0.8478565,-3.515931E-08,1.629057E-07
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 4
-	sym = 5
-	sym = 6
-	sym = 8
-	sym = 9
-	srfN = srfAttach, 2
-	mass = 0.1
-	temp = -51.22215
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutConnectorMedium
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = strutConnectorMedium
-	uid = 1214348064
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = 0.526993334293365,-4.0506591796875,-0.912722408771515
-	rotation = -0.4591891,-0.7342653,0.265113,0.4239284
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 4
-	sym = 5
-	sym = 6
-	sym = 7
-	sym = 9
-	srfN = srfAttach, 2
-	mass = 0.1
-	temp = -51.20599
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutConnectorMedium
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = strutConnectorMedium
-	uid = 3542560636
-	mid = 2279738730
-	launchID = 3
-	parent = 2
-	position = -0.526974856853485,-4.05068445205688,-0.912616848945618
-	rotation = -0.2651129,-0.4239283,0.459189,0.7342653
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 4
-	sym = 5
-	sym = 6
-	sym = 7
-	sym = 8
-	srfN = srfAttach, 2
-	mass = 0.1
-	temp = -51.18987
-	expt = 0
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutConnectorMedium
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = rtg
-	uid = 3070184587
-	mid = 2279738730
-	launchID = 3
+	name = RCSBlock
+	uid = 897438161
+	mid = 1388211008
+	launchID = 2
 	parent = 1
-	position = -0.881820023059845,-1.42228376865387,-0.000131631313706748
-	rotation = 0.5000001,0.5000001,0.5,-0.5000001
+	position = -1.2651652097702,-1.39096784591675,0.000742166070267558
+	rotation = 0,0,0,-1
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
+	sym = 9
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 1760823565
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -0.894080877304077,-1.39096593856812,0.895130753517151
+	rotation = -3.67469E-09,-0.3826836,-3.819224E-10,-0.9238797
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
+	sym = 9
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 720125238
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = 0.000742049072869122,-1.39096903800964,1.26516270637512
+	rotation = 9.176103E-09,-0.7071069,7.357658E-09,-0.7071071
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 4
+	sym = 6
+	sym = 7
+	sym = 8
+	sym = 9
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 3789724879
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = 0.895130574703217,-1.3909695148468,0.89408016204834
+	rotation = -7.806571E-09,-0.9238798,-1.305695E-08,-0.3826835
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 7
+	sym = 8
+	sym = 9
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 1366767274
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = 1.26516449451447,-1.3909707069397,-0.000742844364140183
+	rotation = 2.876966E-09,-1,-7.849292E-09,4.388196E-08
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 8
+	sym = 9
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 2241106018
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = 0.89408016204834,-1.39097213745117,-0.895131826400757
+	rotation = 3.819224E-10,-0.9238797,-3.67469E-09,0.3826836
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 9
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 2980173142
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -0.00074281997513026,-1.3909695148468,-1.26516342163086
+	rotation = -7.357658E-09,-0.7071071,9.176103E-09,0.7071069
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
+	sym = 10
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 1540711882
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -0.895131409168243,-1.39096856117249,-0.894080638885498
+	rotation = 5.079857E-09,-0.3826834,-1.365048E-08,0.9238799
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
+	sym = 9
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 1177689037
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -1.26661539077759,-0.559557914733887,0.00074268935713917
+	rotation = 0,0,0,-1
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
+	sym = 17
+	sym = 18
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 597024553
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -0.895110487937927,-0.559561789035797,0.896156430244446
+	rotation = -3.67469E-09,-0.3826836,-3.819224E-10,-0.9238797
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
@@ -753,692 +1288,21 @@ PART
 	sidx = -1
 	attm = 1
 	sym = 11
-	srfN = srfAttach, 1
-	attN = None, -1
-	attN = None, -1
-	mass = 0.08
-	temp = -51.34227
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = rtg
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleGenerator
-		isEnabled = True
-		generatorIsActive = True
-		throttle = 0
-		EVENTS
-		{
-			Activate
-			{
-				active = False
-				guiActive = True
-				guiIcon = Activate Generator
-				guiName = Activate Generator
-				category = Activate Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Generator
-				guiName = Shutdown Generator
-				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = rtg
-	uid = 456280340
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 0.881822526454926,-1.42235791683197,0.000161128133186139
-	rotation = 0.4999999,-0.5000002,-0.5000002,-0.4999999
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 10
-	srfN = srfAttach, 1
-	attN = None, -1
-	attN = None, -1
-	mass = 0.08
-	temp = -51.32599
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = rtg
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleGenerator
-		isEnabled = True
-		generatorIsActive = True
-		throttle = 0
-		EVENTS
-		{
-			Activate
-			{
-				active = False
-				guiActive = True
-				guiIcon = Activate Generator
-				guiName = Activate Generator
-				category = Activate Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Generator
-				guiName = Shutdown Generator
-				category = Shutdown Generator
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 606950245
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -1.20812809467316,-3.3506178855896,0.000116585877549369
-	rotation = -1.177896E-08,-0.7071069,1.501714E-08,-0.7071068
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
 	sym = 13
 	sym = 14
 	sym = 15
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.30737
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 1037923542
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -4.68984535473282E-06,-3.3505847454071,1.20808744430542
-	rotation = 3.769984E-09,-1,3.293166E-08,2.775558E-16
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 12
-	sym = 14
-	sym = 15
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.29354
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 1892276380
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 1.20812499523163,-3.35054421424866,-0.000167624108144082
-	rotation = -1.919168E-08,-0.7071068,6.136121E-09,0.7071069
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 12
-	sym = 13
-	sym = 15
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.27973
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 28931882
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -1.00622264653794E-06,-3.35059213638306,-1.20814216136932
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 12
-	sym = 13
-	sym = 14
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.26597
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 212045437
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -1.21636044979095,-3.34357452392578,0.000115969283797313
-	rotation = -0.006489721,-0.7070677,-0.00743731,0.7070771
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 17
-	sym = 18
-	sym = 19
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.25218
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 2975680871
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 3.14008116220066E-06,-3.34353947639465,1.21637833118439
-	rotation = -0.009847857,6.802605E-06,-0.0006699663,0.9999515
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 16
-	sym = 18
-	sym = 19
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.23848
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 1902643329
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 1.21639132499695,-3.34359955787659,0.000228715405683033
-	rotation = -0.00743729,0.7070771,0.006489735,0.7070676
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 16
-	sym = 17
-	sym = 19
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.22477
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 445409220
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -1.18821917567402E-05,-3.34350442886353,-1.21650290489197
-	rotation = -0.0006700142,0.9999514,0.009847882,-6.669083E-06
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
 	sym = 16
 	sym = 17
 	sym = 18
 	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.21111
+	mass = 0.05
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = vernierEngine
+	rTrf = RCSBlock
 	modCost = 0
 	EVENTS
 	{
@@ -1487,31 +1351,35 @@ PART
 }
 PART
 {
-	name = vernierEngine
-	uid = 4213312509
-	mid = 2279738730
-	launchID = 3
+	name = RCSBlock
+	uid = 2553833631
+	mid = 1388211008
+	launchID = 2
 	parent = 1
-	position = -1.20871698856354,-0.373316317796707,-0.000159050017828122
-	rotation = 1.919168E-08,0.7071068,-6.136121E-09,-0.7071069
+	position = 0.000742757052648813,-0.559561789035797,1.26661562919617
+	rotation = 9.176103E-09,-0.7071069,7.357658E-09,-0.7071071
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 21
-	sym = 22
-	sym = 23
+	sym = 11
+	sym = 12
+	sym = 14
+	sym = 15
+	sym = 16
+	sym = 17
+	sym = 18
 	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.20148
+	mass = 0.05
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = vernierEngine
+	rTrf = RCSBlock
 	modCost = 0
 	EVENTS
 	{
@@ -1560,12 +1428,397 @@ PART
 }
 PART
 {
-	name = vernierEngine
-	uid = 1245911893
-	mid = 2279738730
-	launchID = 3
+	name = RCSBlock
+	uid = 3527663821
+	mid = 1388211008
+	launchID = 2
 	parent = 1
-	position = 3.5447101254249E-06,-0.37336990237236,1.20874273777008
+	position = 0.896157205104828,-0.559557139873505,0.895107924938202
+	rotation = -7.806571E-09,-0.9238798,-1.305695E-08,-0.3826835
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 15
+	sym = 16
+	sym = 17
+	sym = 18
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 1904877078
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = 1.26661539077759,-0.55956095457077,-0.000742985168471932
+	rotation = 2.876966E-09,-1,-7.849292E-09,4.388196E-08
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 16
+	sym = 17
+	sym = 18
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 2996680342
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = 0.895110368728638,-0.559557020664215,-0.896156549453735
+	rotation = 3.819224E-10,-0.9238797,-3.67469E-09,0.3826836
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 17
+	sym = 18
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 2618115331
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -0.00074277794919908,-0.559557020664215,-1.26661562919617
+	rotation = -7.357658E-09,-0.7071071,9.176103E-09,0.7071069
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
+	sym = 18
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 2521643542
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -0.896157264709473,-0.559561669826508,-0.895107865333557
+	rotation = 5.079857E-09,-0.3826834,-1.365048E-08,0.9238799
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
+	sym = 17
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = solarPanels4
+	uid = 3916703135
+	mid = 1388211008
+	launchID = 2
+	parent = 1
+	position = -1.20746350288391,-0.917552053928375,-6.16180045653891E-07
 	rotation = 0,0,0,-1
 	mirror = 1,1,1
 	istg = 0
@@ -1574,17 +1827,15 @@ PART
 	sidx = -1
 	attm = 1
 	sym = 20
-	sym = 22
-	sym = 23
 	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.18929
+	mass = 0.0175
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = vernierEngine
+	rTrf = solarPanels4
 	modCost = 0
 	EVENTS
 	{
@@ -1594,37 +1845,48 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRCS
+		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		isEnabled = True
+		currentRotation = (0.4521884, 0.4519204, -0.5437709, 0.5436973)
+		stateString = EXTENDED
+		storedAnimationTime = 0
+		storedAnimationSpeed = 0
 		EVENTS
 		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
+			Extend
 			{
 				active = False
 				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
+				guiIcon = Extend Panels
+				guiName = Extend Panels
+				category = Extend Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract Panels
+				guiName = Retract Panels
+				category = Retract Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
 				externalToEVAOnly = True
 			}
 		}
 		ACTIONS
 		{
-			ToggleAction
+			ExtendPanelsAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
 			{
 				actionGroup = None
 			}
@@ -1633,31 +1895,29 @@ PART
 }
 PART
 {
-	name = vernierEngine
-	uid = 2457261217
-	mid = 2279738730
-	launchID = 3
+	name = solarPanels4
+	uid = 2042352762
+	mid = 1388211008
+	launchID = 2
 	parent = 1
-	position = 1.20869588851929,-0.373337358236313,-7.39119568606839E-05
-	rotation = -1.177896E-08,-0.7071069,1.501714E-08,-0.7071068
+	position = 1.20746505260468,-0.917548000812531,4.11816358791839E-07
+	rotation = 2.876966E-09,-1,-7.849292E-09,4.388196E-08
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 20
-	sym = 21
-	sym = 23
+	sym = 19
 	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.17707
+	mass = 0.0175
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = vernierEngine
+	rTrf = solarPanels4
 	modCost = 0
 	EVENTS
 	{
@@ -1667,37 +1927,48 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleRCS
+		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		isEnabled = True
+		currentRotation = (-0.543708, -0.5437932, 0.4519049, -0.4521644)
+		stateString = EXTENDED
+		storedAnimationTime = 0
+		storedAnimationSpeed = 0
 		EVENTS
 		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
+			Extend
 			{
 				active = False
 				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
+				guiIcon = Extend Panels
+				guiName = Extend Panels
+				category = Extend Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract Panels
+				guiName = Retract Panels
+				category = Retract Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
 				externalToEVAOnly = True
 			}
 		}
 		ACTIONS
 		{
-			ToggleAction
+			ExtendPanelsAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
 			{
 				actionGroup = None
 			}
@@ -1706,378 +1977,305 @@ PART
 }
 PART
 {
-	name = vernierEngine
-	uid = 484209184
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 1.86366323760012E-05,-0.373414188623428,-1.20850694179535
-	rotation = 3.769984E-09,-1,3.293166E-08,2.775558E-16
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 20
-	sym = 21
-	sym = 22
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.16492
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 2534085087
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -1.21182370185852,-0.399944096803665,0.000179037117050029
-	rotation = -0.1195516,-0.695692,0.1265425,-0.6969271
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 25
-	sym = 26
-	sym = 27
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.15235
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 4028289610
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 6.15109456703067E-07,-0.399903506040573,1.21183300018311
-	rotation = 0.004943453,-0.9847304,0.1740148,-0.0008736224
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 26
-	sym = 27
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.14016
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 382307756
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = 1.21185779571533,-0.399941295385361,0.000167605350725353
-	rotation = 0.1265426,-0.6969271,0.1195514,0.6956921
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 25
-	sym = 27
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.12798
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 2531324358
-	mid = 2279738730
-	launchID = 3
-	parent = 1
-	position = -1.23696663649753E-05,-0.399866044521332,-1.211958527565
-	rotation = 0.1740147,-0.0008734985,-0.004943409,0.9847304
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 25
-	sym = 26
-	srfN = srfAttach, 1
-	mass = 0.08
-	temp = -51.11581
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = largeAdapter2
-	uid = 1222901367
-	mid = 2279738730
-	launchID = 3
+	name = RCSBlock
+	uid = 978042906
+	mid = 1388211008
+	launchID = 2
 	parent = 0
-	position = 3.77102219317749E-06,0.379206001758575,4.35639813076705E-05
-	rotation = 0,0,-1,0
+	position = 0.18548820912838,0.953210532665253,0.684799253940582
+	rotation = 0.1470927,-0.7818257,0.1334938,-0.5910096
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 22
+	sym = 23
+	sym = 24
+	srfN = srfAttach, 0
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 3491451100
+	mid = 1388211008
+	launchID = 2
+	parent = 0
+	position = 0.684799253940582,0.953213572502136,-0.185487255454063
+	rotation = 0.1984046,-0.9707412,-0.009615904,0.1349274
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 21
+	sym = 23
+	sym = 24
+	srfN = srfAttach, 0
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 2298309247
+	mid = 1388211008
+	launchID = 2
+	parent = 0
+	position = -0.185489311814308,0.953213453292847,-0.684797823429108
+	rotation = 0.1334937,-0.5910094,-0.1470927,0.7818257
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 21
+	sym = 22
+	sym = 24
+	srfN = srfAttach, 0
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = RCSBlock
+	uid = 3237951820
+	mid = 1388211008
+	launchID = 2
+	parent = 0
+	position = -0.684800386428833,0.953210234642029,0.185488864779472
+	rotation = -0.009615856,0.1349275,-0.1984045,0.9707412
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 21
+	sym = 22
+	sym = 23
+	srfN = srfAttach, 0
+	mass = 0.05
+	temp = NaN
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = RCSBlock
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = advSasModule
+	uid = 2311143804
+	mid = 1388211008
+	launchID = 2
+	parent = 0
+	position = 1.74049517909225E-07,1.39221858978271,-2.11153022178223E-07
+	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
@@ -2085,16 +2283,16 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 0
-	attN = bottom, 29
-	mass = 0.08
-	temp = -51.27891
+	attN = top, 26
+	attN = bottom, 0
+	mass = 0.1
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = largeAdapter2
+	rTrf = advSasModule
 	modCost = 0
 	EVENTS
 	{
@@ -2102,15 +2300,62 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Operational
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	name = dockingPort2
-	uid = 2646643390
-	mid = 2279738730
-	launchID = 3
-	parent = 28
-	position = -1.59707451530267E-06,0.568450331687927,-2.19562280108221E-05
+	uid = 2849755379
+	mid = 1388211008
+	launchID = 2
+	parent = 25
+	position = -2.02904720936203E-06,1.59125196933746,-3.73960318711397E-07
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -2120,9 +2365,9 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
-	attN = bottom, 28
+	attN = bottom, 25
 	mass = 0.05
-	temp = -51.24705
+	temp = NaN
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2140,8 +2385,8 @@ PART
 	{
 		name = ModuleDockingNode
 		isEnabled = True
-		state = Ready
-		dockUId = 2849755379
+		state = Disengage
+		dockUId = 1489560211
 		dockNodeIdx = 0
 		EVENTS
 		{
@@ -2244,6 +2489,12 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+		DOCKEDVESSEL
+		{
+			vesselName = Orbiter Two
+			vesselType = 6
+			rootUId = 1205069243
 		}
 	}
 }
