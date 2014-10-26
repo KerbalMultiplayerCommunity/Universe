@@ -5,32 +5,32 @@ sit = SUB_ORBITAL
 landed = False
 landedAt = 
 splashed = False
-met = 396.056387633085
+met = 611.549541056156
 lct = 98143511.0548473
 root = 0
-lat = -0.00117334711490151
-lon = -48.1956577322886
-alt = 50079.9363601488
+lat = -0.00593810659702084
+lon = -14.9252345774146
+alt = 50128.7365817257
 hgt = -1
-nrm = 0.8703299,0.4923611,0.01031892
-rot = 0.7060186,-0.1127894,-0.1168509,-0.6893201
-CoM = -0.0001785375,-1.523919,0.000347466
+nrm = 0.7807424,0.6246545,-0.01575266
+rot = -0.6656286,-0.1386813,-0.152376,0.717278
+CoM = 0.0001838959,-1.568412,-0.0001094625
 stg = 2
 prst = False
 ref = 3149896506
 ctrl = True
-cPch = 0.4604059
-cHdg = 10.57015
+cPch = 0.5680001
+cHdg = 4.574003
 cMod = 0
 ORBIT
 {
-	SMA = 368046.8987396
-	ECC = 0.00577986351853808
-	INC = 0.0370692504545927
-	LPE = 18.8927580409246
-	LAN = 214.279998519441
-	MNA = 2.83999261597876
-	EPH = 98143907.1312349
+	SMA = 369226.433024695
+	ECC = 0.00256859818338763
+	INC = 0.0413253328834756
+	LPE = 350.203031947427
+	LAN = 237.830152157942
+	MNA = 3.45882036927689
+	EPH = 98144122.6243884
 	REF = 6
 }
 PART
@@ -52,13 +52,13 @@ PART
 	attN = bottom, 1
 	attN = top, 45
 	mass = 0.4
-	temp = -44.68264
+	temp = -45.61113
 	expt = 0.5
 	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = decoupler1-2
+	rTrf = decoupler1-2 (Launch Ring Station B)
 	modCost = 0
 	EVENTS
 	{
@@ -135,7 +135,7 @@ PART
 	attN = bottom, 2
 	attN = top, 0
 	mass = 0.5
-	temp = -44.71574
+	temp = -45.64454
 	expt = 0
 	state = 1
 	connected = True
@@ -261,7 +261,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 29.0472825014543
+		amount = 22.8135155282901
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -288,7 +288,7 @@ PART
 	attN = top, 1
 	attN = bottom, 3
 	mass = 0.2
-	temp = -45.11333
+	temp = -46.04889
 	expt = 0.5
 	state = 1
 	connected = True
@@ -322,7 +322,7 @@ PART
 	attN = top, 2
 	attN = bottom, 4
 	mass = 5
-	temp = -45.14267
+	temp = -46.07438
 	expt = 0.5
 	state = 1
 	connected = True
@@ -339,7 +339,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 3239.04606508994
+		amount = 3238.68849415738
 		maxAmount = 3240
 		flowState = True
 		isTweakable = True
@@ -349,7 +349,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 3958.83407949795
+		amount = 3958.39704833705
 		maxAmount = 3960
 		flowState = True
 		isTweakable = True
@@ -376,7 +376,7 @@ PART
 	attN = None, -1
 	attN = bottom, 3
 	mass = 0.2
-	temp = -44.59002
+	temp = -45.51125
 	expt = 0.5
 	state = 1
 	connected = True
@@ -417,7 +417,7 @@ PART
 	srfN = , 3
 	attN = top, 6
 	mass = 0.4
-	temp = -44.58852
+	temp = -45.50878
 	expt = 0.5
 	state = 1
 	connected = True
@@ -430,6 +430,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -459,7 +470,7 @@ PART
 	attN = top, 5
 	attN = None, -1
 	mass = 2.25
-	temp = -44.3839
+	temp = -45.2994
 	expt = 0.5
 	state = 1
 	connected = True
@@ -479,7 +490,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -495,7 +506,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -506,7 +517,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -671,7 +682,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -705,7 +716,7 @@ PART
 	srfN = , 3
 	attN = top, 8
 	mass = 0.4
-	temp = -44.56128
+	temp = -45.48087
 	expt = 0.5
 	state = 1
 	connected = True
@@ -718,6 +729,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -747,7 +769,7 @@ PART
 	attN = top, 7
 	attN = None, -1
 	mass = 2.25
-	temp = -44.37092
+	temp = -45.28603
 	expt = 0.5
 	state = 1
 	connected = True
@@ -767,7 +789,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -783,7 +805,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -794,7 +816,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -959,7 +981,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -993,7 +1015,7 @@ PART
 	srfN = , 3
 	attN = top, 10
 	mass = 0.4
-	temp = -44.53408
+	temp = -45.45301
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1006,6 +1028,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -1035,7 +1068,7 @@ PART
 	attN = top, 9
 	attN = None, -1
 	mass = 2.25
-	temp = -44.35792
+	temp = -45.27263
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1055,7 +1088,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -1071,7 +1104,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -1082,7 +1115,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -1247,7 +1280,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -1281,7 +1314,7 @@ PART
 	srfN = , 3
 	attN = top, 12
 	mass = 0.4
-	temp = -44.50695
+	temp = -45.42519
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1294,6 +1327,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -1323,7 +1367,7 @@ PART
 	attN = top, 11
 	attN = None, -1
 	mass = 2.25
-	temp = -44.34493
+	temp = -45.25928
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1343,7 +1387,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -1359,7 +1403,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -1370,7 +1414,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -1535,7 +1579,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -1569,7 +1613,7 @@ PART
 	srfN = , 3
 	attN = top, 14
 	mass = 0.4
-	temp = -44.47982
+	temp = -45.39743
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1582,6 +1626,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -1611,7 +1666,7 @@ PART
 	attN = top, 13
 	attN = None, -1
 	mass = 2.25
-	temp = -44.33195
+	temp = -45.24598
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1631,7 +1686,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -1647,7 +1702,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -1658,7 +1713,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -1823,7 +1878,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -1857,7 +1912,7 @@ PART
 	srfN = , 3
 	attN = top, 16
 	mass = 0.4
-	temp = -44.45277
+	temp = -45.36973
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1870,6 +1925,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -1899,7 +1965,7 @@ PART
 	attN = top, 15
 	attN = None, -1
 	mass = 2.25
-	temp = -44.31895
+	temp = -45.23267
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1919,7 +1985,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -1935,7 +2001,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -1946,7 +2012,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -2111,7 +2177,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -2145,7 +2211,7 @@ PART
 	srfN = , 3
 	attN = top, 18
 	mass = 0.4
-	temp = -44.42575
+	temp = -45.34205
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2158,6 +2224,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -2187,7 +2264,7 @@ PART
 	attN = top, 17
 	attN = None, -1
 	mass = 2.25
-	temp = -44.30603
+	temp = -45.21943
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2207,7 +2284,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -2223,7 +2300,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -2234,7 +2311,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -2399,7 +2476,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -2433,7 +2510,7 @@ PART
 	srfN = , 3
 	attN = top, 20
 	mass = 0.4
-	temp = -44.39877
+	temp = -45.31447
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2446,6 +2523,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -2475,7 +2563,7 @@ PART
 	attN = top, 19
 	attN = None, -1
 	mass = 2.25
-	temp = -44.29321
+	temp = -45.20616
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2495,7 +2583,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -2511,7 +2599,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -2522,7 +2610,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -2687,7 +2775,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -2721,7 +2809,7 @@ PART
 	srfN = , 3
 	attN = top, 22
 	mass = 0.4
-	temp = -44.37188
+	temp = -45.28687
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2734,6 +2822,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -2763,7 +2862,7 @@ PART
 	attN = top, 21
 	attN = None, -1
 	mass = 2.25
-	temp = -44.28032
+	temp = -45.19292
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2783,7 +2882,7 @@ PART
 		isEnabled = True
 		staged = True
 		flameout = False
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -2799,7 +2898,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -2810,7 +2909,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -2975,7 +3074,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.000442839594073781
+		amount = 0
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -2998,13 +3097,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_57; pos: -6.926112,3.877689,-2.702138; dir: -0.8259706,0.4625034,-0.3222782
+	cData = tgt: Mk1FuselageStructural_57; pos: -6.926019,3.876589,-2.702412; dir: -0.8259706,0.4625034,-0.3222782
 	sym = 24
 	sym = 25
 	sym = 26
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.27732
+	temp = -45.19085
 	expt = 0
 	state = 1
 	connected = True
@@ -3034,13 +3133,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_144; pos: -6.925687,3.877345,-2.703169; dir: -0.8259706,0.4625034,-0.3222782
+	cData = tgt: Mk1FuselageStructural_144; pos: -6.925338,3.87654,-2.703098; dir: -0.8259706,0.4625034,-0.3222782
 	sym = 23
 	sym = 25
 	sym = 26
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.2417
+	temp = -45.15438
 	expt = 0
 	state = 1
 	connected = True
@@ -3070,13 +3169,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_115; pos: -6.925342,3.878229,-2.703329; dir: -0.8259706,0.4625034,-0.3222782
+	cData = tgt: Mk1FuselageStructural_115; pos: -6.924731,3.878116,-2.70434; dir: -0.8259706,0.4625034,-0.3222782
 	sym = 23
 	sym = 24
 	sym = 26
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.20612
+	temp = -45.11795
 	expt = 0
 	state = 1
 	connected = True
@@ -3106,13 +3205,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_86; pos: -6.925894,3.878974,-2.702422; dir: -0.8259706,0.4625034,-0.3222782
+	cData = tgt: Mk1FuselageStructural_86; pos: -6.924951,3.87765,-2.703927; dir: -0.8259706,0.4625034,-0.3222782
 	sym = 23
 	sym = 24
 	sym = 25
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.1707
+	temp = -45.0816
 	expt = 0
 	state = 1
 	connected = True
@@ -3142,13 +3241,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_57; pos: -6.599824,-4.941577,0.8657793; dir: -0.796142,-0.5960373,0.1043907
+	cData = tgt: Mk1FuselageStructural_57; pos: -6.598813,-4.94212,0.8657838; dir: -0.796142,-0.5960373,0.1043907
 	sym = 28
 	sym = 29
 	sym = 30
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.13684
+	temp = -45.04692
 	expt = 0
 	state = 1
 	connected = True
@@ -3178,13 +3277,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_144; pos: -6.599223,-4.94185,0.8648026; dir: -0.796142,-0.5960373,0.1043907
+	cData = tgt: Mk1FuselageStructural_144; pos: -6.598361,-4.941897,0.8649468; dir: -0.796142,-0.5960373,0.1043907
 	sym = 27
 	sym = 29
 	sym = 30
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.10222
+	temp = -45.01152
 	expt = 0
 	state = 1
 	connected = True
@@ -3214,13 +3313,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_115; pos: -6.599833,-4.941269,0.8642911; dir: -0.796142,-0.5960373,0.1043907
+	cData = tgt: Mk1FuselageStructural_115; pos: -6.599358,-4.941292,0.8632141; dir: -0.796142,-0.5960373,0.1043907
 	sym = 27
 	sym = 28
 	sym = 30
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.06763
+	temp = -44.97608
 	expt = 0
 	state = 1
 	connected = True
@@ -3250,13 +3349,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_86; pos: -6.600809,-4.940986,0.8650882; dir: -0.796142,-0.5960373,0.1043907
+	cData = tgt: Mk1FuselageStructural_86; pos: -6.599088,-4.94148,0.8637726; dir: -0.796142,-0.5960373,0.1043907
 	sym = 27
 	sym = 28
 	sym = 29
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -44.0331
+	temp = -44.94069
 	expt = 0
 	state = 1
 	connected = True
@@ -3289,7 +3388,7 @@ PART
 	sym = 32
 	srfN = srfAttach, 2
 	mass = 0.02
-	temp = -44.60012
+	temp = -45.52577
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3306,7 +3405,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 399.047282501499
+		amount = 392.813515528366
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -3332,7 +3431,7 @@ PART
 	sym = 31
 	srfN = srfAttach, 2
 	mass = 0.02
-	temp = -44.55392
+	temp = -45.47848
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3349,7 +3448,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 399.047282501499
+		amount = 392.813515528366
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -3381,7 +3480,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.50789
+	temp = -45.4314
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3469,7 +3568,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.46181
+	temp = -45.38417
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3557,7 +3656,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.4158
+	temp = -45.337
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3645,7 +3744,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.36991
+	temp = -45.29007
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3733,7 +3832,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.32408
+	temp = -45.24314
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3821,7 +3920,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.27842
+	temp = -45.19637
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3909,7 +4008,7 @@ PART
 	sym = 40
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.23284
+	temp = -45.14967
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3997,7 +4096,7 @@ PART
 	sym = 39
 	srfN = srfAttach, 2
 	mass = 0.005
-	temp = -44.18733
+	temp = -45.10312
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4076,13 +4175,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_56; pos: -4.308167,-3.221327,0.01123135; dir: -0.8009335,-0.5987499,0.00201401
+	cData = tgt: Mk1FuselageStructural_56; pos: -4.307487,-3.221942,0.01089875; dir: -0.8009335,-0.5987499,0.00201401
 	sym = 42
 	sym = 43
 	sym = 44
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -44.14304
+	temp = -45.05773
 	expt = 0
 	state = 1
 	connected = True
@@ -4112,13 +4211,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_143; pos: -4.307924,-3.221481,0.01021547; dir: -0.8009335,-0.5987499,0.00201401
+	cData = tgt: Mk1FuselageStructural_143; pos: -4.307333,-3.221563,0.01013462; dir: -0.8009335,-0.5987499,0.00201401
 	sym = 41
 	sym = 43
 	sym = 44
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -44.09835
+	temp = -45.01196
 	expt = 0
 	state = 1
 	connected = True
@@ -4148,13 +4247,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_114; pos: -4.308478,-3.220853,0.009949364; dir: -0.8009335,-0.5987499,0.00201401
+	cData = tgt: Mk1FuselageStructural_114; pos: -4.308105,-3.220943,0.009179303; dir: -0.8009335,-0.5987499,0.00201401
 	sym = 41
 	sym = 42
 	sym = 44
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -44.05376
+	temp = -44.9663
 	expt = 0
 	state = 1
 	connected = True
@@ -4184,13 +4283,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_85; pos: -4.309194,-3.220648,0.01068199; dir: -0.8009335,-0.5987499,0.00201401
+	cData = tgt: Mk1FuselageStructural_85; pos: -4.307831,-3.221267,0.009616198; dir: -0.8009335,-0.5987499,0.00201401
 	sym = 41
 	sym = 42
 	sym = 43
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -44.0093
+	temp = -44.9208
 	expt = 0
 	state = 1
 	connected = True
@@ -4224,7 +4323,7 @@ PART
 	attN = top, 0
 	attN = bottom, 46
 	mass = 0.2
-	temp = -44.52
+	temp = -45.44502
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4368,7 +4467,7 @@ PART
 	attN = top, 45
 	attN = bottom, 47
 	mass = 0.2
-	temp = -44.60348
+	temp = -45.53016
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4402,7 +4501,7 @@ PART
 	attN = top, 46
 	attN = bottom, 48
 	mass = 2.5
-	temp = -44.99835
+	temp = -45.93262
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4456,7 +4555,7 @@ PART
 	attN = top, 49
 	attN = bottom, 47
 	mass = 0.2
-	temp = -44.60541
+	temp = -45.53204
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4490,7 +4589,7 @@ PART
 	attN = bottom, 50
 	attN = top, 48
 	mass = 2.5
-	temp = -44.48376
+	temp = -45.40743
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4762,7 +4861,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 99.0472825014617
+		amount = 92.8135155283156
 		maxAmount = 100
 		flowState = True
 		isTweakable = True
@@ -4772,7 +4871,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 17.7683636496022
+		amount = 0
 		maxAmount = 40
 		flowState = True
 		isTweakable = True
@@ -4799,7 +4898,7 @@ PART
 	attN = None, -1
 	attN = bottom, 49
 	mass = 0.2
-	temp = -44.3336
+	temp = -45.25385
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4941,7 +5040,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 49
 	mass = 1E-05
-	temp = -44.28385
+	temp = -45.20288
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5060,7 +5159,7 @@ PART
 			MechJebModuleSmartASS
 			{
 				mode = TARGET
-				target = TARGET_PLUS
+				target = OFF
 				advReference = INERTIAL
 				advDirection = FORWARD
 				forceRol = True
@@ -5321,10 +5420,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 98143511.0548473
-				deltaVExpended = 0.716995230602855
+				deltaVExpended = 1.04054463654281
 				dragLosses = 0
-				gravityLosses = 3.59450628429613
-				steeringLosses = 1.2883107077226
+				gravityLosses = 3.50271516716542
+				steeringLosses = 1.86211600251005
 				markLatitude = -0.0972250724441117
 				markLongitude = -74.5576830645871
 				markAltitude = 84.0002668889239
@@ -5374,10 +5473,21 @@ PART
 			at = Duna
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4.04728250145134
+		amount = 0
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -5406,7 +5516,7 @@ PART
 	srfN = srfAttach, 47
 	attN = top, 53
 	mass = 0.04
-	temp = -44.5875
+	temp = -45.51382
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5443,7 +5553,7 @@ PART
 	attN = top, 54
 	attN = bottom, 52
 	mass = 0.2
-	temp = -44.47895
+	temp = -45.40285
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5590,7 +5700,7 @@ PART
 	attN = top, 53
 	attN = bottom, 55
 	mass = 0.2
-	temp = -44.45717
+	temp = -45.38033
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5737,7 +5847,7 @@ PART
 	attN = top, 56
 	attN = bottom, 54
 	mass = 0.1
-	temp = -44.50195
+	temp = -45.42581
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5750,6 +5860,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -5774,7 +5895,7 @@ PART
 	attN = top, 55
 	attN = bottom, 57
 	mass = 0.1
-	temp = -44.43143
+	temp = -45.35392
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5787,6 +5908,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -5811,7 +5943,7 @@ PART
 	attN = top, 56
 	attN = bottom, 58
 	mass = 0.1
-	temp = -44.42414
+	temp = -45.34646
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5824,6 +5956,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -5848,7 +5991,7 @@ PART
 	attN = top, 57
 	attN = bottom, 59
 	mass = 0.1
-	temp = -44.46696
+	temp = -45.39037
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5861,6 +6004,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -5885,7 +6039,7 @@ PART
 	attN = top, 58
 	attN = bottom, 60
 	mass = 0.1
-	temp = -44.59649
+	temp = -45.52244
 	expt = 0.5
 	state = 1
 	connected = True
@@ -5898,6 +6052,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -5922,7 +6087,7 @@ PART
 	attN = top, 59
 	attN = bottom, 61
 	mass = 2.5
-	temp = -44.47643
+	temp = -45.39968
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6131,7 +6296,7 @@ PART
 	attN = None, -1
 	attN = bottom, 60
 	mass = 0.2
-	temp = -44.331
+	temp = -45.251
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6276,7 +6441,7 @@ PART
 	sym = 149
 	srfN = srfAttach, 60
 	mass = 0.015
-	temp = -44.28373
+	temp = -45.20263
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6384,7 +6549,7 @@ PART
 	srfN = srfAttach, 59
 	attN = top, 64
 	mass = 0.04
-	temp = -44.4225
+	temp = -45.34484
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6421,7 +6586,7 @@ PART
 	attN = None, -1
 	attN = bottom, 63
 	mass = 0.5
-	temp = -44.40772
+	temp = -45.3297
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6478,7 +6643,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46294
+	temp = -45.38591
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6534,7 +6699,7 @@ PART
 	srfN = srfAttach, 65
 	attN = top, 67
 	mass = 0.04
-	temp = -44.40607
+	temp = -45.32785
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6571,7 +6736,7 @@ PART
 	attN = None, -1
 	attN = bottom, 66
 	mass = 0.5
-	temp = -44.40155
+	temp = -45.32331
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6628,7 +6793,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46004
+	temp = -45.3829
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6684,7 +6849,7 @@ PART
 	srfN = srfAttach, 68
 	attN = top, 70
 	mass = 0.04
-	temp = -44.40133
+	temp = -45.32303
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6721,7 +6886,7 @@ PART
 	attN = top, 69
 	attN = bottom, 71
 	mass = 0.5
-	temp = -44.38844
+	temp = -45.30976
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6778,7 +6943,7 @@ PART
 	attN = top, 72
 	attN = bottom, 70
 	mass = 0.05
-	temp = -44.38883
+	temp = -45.31015
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6795,7 +6960,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -6825,7 +6990,7 @@ PART
 	attN = top, 73
 	attN = bottom, 71
 	mass = 0.05
-	temp = -44.35089
+	temp = -45.27113
 	expt = 0.5
 	state = 1
 	connected = True
@@ -6842,7 +7007,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -6872,7 +7037,7 @@ PART
 	attN = None, -1
 	attN = bottom, 72
 	mass = 0.05
-	temp = -44.26728
+	temp = -45.18564
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7017,7 +7182,7 @@ PART
 	sym = 161
 	srfN = srfAttach, 68
 	mass = 0.05
-	temp = -44.27031
+	temp = -45.18892
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7067,6 +7232,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -7090,7 +7266,7 @@ PART
 	sym = 162
 	srfN = srfAttach, 65
 	mass = 0.05
-	temp = -44.27171
+	temp = -45.1904
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7140,6 +7316,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -7164,7 +7351,7 @@ PART
 	srfN = srfAttach, 59
 	attN = top, 77
 	mass = 0.04
-	temp = -44.35761
+	temp = -45.27824
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7201,7 +7388,7 @@ PART
 	attN = None, -1
 	attN = bottom, 76
 	mass = 0.05
-	temp = -44.27061
+	temp = -45.18908
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7346,7 +7533,7 @@ PART
 	sym = 165
 	srfN = srfAttach, 59
 	mass = 0.05
-	temp = -44.24379
+	temp = -45.16186
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7398,6 +7585,17 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -7414,13 +7612,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter_59; pos: -2.160832,-5.367144,-0.005178881; dir: -0.3733462,-0.9276916,-0.000986104
+	cData = tgt: largeAdapter_59; pos: -2.159726,-5.367671,-0.005078015; dir: -0.3733462,-0.9276916,-0.000986104
 	sym = 108
 	sym = 137
 	sym = 166
 	srfN = srfAttach, 55
 	mass = 0.05
-	temp = -44.29691
+	temp = -45.21614
 	expt = 0
 	state = 1
 	connected = True
@@ -7450,13 +7648,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_56; pos: -0.01094931,-0.027182,-0.000178563; dir: -0.3732923,-0.9277138,-0.0002738431
+	cData = tgt: Mk1FuselageStructural_56; pos: -0.01100718,-0.0273887,-2.993107E-05; dir: -0.3732923,-0.9277138,-0.0002738431
 	sym = 109
 	sym = 138
 	sym = 167
 	srfN = srfAttach, 55
 	mass = 0.05
-	temp = -44.24678
+	temp = -45.16485
 	expt = 0
 	state = 1
 	connected = True
@@ -7492,7 +7690,7 @@ PART
 	srfN = srfAttach, 47
 	attN = top, 82
 	mass = 0.04
-	temp = -44.55619
+	temp = -45.48172
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7529,7 +7727,7 @@ PART
 	attN = top, 83
 	attN = bottom, 81
 	mass = 0.2
-	temp = -44.46703
+	temp = -45.39049
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7676,7 +7874,7 @@ PART
 	attN = top, 82
 	attN = bottom, 84
 	mass = 0.2
-	temp = -44.45283
+	temp = -45.37584
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7823,7 +8021,7 @@ PART
 	attN = top, 85
 	attN = bottom, 83
 	mass = 0.1
-	temp = -44.50077
+	temp = -45.42455
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7836,6 +8034,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -7860,7 +8069,7 @@ PART
 	attN = top, 84
 	attN = bottom, 86
 	mass = 0.1
-	temp = -44.43098
+	temp = -45.35351
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7873,6 +8082,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -7897,7 +8117,7 @@ PART
 	attN = top, 85
 	attN = bottom, 87
 	mass = 0.1
-	temp = -44.42397
+	temp = -45.3463
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7910,6 +8130,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -7934,7 +8165,7 @@ PART
 	attN = top, 86
 	attN = bottom, 88
 	mass = 0.1
-	temp = -44.4669
+	temp = -45.39032
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7947,6 +8178,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -7971,7 +8213,7 @@ PART
 	attN = top, 87
 	attN = bottom, 89
 	mass = 0.1
-	temp = -44.59648
+	temp = -45.52243
 	expt = 0.5
 	state = 1
 	connected = True
@@ -7984,6 +8226,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -8008,7 +8261,7 @@ PART
 	attN = top, 88
 	attN = bottom, 90
 	mass = 2.5
-	temp = -44.47643
+	temp = -45.39968
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8217,7 +8470,7 @@ PART
 	attN = None, -1
 	attN = bottom, 89
 	mass = 0.2
-	temp = -44.331
+	temp = -45.251
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8362,7 +8615,7 @@ PART
 	sym = 149
 	srfN = srfAttach, 89
 	mass = 0.015
-	temp = -44.28373
+	temp = -45.20263
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8470,7 +8723,7 @@ PART
 	srfN = srfAttach, 88
 	attN = top, 93
 	mass = 0.04
-	temp = -44.4225
+	temp = -45.34486
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8507,7 +8760,7 @@ PART
 	attN = None, -1
 	attN = bottom, 92
 	mass = 0.5
-	temp = -44.40772
+	temp = -45.32969
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8564,7 +8817,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46294
+	temp = -45.38592
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8620,7 +8873,7 @@ PART
 	srfN = srfAttach, 94
 	attN = top, 96
 	mass = 0.04
-	temp = -44.40608
+	temp = -45.32785
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8657,7 +8910,7 @@ PART
 	attN = None, -1
 	attN = bottom, 95
 	mass = 0.5
-	temp = -44.40155
+	temp = -45.32332
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8714,7 +8967,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46004
+	temp = -45.38289
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8770,7 +9023,7 @@ PART
 	srfN = srfAttach, 97
 	attN = top, 99
 	mass = 0.04
-	temp = -44.40132
+	temp = -45.32302
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8807,7 +9060,7 @@ PART
 	attN = top, 98
 	attN = bottom, 100
 	mass = 0.5
-	temp = -44.38845
+	temp = -45.30977
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8864,7 +9117,7 @@ PART
 	attN = top, 101
 	attN = bottom, 99
 	mass = 0.05
-	temp = -44.38882
+	temp = -45.31016
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8881,7 +9134,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -8911,7 +9164,7 @@ PART
 	attN = top, 102
 	attN = bottom, 100
 	mass = 0.05
-	temp = -44.35089
+	temp = -45.27114
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8928,7 +9181,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -8958,7 +9211,7 @@ PART
 	attN = None, -1
 	attN = bottom, 101
 	mass = 0.05
-	temp = -44.26728
+	temp = -45.18564
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9103,7 +9356,7 @@ PART
 	sym = 161
 	srfN = srfAttach, 97
 	mass = 0.05
-	temp = -44.27031
+	temp = -45.18892
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9153,6 +9406,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -9176,7 +9440,7 @@ PART
 	sym = 162
 	srfN = srfAttach, 94
 	mass = 0.05
-	temp = -44.27171
+	temp = -45.1904
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9226,6 +9490,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -9250,7 +9525,7 @@ PART
 	srfN = srfAttach, 88
 	attN = top, 106
 	mass = 0.04
-	temp = -44.3576
+	temp = -45.27823
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9287,7 +9562,7 @@ PART
 	attN = None, -1
 	attN = bottom, 105
 	mass = 0.05
-	temp = -44.27061
+	temp = -45.18908
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9432,7 +9707,7 @@ PART
 	sym = 165
 	srfN = srfAttach, 88
 	mass = 0.05
-	temp = -44.24377
+	temp = -45.16185
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9484,6 +9759,17 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -9500,13 +9786,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter_88; pos: -2.160551,-5.367269,-0.005567916; dir: -0.3733462,-0.9276916,-0.000986104
+	cData = tgt: largeAdapter_88; pos: -2.159463,-5.367559,-0.006525027; dir: -0.3733462,-0.9276916,-0.000986104
 	sym = 79
 	sym = 137
 	sym = 166
 	srfN = srfAttach, 84
 	mass = 0.05
-	temp = -44.29632
+	temp = -45.21557
 	expt = 0
 	state = 1
 	connected = True
@@ -9536,13 +9822,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_85; pos: -0.01083853,-0.02704871,-7.109858E-05; dir: -0.3732923,-0.9277138,-0.0002738431
+	cData = tgt: Mk1FuselageStructural_85; pos: -0.01095997,-0.02712484,0.0002745932; dir: -0.3732923,-0.9277138,-0.0002738431
 	sym = 80
 	sym = 138
 	sym = 167
 	srfN = srfAttach, 84
 	mass = 0.05
-	temp = -44.24619
+	temp = -45.16416
 	expt = 0
 	state = 1
 	connected = True
@@ -9578,7 +9864,7 @@ PART
 	srfN = srfAttach, 47
 	attN = top, 111
 	mass = 0.04
-	temp = -44.52492
+	temp = -45.44968
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9615,7 +9901,7 @@ PART
 	attN = top, 112
 	attN = bottom, 110
 	mass = 0.2
-	temp = -44.45517
+	temp = -45.37831
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9762,7 +10048,7 @@ PART
 	attN = top, 111
 	attN = bottom, 113
 	mass = 0.2
-	temp = -44.44848
+	temp = -45.37143
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9909,7 +10195,7 @@ PART
 	attN = top, 114
 	attN = bottom, 112
 	mass = 0.1
-	temp = -44.49957
+	temp = -45.42334
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9922,6 +10208,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -9946,7 +10243,7 @@ PART
 	attN = top, 113
 	attN = bottom, 115
 	mass = 0.1
-	temp = -44.43056
+	temp = -45.353
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9959,6 +10256,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -9983,7 +10291,7 @@ PART
 	attN = top, 114
 	attN = bottom, 116
 	mass = 0.1
-	temp = -44.42381
+	temp = -45.34617
 	expt = 0.5
 	state = 1
 	connected = True
@@ -9996,6 +10304,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -10020,7 +10339,7 @@ PART
 	attN = top, 115
 	attN = bottom, 117
 	mass = 0.1
-	temp = -44.46684
+	temp = -45.39025
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10033,6 +10352,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -10057,7 +10387,7 @@ PART
 	attN = top, 116
 	attN = bottom, 118
 	mass = 0.1
-	temp = -44.59647
+	temp = -45.52242
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10070,6 +10400,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -10094,7 +10435,7 @@ PART
 	attN = top, 117
 	attN = bottom, 119
 	mass = 2.5
-	temp = -44.47641
+	temp = -45.39968
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10303,7 +10644,7 @@ PART
 	attN = None, -1
 	attN = bottom, 118
 	mass = 0.2
-	temp = -44.33098
+	temp = -45.25098
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10448,7 +10789,7 @@ PART
 	sym = 149
 	srfN = srfAttach, 118
 	mass = 0.015
-	temp = -44.28374
+	temp = -45.20262
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10556,7 +10897,7 @@ PART
 	srfN = srfAttach, 117
 	attN = top, 122
 	mass = 0.04
-	temp = -44.42249
+	temp = -45.34484
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10593,7 +10934,7 @@ PART
 	attN = None, -1
 	attN = bottom, 121
 	mass = 0.5
-	temp = -44.40772
+	temp = -45.32969
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10650,7 +10991,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46294
+	temp = -45.38591
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10706,7 +11047,7 @@ PART
 	srfN = srfAttach, 123
 	attN = top, 125
 	mass = 0.04
-	temp = -44.40607
+	temp = -45.32785
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10743,7 +11084,7 @@ PART
 	attN = None, -1
 	attN = bottom, 124
 	mass = 0.5
-	temp = -44.40154
+	temp = -45.32333
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10800,7 +11141,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46005
+	temp = -45.3829
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10856,7 +11197,7 @@ PART
 	srfN = srfAttach, 126
 	attN = top, 128
 	mass = 0.04
-	temp = -44.40133
+	temp = -45.32304
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10893,7 +11234,7 @@ PART
 	attN = top, 127
 	attN = bottom, 129
 	mass = 0.5
-	temp = -44.38844
+	temp = -45.30976
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10950,7 +11291,7 @@ PART
 	attN = top, 130
 	attN = bottom, 128
 	mass = 0.05
-	temp = -44.38884
+	temp = -45.31015
 	expt = 0.5
 	state = 1
 	connected = True
@@ -10967,7 +11308,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -10997,7 +11338,7 @@ PART
 	attN = top, 131
 	attN = bottom, 129
 	mass = 0.05
-	temp = -44.35089
+	temp = -45.27113
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11014,7 +11355,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -11044,7 +11385,7 @@ PART
 	attN = None, -1
 	attN = bottom, 130
 	mass = 0.05
-	temp = -44.26728
+	temp = -45.18564
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11189,7 +11530,7 @@ PART
 	sym = 161
 	srfN = srfAttach, 126
 	mass = 0.05
-	temp = -44.27031
+	temp = -45.18892
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11239,6 +11580,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -11262,7 +11614,7 @@ PART
 	sym = 162
 	srfN = srfAttach, 123
 	mass = 0.05
-	temp = -44.27171
+	temp = -45.19041
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11312,6 +11664,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -11336,7 +11699,7 @@ PART
 	srfN = srfAttach, 117
 	attN = top, 135
 	mass = 0.04
-	temp = -44.3576
+	temp = -45.27822
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11373,7 +11736,7 @@ PART
 	attN = None, -1
 	attN = bottom, 134
 	mass = 0.05
-	temp = -44.27061
+	temp = -45.18908
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11518,7 +11881,7 @@ PART
 	sym = 165
 	srfN = srfAttach, 117
 	mass = 0.05
-	temp = -44.24377
+	temp = -45.16185
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11570,6 +11933,17 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -11586,13 +11960,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter_117; pos: -2.160033,-5.367342,-0.005741056; dir: -0.3733462,-0.9276916,-0.000986104
+	cData = tgt: largeAdapter_117; pos: -2.159484,-5.367478,-0.006365818; dir: -0.3733462,-0.9276916,-0.000986104
 	sym = 79
 	sym = 108
 	sym = 166
 	srfN = srfAttach, 113
 	mass = 0.05
-	temp = -44.29575
+	temp = -45.21489
 	expt = 0
 	state = 1
 	connected = True
@@ -11622,13 +11996,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_114; pos: -0.01086228,-0.02703132,-1.345196E-05; dir: -0.3732923,-0.9277138,-0.0002738431
+	cData = tgt: Mk1FuselageStructural_114; pos: -0.01087211,-0.02706026,0.0001897394; dir: -0.3732923,-0.9277138,-0.0002738431
 	sym = 80
 	sym = 109
 	sym = 167
 	srfN = srfAttach, 113
 	mass = 0.05
-	temp = -44.2456
+	temp = -45.16364
 	expt = 0
 	state = 1
 	connected = True
@@ -11664,7 +12038,7 @@ PART
 	srfN = srfAttach, 47
 	attN = top, 140
 	mass = 0.04
-	temp = -44.49369
+	temp = -45.41768
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11701,7 +12075,7 @@ PART
 	attN = top, 141
 	attN = bottom, 139
 	mass = 0.2
-	temp = -44.44326
+	temp = -45.36621
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11848,7 +12222,7 @@ PART
 	attN = top, 140
 	attN = bottom, 142
 	mass = 0.2
-	temp = -44.44413
+	temp = -45.36701
 	expt = 0.5
 	state = 1
 	connected = True
@@ -11995,7 +12369,7 @@ PART
 	attN = top, 143
 	attN = bottom, 141
 	mass = 0.1
-	temp = -44.49834
+	temp = -45.42213
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12008,6 +12382,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -12032,7 +12417,7 @@ PART
 	attN = top, 142
 	attN = bottom, 144
 	mass = 0.1
-	temp = -44.43013
+	temp = -45.35251
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12045,6 +12430,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -12069,7 +12465,7 @@ PART
 	attN = top, 143
 	attN = bottom, 145
 	mass = 0.1
-	temp = -44.42365
+	temp = -45.34605
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12082,6 +12478,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -12106,7 +12513,7 @@ PART
 	attN = top, 144
 	attN = bottom, 146
 	mass = 0.1
-	temp = -44.4668
+	temp = -45.39018
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12119,6 +12526,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -12143,7 +12561,7 @@ PART
 	attN = top, 145
 	attN = bottom, 147
 	mass = 0.1
-	temp = -44.59646
+	temp = -45.5224
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12156,6 +12574,17 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 	}
 }
 PART
@@ -12180,7 +12609,7 @@ PART
 	attN = top, 146
 	attN = bottom, 148
 	mass = 2.5
-	temp = -44.47641
+	temp = -45.39966
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12389,7 +12818,7 @@ PART
 	attN = None, -1
 	attN = bottom, 147
 	mass = 0.2
-	temp = -44.33099
+	temp = -45.25099
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12534,7 +12963,7 @@ PART
 	sym = 120
 	srfN = srfAttach, 147
 	mass = 0.015
-	temp = -44.28371
+	temp = -45.20262
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12642,7 +13071,7 @@ PART
 	srfN = srfAttach, 146
 	attN = top, 151
 	mass = 0.04
-	temp = -44.42248
+	temp = -45.34483
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12679,7 +13108,7 @@ PART
 	attN = None, -1
 	attN = bottom, 150
 	mass = 0.5
-	temp = -44.40774
+	temp = -45.32969
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12736,7 +13165,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46294
+	temp = -45.38592
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12792,7 +13221,7 @@ PART
 	srfN = srfAttach, 152
 	attN = top, 154
 	mass = 0.04
-	temp = -44.40608
+	temp = -45.32786
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12829,7 +13258,7 @@ PART
 	attN = None, -1
 	attN = bottom, 153
 	mass = 0.5
-	temp = -44.40154
+	temp = -45.32331
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12886,7 +13315,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -44.46004
+	temp = -45.3829
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12942,7 +13371,7 @@ PART
 	srfN = srfAttach, 155
 	attN = top, 157
 	mass = 0.04
-	temp = -44.40132
+	temp = -45.32302
 	expt = 0.5
 	state = 1
 	connected = True
@@ -12979,7 +13408,7 @@ PART
 	attN = top, 156
 	attN = bottom, 158
 	mass = 0.5
-	temp = -44.38845
+	temp = -45.30976
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13036,7 +13465,7 @@ PART
 	attN = top, 159
 	attN = bottom, 157
 	mass = 0.05
-	temp = -44.38884
+	temp = -45.31017
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13053,7 +13482,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -13083,7 +13512,7 @@ PART
 	attN = top, 160
 	attN = bottom, 158
 	mass = 0.05
-	temp = -44.35089
+	temp = -45.27113
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13100,7 +13529,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 999.047282501436
+		amount = 992.81351552812
 		maxAmount = 1000
 		flowState = True
 		isTweakable = True
@@ -13130,7 +13559,7 @@ PART
 	attN = None, -1
 	attN = bottom, 159
 	mass = 0.05
-	temp = -44.26728
+	temp = -45.18564
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13275,7 +13704,7 @@ PART
 	sym = 132
 	srfN = srfAttach, 155
 	mass = 0.05
-	temp = -44.27032
+	temp = -45.18892
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13325,6 +13754,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -13348,7 +13788,7 @@ PART
 	sym = 133
 	srfN = srfAttach, 152
 	mass = 0.05
-	temp = -44.27172
+	temp = -45.1904
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13398,6 +13838,17 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 	}
 }
@@ -13422,7 +13873,7 @@ PART
 	srfN = srfAttach, 146
 	attN = top, 164
 	mass = 0.04
-	temp = -44.35759
+	temp = -45.27823
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13459,7 +13910,7 @@ PART
 	attN = None, -1
 	attN = bottom, 163
 	mass = 0.05
-	temp = -44.27061
+	temp = -45.18908
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13604,7 +14055,7 @@ PART
 	sym = 136
 	srfN = srfAttach, 146
 	mass = 0.05
-	temp = -44.24378
+	temp = -45.16184
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13656,6 +14107,17 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
@@ -13672,13 +14134,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter_146; pos: -2.160225,-5.366952,-0.00588921; dir: -0.3733462,-0.9276916,-0.000986104
+	cData = tgt: largeAdapter_146; pos: -2.159219,-5.367493,-0.005527443; dir: -0.3733462,-0.9276916,-0.000986104
 	sym = 79
 	sym = 108
 	sym = 137
 	srfN = srfAttach, 142
 	mass = 0.05
-	temp = -44.29514
+	temp = -45.21436
 	expt = 0
 	state = 1
 	connected = True
@@ -13708,13 +14170,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Mk1FuselageStructural_143; pos: -0.01084954,-0.02704246,-6.785087E-05; dir: -0.3732923,-0.9277138,-0.0002738431
+	cData = tgt: Mk1FuselageStructural_143; pos: -0.01109894,-0.0270439,-3.192648E-05; dir: -0.3732923,-0.9277138,-0.0002738431
 	sym = 80
 	sym = 109
 	sym = 138
 	srfN = srfAttach, 142
 	mass = 0.05
-	temp = -44.24502
+	temp = -45.16298
 	expt = 0
 	state = 1
 	connected = True
@@ -13744,13 +14206,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: dockingPortLarge_82; pos: -0.2638141,0.004657193,-0.01973422; dir: -0.9970075,0.01782197,-0.07522179
+	cData = tgt: dockingPortLarge_82; pos: -0.2638739,0.004585668,-0.01961606; dir: -0.9970075,0.01782197,-0.07522179
 	sym = 169
 	sym = 170
 	sym = 171
 	srfN = srfAttach, 47
 	mass = 0.05
-	temp = -44.36411
+	temp = -45.28499
 	expt = 0
 	state = 1
 	connected = True
@@ -13780,13 +14242,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: dockingPortLarge_111; pos: -0.2638298,0.004735876,-0.01970484; dir: -0.9970075,0.01782197,-0.07522179
+	cData = tgt: dockingPortLarge_111; pos: -0.2638611,0.004642407,-0.01963171; dir: -0.9970075,0.01782197,-0.07522179
 	sym = 168
 	sym = 170
 	sym = 171
 	srfN = srfAttach, 47
 	mass = 0.05
-	temp = -44.32172
+	temp = -45.24155
 	expt = 0
 	state = 1
 	connected = True
@@ -13816,13 +14278,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: dockingPortLarge_140; pos: -0.2638039,0.004679445,-0.01970425; dir: -0.9970075,0.01782197,-0.07522179
+	cData = tgt: dockingPortLarge_140; pos: -0.2638377,0.004710333,-0.0197317; dir: -0.9970075,0.01782197,-0.07522179
 	sym = 168
 	sym = 169
 	sym = 171
 	srfN = srfAttach, 47
 	mass = 0.05
-	temp = -44.27943
+	temp = -45.19836
 	expt = 0
 	state = 1
 	connected = True
@@ -13852,13 +14314,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: dockingPortLarge_53; pos: -0.2637538,0.004703746,-0.01977902; dir: -0.9970075,0.01782197,-0.07522179
+	cData = tgt: dockingPortLarge_53; pos: -0.2637937,0.004672502,-0.01977903; dir: -0.9970075,0.01782197,-0.07522179
 	sym = 168
 	sym = 169
 	sym = 170
 	srfN = srfAttach, 47
 	mass = 0.05
-	temp = -44.23724
+	temp = -45.15505
 	expt = 0
 	state = 1
 	connected = True
@@ -13893,7 +14355,7 @@ PART
 	sym = 175
 	srfN = srfAttach, 47
 	mass = 0.15
-	temp = -44.19054
+	temp = -45.10727
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13910,7 +14372,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 127.768363649607
+		amount = 76.5714666284989
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -13938,7 +14400,7 @@ PART
 	sym = 175
 	srfN = srfAttach, 47
 	mass = 0.15
-	temp = -44.14529
+	temp = -45.0609
 	expt = 0.5
 	state = 1
 	connected = True
@@ -13955,7 +14417,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 127.768363649607
+		amount = 76.5714666284989
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -13983,7 +14445,7 @@ PART
 	sym = 175
 	srfN = srfAttach, 47
 	mass = 0.15
-	temp = -44.10019
+	temp = -45.01472
 	expt = 0.5
 	state = 1
 	connected = True
@@ -14000,7 +14462,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 127.768363649607
+		amount = 76.5714666284989
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -14028,7 +14490,7 @@ PART
 	sym = 174
 	srfN = srfAttach, 47
 	mass = 0.15
-	temp = -44.05515
+	temp = -44.96864
 	expt = 0.5
 	state = 1
 	connected = True
@@ -14045,7 +14507,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 127.768363649607
+		amount = 76.5714666284989
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -14055,10 +14517,10 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 98143535.0204213
+	Stage = True, 0.04
 	Gear = True, 0
 	Light = False, 0
-	RCS = True, 98143876.5712413
+	RCS = True, 98144084.2243964
 	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
@@ -14086,16 +14548,18 @@ FLIGHTPLAN
 }
 TARGET
 {
-	type = Vessel
-	vesselID = c1549575-6bd4-4b48-809e-2eb90eaf27ed
+	type = PartModule
+	vesselID = fbd5f28f-e56e-4106-8457-7d37c73c0076
+	partID = 183721340
+	moduleIdx = 0
 }
 CTRLSTATE
 {
-	pitch = -0.2631618
-	yaw = 0.7659462
-	roll = 0.01690419
+	pitch = -0.3296831
+	yaw = -0.9967864
+	roll = 0.001238544
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 0.01999998
 }
