@@ -1,36 +1,36 @@
 pid = 459f896ba2544885a4b58b4deeeaa83d
 name = SilkyZ - Rick mk1
 type = Ship
-sit = SUB_ORBITAL
-landed = False
+sit = LANDED
+landed = True
 landedAt = 
 splashed = False
-met = 591.596906200051
+met = 1117.82225836813
 lct = 95971442.3653405
 root = 0
-lat = -0.0317721267817045
-lon = -27.3879855569639
-alt = 94048.6267989464
-hgt = -1
-nrm = -0.002189513,0.2344321,-0.9721301
-rot = 0.2933193,-0.2937477,-0.6446006,0.6420017
-CoM = 9.788914E-07,-2.910049,-0.02677335
+lat = -2.43702836400372
+lon = 16.4213535419513
+alt = 311.22647539177
+hgt = 1.631898
+nrm = -0.0008168424,0.05524446,-0.9984726
+rot = 0.6179088,-0.4619203,-0.5181577,0.3692304
+CoM = 1.951843E-05,-2.90259,-0.02899539
 stg = 0
 prst = False
 ref = 1128213776
 ctrl = True
-cPch = 0.1439998
-cHdg = 1.204
+cPch = 0.02805173
+cHdg = 2.332002
 cMod = 0
 ORBIT
 {
-	SMA = 553551.608372798
-	ECC = 0.258947086104526
-	INC = 0.0408246651634392
-	LPE = 120.116696620511
-	LAN = 174.127166006647
-	MNA = 3.39255341083366
-	EPH = 95972034.0022467
+	SMA = 300933.996803819
+	ECC = 0.994826046977487
+	INC = 2.4369460727682
+	LPE = 90.0027866645429
+	LAN = 265.604699764955
+	MNA = 3.14159348003657
+	EPH = 95972560.2275989
 	REF = 1
 }
 PART
@@ -51,7 +51,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 1
 	mass = 1.25
-	temp = -201.1885
+	temp = 17.78585
 	expt = 0.5
 	state = 1
 	connected = True
@@ -115,7 +115,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -360,7 +360,7 @@ PART
 	attN = top, 0
 	attN = bottom, 2
 	mass = 0.15
-	temp = -201.5134
+	temp = 17.81446
 	expt = 0.5
 	state = 1
 	connected = True
@@ -415,7 +415,7 @@ PART
 	RESOURCE
 	{
 		name = IntakeAir
-		amount = 0
+		amount = 0.2
 		maxAmount = 0.2
 		flowState = True
 		isTweakable = False
@@ -452,7 +452,7 @@ PART
 	attN = top, 3
 	attN = bottom, 1
 	mass = 0.1
-	temp = -201.2608
+	temp = 17.79219
 	expt = 0.5
 	state = 1
 	connected = True
@@ -470,7 +470,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -533,7 +533,7 @@ PART
 	attN = top, 4
 	attN = bottom, 2
 	mass = 0.4
-	temp = -201.7006
+	temp = 17.83116
 	expt = 0.5
 	state = 1
 	connected = True
@@ -561,7 +561,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 7.89458160759327
+		amount = 0.000446202508639492
 		maxAmount = 225
 		flowState = True
 		isTweakable = True
@@ -598,7 +598,7 @@ PART
 	attN = top, 5
 	attN = bottom, 3
 	mass = 0.1
-	temp = -201.0437
+	temp = 17.77314
 	expt = 0.5
 	state = 1
 	connected = True
@@ -616,7 +616,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -679,7 +679,7 @@ PART
 	attN = top, 4
 	attN = None, -1
 	mass = 1.2
-	temp = -200.9668
+	temp = 17.76619
 	expt = 0.5
 	state = 1
 	connected = True
@@ -697,7 +697,7 @@ PART
 	{
 		name = MultiModeEngine
 		isEnabled = True
-		runningPrimary = False
+		runningPrimary = True
 		autoSwitch = True
 		EVENTS
 		{
@@ -761,14 +761,14 @@ PART
 	MODULE
 	{
 		name = ModuleEnginesFX
-		isEnabled = False
+		isEnabled = True
 		staged = True
 		flameout = True
-		EngineIgnited = False
+		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 0
+		currentThrottle = 1
 		thrustPercentage = 100
-		manuallyOverridden = True
+		manuallyOverridden = False
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -780,7 +780,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -791,7 +791,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -823,14 +823,14 @@ PART
 	MODULE
 	{
 		name = ModuleEnginesFX
-		isEnabled = True
+		isEnabled = False
 		staged = False
 		flameout = True
-		EngineIgnited = True
+		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
-		manuallyOverridden = False
+		manuallyOverridden = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -842,7 +842,7 @@ PART
 		{
 			Activate
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -853,7 +853,7 @@ PART
 			}
 			Shutdown
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -973,7 +973,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -200.2354
+	temp = 17.70151
 	expt = 0.5
 	state = 1
 	connected = True
@@ -992,7 +992,7 @@ PART
 		name = ModuleGenerator
 		isEnabled = True
 		generatorIsActive = True
-		throttle = 0
+		throttle = 1
 		EVENTS
 		{
 			Activate
@@ -1055,7 +1055,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -200.0021
+	temp = 17.6809
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1074,7 +1074,7 @@ PART
 		name = ModuleGenerator
 		isEnabled = True
 		generatorIsActive = True
-		throttle = 0
+		throttle = 1
 		EVENTS
 		{
 			Activate
@@ -1134,7 +1134,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 5
 	mass = 0.075
-	temp = -199.7682
+	temp = 17.66028
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1178,7 +1178,7 @@ PART
 	srfN = , 3
 	attN = top, 10
 	mass = 0.4
-	temp = -200.9978
+	temp = 17.76893
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1212,7 +1212,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 9
 	mass = 0.025
-	temp = -200.2515
+	temp = 17.70305
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1267,7 +1267,7 @@ PART
 	RESOURCE
 	{
 		name = IntakeAir
-		amount = 0
+		amount = 0.8
 		maxAmount = 0.8
 		flowState = True
 		isTweakable = False
@@ -1293,7 +1293,7 @@ PART
 	sym = 18
 	srfN = srfAttach, 9
 	mass = 0.005
-	temp = -200.0843
+	temp = 17.68813
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1311,11 +1311,11 @@ PART
 	{
 		name = ModuleLandingGear
 		isEnabled = True
-		brakesEngaged = False
+		brakesEngaged = True
 		brakesEnabled = True
-		storedGearState = RETRACTED
-		storedAnimationSpeed = 1
-		storedAnimationTime = 1
+		storedGearState = DEPLOYED
+		storedAnimationSpeed = -1
+		storedAnimationTime = 0
 		StartDeployed = True
 		StartDeployed_UIFlight
 		{
@@ -1349,7 +1349,7 @@ PART
 			}
 			LowerLandingGear
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Gear
 				guiName = Lower Gear
@@ -1360,7 +1360,7 @@ PART
 			}
 			RaiseLandingGear
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Gear
 				guiName = Raise Gear
@@ -1462,7 +1462,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -1491,7 +1491,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -1503,7 +1503,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -1571,7 +1571,7 @@ PART
 	sym = 19
 	srfN = srfAttach, 9
 	mass = 0.1
-	temp = -200.5644
+	temp = 17.73063
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1604,7 +1604,7 @@ PART
 	sym = 20
 	srfN = srfAttach, 12
 	mass = 0.04
-	temp = -200.0514
+	temp = 17.68521
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1663,7 +1663,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 12
 	mass = 0.03
-	temp = -199.9199
+	temp = 17.67376
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1722,7 +1722,7 @@ PART
 	sym = 22
 	srfN = srfAttach, 12
 	mass = 0.05
-	temp = -199.8856
+	temp = 17.67059
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1794,7 +1794,7 @@ PART
 	srfN = , 3
 	attN = top, 17
 	mass = 0.4
-	temp = -200.8908
+	temp = 17.75965
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1828,7 +1828,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 16
 	mass = 0.025
-	temp = -200.1979
+	temp = 17.6983
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1883,7 +1883,7 @@ PART
 	RESOURCE
 	{
 		name = IntakeAir
-		amount = 0
+		amount = 0.8
 		maxAmount = 0.8
 		flowState = True
 		isTweakable = False
@@ -1909,7 +1909,7 @@ PART
 	sym = 11
 	srfN = srfAttach, 16
 	mass = 0.005
-	temp = -200.0527
+	temp = 17.68566
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1927,11 +1927,11 @@ PART
 	{
 		name = ModuleLandingGear
 		isEnabled = True
-		brakesEngaged = False
+		brakesEngaged = True
 		brakesEnabled = True
-		storedGearState = RETRACTED
-		storedAnimationSpeed = 1
-		storedAnimationTime = 1
+		storedGearState = DEPLOYED
+		storedAnimationSpeed = -1
+		storedAnimationTime = 0
 		StartDeployed = True
 		StartDeployed_UIFlight
 		{
@@ -1965,7 +1965,7 @@ PART
 			}
 			LowerLandingGear
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Gear
 				guiName = Lower Gear
@@ -1976,7 +1976,7 @@ PART
 			}
 			RaiseLandingGear
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Gear
 				guiName = Raise Gear
@@ -2078,7 +2078,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -2107,7 +2107,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -2119,7 +2119,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -2187,7 +2187,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 16
 	mass = 0.1
-	temp = -200.5373
+	temp = 17.72846
 	expt = 0.1
 	state = 1
 	connected = True
@@ -2220,7 +2220,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 19
 	mass = 0.04
-	temp = -200.0378
+	temp = 17.68407
 	expt = 0.1
 	state = 1
 	connected = True
@@ -2279,7 +2279,7 @@ PART
 	sym = 14
 	srfN = srfAttach, 19
 	mass = 0.03
-	temp = -199.9086
+	temp = 17.67257
 	expt = 0.1
 	state = 1
 	connected = True
@@ -2338,7 +2338,7 @@ PART
 	sym = 15
 	srfN = srfAttach, 19
 	mass = 0.05
-	temp = -199.8775
+	temp = 17.6698
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2408,7 +2408,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -200.0107
+	temp = 17.68169
 	expt = 0.1
 	state = 1
 	connected = True
@@ -2468,7 +2468,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.02
-	temp = -199.8225
+	temp = 17.66504
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2610,7 +2610,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 2
 	mass = 1E-05
-	temp = -200.1685
+	temp = 17.69581
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2990,15 +2990,15 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 95971442.3653405
-				deltaVExpended = 4432.05248427628
-				dragLosses = 500.456302527555
-				gravityLosses = 2022.89328397587
-				steeringLosses = 87.7367894896243
+				deltaVExpended = 6255.16441583149
+				dragLosses = 5063.59815040411
+				gravityLosses = 851.612496315547
+				steeringLosses = 142.992641491656
 				markLatitude = -0.0485988343695285
 				markLongitude = -74.7246267945757
 				markAltitude = 70.686885545461
 				markBodyIndex = 1
-				maxDragGees = 0.586109125385185
+				maxDragGees = 5.7909778541692
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -3073,7 +3073,7 @@ PART
 	sym = 28
 	srfN = srfAttach, 1
 	mass = 0.04
-	temp = -200.4595
+	temp = 17.72121
 	expt = 0.1
 	state = 1
 	connected = True
@@ -3132,7 +3132,7 @@ PART
 	sym = 29
 	srfN = srfAttach, 26
 	mass = 0.05
-	temp = -200.0199
+	temp = 17.68248
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3203,7 +3203,7 @@ PART
 	sym = 26
 	srfN = srfAttach, 1
 	mass = 0.04
-	temp = -200.277
+	temp = 17.70524
 	expt = 0.1
 	state = 1
 	connected = True
@@ -3262,7 +3262,7 @@ PART
 	sym = 27
 	srfN = srfAttach, 28
 	mass = 0.05
-	temp = -199.9369
+	temp = 17.67535
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3332,7 +3332,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = -199.8264
+	temp = 17.66547
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3350,11 +3350,11 @@ PART
 	{
 		name = ModuleLandingGear
 		isEnabled = True
-		brakesEngaged = False
+		brakesEngaged = True
 		brakesEnabled = True
-		storedGearState = RETRACTED
-		storedAnimationSpeed = 1
-		storedAnimationTime = 1
+		storedGearState = DEPLOYED
+		storedAnimationSpeed = -1
+		storedAnimationTime = 0
 		StartDeployed = True
 		StartDeployed_UIFlight
 		{
@@ -3388,7 +3388,7 @@ PART
 			}
 			LowerLandingGear
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Gear
 				guiName = Lower Gear
@@ -3399,7 +3399,7 @@ PART
 			}
 			RaiseLandingGear
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Gear
 				guiName = Raise Gear
@@ -3501,7 +3501,7 @@ PART
 	{
 		name = ModuleLight
 		isEnabled = True
-		isOn = False
+		isOn = True
 		lightR = 1
 		lightG = 1
 		lightB = 1
@@ -3530,7 +3530,7 @@ PART
 		{
 			LightsOff
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights Off
@@ -3542,7 +3542,7 @@ PART
 			}
 			LightsOn
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lights On
@@ -3594,12 +3594,12 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 95971440.8853408
-	Gear = False, 95971456.8053375
-	Light = False, 0
+	Stage = True, 95972550.4676009
+	Gear = True, 95972424.8476271
+	Light = True, 95972549.5476011
 	RCS = False, 95972032.0022471
-	SAS = True, 95971964.2422612
-	Brakes = False, 0
+	SAS = True, 95972550.3076009
+	Brakes = True, 95972546.5476017
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -3630,11 +3630,11 @@ TARGET
 }
 CTRLSTATE
 {
-	pitch = 0.0002014561
-	yaw = -4.861628E-06
-	roll = 0.0001765012
+	pitch = -0.002554118
+	yaw = 0.00262218
+	roll = 0.03566099
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0
+	mainThrottle = 1
 }
