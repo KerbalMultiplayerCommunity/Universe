@@ -1,36 +1,36 @@
 pid = 064c27cc6eb1426ca8fe80afdbf18b24
 name = Orbiter Two
 type = Ship
-sit = SUB_ORBITAL
+sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 445.22023883462
+met = 707.42037948966
 lct = 137887069.810614
 root = 0
-lat = -0.30257570999168
-lon = -36.044560197801
-alt = 85338.3283259785
+lat = -0.340830880158381
+lon = 8.74391772354175
+alt = 83347.7707326354
 hgt = -1
-nrm = -0.9978313,0.06577671,-0.002444736
-rot = 0.2421624,0.6636502,0.6660503,-0.2393802
-CoM = 0.00240612,-25.09138,0.0001086034
-stg = 2
+nrm = -0.9849101,-0.1730493,-0.002456858
+rot = -0.1136994,0.6974822,0.6979218,0.1161733
+CoM = 0.002594143,-0.8625911,-1.399871E-05
+stg = 0
 prst = False
 ref = 1205069243
 ctrl = True
-cPch = 0.1820001
-cHdg = -2.287998
+cPch = 0.05600016
+cHdg = -2.407999
 cMod = 0
 ORBIT
 {
-	SMA = 668874.809018498
-	ECC = 0.025806976439942
-	INC = 0.356229132701445
-	LPE = 75.2122683461434
-	LAN = 70.4235344321328
-	MNA = 2.82830006619933
-	EPH = 137887515.050853
+	SMA = 683011.01452841
+	ECC = 0.0136895139694824
+	INC = 0.356293277077201
+	LPE = 19.7901843015807
+	LAN = 70.7843784963845
+	MNA = 4.69009640847829
+	EPH = 137887777.270994
 	REF = 1
 }
 PART
@@ -50,11 +50,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = bottom, 1
-	attN = top, 31
+	attN = top, 25
 	mass = 4
-	temp = -75.40897
+	temp = -41.2697
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -325,7 +325,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 132.376048628759
+		amount = 112.277412475989
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -335,7 +335,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 16.7882685991135
+		amount = 12.2470815610372
 		maxAmount = 30
 		flowState = True
 		isTweakable = True
@@ -362,9 +362,9 @@ PART
 	attN = top, 0
 	attN = bottom, 2
 	mass = 0.4
-	temp = -75.9751
+	temp = -41.63979
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -379,7 +379,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 736.788268599114
+		amount = 732.247081561037
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -405,517 +405,15 @@ PART
 	srfN = None, -1
 	attN = None, -1
 	attN = top2, 1
-	attN = bottom, 3
+	attN = None, -1
 	mass = 2
-	temp = -75.11942
+	temp = -41.08591
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
 	rTrf = KW2mengineSPS
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		EVENTS
-		{
-			LockGimbal
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Gimbal
-				guiName = Lock Gimbal
-				category = Lock Gimbal
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			FreeGimbal
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Free Gimbal
-				guiName = Free Gimbal
-				category = Free Gimbal
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAlternator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		EVENTS
-		{
-			Jettison
-			{
-				active = True
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 0
-		maxAmount = 2
-		flowState = True
-		isTweakable = False
-		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = decoupler1-2
-	uid = 945841182
-	mid = 1388211008
-	launchID = 2
-	parent = 2
-	position = 0,-4.03884887695313,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 1
-	sqor = 0
-	sidx = 1
-	attm = 0
-	srfN = None, -1
-	attN = bottom, 4
-	attN = top, 2
-	mass = 0.4
-	temp = -74.66639
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = decoupler1-2
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = Size3to2Adapter
-	uid = 392069046
-	mid = 1388211008
-	launchID = 2
-	parent = 3
-	position = 0,-5.50431823730469,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 3
-	attN = bottom, 5
-	mass = 0.2
-	temp = -74.36974
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = Size3to2Adapter
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW5x3AdapterShroud
-	uid = 124057457
-	mid = 1388211008
-	launchID = 2
-	parent = 4
-	position = 0,-8.79182052612305,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 1
-	dstg = 3
-	sqor = 1
-	sidx = 0
-	attm = 0
-	srfN = None, -1
-	attN = bottom, 6
-	attN = top, 4
-	mass = 3.75
-	temp = -74.17057
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW5x3AdapterShroud
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = KW5mtankL3.5
-	uid = 1702916129
-	mid = 1388211008
-	launchID = 2
-	parent = 5
-	position = 0,-19.7053298950195,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 5
-	attN = bottom, 7
-	mass = 30
-	temp = -74.13057
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW5mtankL3.5
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 0
-		maxAmount = 24192
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 0
-		maxAmount = 29568
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = KW5mtankL1.5
-	uid = 82324421
-	mid = 1388211008
-	launchID = 2
-	parent = 6
-	position = 0,-32.2053298950195,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 6
-	attN = bottom, 8
-	mass = 12.7
-	temp = -74.13057
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW5mtankL1.5
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 1030.40407212003
-		maxAmount = 10368
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 1259.3822051209
-		maxAmount = 12672
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = KW5mengineTitanV
-	uid = 2873385042
-	mid = 1388211008
-	launchID = 2
-	parent = 7
-	position = 0,-39.630241394043,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 4
-	sqor = 2
-	sidx = 0
-	attm = 0
-	srfN = None, -1
-	attN = None, -1
-	attN = top2, 7
-	attN = None, -1
-	mass = 22
-	temp = -74.11618
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW5mengineTitanV
 	modCost = 0
 	EVENTS
 	{
@@ -1074,7 +572,7 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0.639999985694885
+		maxAmount = 2
 		flowState = True
 		isTweakable = False
 		hideFlow = True
@@ -1096,18 +594,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
+	sym = 9
 	sym = 10
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 15
-	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -75.10575
+	temp = -41.06396
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1173,18 +671,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 3
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
 	sym = 9
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 15
-	sym = 16
+	sym = 10
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.99516
+	temp = -41.01888
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1250,18 +748,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 3
+	sym = 4
+	sym = 6
+	sym = 7
+	sym = 8
 	sym = 9
 	sym = 10
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 15
-	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.88496
+	temp = -40.97391
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1327,18 +825,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 7
+	sym = 8
 	sym = 9
 	sym = 10
-	sym = 11
-	sym = 13
-	sym = 14
-	sym = 15
-	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.77486
+	temp = -40.92905
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1404,18 +902,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 8
 	sym = 9
 	sym = 10
-	sym = 11
-	sym = 12
-	sym = 14
-	sym = 15
-	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.665
+	temp = -40.88429
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1481,18 +979,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
 	sym = 9
 	sym = 10
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 15
-	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.55552
+	temp = -40.8396
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1558,18 +1056,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 9
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
 	sym = 10
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.44616
+	temp = -40.79505
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1635,18 +1133,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 3
+	sym = 4
+	sym = 5
+	sym = 6
+	sym = 7
+	sym = 8
 	sym = 9
-	sym = 10
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 15
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.33714
+	temp = -40.7506
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1712,18 +1210,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
+	sym = 17
 	sym = 18
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 22
-	sym = 23
-	sym = 24
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.22832
+	temp = -40.70625
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1789,18 +1287,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 11
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
 	sym = 17
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 22
-	sym = 23
-	sym = 24
+	sym = 18
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.11991
+	temp = -40.66198
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1866,18 +1364,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 11
+	sym = 12
+	sym = 14
+	sym = 15
+	sym = 16
 	sym = 17
 	sym = 18
-	sym = 20
-	sym = 21
-	sym = 22
-	sym = 23
-	sym = 24
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -74.01156
+	temp = -40.61786
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1943,18 +1441,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 15
+	sym = 16
 	sym = 17
 	sym = 18
-	sym = 19
-	sym = 21
-	sym = 22
-	sym = 23
-	sym = 24
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -73.90355
+	temp = -40.57383
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2020,18 +1518,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 16
 	sym = 17
 	sym = 18
-	sym = 19
-	sym = 20
-	sym = 22
-	sym = 23
-	sym = 24
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -73.79575
+	temp = -40.52991
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2097,18 +1595,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
 	sym = 17
 	sym = 18
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 23
-	sym = 24
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -73.68823
+	temp = -40.48608
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2174,18 +1672,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
 	sym = 18
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 22
-	sym = 24
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -73.58092
+	temp = -40.44231
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2251,18 +1749,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
 	sym = 17
-	sym = 18
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 22
-	sym = 23
 	srfN = srfAttach, 1
 	mass = 0.05
-	temp = -73.47385
+	temp = -40.39869
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2328,12 +1826,12 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 26
+	sym = 20
 	srfN = srfAttach, 1
 	mass = 0.0175
-	temp = -73.36168
+	temp = -40.35225
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2410,12 +1908,12 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 25
+	sym = 19
 	srfN = srfAttach, 1
 	mass = 0.0175
-	temp = -73.25314
+	temp = -40.30789
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2492,14 +1990,14 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 28
-	sym = 29
-	sym = 30
+	sym = 22
+	sym = 23
+	sym = 24
 	srfN = srfAttach, 0
 	mass = 0.05
-	temp = -74.70717
+	temp = -40.88325
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2565,14 +2063,14 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 27
-	sym = 29
-	sym = 30
+	sym = 21
+	sym = 23
+	sym = 24
 	srfN = srfAttach, 0
 	mass = 0.05
-	temp = -74.59516
+	temp = -40.83756
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2638,14 +2136,14 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 27
-	sym = 28
-	sym = 30
+	sym = 21
+	sym = 22
+	sym = 24
 	srfN = srfAttach, 0
 	mass = 0.05
-	temp = -74.48345
+	temp = -40.79195
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2711,14 +2209,14 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 27
-	sym = 28
-	sym = 29
+	sym = 21
+	sym = 22
+	sym = 23
 	srfN = srfAttach, 0
 	mass = 0.05
-	temp = -74.37202
+	temp = -40.74649
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2785,12 +2283,12 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 32
+	attN = top, 26
 	attN = bottom, 0
 	mass = 0.1
-	temp = -74.36621
+	temp = -40.75996
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2856,7 +2354,7 @@ PART
 	uid = 2849755379
 	mid = 1388211008
 	launchID = 2
-	parent = 31
+	parent = 25
 	position = 0,1.59125137329102,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
@@ -2867,11 +2365,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
-	attN = bottom, 31
+	attN = bottom, 25
 	mass = 0.05
-	temp = -74.14023
+	temp = -40.67599
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2996,11 +2494,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 137887068.150613
+	Stage = True, 137887777.230994
 	Gear = True, 0
 	Light = False, 0
-	RCS = False, 137887508.63085
-	SAS = False, 137887512.370852
+	RCS = False, 137887771.610991
+	SAS = True, 137887750.63098
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -3024,12 +2522,22 @@ DISCOVERY
 }
 FLIGHTPLAN
 {
+	MANEUVER
+	{
+		UT = 137887764.63889
+		dV = 0,0,22.5136975759927
+	}
+}
+TARGET
+{
+	type = Vessel
+	vesselID = 707129c2-6753-4d29-8cf2-5a3e9502c3cd
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = -0.0005827326
+	yaw = 0.01802693
+	roll = -0.0001383677
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
