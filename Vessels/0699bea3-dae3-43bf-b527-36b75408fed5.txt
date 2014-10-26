@@ -1,36 +1,36 @@
 pid = 0699bea3dae343bfb52736b75408fed5
 name = KWorkcets
 type = Ship
-sit = SUB_ORBITAL
-landed = False
+sit = LANDED
+landed = True
 landedAt = 
 splashed = False
-met = 177.139963045716
+met = 1346.14408321679
 lct = 95970271.6379584
 root = 0
-lat = 2.12001528155909
-lon = 283.9020324425
-alt = 69085.4793956921
-hgt = -1
-nrm = 0.02628838,0.4635758,-0.8856673
-rot = -0.2485866,-0.1778375,0.269178,0.9133027
-CoM = 0.01232215,-13.21958,-0.00495062
-stg = 2
+lat = 34.4927647478671
+lon = 77.8567271408512
+alt = 661.852755117696
+hgt = 6.189371
+nrm = -0.003551266,0.9999861,-0.003908144
+rot = -0.02487791,-0.8933421,-0.4465644,0.0436051
+CoM = 6.647979E-05,-2.724275,-1.647911E-05
+stg = 0
 prst = False
 ref = 3414397438
 ctrl = True
-cPch = 0.5339995
-cHdg = -0.5979995
-cMod = 0
+cPch = 0.4109334
+cHdg = -5.348704
+cMod = 1
 ORBIT
 {
-	SMA = 459044.127242741
-	ECC = 0.717981330695299
-	INC = 119.96809221171
-	LPE = 204.040250329896
-	LAN = 49.1206536162033
-	MNA = 1.70856514525552
-	EPH = 95970448.7979214
+	SMA = 300860.16678406
+	ECC = 0.996472805545198
+	INC = 34.4927529702446
+	LPE = 269.997028021717
+	LAN = 131.340221399538
+	MNA = 3.14158822956895
+	EPH = 95971617.8420416
 	REF = 1
 }
 PART
@@ -50,11 +50,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = bottom, 1
-	attN = top, 34
+	attN = top, 16
 	mass = 4
-	temp = -72.18864
+	temp = 14.93621
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -62,7 +62,6 @@ PART
 	modCost = 0
 	crew = Sherdas Kerman
 	crew = Songar Kerman
-	crew = Thompdin Kerman
 	EVENTS
 	{
 	}
@@ -306,6 +305,7 @@ PART
 		}
 		Surfaced
 		{
+			at = Kerbin
 		}
 		Flew
 		{
@@ -319,12 +319,13 @@ PART
 		}
 		SubOrbited
 		{
+			at = Kerbin
 		}
 	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 150
+		amount = 105.791179313249
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -361,9 +362,9 @@ PART
 	attN = top, 0
 	attN = bottom, 2
 	mass = 0.53
-	temp = -72.16619
+	temp = 14.92866
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -378,7 +379,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 432
+		amount = 0
 		maxAmount = 432
 		flowState = True
 		isTweakable = True
@@ -388,7 +389,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 528
+		amount = 0
 		maxAmount = 528
 		flowState = True
 		isTweakable = True
@@ -415,9 +416,9 @@ PART
 	attN = top, 1
 	attN = bottom, 3
 	mass = 0.53
-	temp = -72.39548
+	temp = 14.96873
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -432,7 +433,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 432
+		amount = 0
 		maxAmount = 432
 		flowState = True
 		isTweakable = True
@@ -442,7 +443,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 528
+		amount = 0
 		maxAmount = 528
 		flowState = True
 		isTweakable = True
@@ -460,19 +461,19 @@ PART
 	position = 0,-4.22924041748047,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
-	istg = 1
+	istg = 0
 	dstg = 0
-	sqor = 1
-	sidx = 0
+	sqor = 0
+	sidx = 5
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
 	attN = top2, 2
-	attN = bottom, 12
+	attN = None, -1
 	mass = 8
-	temp = -72.59753
+	temp = 14.99697
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -488,9 +489,9 @@ PART
 	{
 		name = ModuleEnginesFX
 		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
+		staged = True
+		flameout = True
+		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
 		thrustPercentage = 100
@@ -506,7 +507,7 @@ PART
 		{
 			Activate
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Activate Engine
 				guiName = Activate Engine
@@ -517,7 +518,7 @@ PART
 			}
 			Shutdown
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
@@ -613,7 +614,7 @@ PART
 		{
 			Jettison
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Jettison
 				guiName = Jettison
@@ -634,7 +635,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.299999993294477
+		amount = 0
 		maxAmount = 0.299999993294477
 		flowState = True
 		isTweakable = False
@@ -662,9 +663,9 @@ PART
 	sym = 7
 	srfN = srfAttach, 3
 	mass = 0.1
-	temp = -72.08635
+	temp = 14.90289
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -681,10 +682,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 0
-		savedAnimationSpeed = 0
-		savedLegState = 0
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 1
+		savedAnimationSpeed = 0.3260869
+		savedLegState = 3
+		savedLocalPosition = (5.690713E-07, -4.893865E-05, 0.5024814)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -694,7 +695,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -705,7 +706,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -791,9 +792,9 @@ PART
 	sym = 7
 	srfN = srfAttach, 3
 	mass = 0.1
-	temp = -72.00633
+	temp = 14.88623
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -810,10 +811,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 0
-		savedAnimationSpeed = 0
-		savedLegState = 0
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 1
+		savedAnimationSpeed = 0.3260869
+		savedLegState = 3
+		savedLocalPosition = (1.385504E-06, 5.276411E-06, 0.4987)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -823,7 +824,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -834,7 +835,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -920,9 +921,9 @@ PART
 	sym = 7
 	srfN = srfAttach, 3
 	mass = 0.1
-	temp = -71.92657
+	temp = 14.86964
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -939,10 +940,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 0
-		savedAnimationSpeed = 0
-		savedLegState = 0
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 1
+		savedAnimationSpeed = 0.3260869
+		savedLegState = 3
+		savedLocalPosition = (4.675291E-05, 3.381278E-05, 0.4825301)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -952,7 +953,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -963,7 +964,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -1049,9 +1050,9 @@ PART
 	sym = 6
 	srfN = srfAttach, 3
 	mass = 0.1
-	temp = -71.84693
+	temp = 14.85308
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1068,10 +1069,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 0
-		savedAnimationSpeed = 0
-		savedLegState = 0
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 1
+		savedAnimationSpeed = 0.3260869
+		savedLegState = 3
+		savedLocalPosition = (-2.334418E-05, -4.27387E-05, 0.5031583)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -1081,7 +1082,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -1092,7 +1093,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -1180,9 +1181,9 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -71.77222
+	temp = 14.83761
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1217,9 +1218,9 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -71.70097
+	temp = 14.82269
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1254,9 +1255,9 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -71.62984
+	temp = 14.80769
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1291,9 +1292,9 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.125
-	temp = -71.55886
+	temp = 14.79287
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1304,1205 +1305,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-}
-PART
-{
-	name = KW3mFairingBase
-	uid = 3387695424
-	mid = 1431203042
-	launchID = 1
-	parent = 3
-	position = 0,-7.18173980712891,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 1
-	dstg = 1
-	sqor = 1
-	sidx = 4
-	attm = 0
-	srfN = None, -1
-	attN = bottom, 22
-	attN = top, 3
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = connect7, 13
-	attN = connect8, 16
-	attN = connect9, 19
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	mass = 2
-	temp = -71.54334
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingBase
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = KW3mFairingCone
-	uid = 2633954219
-	mid = 1431203042
-	launchID = 1
-	parent = 12
-	position = -1.07288360595703E-06,0.725139617919922,0
-	rotation = 0,1,0,0
-	mirror = 1,1,1
-	istg = 1
-	dstg = 3
-	sqor = 1
-	sidx = 1
-	attm = 0
-	sym = 16
-	sym = 19
-	srfN = None, -1
-	attN = connect, 14
-	attN = bottom, 12
-	mass = 0.4
-	temp = -71.86066
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingCone
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = KW3mFairingWall
-	uid = 1815718823
-	mid = 1431203042
-	launchID = 1
-	parent = 13
-	position = -1.07288360595703E-06,-3.02486038208008,0
-	rotation = 0,1,0,0
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 17
-	sym = 20
-	srfN = None, -1
-	attN = bottom, 15
-	attN = top, 13
-	mass = 0.05
-	temp = -71.82729
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW3mFairingWall
-	uid = 2861220731
-	mid = 1431203042
-	launchID = 1
-	parent = 14
-	position = -2.02655792236328E-06,-6.77486038208008,0
-	rotation = 0,1,0,0
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 18
-	sym = 21
-	srfN = None, -1
-	attN = None, -1
-	attN = top, 14
-	mass = 0.05
-	temp = -71.75926
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW3mFairingCone
-	uid = 3789763022
-	mid = 1431203042
-	launchID = 1
-	parent = 12
-	position = 0,0.725139617919922,-0.000455796718597412
-	rotation = 0,0.5,0,-0.8660254
-	mirror = 1,1,1
-	istg = 1
-	dstg = 3
-	sqor = 1
-	sidx = 2
-	attm = 0
-	sym = 13
-	sym = 19
-	srfN = None, -1
-	attN = connect, 17
-	attN = bottom, 12
-	mass = 0.4
-	temp = -71.86064
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingCone
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = KW3mFairingWall
-	uid = 1392137687
-	mid = 1431203042
-	launchID = 1
-	parent = 16
-	position = 0,-3.02486038208008,-0.000455886125564575
-	rotation = 0,0.5,0,-0.8660254
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 14
-	sym = 20
-	srfN = None, -1
-	attN = bottom, 18
-	attN = top, 16
-	mass = 0.05
-	temp = -71.82731
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW3mFairingWall
-	uid = 572003393
-	mid = 1431203042
-	launchID = 1
-	parent = 17
-	position = 0,-6.77486038208008,-0.000455796718597412
-	rotation = 0,0.5,0,-0.8660254
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 15
-	sym = 21
-	srfN = None, -1
-	attN = None, -1
-	attN = top, 17
-	mass = 0.05
-	temp = -71.75924
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW3mFairingCone
-	uid = 1872850980
-	mid = 1431203042
-	launchID = 1
-	parent = 12
-	position = 9.5367431640625E-07,0.725139617919922,0.000456392765045166
-	rotation = 0,-0.5000001,0,-0.8660254
-	mirror = 1,1,1
-	istg = 1
-	dstg = 3
-	sqor = 1
-	sidx = 3
-	attm = 0
-	sym = 13
-	sym = 16
-	srfN = None, -1
-	attN = connect, 20
-	attN = bottom, 12
-	mass = 0.4
-	temp = -71.86068
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingCone
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = KW3mFairingWall
-	uid = 2995123965
-	mid = 1431203042
-	launchID = 1
-	parent = 19
-	position = 9.5367431640625E-07,-3.02486038208008,0.000456392765045166
-	rotation = 0,-0.5000001,0,-0.8660254
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 14
-	sym = 17
-	srfN = None, -1
-	attN = bottom, 21
-	attN = top, 19
-	mass = 0.05
-	temp = -71.82721
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW3mFairingWall
-	uid = 4128351434
-	mid = 1431203042
-	launchID = 1
-	parent = 20
-	position = 9.5367431640625E-07,-6.77486038208008,0.000456392765045166
-	rotation = 0,-0.5000001,0,-0.8660254
-	mirror = 1,1,1
-	istg = 4
-	dstg = 4
-	sqor = -1
-	sidx = -1
-	attm = 0
-	sym = 15
-	sym = 18
-	srfN = None, -1
-	attN = None, -1
-	attN = top, 20
-	mass = 0.05
-	temp = -71.7593
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-}
-PART
-{
-	name = KW3mtankL4
-	uid = 1606367163
-	mid = 1431203042
-	launchID = 1
-	parent = 12
-	position = 0,-14.6817398071289,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 12
-	attN = bottom, 23
-	mass = 14.3
-	temp = -72.40839
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mtankL4
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = ToggleFlag
-				guiName = ToggleFlag
-				category = ToggleFlag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 3277.46191539166
-		maxAmount = 11664
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 4005.78535104279
-		maxAmount = 14256
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = KW3mengineGriffonXX
-	uid = 613097215
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = 0,-25.6917419433594,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = 2
-	sidx = 0
-	attm = 0
-	srfN = None, -1
-	attN = None, -1
-	attN = top2, 22
-	attN = None, -1
-	mass = 18
-	temp = 5088.703
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mengineGriffonXX
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = True
-		flameout = False
-		EngineIgnited = True
-		engineShutdown = False
-		currentThrottle = 1
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = False
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = True
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		EVENTS
-		{
-			LockGimbal
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Gimbal
-				guiName = Lock Gimbal
-				category = Lock Gimbal
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			FreeGimbal
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Free Gimbal
-				guiName = Free Gimbal
-				category = Free Gimbal
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAlternator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		EVENTS
-		{
-			Jettison
-			{
-				active = False
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 0.699999984353781
-		maxAmount = 0.699999984353781
-		flowState = True
-		isTweakable = False
-		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 1502423985
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = 1.81234896183014,-14.5353889465332,1.19209289550781E-07
-	rotation = 0,1,0,0
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 25
-	sym = 26
-	sym = 27
-	sym = 28
-	sym = 29
-	srfN = srfAttach, 22
-	mass = 0.08
-	temp = -71.98893
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 1117233110
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = 0.906174898147583,-14.5353889465332,-1.56954038143158
-	rotation = 0,0.8660254,0,-0.5
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 26
-	sym = 27
-	sym = 28
-	sym = 29
-	srfN = srfAttach, 22
-	mass = 0.08
-	temp = -71.91552
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 536909680
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = -0.906175136566162,-14.5353889465332,-1.56954038143158
-	rotation = 0,0.5,0,-0.8660254
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 25
-	sym = 27
-	sym = 28
-	sym = 29
-	srfN = srfAttach, 22
-	mass = 0.08
-	temp = -71.84221
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 2167896538
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = -1.81234908103943,-14.5353889465332,0
-	rotation = 0,-4.371139E-08,0,-1
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 25
-	sym = 26
-	sym = 28
-	sym = 29
-	srfN = srfAttach, 22
-	mass = 0.08
-	temp = -71.76918
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 2619369036
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = -0.906175136566162,-14.5353889465332,1.56954050064087
-	rotation = 0,-0.5000001,0,-0.8660254
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 25
-	sym = 26
-	sym = 27
-	sym = 29
-	srfN = srfAttach, 22
-	mass = 0.08
-	temp = -71.69631
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	name = vernierEngine
-	uid = 212008593
-	mid = 1431203042
-	launchID = 1
-	parent = 22
-	position = 0.906173944473267,-14.5353889465332,1.56954050064087
-	rotation = 0,-0.8660254,0,-0.5000001
-	mirror = 1,1,1
-	istg = 2
-	dstg = 2
-	sqor = -1
-	sidx = -1
-	attm = 1
-	sym = 24
-	sym = 25
-	sym = 26
-	sym = 27
-	sym = 28
-	srfN = srfAttach, 22
-	mass = 0.08
-	temp = -71.62358
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = vernierEngine
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleRCS
-		isEnabled = True
-		isEnabled = True
-		EVENTS
-		{
-			Disable
-			{
-				active = True
-				guiActive = True
-				guiIcon = Disable RCS Port
-				guiName = Disable RCS Port
-				category = Disable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Enable
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable RCS Port
-				guiName = Enable RCS Port
-				category = Enable RCS Port
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
 	}
 }
 PART
@@ -2520,14 +1322,14 @@ PART
 	sqor = 0
 	sidx = 1
 	attm = 1
-	sym = 31
-	sym = 32
-	sym = 33
+	sym = 13
+	sym = 14
+	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.15
-	temp = -71.9074
+	temp = 14.8744
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2543,10 +1345,10 @@ PART
 	{
 		name = ModuleParachute
 		isEnabled = True
-		persistentState = STOWED
+		persistentState = CUT
 		deployAltitude = 500
 		minAirPressureToOpen = 0.01
-		staged = False
+		staged = True
 		deployAltitude_UIFlight
 		{
 			controlEnabled = True
@@ -2565,7 +1367,7 @@ PART
 		{
 			Deploy
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
@@ -2587,7 +1389,7 @@ PART
 			}
 			Repack
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
@@ -2647,14 +1449,14 @@ PART
 	sqor = 0
 	sidx = 2
 	attm = 1
-	sym = 30
-	sym = 32
-	sym = 33
+	sym = 12
+	sym = 14
+	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.15
-	temp = -71.82619
+	temp = 14.85753
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2670,10 +1472,10 @@ PART
 	{
 		name = ModuleParachute
 		isEnabled = True
-		persistentState = STOWED
+		persistentState = CUT
 		deployAltitude = 500
 		minAirPressureToOpen = 0.01
-		staged = False
+		staged = True
 		deployAltitude_UIFlight
 		{
 			controlEnabled = True
@@ -2692,7 +1494,7 @@ PART
 		{
 			Deploy
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
@@ -2714,7 +1516,7 @@ PART
 			}
 			Repack
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
@@ -2774,14 +1576,14 @@ PART
 	sqor = 0
 	sidx = 3
 	attm = 1
-	sym = 30
-	sym = 31
-	sym = 33
+	sym = 12
+	sym = 13
+	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.15
-	temp = -71.7452
+	temp = 14.84071
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2797,10 +1599,10 @@ PART
 	{
 		name = ModuleParachute
 		isEnabled = True
-		persistentState = STOWED
+		persistentState = CUT
 		deployAltitude = 500
 		minAirPressureToOpen = 0.01
-		staged = False
+		staged = True
 		deployAltitude_UIFlight
 		{
 			controlEnabled = True
@@ -2819,7 +1621,7 @@ PART
 		{
 			Deploy
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
@@ -2841,7 +1643,7 @@ PART
 			}
 			Repack
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
@@ -2901,14 +1703,14 @@ PART
 	sqor = 0
 	sidx = 4
 	attm = 1
-	sym = 30
-	sym = 31
-	sym = 32
+	sym = 12
+	sym = 13
+	sym = 14
 	srfN = srfAttach, 2
 	mass = 0.15
-	temp = -71.66442
+	temp = 14.82394
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2924,10 +1726,10 @@ PART
 	{
 		name = ModuleParachute
 		isEnabled = True
-		persistentState = STOWED
+		persistentState = CUT
 		deployAltitude = 500
 		minAirPressureToOpen = 0.01
-		staged = False
+		staged = True
 		deployAltitude_UIFlight
 		{
 			controlEnabled = True
@@ -2946,7 +1748,7 @@ PART
 		{
 			Deploy
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
@@ -2968,7 +1770,7 @@ PART
 			}
 			Repack
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
@@ -3031,9 +1833,9 @@ PART
 	srfN = None, -1
 	attN = bottom, 0
 	mass = 0.3
-	temp = -71.79224
+	temp = 14.85894
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -3049,10 +1851,10 @@ PART
 	{
 		name = ModuleParachute
 		isEnabled = True
-		persistentState = STOWED
+		persistentState = CUT
 		deployAltitude = 500
 		minAirPressureToOpen = 0.01
-		staged = False
+		staged = True
 		deployAltitude_UIFlight
 		{
 			controlEnabled = True
@@ -3071,7 +1873,7 @@ PART
 		{
 			Deploy
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
@@ -3093,7 +1895,7 @@ PART
 			}
 			Repack
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
@@ -3140,11 +1942,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 95970380.9579356
-	Gear = True, 0
+	Stage = True, 95971540.392418
+	Gear = True, 95971514.4924234
 	Light = False, 0
-	RCS = True, 95970265.6579596
-	SAS = True, 95970266.0179596
+	RCS = False, 95971501.4924261
+	SAS = False, 95971605.4820442
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -3171,11 +1973,11 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = -1
-	yaw = -0.004253188
-	roll = -1.647848E-05
+	pitch = 0
+	yaw = 0
+	roll = 0
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
