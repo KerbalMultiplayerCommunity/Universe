@@ -5,32 +5,32 @@ sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 26296.8661539555
+met = 50601.134529531
 lct = 138023187.950057
 root = 0
-lat = 0.00388847369630184
-lon = 54.1365164433516
-alt = 394135.161863211
+lat = -0.00763594276693685
+lon = 117.411256820672
+alt = 397888.20448207
 hgt = -1
-nrm = 0.4996641,0.3190176,0.8053345
-rot = 0.04797306,0.00953646,-0.2151736,0.9753502
-CoM = 0.0004287686,-1.572769,-11.19572
+nrm = -0.9022845,-0.4019194,0.1560239
+rot = -0.0543978,0.4489301,-0.2136596,0.8659401
+CoM = -0.002871037,-1.5731,-11.19653
 stg = 1
 prst = False
 ref = 2227752525
 ctrl = True
-cPch = 0.03800001
-cHdg = 3.864
+cPch = 0
+cHdg = 0
 cMod = 0
 ORBIT
 {
-	SMA = 997194.756626971
-	ECC = 0.00309035048330234
-	INC = 0.00780772317055837
-	LPE = 155.481376896984
-	LAN = 67.9673144783196
-	MNA = 6.19315718637103
-	EPH = 138049484.876211
+	SMA = 997193.231435674
+	ECC = 0.00307920483488158
+	INC = 0.00784707474003723
+	LPE = 154.054102633647
+	LAN = 69.3185865780681
+	MNA = 1.7957749245378
+	EPH = 138073789.124587
 	REF = 1
 }
 PART
@@ -51,7 +51,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 1
 	mass = 1.25
-	temp = -155.0548
+	temp = -4.279877
 	expt = 0.5
 	state = 0
 	connected = True
@@ -321,17 +321,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -372,7 +361,7 @@ PART
 	attN = bottom, 2
 	attN = top, 0
 	mass = 0.05
-	temp = -155.7825
+	temp = -4.280746
 	expt = 0.5
 	state = 0
 	connected = True
@@ -433,17 +422,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -464,7 +442,7 @@ PART
 	attN = top, 7
 	attN = bottom, 3
 	mass = 0.15
-	temp = -159.0949
+	temp = -4.308836
 	expt = 0.5
 	state = 0
 	connected = True
@@ -477,17 +455,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -519,7 +486,7 @@ PART
 	attN = top, 4
 	attN = None, -1
 	mass = 1.2
-	temp = -155.5687
+	temp = -4.280305
 	expt = 0.5
 	state = 0
 	connected = True
@@ -792,17 +759,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -822,7 +778,7 @@ PART
 	srfN = None, -1
 	attN = top, 3
 	mass = 1.2
-	temp = -154.4492
+	temp = -4.279294
 	expt = 0.5
 	state = 0
 	connected = True
@@ -979,21 +935,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00265930850827882
+		amount = 0.0021788067111417
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -1019,7 +964,7 @@ PART
 	sym = 6
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -154.3081
+	temp = -4.2792
 	expt = 0.1
 	state = 0
 	connected = True
@@ -1035,89 +980,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -1139,7 +1023,7 @@ PART
 	sym = 5
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -154.169
+	temp = -4.279103
 	expt = 0.1
 	state = 0
 	connected = True
@@ -1155,89 +1039,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -1260,7 +1083,7 @@ PART
 	attN = bottom, 2
 	attN = top, 8
 	mass = 0.04
-	temp = -155.5926
+	temp = -4.280238
 	expt = 0
 	state = 0
 	connected = True
@@ -1385,17 +1208,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -1426,7 +1238,7 @@ PART
 	attN = top, 9
 	attN = None, -1
 	mass = 0.08
-	temp = -154.5739
+	temp = -4.279472
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1487,17 +1299,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -1518,7 +1319,7 @@ PART
 	attN = top, 8
 	attN = None, -1
 	mass = 2.25
-	temp = -154.0947
+	temp = -4.279291
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1727,21 +1528,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -1766,7 +1556,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 7
 	mass = 0.015
-	temp = -154.3158
+	temp = -4.279194
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1850,17 +1640,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -1881,7 +1660,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 7
 	mass = 0.015
-	temp = -154.1746
+	temp = -4.279096
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1965,17 +1744,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -1997,7 +1765,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -155.5305
+	temp = -4.279288
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2081,17 +1849,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -2113,7 +1870,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -155.3905
+	temp = -4.279193
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2199,17 +1956,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -2226,11 +1972,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RAPIER_3; pos: -0.008965153,-0.1710304,-0.01994342; dir: -0.05161256,-0.9920158,-0.1150678; rot: 0.7071071,0.7071065,-6.554363E-07,5.556446E-07
+	cData = tgt: RAPIER_3; pos: -0.009206698,-0.1709536,-0.01996956; dir: -0.05161256,-0.9920158,-0.1150678; rot: 0.6532818,0.6532813,-0.2705987,-0.2705974
 	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -155.2411
+	temp = -4.279105
 	expt = 0
 	state = 0
 	connected = True
@@ -2260,11 +2006,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RAPIER_3; pos: -0.008778429,-0.1710767,0.01988264; dir: -0.0516125,-0.992016,0.1150682; rot: -0.7071066,-0.707107,1.111157E-06,6.103669E-07
+	cData = tgt: RAPIER_3; pos: -0.008808056,-0.1710221,0.01979563; dir: -0.0516125,-0.992016,0.1150682; rot: 0.2705969,0.2705973,-0.653282,-0.6532818
 	sym = 14
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -155.1053
+	temp = -4.279014
 	expt = 0
 	state = 0
 	connected = True
@@ -2294,11 +2040,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RAPIER_3; pos: 0.003308627,-0.3755131,0.006813523; dir: 0.008696517,-0.999802,0.0178984
+	cData = tgt: RAPIER_3; pos: 0.003227587,-0.3755293,0.006813035; dir: 0.008696517,-0.999802,0.0178984
 	sym = 17
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -154.9752
+	temp = -4.278917
 	expt = 0
 	state = 0
 	connected = True
@@ -2328,11 +2074,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RAPIER_3; pos: 0.003145953,-0.3754926,-0.006800049; dir: 0.008696514,-0.9998024,-0.01789815
+	cData = tgt: RAPIER_3; pos: 0.003165026,-0.3754132,-0.006632225; dir: 0.008696514,-0.9998024,-0.01789815
 	sym = 16
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -154.8374
+	temp = -4.278825
 	expt = 0
 	state = 0
 	connected = True
@@ -2367,7 +2113,7 @@ PART
 	attN = top, 20
 	attN = bottom, 22
 	mass = 0.25
-	temp = -155.2076
+	temp = -4.28004
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2380,17 +2126,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -2428,11 +2163,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: JetEngine_42; pos: -0.1836969,-0.05794482,-0.02962918; dir: -0.9427101,-0.297016,-0.1519235
+	cData = tgt: JetEngine_42; pos: -0.1835652,-0.05796142,-0.02963796; dir: -0.9427101,-0.297016,-0.1519235
 	sym = 26
 	srfN = srfAttach, 18
 	mass = 0.05
-	temp = -154.3284
+	temp = -4.279284
 	expt = 0
 	state = 0
 	connected = True
@@ -2466,7 +2201,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 21
 	mass = 0.01
-	temp = -154.3667
+	temp = -4.279389
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2516,17 +2251,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -2559,7 +2283,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 20
 	mass = 0.01
-	temp = -154.0241
+	temp = -4.279274
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2609,17 +2333,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -2652,7 +2365,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 23
 	mass = 0.01
-	temp = -154.2583
+	temp = -4.279297
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2702,17 +2415,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -2745,7 +2447,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 22
 	mass = 0.01
-	temp = -153.9874
+	temp = -4.279272
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2797,17 +2499,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -2834,11 +2525,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: MK1Fuselage_2; pos: -0.06247215,0.1312398,0.03924454; dir: -0.415233,0.8713884,0.2612733; rot: -0.3936106,-0.00754662,-0.919236,0.004357067
+	cData = tgt: MK1Fuselage_2; pos: -0.06241263,0.1312336,0.03924484; dir: -0.415233,0.8713884,0.2612733; rot: -0.8599954,0.005304649,0.5102274,0.006913467
 	sym = 31
 	srfN = srfAttach, 18
 	mass = 0.05
-	temp = -153.9239
+	temp = -4.279011
 	expt = 0
 	state = 0
 	connected = True
@@ -2873,7 +2564,7 @@ PART
 	attN = top, 27
 	attN = bottom, 29
 	mass = 0.25
-	temp = -155.1434
+	temp = -4.279957
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2886,17 +2577,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -2934,11 +2614,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: JetEngine_42; pos: -0.1838524,-0.05795722,0.02950885; dir: -0.9427102,-0.2970162,0.1519237
+	cData = tgt: JetEngine_42; pos: -0.183916,-0.05794478,0.02961372; dir: -0.9427102,-0.2970162,0.1519237
 	sym = 19
 	srfN = srfAttach, 25
 	mass = 0.05
-	temp = -154.3064
+	temp = -4.279283
 	expt = 0
 	state = 0
 	connected = True
@@ -2972,7 +2652,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 28
 	mass = 0.01
-	temp = -154.3487
+	temp = -4.279387
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3022,17 +2702,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -3065,7 +2734,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 27
 	mass = 0.01
-	temp = -154.0189
+	temp = -4.279273
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3115,17 +2784,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -3158,7 +2816,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 30
 	mass = 0.01
-	temp = -154.2405
+	temp = -4.279295
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3208,17 +2866,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -3251,7 +2898,7 @@ PART
 	srfN = None, -1
 	attN = bottom01, 29
 	mass = 0.01
-	temp = -153.9819
+	temp = -4.279271
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3303,17 +2950,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -3340,11 +2976,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: MK1Fuselage_2; pos: -0.05794037,0.1213495,-0.03642786; dir: -0.4152332,0.8713885,-0.2612739; rot: 0.9201567,0.000901668,0.391549,0.0005183764
+	cData = tgt: MK1Fuselage_2; pos: -0.05792486,0.1213483,-0.03649809; dir: -0.4152332,0.8713885,-0.2612739; rot: 0.8611773,0.0008259788,0.5083036,0.0006311238
 	sym = 24
 	srfN = srfAttach, 25
 	mass = 0.05
-	temp = -153.9022
+	temp = -4.279009
 	expt = 0
 	state = 0
 	connected = True
@@ -3379,7 +3015,7 @@ PART
 	attN = None, -1
 	attN = bottom, 33
 	mass = 0.001
-	temp = -154.5629
+	temp = -4.278751
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3392,17 +3028,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3425,7 +3050,7 @@ PART
 	attN = top, 32
 	attN = None, -1
 	mass = 0.1
-	temp = -154.0901
+	temp = -4.27927
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3581,17 +3206,6 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
 		}
 		ACTIONS
 		{
@@ -3618,7 +3232,7 @@ PART
 	attN = None, -1
 	attN = bottom, 35
 	mass = 0.001
-	temp = -154.4521
+	temp = -4.27866
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3631,17 +3245,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3664,7 +3267,7 @@ PART
 	attN = top, 34
 	attN = None, -1
 	mass = 0.1
-	temp = -154.0525
+	temp = -4.279268
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3825,17 +3428,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -3855,7 +3447,7 @@ PART
 	sym = 37
 	srfN = srfAttach, 2
 	mass = 0.01
-	temp = -154.1618
+	temp = -4.278365
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3905,17 +3497,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -3947,7 +3528,7 @@ PART
 	sym = 36
 	srfN = srfAttach, 2
 	mass = 0.01
-	temp = -154.0247
+	temp = -4.278272
 	expt = 0.5
 	state = 0
 	connected = True
@@ -3997,17 +3578,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -4039,7 +3609,7 @@ PART
 	sym = 39
 	srfN = srfAttach, 2
 	mass = 0.01
-	temp = -153.8897
+	temp = -4.27819
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4089,17 +3659,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 	RESOURCE
@@ -4131,7 +3690,7 @@ PART
 	sym = 38
 	srfN = srfAttach, 2
 	mass = 0.01
-	temp = -153.7548
+	temp = -4.278099
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4183,17 +3742,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -4222,7 +3770,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -153.6208
+	temp = -4.27801
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4330,17 +3878,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -4361,7 +3898,7 @@ PART
 	attN = None, -1
 	attN = bottom, 42
 	mass = 0.001
-	temp = -154.5383
+	temp = -4.279263
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4374,17 +3911,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -4405,7 +3931,7 @@ PART
 	srfN = None, -1
 	attN = top, 41
 	mass = 1
-	temp = -154.1015
+	temp = -4.279268
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4562,21 +4088,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0799999982118607
 		flowState = True
 		isTweakable = False
@@ -4601,7 +4116,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 41
 	mass = 0.05
-	temp = -153.9597
+	temp = -4.279166
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4653,17 +4168,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -4682,7 +4186,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 41
 	mass = 0.05
-	temp = -153.8179
+	temp = -4.279068
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4732,17 +4236,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -4763,7 +4256,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 41
 	mass = 0.05
-	temp = -153.6766
+	temp = -4.27897
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4813,17 +4306,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -4845,7 +4327,7 @@ PART
 	sym = 47
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -153.3476
+	temp = -4.277819
 	expt = 0.5
 	state = 0
 	connected = True
@@ -4951,17 +4433,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -4983,7 +4454,7 @@ PART
 	sym = 46
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -153.2129
+	temp = -4.277728
 	expt = 0.5
 	state = 0
 	connected = True
@@ -5091,17 +4562,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -5121,7 +4581,7 @@ PART
 	sym = 50
 	srfN = srfAttach, 2
 	mass = 0.02
-	temp = -153.4428
+	temp = -4.277811
 	expt = 0.1
 	state = 0
 	connected = True
@@ -5134,17 +4594,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -5165,7 +4614,7 @@ PART
 	sym = 51
 	srfN = srfAttach, 48
 	mass = 0.02
-	temp = -153.733
+	temp = -4.279261
 	expt = 0.1
 	state = 0
 	connected = True
@@ -5181,89 +4630,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -5285,7 +4673,7 @@ PART
 	sym = 48
 	srfN = srfAttach, 2
 	mass = 0.02
-	temp = -153.3323
+	temp = -4.277719
 	expt = 0.1
 	state = 0
 	connected = True
@@ -5298,17 +4686,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -5329,7 +4706,7 @@ PART
 	sym = 49
 	srfN = srfAttach, 50
 	mass = 0.02
-	temp = -153.697
+	temp = -4.279258
 	expt = 0.1
 	state = 0
 	connected = True
@@ -5345,89 +4722,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -5450,7 +4766,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.001
-	temp = -153.2659
+	temp = -4.277699
 	expt = 0.5
 	state = 0
 	connected = True
@@ -5463,17 +4779,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -5493,7 +4798,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 52
 	mass = 0.075
-	temp = -153.6523
+	temp = -4.279245
 	expt = 0.5
 	state = 0
 	connected = True
@@ -5506,17 +4811,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -5544,11 +4838,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: MK1Fuselage_2; pos: -0.0009912729,4.285606E-05,-7.440964E-05; dir: -0.9970864,0.05441402,-0.05345847; rot: -0.4226175,4.670356E-07,-0.9063078,-0.0007548186
+	cData = tgt: MK1Fuselage_2; pos: -0.001004064,-2.979927E-06,-7.902493E-05; dir: -0.9970864,0.05441402,-0.05345847; rot: 0.7372766,0.0002885684,0.6755907,0.0006974153
 	sym = 55
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -152.6881
+	temp = -4.27739
 	expt = 0
 	state = 0
 	connected = True
@@ -5578,11 +4872,11 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: nuclearEngine_9; pos: -0.02627816,0.001396307,0.001377071; dir: -0.9970866,0.05441427,0.05345823; rot: -0.8660263,1.990281E-07,-0.4999985,-2.170977E-06
+	cData = tgt: nuclearEngine_9; pos: -0.02625939,0.001418302,0.001492826; dir: -0.9970866,0.05441427,0.05345823; rot: -0.7933521,-1.892447E-06,0.608763,-7.674097E-07
 	sym = 54
 	srfN = srfAttach, 2
 	mass = 0.05
-	temp = -152.5573
+	temp = -4.277302
 	expt = 0
 	state = 0
 	connected = True
@@ -5616,7 +4910,7 @@ PART
 	attN = None, -1
 	attN = bottom, 57
 	mass = 0.001
-	temp = -153.0136
+	temp = -4.277373
 	expt = 0.5
 	state = 0
 	connected = True
@@ -5629,17 +4923,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -5660,7 +4943,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 56
 	mass = 0.1
-	temp = -153.9316
+	temp = -4.279442
 	expt = 0.5
 	state = 0
 	connected = True
@@ -5821,17 +5104,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -5851,7 +5123,7 @@ PART
 	sym = 59
 	srfN = srfAttach, 1
 	mass = 0.02
-	temp = -154.3886
+	temp = -4.279207
 	expt = 0.1
 	state = 0
 	connected = True
@@ -5867,89 +5139,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 15
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -5971,7 +5182,7 @@ PART
 	sym = 58
 	srfN = srfAttach, 1
 	mass = 0.02
-	temp = -154.2491
+	temp = -4.27911
 	expt = 0.1
 	state = 0
 	connected = True
@@ -5987,89 +5198,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 15
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -6090,7 +5240,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.015
-	temp = -154.1092
+	temp = -4.279014
 	expt = 0.5
 	state = 0
 	connected = True
@@ -6176,17 +5326,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -6205,7 +5344,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 0
 	mass = 1E-05
-	temp = -154.1117
+	temp = -4.279198
 	expt = 0.5
 	state = 0
 	connected = True
@@ -6313,7 +5452,7 @@ PART
 				unlockTechs = 
 				touchdownSpeed
 				{
-					val = 0.5
+					_val = 0.5
 					_text = 0.5
 				}
 				limitGearsStage
@@ -6330,11 +5469,12 @@ PART
 			MechJebModuleDockingAutopilot
 			{
 				forceRol = False
+				overrideSafeDistance = False
 				unlockParts = 
 				unlockTechs = 
 				rol
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 			}
@@ -6362,6 +5502,7 @@ PART
 			}
 			MechJebModuleLandingGuidance
 			{
+				landingSiteIdx = 0
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -6398,12 +5539,12 @@ PART
 				unlockTechs = 
 				heading
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 				speed
 				{
-					val = 10
+					_val = 10
 					_text = 10
 				}
 			}
@@ -6443,27 +5584,43 @@ PART
 				unlockTechs = flightControl
 				srfHdg
 				{
-					val = 90
+					_val = 90
 					_text = 90
 				}
 				srfPit
 				{
-					val = 90
+					_val = 90
 					_text = 5
 				}
 				srfRol
 				{
-					val = 0
+					_val = 0
+					_text = 0
+				}
+				srfVelYaw
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelPit
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelRol
+				{
+					_val = 0
 					_text = 0
 				}
 				rol
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 			}
 			MechJebModuleSpaceplaneGuidance
 			{
+				runwayIndex = 1
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -6478,7 +5635,7 @@ PART
 				unlockTechs = advFlightControl
 				phaseAngle
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 			}
@@ -6535,7 +5692,7 @@ PART
 				unlockTechs = 
 				maxThrottle
 				{
-					val = 1
+					_val = 1
 					_text = 100
 				}
 			}
@@ -6545,7 +5702,7 @@ PART
 				unlockTechs = 
 				Tf
 				{
-					val = 1
+					_val = 1
 					_text = 1
 				}
 			}
@@ -6569,7 +5726,7 @@ PART
 				markUT = 138023187.950057
 				deltaVExpended = 7315.81871468418
 				dragLosses = 2511.53228041425
-				gravityLosses = 2386.39167364956
+				gravityLosses = 2387.96224352697
 				steeringLosses = 477.304484666476
 				markLatitude = -0.0485985853819117
 				markLongitude = -74.724664856711
@@ -6622,17 +5779,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -6662,7 +5808,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 63
 	mass = 0.1
-	temp = -154.2383
+	temp = -4.27947
 	expt = 0.5
 	state = 0
 	connected = True
@@ -6823,17 +5969,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -6854,7 +5989,7 @@ PART
 	attN = top, 64
 	attN = bottom, 62
 	mass = 0.08
-	temp = -154.4198
+	temp = -4.279472
 	expt = 0.5
 	state = 0
 	connected = True
@@ -6867,17 +6002,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -6899,7 +6023,7 @@ PART
 	attN = bottom, 67
 	attN = top, 63
 	mass = 0.5
-	temp = -154.8267
+	temp = -4.280086
 	expt = 0
 	state = 0
 	connected = True
@@ -7023,17 +6147,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -7062,7 +6175,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 64
 	mass = 0.005
-	temp = -154.1937
+	temp = -4.279289
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7075,17 +6188,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -7115,7 +6217,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 64
 	mass = 0.005
-	temp = -154.0656
+	temp = -4.279202
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7178,17 +6280,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -7209,7 +6300,7 @@ PART
 	attN = top, 64
 	attN = bottom, 72
 	mass = 0.4
-	temp = -154.968
+	temp = -4.280837
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7222,17 +6313,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -7265,7 +6345,7 @@ PART
 	sym = 71
 	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -154.2517
+	temp = -4.279293
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7315,17 +6395,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -7349,7 +6418,7 @@ PART
 	sym = 71
 	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -154.1239
+	temp = -4.279206
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7399,17 +6468,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -7433,7 +6491,7 @@ PART
 	sym = 71
 	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -153.9967
+	temp = -4.279119
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7483,17 +6541,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -7517,7 +6564,7 @@ PART
 	sym = 70
 	srfN = srfAttach, 67
 	mass = 0.05
-	temp = -153.8695
+	temp = -4.279034
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7569,17 +6616,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -7600,7 +6636,7 @@ PART
 	attN = top, 73
 	attN = bottom, 67
 	mass = 0.2
-	temp = -154.0719
+	temp = -4.279116
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7722,17 +6758,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -7755,7 +6780,7 @@ PART
 	attN = top, 72
 	attN = bottom, 74
 	mass = 0.2
-	temp = -154.2656
+	temp = -4.279468
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7879,17 +6904,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -7910,7 +6924,7 @@ PART
 	attN = top, 73
 	attN = bottom, 75
 	mass = 0.4
-	temp = -154.441
+	temp = -4.279472
 	expt = 0.5
 	state = 0
 	connected = True
@@ -7923,17 +6937,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -7965,7 +6968,7 @@ PART
 	attN = bottom, 76
 	attN = top, 74
 	mass = 0.5
-	temp = -154.9031
+	temp = -4.28006
 	expt = 0
 	state = 0
 	connected = True
@@ -8089,17 +7092,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -8130,7 +7122,7 @@ PART
 	attN = top, 75
 	attN = bottom, 77
 	mass = 0.2
-	temp = -155.6778
+	temp = -4.283452
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8143,17 +7135,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -8175,7 +7156,7 @@ PART
 	attN = top, 76
 	attN = bottom, 158
 	mass = 10
-	temp = -155.0556
+	temp = -4.279768
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8188,17 +7169,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -8243,7 +7213,7 @@ PART
 	attN = top, 97
 	attN = bottom, 79
 	mass = 10
-	temp = -155.097
+	temp = -4.281034
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8256,17 +7226,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -8311,7 +7270,7 @@ PART
 	attN = top, 80
 	attN = bottom, 78
 	mass = 0.2
-	temp = -154.8894
+	temp = -4.280136
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8324,17 +7283,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -8362,7 +7310,7 @@ PART
 	attN = bottom03, 82
 	attN = bottom04, 81
 	mass = 0.2
-	temp = -154.7509
+	temp = -4.280176
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8375,17 +7323,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -8413,7 +7350,7 @@ PART
 	attN = top, 80
 	attN = None, -1
 	mass = 2.25
-	temp = -154.1799
+	temp = -4.279312
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8622,21 +7559,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -8669,7 +7595,7 @@ PART
 	attN = top, 80
 	attN = None, -1
 	mass = 2.25
-	temp = -154.0857
+	temp = -4.279251
 	expt = 0.5
 	state = 0
 	connected = True
@@ -8878,21 +7804,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -8925,7 +7840,7 @@ PART
 	attN = top, 80
 	attN = None, -1
 	mass = 2.25
-	temp = -153.9917
+	temp = -4.279191
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9134,21 +8049,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -9181,7 +8085,7 @@ PART
 	attN = top, 80
 	attN = None, -1
 	mass = 2.25
-	temp = -153.8978
+	temp = -4.27913
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9390,21 +8294,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -9432,7 +8325,7 @@ PART
 	sym = 145
 	srfN = srfAttach, 79
 	mass = 0.005
-	temp = -154.0897
+	temp = -4.27921
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9495,17 +8388,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -9527,7 +8409,7 @@ PART
 	sym = 146
 	srfN = srfAttach, 79
 	mass = 0.05
-	temp = -153.969
+	temp = -4.279128
 	expt = 0
 	state = 0
 	connected = True
@@ -9562,7 +8444,7 @@ PART
 	sym = 147
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.214
+	temp = -4.279355
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9612,17 +8494,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -9646,7 +8517,7 @@ PART
 	sym = 148
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.2148
+	temp = -4.279325
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9696,17 +8567,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -9730,7 +8590,7 @@ PART
 	sym = 149
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.1563
+	temp = -4.279324
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9780,17 +8640,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -9814,7 +8663,7 @@ PART
 	sym = 150
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.1341
+	temp = -4.279308
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9864,17 +8713,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -9898,7 +8736,7 @@ PART
 	sym = 151
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.1097
+	temp = -4.279294
 	expt = 0.5
 	state = 0
 	connected = True
@@ -9948,17 +8786,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -9982,7 +8809,7 @@ PART
 	sym = 152
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.0854
+	temp = -4.279281
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10032,17 +8859,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -10066,7 +8882,7 @@ PART
 	sym = 153
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.0617
+	temp = -4.279269
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10116,17 +8932,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -10150,7 +8955,7 @@ PART
 	sym = 154
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -154.0128
+	temp = -4.279204
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10202,17 +9007,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -10229,13 +9023,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_77; pos: -0.08993889,-0.1247663,1.05451; dir: -0.399422,0.05754538,0.9149594; rot: -0.5316076,0.4662548,0.466254,0.531608
+	cData = tgt: Size3LargeTank_77; pos: -0.08987454,-0.1248509,1.054599; dir: -0.399422,0.05754538,0.9149594; rot: 0.312714,-0.6342005,-0.6342002,-0.3127136
 	sym = 115
 	sym = 135
 	sym = 155
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -153.9908
+	temp = -4.279214
 	expt = 0
 	state = 0
 	connected = True
@@ -10265,13 +9059,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_138; pos: -1.642155,0.1483429,-1.14732; dir: -0.8149305,-0.01920811,-0.5792403
+	cData = tgt: Size3LargeTank_138; pos: -1.642226,0.1482569,-1.14715; dir: -0.8149305,-0.01920811,-0.5792403
 	sym = 116
 	sym = 136
 	sym = 156
 	srfN = srfAttach, 78
 	mass = 0.05
-	temp = -153.8206
+	temp = -4.278987
 	expt = 0
 	state = 0
 	connected = True
@@ -10308,7 +9102,7 @@ PART
 	attN = None, -1
 	attN = bottom, 78
 	mass = 0.4
-	temp = -153.9567
+	temp = -4.27923
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10321,17 +9115,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -10366,7 +9149,7 @@ PART
 	attN = top, 117
 	attN = bottom, 99
 	mass = 10
-	temp = -155.0849
+	temp = -4.281017
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10379,17 +9162,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -10434,7 +9206,7 @@ PART
 	attN = top, 100
 	attN = bottom, 98
 	mass = 0.2
-	temp = -154.8891
+	temp = -4.280135
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10447,17 +9219,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -10485,7 +9246,7 @@ PART
 	attN = bottom03, 102
 	attN = bottom04, 101
 	mass = 0.2
-	temp = -154.7509
+	temp = -4.280176
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10498,17 +9259,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -10536,7 +9286,7 @@ PART
 	attN = top, 100
 	attN = None, -1
 	mass = 2.25
-	temp = -154.18
+	temp = -4.279312
 	expt = 0.5
 	state = 0
 	connected = True
@@ -10745,21 +9495,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -10792,7 +9531,7 @@ PART
 	attN = top, 100
 	attN = None, -1
 	mass = 2.25
-	temp = -154.0856
+	temp = -4.279252
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11001,21 +9740,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -11048,7 +9776,7 @@ PART
 	attN = top, 100
 	attN = None, -1
 	mass = 2.25
-	temp = -153.9917
+	temp = -4.279191
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11257,21 +9985,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -11304,7 +10021,7 @@ PART
 	attN = top, 100
 	attN = None, -1
 	mass = 2.25
-	temp = -153.8978
+	temp = -4.279129
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11513,21 +10230,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00204373606008705
+		amount = 0.00156323426294993
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -11555,7 +10261,7 @@ PART
 	sym = 145
 	srfN = srfAttach, 99
 	mass = 0.005
-	temp = -154.0896
+	temp = -4.27921
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11618,17 +10324,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -11650,7 +10345,7 @@ PART
 	sym = 146
 	srfN = srfAttach, 99
 	mass = 0.05
-	temp = -153.9689
+	temp = -4.279128
 	expt = 0
 	state = 0
 	connected = True
@@ -11685,7 +10380,7 @@ PART
 	sym = 147
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.2122
+	temp = -4.279355
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11735,17 +10430,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -11769,7 +10453,7 @@ PART
 	sym = 148
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.2122
+	temp = -4.279325
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11819,17 +10503,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -11853,7 +10526,7 @@ PART
 	sym = 149
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.1543
+	temp = -4.279324
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11903,17 +10576,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -11937,7 +10599,7 @@ PART
 	sym = 150
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.1321
+	temp = -4.279308
 	expt = 0.5
 	state = 0
 	connected = True
@@ -11987,17 +10649,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -12021,7 +10672,7 @@ PART
 	sym = 151
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.1078
+	temp = -4.279295
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12071,17 +10722,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -12105,7 +10745,7 @@ PART
 	sym = 152
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.0834
+	temp = -4.279281
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12155,17 +10795,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -12189,7 +10818,7 @@ PART
 	sym = 153
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.0596
+	temp = -4.279268
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12239,17 +10868,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -12273,7 +10891,7 @@ PART
 	sym = 154
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -154.0101
+	temp = -4.279203
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12325,17 +10943,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -12352,13 +10959,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_77; pos: -0.5891981,0.1569344,1.121908; dir: -0.399422,0.05754538,0.9149594; rot: -0.531635,0.4662233,0.4662226,0.5316358
+	cData = tgt: Size3LargeTank_77; pos: -0.5892119,0.1568039,1.12199; dir: -0.399422,0.05754538,0.9149594; rot: -0.2272855,-0.6695831,-0.6695826,0.227286
 	sym = 95
 	sym = 135
 	sym = 155
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -153.9883
+	temp = -4.279213
 	expt = 0
 	state = 0
 	connected = True
@@ -12388,13 +10995,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_78; pos: -1.629417,0.03681963,-1.16633; dir: -0.8149305,-0.01920811,-0.5792403
+	cData = tgt: Size3LargeTank_78; pos: -1.629484,0.03678202,-1.166429; dir: -0.8149305,-0.01920811,-0.5792403
 	sym = 96
 	sym = 136
 	sym = 156
 	srfN = srfAttach, 98
 	mass = 0.05
-	temp = -153.8167
+	temp = -4.278987
 	expt = 0
 	state = 0
 	connected = True
@@ -12431,7 +11038,7 @@ PART
 	attN = None, -1
 	attN = bottom, 98
 	mass = 0.4
-	temp = -153.9551
+	temp = -4.27923
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12444,17 +11051,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -12489,7 +11085,7 @@ PART
 	attN = top, 137
 	attN = bottom, 119
 	mass = 10
-	temp = -155.0723
+	temp = -4.280999
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12502,17 +11098,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -12557,7 +11142,7 @@ PART
 	attN = top, 120
 	attN = bottom, 118
 	mass = 0.2
-	temp = -154.8888
+	temp = -4.280135
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12570,17 +11155,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -12608,7 +11182,7 @@ PART
 	attN = bottom03, 122
 	attN = bottom04, 121
 	mass = 0.2
-	temp = -154.7508
+	temp = -4.280176
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12621,17 +11195,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -12659,7 +11222,7 @@ PART
 	attN = top, 120
 	attN = None, -1
 	mass = 2.25
-	temp = -154.18
+	temp = -4.279312
 	expt = 0.5
 	state = 0
 	connected = True
@@ -12868,21 +11431,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0017805217827643
+		amount = 0.00129893927728246
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -12915,7 +11467,7 @@ PART
 	attN = top, 120
 	attN = None, -1
 	mass = 2.25
-	temp = -154.0857
+	temp = -4.279251
 	expt = 0.5
 	state = 0
 	connected = True
@@ -13124,21 +11676,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0017805217827643
+		amount = 0.00129893927728246
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -13171,7 +11712,7 @@ PART
 	attN = top, 120
 	attN = None, -1
 	mass = 2.25
-	temp = -153.9916
+	temp = -4.27919
 	expt = 0.5
 	state = 0
 	connected = True
@@ -13380,21 +11921,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0017805217827643
+		amount = 0.00129893927728246
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -13427,7 +11957,7 @@ PART
 	attN = top, 120
 	attN = None, -1
 	mass = 2.25
-	temp = -153.8979
+	temp = -4.27913
 	expt = 0.5
 	state = 0
 	connected = True
@@ -13636,21 +12166,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0017805217827643
+		amount = 0.00129893927728246
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -13678,7 +12197,7 @@ PART
 	sym = 145
 	srfN = srfAttach, 119
 	mass = 0.005
-	temp = -154.0895
+	temp = -4.27921
 	expt = 0.5
 	state = 0
 	connected = True
@@ -13741,17 +12260,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -13773,7 +12281,7 @@ PART
 	sym = 146
 	srfN = srfAttach, 119
 	mass = 0.05
-	temp = -153.9689
+	temp = -4.279128
 	expt = 0
 	state = 0
 	connected = True
@@ -13808,7 +12316,7 @@ PART
 	sym = 147
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.2102
+	temp = -4.279355
 	expt = 0.5
 	state = 0
 	connected = True
@@ -13858,17 +12366,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -13892,7 +12389,7 @@ PART
 	sym = 148
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.2097
+	temp = -4.279325
 	expt = 0.5
 	state = 0
 	connected = True
@@ -13942,17 +12439,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -13976,7 +12462,7 @@ PART
 	sym = 149
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.1522
+	temp = -4.279323
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14026,17 +12512,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -14060,7 +12535,7 @@ PART
 	sym = 150
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.1301
+	temp = -4.279308
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14110,17 +12585,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -14144,7 +12608,7 @@ PART
 	sym = 151
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.1057
+	temp = -4.279294
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14194,17 +12658,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -14228,7 +12681,7 @@ PART
 	sym = 152
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.0814
+	temp = -4.279281
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14278,17 +12731,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -14312,7 +12754,7 @@ PART
 	sym = 153
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.0578
+	temp = -4.279268
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14362,17 +12804,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -14396,7 +12827,7 @@ PART
 	sym = 154
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -154.0075
+	temp = -4.279203
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14448,17 +12879,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -14475,13 +12895,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_77; pos: -0.6522914,0.1908264,0.6051673; dir: -0.399422,0.05754538,0.9149594; rot: 0.5316064,-0.4662558,-0.4662554,-0.5316072
+	cData = tgt: Size3LargeTank_77; pos: -0.6524318,0.1906356,0.6051766; dir: -0.399422,0.05754538,0.9149594; rot: 0.634201,0.3127126,0.3127122,-0.6342011
 	sym = 95
 	sym = 115
 	sym = 155
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -153.9862
+	temp = -4.279213
 	expt = 0
 	state = 0
 	connected = True
@@ -14511,13 +12931,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_98; pos: -1.62595,-0.2258606,-1.153726; dir: -0.8149305,-0.01920811,-0.5792403
+	cData = tgt: Size3LargeTank_98; pos: -1.625939,-0.2259179,-1.153826; dir: -0.8149305,-0.01920811,-0.5792403
 	sym = 96
 	sym = 116
 	sym = 156
 	srfN = srfAttach, 118
 	mass = 0.05
-	temp = -153.8127
+	temp = -4.278987
 	expt = 0
 	state = 0
 	connected = True
@@ -14554,7 +12974,7 @@ PART
 	attN = None, -1
 	attN = bottom, 118
 	mass = 0.4
-	temp = -153.9537
+	temp = -4.27923
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14567,17 +12987,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -14612,7 +13021,7 @@ PART
 	attN = top, 157
 	attN = bottom, 139
 	mass = 10
-	temp = -155.0599
+	temp = -4.280979
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14625,17 +13034,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -14680,7 +13078,7 @@ PART
 	attN = top, 140
 	attN = bottom, 138
 	mass = 0.2
-	temp = -154.8889
+	temp = -4.280135
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14693,17 +13091,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -14731,7 +13118,7 @@ PART
 	attN = bottom03, 142
 	attN = bottom04, 141
 	mass = 0.2
-	temp = -154.7509
+	temp = -4.280176
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14744,17 +13131,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -14782,7 +13158,7 @@ PART
 	attN = top, 140
 	attN = None, -1
 	mass = 2.25
-	temp = -154.18
+	temp = -4.279312
 	expt = 0.5
 	state = 0
 	connected = True
@@ -14991,21 +13367,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00112062374963904
+		amount = 0.000643501394533154
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -15038,7 +13403,7 @@ PART
 	attN = top, 140
 	attN = None, -1
 	mass = 2.25
-	temp = -154.0856
+	temp = -4.279251
 	expt = 0.5
 	state = 0
 	connected = True
@@ -15247,21 +13612,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00112062374963904
+		amount = 0.000643501394533154
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -15294,7 +13648,7 @@ PART
 	attN = top, 140
 	attN = None, -1
 	mass = 2.25
-	temp = -153.9916
+	temp = -4.279191
 	expt = 0.5
 	state = 0
 	connected = True
@@ -15503,21 +13857,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00112062374963904
+		amount = 0.000643501394533154
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -15550,7 +13893,7 @@ PART
 	attN = top, 140
 	attN = None, -1
 	mass = 2.25
-	temp = -153.8978
+	temp = -4.27913
 	expt = 0.5
 	state = 0
 	connected = True
@@ -15759,21 +14102,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00112062374963904
+		amount = 0.000643501394533154
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -15801,7 +14133,7 @@ PART
 	sym = 125
 	srfN = srfAttach, 139
 	mass = 0.005
-	temp = -154.0894
+	temp = -4.27921
 	expt = 0.5
 	state = 0
 	connected = True
@@ -15864,17 +14196,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -15896,7 +14217,7 @@ PART
 	sym = 126
 	srfN = srfAttach, 139
 	mass = 0.05
-	temp = -153.9688
+	temp = -4.279128
 	expt = 0
 	state = 0
 	connected = True
@@ -15931,7 +14252,7 @@ PART
 	sym = 127
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.2082
+	temp = -4.279354
 	expt = 0.5
 	state = 0
 	connected = True
@@ -15981,17 +14302,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16015,7 +14325,7 @@ PART
 	sym = 128
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.2069
+	temp = -4.279324
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16065,17 +14375,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16099,7 +14398,7 @@ PART
 	sym = 129
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.1501
+	temp = -4.279323
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16149,17 +14448,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16183,7 +14471,7 @@ PART
 	sym = 130
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.128
+	temp = -4.279308
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16233,17 +14521,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16267,7 +14544,7 @@ PART
 	sym = 131
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.1035
+	temp = -4.279294
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16317,17 +14594,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16351,7 +14617,7 @@ PART
 	sym = 132
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.0796
+	temp = -4.279281
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16401,17 +14667,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16435,7 +14690,7 @@ PART
 	sym = 133
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.0557
+	temp = -4.279268
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16485,17 +14740,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16519,7 +14763,7 @@ PART
 	sym = 134
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -154.005
+	temp = -4.279202
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16571,17 +14815,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -16598,13 +14831,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_77; pos: -0.148245,-0.09103719,0.5593823; dir: -0.399422,0.05754538,0.9149594; rot: 0.5316067,-0.4662558,-0.4662552,-0.531607
+	cData = tgt: Size3LargeTank_77; pos: -0.148258,-0.09120175,0.5592604; dir: -0.399422,0.05754538,0.9149594; rot: 0.6695691,-0.2273268,-0.2273266,-0.6695689
 	sym = 95
 	sym = 115
 	sym = 135
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -153.9841
+	temp = -4.279213
 	expt = 0
 	state = 0
 	connected = True
@@ -16634,13 +14867,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3LargeTank_118; pos: -1.622757,-0.1143197,-1.150069; dir: -0.8149305,-0.01920811,-0.5792403
+	cData = tgt: Size3LargeTank_118; pos: -1.622734,-0.1142374,-1.15006; dir: -0.8149305,-0.01920811,-0.5792403
 	sym = 96
 	sym = 116
 	sym = 136
 	srfN = srfAttach, 138
 	mass = 0.05
-	temp = -153.8089
+	temp = -4.278987
 	expt = 0
 	state = 0
 	connected = True
@@ -16677,7 +14910,7 @@ PART
 	attN = None, -1
 	attN = bottom, 138
 	mass = 0.4
-	temp = -153.9521
+	temp = -4.27923
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16690,17 +14923,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -16732,7 +14954,7 @@ PART
 	attN = top, 159
 	attN = bottom, 77
 	mass = 0.2
-	temp = -155.741
+	temp = -4.28309
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16745,17 +14967,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -16777,7 +14988,7 @@ PART
 	attN = top, 160
 	attN = bottom, 158
 	mass = 0.2
-	temp = -154.7846
+	temp = -4.279502
 	expt = 0.5
 	state = 0
 	connected = True
@@ -16899,17 +15110,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -16932,7 +15132,7 @@ PART
 	attN = top, 159
 	attN = bottom, 161
 	mass = 0.2
-	temp = -154.698
+	temp = -4.279489
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17056,17 +15256,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -17087,7 +15276,7 @@ PART
 	attN = bottom, 162
 	attN = top, 160
 	mass = 0.5
-	temp = -155.3232
+	temp = -4.281081
 	expt = 0
 	state = 0
 	connected = True
@@ -17211,17 +15400,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -17252,7 +15430,7 @@ PART
 	attN = top, 161
 	attN = bottom, 163
 	mass = 0.2
-	temp = -156.2218
+	temp = -4.286112
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17265,17 +15443,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -17297,7 +15464,7 @@ PART
 	attN = top, 162
 	attN = None, -1
 	mass = 6.5
-	temp = -154.6285
+	temp = -4.27935
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17504,21 +15671,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.00112062374963904
+		amount = 0.000643501394533154
 		maxAmount = 0.239999994635582
 		flowState = True
 		isTweakable = False
@@ -17546,7 +15702,7 @@ PART
 	sym = 167
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -154.5967
+	temp = -4.279266
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17559,17 +15715,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -17602,7 +15747,7 @@ PART
 	sym = 167
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -154.4773
+	temp = -4.279186
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17615,17 +15760,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -17658,7 +15792,7 @@ PART
 	sym = 167
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -154.358
+	temp = -4.279106
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17671,17 +15805,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -17714,7 +15837,7 @@ PART
 	sym = 166
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -154.239
+	temp = -4.279027
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17727,17 +15850,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -17770,7 +15882,7 @@ PART
 	sym = 171
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -154.1254
+	temp = -4.278982
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17831,17 +15943,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -17865,7 +15966,7 @@ PART
 	sym = 171
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -154.0206
+	temp = -4.278913
 	expt = 0.5
 	state = 0
 	connected = True
@@ -17926,17 +16027,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -17960,7 +16050,7 @@ PART
 	sym = 171
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -153.9157
+	temp = -4.278845
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18021,17 +16111,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -18055,7 +16134,7 @@ PART
 	sym = 170
 	srfN = srfAttach, 162
 	mass = 0.005
-	temp = -153.8113
+	temp = -4.278777
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18118,17 +16197,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -18150,7 +16218,7 @@ PART
 	sym = 175
 	srfN = srfAttach, 162
 	mass = 0.05
-	temp = -153.7191
+	temp = -4.278733
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18200,17 +16268,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -18234,7 +16291,7 @@ PART
 	sym = 175
 	srfN = srfAttach, 162
 	mass = 0.05
-	temp = -153.6208
+	temp = -4.278668
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18284,17 +16341,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -18318,7 +16364,7 @@ PART
 	sym = 175
 	srfN = srfAttach, 162
 	mass = 0.05
-	temp = -153.5227
+	temp = -4.278605
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18368,17 +16414,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -18402,7 +16437,7 @@ PART
 	sym = 174
 	srfN = srfAttach, 162
 	mass = 0.05
-	temp = -153.425
+	temp = -4.278543
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18454,17 +16489,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -18486,7 +16510,7 @@ PART
 	sym = 179
 	srfN = srfAttach, 161
 	mass = 0.15
-	temp = -154.2423
+	temp = -4.279204
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18499,17 +16523,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -18542,7 +16555,7 @@ PART
 	sym = 179
 	srfN = srfAttach, 161
 	mass = 0.15
-	temp = -154.1077
+	temp = -4.279112
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18555,17 +16568,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -18598,7 +16600,7 @@ PART
 	sym = 179
 	srfN = srfAttach, 161
 	mass = 0.15
-	temp = -153.9734
+	temp = -4.27902
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18611,17 +16613,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -18654,7 +16645,7 @@ PART
 	sym = 178
 	srfN = srfAttach, 161
 	mass = 0.15
-	temp = -153.8393
+	temp = -4.278928
 	expt = 0.5
 	state = 0
 	connected = True
@@ -18667,17 +16658,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -18705,7 +16685,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -1.173879,-4.641711,0.1030728; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -1.173836,-4.641661,0.1031853; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 181
 	sym = 182
 	sym = 183
@@ -18715,7 +16695,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -154.3845
+	temp = -4.279247
 	expt = 0
 	state = 0
 	connected = True
@@ -18745,7 +16725,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -1.230585,-4.689694,0.03280058; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -1.230622,-4.6896,0.03290568; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 182
 	sym = 183
@@ -18755,7 +16735,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -154.2795
+	temp = -4.279178
 	expt = 0
 	state = 0
 	connected = True
@@ -18785,7 +16765,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -1.19845,-4.668798,-0.0474169; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -1.198488,-4.668732,-0.0473734; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 181
 	sym = 183
@@ -18795,7 +16775,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -154.1749
+	temp = -4.279109
 	expt = 0
 	state = 0
 	connected = True
@@ -18825,7 +16805,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -1.098045,-4.574669,-0.08193901; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -1.098159,-4.574436,-0.0820687; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 181
 	sym = 182
@@ -18835,7 +16815,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -154.0702
+	temp = -4.279042
 	expt = 0
 	state = 0
 	connected = True
@@ -18865,7 +16845,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -0.991721,-4.439936,-0.05604583; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -0.9917591,-4.439863,-0.05613735; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 181
 	sym = 182
@@ -18875,7 +16855,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -153.9657
+	temp = -4.278973
 	expt = 0
 	state = 0
 	connected = True
@@ -18905,7 +16885,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -0.9407239,-4.361263,0.005969042; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -0.9407188,-4.361328,0.005994216; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 181
 	sym = 182
@@ -18915,7 +16895,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -153.8615
+	temp = -4.278904
 	expt = 0
 	state = 0
 	connected = True
@@ -18945,7 +16925,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -0.9701087,-4.405115,0.07360101; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -0.9699525,-4.405077,0.07356519; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 181
 	sym = 182
@@ -18955,7 +16935,7 @@ PART
 	sym = 187
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -153.7576
+	temp = -4.278837
 	expt = 0
 	state = 0
 	connected = True
@@ -18985,7 +16965,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: Size3to2Adapter_162; pos: -1.065289,-4.531314,0.1161272; dir: -0.2311173,-0.9729181,0.003894013
+	cData = tgt: Size3to2Adapter_162; pos: -1.065177,-4.531308,0.1162032; dir: -0.2311173,-0.9729181,0.003894013
 	sym = 180
 	sym = 181
 	sym = 182
@@ -18995,7 +16975,7 @@ PART
 	sym = 186
 	srfN = srfAttach, 158
 	mass = 0.05
-	temp = -153.6539
+	temp = -4.278769
 	expt = 0
 	state = 0
 	connected = True
@@ -19029,7 +17009,7 @@ PART
 	sym = 190
 	srfN = srfAttach, 76
 	mass = 0.005
-	temp = -154.496
+	temp = -4.279306
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19042,17 +17022,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -19084,7 +17053,7 @@ PART
 	sym = 190
 	srfN = srfAttach, 76
 	mass = 0.005
-	temp = -154.3747
+	temp = -4.279225
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19097,17 +17066,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -19139,7 +17097,7 @@ PART
 	sym = 189
 	srfN = srfAttach, 76
 	mass = 0.005
-	temp = -154.2539
+	temp = -4.279145
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19152,17 +17110,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -19194,7 +17141,7 @@ PART
 	sym = 193
 	srfN = srfAttach, 76
 	mass = 0.005
-	temp = -154.1331
+	temp = -4.279065
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19255,17 +17202,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -19288,7 +17224,7 @@ PART
 	sym = 193
 	srfN = srfAttach, 76
 	mass = 0.005
-	temp = -154.0128
+	temp = -4.278983
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19349,17 +17285,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -19382,7 +17307,7 @@ PART
 	sym = 192
 	srfN = srfAttach, 76
 	mass = 0.005
-	temp = -153.8925
+	temp = -4.278903
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19445,17 +17370,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -19474,7 +17388,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 76
 	mass = 0.015
-	temp = -153.7854
+	temp = -4.278847
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19560,17 +17474,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -19589,7 +17492,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 76
 	mass = 0.015
-	temp = -153.6734
+	temp = -4.278772
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19675,17 +17578,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -19704,7 +17596,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 76
 	mass = 1E-05
-	temp = -153.5456
+	temp = -4.278673
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19803,17 +17695,6 @@ PART
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -19843,7 +17724,7 @@ PART
 	sym = 198
 	srfN = srfAttach, 75
 	mass = 0.015
-	temp = -154.0948
+	temp = -4.279208
 	expt = 0.5
 	state = 0
 	connected = True
@@ -19927,17 +17808,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -19959,7 +17829,7 @@ PART
 	sym = 197
 	srfN = srfAttach, 75
 	mass = 0.015
-	temp = -153.9716
+	temp = -4.279124
 	expt = 0.5
 	state = 0
 	connected = True
@@ -20045,32 +17915,21 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 ACTIONGROUPS
 {
 	Stage = False, 0
-	Gear = False, 0.06
+	Gear = False, 0.04
 	Light = False, 0
-	RCS = False, 0.06
-	SAS = False, 0.06
+	RCS = False, 0.04
+	SAS = False, 0.04
 	Brakes = False, 0
 	Abort = False, 0
-	Custom01 = False, 0.06
-	Custom02 = False, 0.06
-	Custom03 = False, 0.06
+	Custom01 = False, 0.04
+	Custom02 = False, 0.04
+	Custom03 = False, 0.04
 	Custom04 = False, 0
-	Custom05 = True, 0.06
+	Custom05 = True, 0.04
 	Custom06 = False, 0
 	Custom07 = False, 0
 	Custom08 = False, 0
