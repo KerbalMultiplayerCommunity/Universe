@@ -1,0 +1,513 @@
+pid = 520c548280b24e0a87ab7397c5a9a4e3
+name = Duna Lander Debris
+type = Debris
+sit = SUB_ORBITAL
+landed = False
+landedAt = 
+splashed = False
+met = 58.0200311243534
+lct = 157417485.283725
+root = 0
+lat = -0.00136628149829913
+lon = -152.013362831044
+alt = 50053.881662449
+hgt = -1
+nrm = -0.1229051,0.9845832,0.1244606
+rot = -0.4073059,-0.02531491,0.5634576,0.7183152
+CoM = -0.002745678,-1.688931,-0.001975825
+stg = 7
+prst = False
+ref = 0
+ctrl = False
+cPch = 0
+cHdg = 0
+cMod = -1
+ORBIT
+{
+	SMA = 370013.785601387
+	ECC = 0.00101988558911388
+	INC = 0.00898353208391594
+	LPE = 92.9039562273813
+	LAN = 349.749508284141
+	MNA = 1.67185074374545
+	EPH = 157417543.343756
+	REF = 6
+}
+PART
+{
+	name = size3Decoupler
+	uid = 2139158626
+	mid = 1456413370
+	launchID = 2
+	parent = 0
+	position = 0,0,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 6
+	dstg = 1
+	sqor = 6
+	sidx = 0
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = bottom, 1
+	mass = 0.8
+	temp = -43.65348
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = False
+	flag = Squad/Flags/default
+	rTrf = size3Decoupler
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = True
+		EVENTS
+		{
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = Size3SmallTank
+	uid = 113581655
+	mid = 1456413370
+	launchID = 2
+	parent = 0
+	position = -8.65661213467672E-16,-1.39656066894531,1.98276453849261E-14
+	rotation = -7.098757E-15,5.868466E-07,-3.099178E-16,1
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = top, 0
+	attN = bottom, 2
+	mass = 2.5
+	temp = -43.53074
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = Size3SmallTank
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1620
+		maxAmount = 1620
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1980
+		maxAmount = 1980
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = Size3to2Adapter
+	uid = 850046373
+	mid = 1456413370
+	launchID = 2
+	parent = 1
+	position = -2.14689013162722E-15,-3.46355152130127,4.91737117062734E-14
+	rotation = -1,3.099252E-16,-8.26013E-08,-7.098742E-15
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = top, 3
+	attN = bottom, 1
+	mass = 0.2
+	temp = -43.47186
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = Size3to2Adapter
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	name = liquidEngine2-2
+	uid = 939675832
+	mid = 1456413370
+	launchID = 2
+	parent = 2
+	position = -3.27940960452295E-15,-5.29063129425049,7.51136417062766E-14
+	rotation = -7.098742E-15,1.279104E-06,-3.099349E-16,1
+	mirror = 1,1,1
+	istg = 6
+	dstg = 2
+	sqor = 6
+	sidx = 1
+	attm = 0
+	srfN = None, -1
+	attN = top, 2
+	attN = None, -1
+	mass = 2
+	temp = -43.3899
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = liquidEngine2-2
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = True
+		flameout = False
+		EngineIgnited = True
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = Abort, Custom07, Custom10
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0.159999996423721
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	name = strutConnector
+	uid = 4210293504
+	mid = 1456413370
+	launchID = 2
+	parent = 0
+	position = -4.68488588012406E-06,0.431549072265625,-0.725564777851105
+	rotation = -0.5000001,0.5000001,0.5000004,-0.5000004
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	srfN = srfAttach, 0
+	mass = 0.05
+	temp = -43.42576
+	expt = 0
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = strutConnector
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	name = strutConnector
+	uid = 3265443954
+	mid = 1456413370
+	launchID = 2
+	parent = 0
+	position = -1.36321234703064,0.431549072265625,-0.61747270822525
+	rotation = -0.7071071,0.7071072,5.019859E-07,3.421126E-07
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	srfN = srfAttach, 0
+	mass = 0.05
+	temp = -43.38009
+	expt = 0
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = strutConnector
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+ACTIONGROUPS
+{
+	Stage = True, 157417479.543721
+	Gear = True, 0
+	Light = False, 0
+	RCS = True, 157417484.383724
+	SAS = False, 0
+	Brakes = False, 0
+	Abort = False, 0
+	Custom01 = False, 0
+	Custom02 = False, 0
+	Custom03 = False, 0
+	Custom04 = False, 0
+	Custom05 = False, 0
+	Custom06 = False, 0
+	Custom07 = False, 0
+	Custom08 = False, 0
+	Custom09 = False, 0
+	Custom10 = False, 0
+}
+DISCOVERY
+{
+	state = -1
+	lastObservedTime = 0
+	lifetime = Infinity
+	refTime = Infinity
+	size = 2
+}
+FLIGHTPLAN
+{
+}
+CTRLSTATE
+{
+	pitch = -0.2042412
+	yaw = 0.05332124
+	roll = 0
+	trimPitch = -0.2042412
+	trimYaw = 0.05332124
+	trimRoll = 0
+	mainThrottle = 0
+}
