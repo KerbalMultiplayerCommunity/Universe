@@ -1,36 +1,36 @@
 pid = 322cfc8518c44a458765c83b0536c35e
 name = It will at least move an inch
 type = Lander
-sit = SUB_ORBITAL
-landed = False
+sit = LANDED
+landed = True
 landedAt = 
 splashed = False
-met = 293766.048714876
+met = 294155.180978507
 lct = 141738406.470668
 root = 0
-lat = 1.59170273562176
-lon = 50.1524298446106
-alt = 7904.14767414016
-hgt = 3515.346
-nrm = -0.03984012,0.4281907,-0.9028099
-rot = -0.6896479,-0.7039781,0.1653186,0.03834698
-CoM = 1.480087E-05,-2.473725,9.131718E-05
+lat = 1.6869317833594
+lon = 50.2473158692966
+alt = 4390.16592749672
+hgt = 2.657733
+nrm = -0.461393,0.3928774,-0.7954646
+rot = -0.506532,-0.8342554,0.2144379,-0.03820484
+CoM = -8.925386E-06,-2.468165,-1.616659E-06
 stg = 2
 prst = False
 ref = 1288799050
-ctrl = True
-cPch = 0.5373116
-cHdg = 1.484763
+ctrl = False
+cPch = 0.1219998
+cHdg = -4.531235
 cMod = 0
 ORBIT
 {
-	SMA = 34641.9728218007
-	ECC = 0.970845300807272
-	INC = 2.55940125376894
-	LPE = 217.427981236688
-	LAN = 114.937938571851
-	MNA = 3.43411936081674
-	EPH = 142032172.619383
+	SMA = 32253.6134268987
+	ECC = 0.9963463458617
+	INC = 1.68608462848985
+	LPE = 269.99794406291
+	LAN = 66.939976539612
+	MNA = 3.14159195784548
+	EPH = 142032561.711647
 	REF = 3
 }
 PART
@@ -52,7 +52,7 @@ PART
 	attN = bottom, 1
 	attN = top, 16
 	mass = 0.6
-	temp = -121.9499
+	temp = -1.366713E-09
 	expt = 0.5
 	state = 0
 	connected = True
@@ -60,7 +60,6 @@ PART
 	flag = Squad/Flags/default
 	rTrf = landerCabinSmall
 	modCost = 0
-	crew = Shepdun Kerman
 	EVENTS
 	{
 	}
@@ -71,7 +70,7 @@ PART
 	{
 		name = ModuleCommand
 		isEnabled = True
-		controlSrcStatusText = Operational
+		controlSrcStatusText = Not Enough Crew (0/1)
 		EVENTS
 		{
 			MakeReference
@@ -305,6 +304,7 @@ PART
 		Surfaced
 		{
 			at = Kerbin
+			at = Minmus
 		}
 		Flew
 		{
@@ -367,7 +367,7 @@ PART
 	attN = bottom, 2
 	attN = top, 0
 	mass = 0.05
-	temp = -112.6136
+	temp = -1.362759E-09
 	expt = 0.5
 	state = 0
 	connected = True
@@ -450,7 +450,7 @@ PART
 	attN = top, 1
 	attN = bottom, 3
 	mass = 0.5
-	temp = -95.73167
+	temp = -1.359291E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -467,7 +467,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 341.22522521965
+		amount = 327.948955849258
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -477,7 +477,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 417.053051940965
+		amount = 400.826499706713
 		maxAmount = 440
 		flowState = True
 		isTweakable = True
@@ -504,7 +504,7 @@ PART
 	attN = top, 2
 	attN = None, -1
 	mass = 0.5
-	temp = 71.87276
+	temp = -1.353149E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -526,7 +526,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 0.2699997
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -697,7 +697,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -103.4007
+	temp = -1.350562E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -742,7 +742,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -103.3204
+	temp = -1.347484E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -787,7 +787,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -103.2404
+	temp = -1.344414E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -832,7 +832,7 @@ PART
 	sym = 6
 	srfN = srfAttach, 2
 	mass = 0.015
-	temp = -103.1606
+	temp = -1.341349E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -877,7 +877,7 @@ PART
 	sym = 11
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -103.551
+	temp = -1.338292E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -896,10 +896,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 1
-		savedAnimationSpeed = 0
-		savedLegState = 3
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 0
+		savedAnimationSpeed = -0.3260869
+		savedLegState = 0
+		savedLocalPosition = (1.304806E-06, -2.003572E-06, 0.5361902)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -909,7 +909,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -920,7 +920,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -1006,7 +1006,7 @@ PART
 	sym = 11
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -103.4773
+	temp = -1.335377E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1025,10 +1025,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 1
-		savedAnimationSpeed = 0
-		savedLegState = 3
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 0
+		savedAnimationSpeed = -0.3260869
+		savedLegState = 0
+		savedLocalPosition = (2.590134E-06, 1.960653E-06, 0.5372128)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -1038,7 +1038,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -1049,7 +1049,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -1135,7 +1135,7 @@ PART
 	sym = 11
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -103.4036
+	temp = -1.33247E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1154,10 +1154,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 1
-		savedAnimationSpeed = 0
-		savedLegState = 3
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 0
+		savedAnimationSpeed = -0.3260869
+		savedLegState = 0
+		savedLocalPosition = (-1.011127E-06, -2.204668E-06, 0.5145909)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -1167,7 +1167,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -1178,7 +1178,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -1264,7 +1264,7 @@ PART
 	sym = 10
 	srfN = srfAttach, 2
 	mass = 0.1
-	temp = -103.3302
+	temp = -1.32957E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1283,10 +1283,10 @@ PART
 		name = ModuleLandingLeg
 		isEnabled = True
 		StartDeployed = False
-		savedAnimationTime = 1
-		savedAnimationSpeed = 0
-		savedLegState = 3
-		savedLocalPosition = (0, 0, 0)
+		savedAnimationTime = 0
+		savedAnimationSpeed = -0.3260869
+		savedLegState = 0
+		savedLocalPosition = (-3.514968E-06, 5.24745E-06, 0.5379456)
 		suspensionLocked = False
 		StartDeployed_UIFlight
 		{
@@ -1296,7 +1296,7 @@ PART
 		{
 			LowerLeg
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Lower Legs
 				guiName = Lower Legs
@@ -1307,7 +1307,7 @@ PART
 			}
 			RaiseLeg
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Raise Legs
 				guiName = Raise Legs
@@ -1393,7 +1393,7 @@ PART
 	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.025
-	temp = -102.851
+	temp = -1.326674E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1411,7 +1411,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.5844482, 0.3980421, -0.3980846, -0.5843897)
+		currentRotation = (0.6046647, 0.3665721, -0.3666065, -0.604653)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
@@ -1477,7 +1477,7 @@ PART
 	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.025
-	temp = -102.7732
+	temp = -1.323673E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1495,7 +1495,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.6354101, 0.3102142, -0.310214, -0.6354435)
+		currentRotation = (0.5956432, 0.38103, -0.3809952, -0.5957081)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
@@ -1561,7 +1561,7 @@ PART
 	sym = 15
 	srfN = srfAttach, 2
 	mass = 0.025
-	temp = -102.6955
+	temp = -1.320676E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1579,7 +1579,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.5843967, -0.3980168, 0.3980804, -0.5844616)
+		currentRotation = (0.6063269, -0.3637008, 0.3637733, -0.6064309)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
@@ -1645,7 +1645,7 @@ PART
 	sym = 14
 	srfN = srfAttach, 2
 	mass = 0.025
-	temp = -102.6179
+	temp = -1.317688E-09
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1663,7 +1663,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.6354452, -0.3102181, 0.3102268, -0.6354002)
+		currentRotation = (0.5942755, -0.3831947, 0.3832937, -0.5942091)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
@@ -1727,7 +1727,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 0
 	mass = 0.3
-	temp = -125.6257
+	temp = -1.357376E-09
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1837,10 +1837,10 @@ PART
 ACTIONGROUPS
 {
 	Stage = True, 142031858.079846
-	Gear = True, 142031878.839857
+	Gear = False, 142032511.65162
 	Light = False, 0
 	RCS = False, 0
-	SAS = True, 141738546.921801
+	SAS = False, 142032518.951624
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = True, 141738617.516974
@@ -1867,11 +1867,11 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.3928921
-	yaw = 0.02363313
-	roll = -0.0001989821
+	pitch = 0
+	yaw = 0
+	roll = 0
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 0.2699997
+	mainThrottle = 0
 }
