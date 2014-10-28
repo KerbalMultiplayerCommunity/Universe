@@ -1,44 +1,44 @@
-pid = f314e3b7bd09468d99a13b3e27ad532f
+pid = d5bcda871c854ad4936701cbc376dbb2
 name = Asteroid catcher Probe
 type = Probe
 sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 99.5400533974171
-lct = 161689455.18552
+met = 26.0000139474869
+lct = 161689630.067791
 root = 0
-lat = -22.8749980291372
-lon = -0.799846829625992
-alt = 18848122.6200896
+lat = 0.08432245639696
+lon = -192.211770821291
+alt = 160691.258057429
 hgt = -1
-nrm = -0.05785678,0.6986209,-0.713149
-rot = -0.742312,-0.2749573,0.6109509,0.01050834
-CoM = -0.002177286,-4.231981,-0.0003666187
-stg = 0
+nrm = 0.4989743,0.4888167,-0.7155998
+rot = 0.565057,-0.2521538,0.7672467,0.1687056
+CoM = 0.000469062,-11.52244,-0.0002276034
+stg = 2
 prst = False
 ref = 0
 ctrl = True
-cPch = 0.134
-cHdg = 1
-cMod = 3
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 44151205.3361243
-	ECC = 0.650900521488918
-	INC = 145.825966378268
-	LPE = 162.071324220848
-	LAN = 184.509672568934
-	MNA = 0.203725152100813
-	EPH = 161689554.765573
+	SMA = 754671.85448734
+	ECC = 0.00949267257644155
+	INC = 0.104070918120071
+	LPE = 267.413084839622
+	LAN = 81.5763123626834
+	MNA = 2.56198444535327
+	EPH = 161689656.107805
 	REF = 1
 }
 PART
 {
 	name = KWFuelAdapter3x2S
-	uid = 426880828
-	mid = 3845924988
-	launchID = 3
+	uid = 2488563498
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -52,9 +52,9 @@ PART
 	attN = None, -1
 	attN = bottom, 1
 	mass = 0.9
-	temp = -41.15639
+	temp = -83.77496
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -80,7 +80,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 0
+		amount = 731.264
 		maxAmount = 731.264
 		flowState = True
 		isTweakable = True
@@ -90,7 +90,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 0
+		amount = 893.767
 		maxAmount = 893.767
 		flowState = True
 		isTweakable = True
@@ -101,9 +101,9 @@ PART
 PART
 {
 	name = Size3LargeTank
-	uid = 1156112099
-	mid = 3845924988
-	launchID = 3
+	uid = 1240788082
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 0,-4.44250106811523,0
 	rotation = 0,0,0,1
@@ -115,11 +115,11 @@ PART
 	attm = 0
 	srfN = None, -1
 	attN = top, 0
-	attN = None, -1
+	attN = bottom, 2
 	mass = 10
-	temp = -40.71384
+	temp = -82.86573
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -145,7 +145,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 3264.24629689788
+		amount = 6480
 		maxAmount = 6480
 		flowState = True
 		isTweakable = True
@@ -155,7 +155,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 3989.60907842002
+		amount = 7920
 		maxAmount = 7920
 		flowState = True
 		isTweakable = True
@@ -165,10 +165,1134 @@ PART
 }
 PART
 {
+	name = KW3mengineWildcarXR
+	uid = 602130411
+	mid = 2906901331
+	launchID = 2
+	parent = 1
+	position = 0,-11.6925010681152,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = 0
+	sidx = 0
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = top2, 1
+	attN = bottom, 3
+	mass = 8
+	temp = -82.57413
+	expt = 0.5
+	state = 0
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mengineWildcarXR
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = True
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0.0562754431517468
+		maxAmount = 0.239999994635582
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	name = size3Decoupler
+	uid = 3027304271
+	mid = 2906901331
+	launchID = 2
+	parent = 2
+	position = 0,-12.9641532897949,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 0
+	dstg = 1
+	sqor = 0
+	sidx = 1
+	attm = 0
+	srfN = None, -1
+	attN = top, 2
+	attN = bottom, 4
+	mass = 0.8
+	temp = -82.51676
+	expt = 0.5
+	state = 0
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = size3Decoupler
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = KWFuelAdapter5x3
+	uid = 2698691622
+	mid = 2906901331
+	launchID = 2
+	parent = 3
+	position = 0,-14.5869636535645,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = top, 3
+	attN = bottom, 9
+	mass = 2.9
+	temp = -82.56722
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KWFuelAdapter5x3
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 0
+		maxAmount = 2383.379
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 2913.019
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = rtg
+	uid = 2435157547
+	mid = 2906901331
+	launchID = 2
+	parent = 4
+	position = -2.01191759109497,-15.3350410461426,1.14403665065765E-05
+	rotation = -0.567039,-0.4224533,-0.567039,0.4224533
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 7
+	srfN = srfAttach, 4
+	attN = top, 6
+	attN = None, -1
+	mass = 0.08
+	temp = -82.43501
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = rtg
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = True
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = probeCoreSphere
+	uid = 28905183
+	mid = 2906901331
+	launchID = 2
+	parent = 5
+	position = -1.37457644939423,-15.5253524780273,1.13621354103088E-05
+	rotation = 2.761446E-09,-3.706558E-09,-0.8019143,0.5974392
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	sym = 8
+	srfN = None, -1
+	attN = bottom, 5
+	mass = 0.05
+	temp = -82.23241
+	expt = 0
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = probeCoreSphere
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = Operational
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Operational
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+			at = Kerbin
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+			at = Kerbin
+		}
+		SubOrbited
+		{
+			at = Kerbin
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = rtg
+	uid = 3638003518
+	mid = 2906901331
+	launchID = 2
+	parent = 4
+	position = 2.01191449165344,-15.3350410461426,0
+	rotation = -0.567039,0.4224533,0.567039,0.4224532
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	sym = 5
+	srfN = srfAttach, 4
+	attN = top, 8
+	attN = None, -1
+	mass = 0.08
+	temp = -82.3733
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = rtg
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = True
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = probeCoreSphere
+	uid = 2190862774
+	mid = 2906901331
+	launchID = 2
+	parent = 7
+	position = 1.37457537651062,-15.5253524780273,2.88709998130798E-08
+	rotation = -0.8019143,0.5974392,-2.29538E-08,-5.348391E-08
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	sym = 6
+	srfN = None, -1
+	attN = bottom, 7
+	mass = 0.05
+	temp = -82.2031
+	expt = 0
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = probeCoreSphere
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = Operational
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Operational
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+			at = Kerbin
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+			at = Kerbin
+		}
+		SubOrbited
+		{
+			at = Kerbin
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = KW5mtankL1.5
+	uid = 3530529811
+	mid = 2906901331
+	launchID = 2
+	parent = 4
+	position = 0,-19.4219627380371,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = top, 4
+	attN = bottom, 10
+	mass = 12.7
+	temp = -82.25078
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW5mtankL1.5
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 2955.43642474824
+		maxAmount = 10368
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 3612.19868253157
+		maxAmount = 12672
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = KW5mengineTitanV
+	uid = 311969442
+	mid = 2906901331
+	launchID = 2
+	parent = 9
+	position = 0,-26.8468627929688,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 1
+	dstg = 2
+	sqor = 1
+	sidx = 0
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = top2, 9
+	attN = None, -1
+	mass = 22
+	temp = -58.28053
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW5mengineTitanV
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = True
+		flameout = False
+		EngineIgnited = True
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0.0432493323581025
+		maxAmount = 0.639999985694885
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
 	name = vernierEngine
-	uid = 1993041705
-	mid = 3845924988
-	launchID = 3
+	uid = 1858608093
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = -1.60249054431915,-7.50501251220703,-0.925198256969452
 	rotation = 1.802584E-08,0.258819,-9.064695E-08,-0.9659259
@@ -178,16 +1302,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 3
-	sym = 4
-	sym = 5
-	sym = 6
-	sym = 7
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.08
-	temp = -40.5109
+	temp = -82.41507
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -252,9 +1376,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3327881124
-	mid = 3845924988
-	launchID = 3
+	uid = 2431716257
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = -1.60249054431915,-7.50501251220703,0.925198435783386
 	rotation = -2.971264E-08,-0.2588191,-8.751547E-08,-0.9659258
@@ -264,16 +1388,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 2
-	sym = 4
-	sym = 5
-	sym = 6
-	sym = 7
+	sym = 11
+	sym = 13
+	sym = 14
+	sym = 15
+	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.08
-	temp = -40.49513
+	temp = -82.38082
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -338,9 +1462,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 2425739900
-	mid = 3845924988
-	launchID = 3
+	uid = 2419947606
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = 2.90572643280029E-07,-7.50501251220703,1.85039710998535
 	rotation = -6.948964E-08,-0.7071068,-6.093429E-08,-0.7071068
@@ -350,16 +1474,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 2
-	sym = 3
-	sym = 5
-	sym = 6
-	sym = 7
+	sym = 11
+	sym = 12
+	sym = 14
+	sym = 15
+	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.08
-	temp = -40.47939
+	temp = -82.34673
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -424,9 +1548,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 1793620425
-	mid = 3845924988
-	launchID = 3
+	uid = 2421026778
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = 1.60249042510986,-7.50501251220703,0.925198197364807
 	rotation = -9.064695E-08,-0.9659259,-1.802583E-08,-0.258819
@@ -436,16 +1560,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 2
-	sym = 3
-	sym = 4
-	sym = 6
-	sym = 7
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 15
+	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.08
-	temp = -40.46363
+	temp = -82.31248
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -510,9 +1634,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3634322769
-	mid = 3845924988
-	launchID = 3
+	uid = 871137569
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = 1.60249042510986,-7.50501251220703,-0.925198614597321
 	rotation = -8.751547E-08,-0.9659258,2.971265E-08,0.2588192
@@ -522,16 +1646,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 2
-	sym = 3
-	sym = 4
-	sym = 5
-	sym = 7
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.08
-	temp = -40.44792
+	temp = -82.27837
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -596,9 +1720,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3595620815
-	mid = 3845924988
-	launchID = 3
+	uid = 2164150958
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = 1.99303030967712E-07,-7.50501251220703,-1.85039687156677
 	rotation = -6.093431E-08,-0.7071068,6.948964E-08,0.7071068
@@ -608,16 +1732,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 2
-	sym = 3
-	sym = 4
-	sym = 5
-	sym = 6
+	sym = 11
+	sym = 12
+	sym = 13
+	sym = 14
+	sym = 15
 	srfN = srfAttach, 1
 	mass = 0.08
-	temp = -40.4322
+	temp = -82.24422
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -682,9 +1806,9 @@ PART
 PART
 {
 	name = KWSASmodule3mHalf
-	uid = 466316720
-	mid = 3845924988
-	launchID = 3
+	uid = 1235454309
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = -1.91441762447357,-1.21697235107422,1.10827386379242E-07
 	rotation = -1.489821E-08,0.7071068,-1.306521E-08,-0.7071068
@@ -694,12 +1818,12 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 9
+	sym = 18
 	srfN = srfAttach, 1
 	mass = 0.5625
-	temp = -40.41925
+	temp = -82.21655
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -773,9 +1897,9 @@ PART
 PART
 {
 	name = KWSASmodule3mHalf
-	uid = 2306293689
-	mid = 3845924988
-	launchID = 3
+	uid = 2290296978
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = 1.91441738605499,-1.21697235107422,-2.89641320705414E-07
 	rotation = -1.30652E-08,-0.7071068,1.489821E-08,-0.7071068
@@ -785,12 +1909,12 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 8
+	sym = 17
 	srfN = srfAttach, 1
 	mass = 0.5625
-	temp = -40.4062
+	temp = -82.18841
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -864,9 +1988,9 @@ PART
 PART
 {
 	name = mumech.MJ2.AR202
-	uid = 1068496681
-	mid = 3845924988
-	launchID = 3
+	uid = 1968851682
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = -1.48714756965637,0.0453376770019531,8.00937414169312E-08
 	rotation = -2.107343E-08,0,-0.2297936,0.9732394
@@ -878,9 +2002,9 @@ PART
 	attm = 1
 	srfN = srfAttach, 0
 	mass = 1E-05
-	temp = -40.72759
+	temp = -82.89887
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -948,129 +2072,9 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = True
-				StabilityControl = False
-				LimitAcceleration = False
-				unlockParts = 
-				unlockTechs = 
-				heading
-				{
-					val = 0
-					_text = 0
-				}
-				speed
-				{
-					val = 10
-					_text = 10
-				}
-			}
-			MechJebModuleRoverWindow
-			{
-				unlockParts = 
-				unlockTechs = fieldScience
-			}
-			MechJebModuleRendezvousAutopilotWindow
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleAscentAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = flightControl
-			}
-			MechJebModuleInfoItems
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleNodeExecutor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleRCSBalancerWindow
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleLandingPredictions
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleNodeEditor
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleManeuverPlanner
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleRendezvousGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleSpaceplaneAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
 			MechJebModuleSmartASS
 			{
-				mode = TARGET
+				mode = ORBITAL
 				target = OFF
 				advReference = INERTIAL
 				advDirection = FORWARD
@@ -1098,12 +2102,102 @@ PART
 					_text = 0
 				}
 			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
 			MechJebModuleSpaceplaneGuidance
 			{
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
-			MechJebModuleStageStats
+			MechJebModuleRendezvousGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					val = 0
+					_text = 0
+				}
+				speed
+				{
+					val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleSettings
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
+			}
+			MechJebModuleTargetController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			ModExtensionDemo
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWaypointHelpWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleThrustWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleTranslatron
+			{
+				trans_spd = 0
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleWaypointWindow
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -1118,11 +2212,6 @@ PART
 					_text = 0
 				}
 			}
-			MechJebModuleWaypointWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
 			MechJebModuleRendezvousAutopilot
 			{
 				unlockParts = 
@@ -1132,6 +2221,11 @@ PART
 			{
 				unlockParts = 
 				unlockTechs = 
+			}
+			MechJebModuleAttitudeAdjustment
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
 			}
 			MechJebModuleLandingAutopilot
 			{
@@ -1155,11 +2249,6 @@ PART
 					_text = 0
 				}
 			}
-			MechJebModuleSettings
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
 			MechJebModuleAscentPathEditor
 			{
 				unlockParts = 
@@ -1170,29 +2259,64 @@ PART
 				unlockParts = 
 				unlockTechs = advUnmanned
 			}
-			MechJebModuleTargetController
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleInfoItems
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			ModExtensionDemo
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleNodeExecutor
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleWaypointHelpWindow
+			MechJebModuleAscentAutopilot
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleThrustWindow
+			MechJebModuleRCSBalancerWindow
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleTranslatron
+			MechJebModuleLandingGuidance
 			{
-				trans_spd = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleLandingPredictions
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleManeuverPlanner
+			{
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
@@ -1239,16 +2363,16 @@ PART
 			}
 			MechJebModuleFlightRecorder
 			{
-				markUT = 159558409.236819
-				deltaVExpended = 5873.16867559967
-				dragLosses = 1.98789017216941
-				gravityLosses = -3619.62121258236
-				steeringLosses = 1240.1694577706
-				markLatitude = -0.0972144826127245
-				markLongitude = -74.5576725780042
-				markAltitude = 106.742485248449
+				markUT = 159553328.761208
+				deltaVExpended = 3703.10599847844
+				dragLosses = 5.29076559624217
+				gravityLosses = 1254.08283217115
+				steeringLosses = 432.952449918416
+				markLatitude = -0.0972148265710588
+				markLongitude = -74.5576707908468
+				markAltitude = 106.645239201037
 				markBodyIndex = 1
-				maxDragGees = 0.0104398310580271
+				maxDragGees = 0.0331914004564651
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1284,12 +2408,10 @@ PART
 		}
 		FlewBy
 		{
-			at = Kerbin
 		}
 		Orbited
 		{
 			at = Kerbin
-			at = Sun
 		}
 		SubOrbited
 		{
@@ -1310,7 +2432,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4.99979507213218
+		amount = 5
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -1321,9 +2443,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 4028250888
-	mid = 3845924988
-	launchID = 3
+	uid = 1518127309
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = -1.23432958126068,0.185688018798828,-0.712640404701233
 	rotation = 0.05424986,-0.2297638,-0.2232978,0.9457292
@@ -1333,16 +2455,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 15
-	sym = 16
+	sym = 21
+	sym = 22
+	sym = 23
+	sym = 24
+	sym = 25
 	srfN = srfAttach, 0
 	mass = 0.08
-	temp = -40.68509
+	temp = -82.80441
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1407,9 +2529,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 1726948301
-	mid = 3845924988
-	launchID = 3
+	uid = 4189539688
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = -1.23432958126068,0.185688018798828,0.712640523910522
 	rotation = -0.06466717,0.2738834,-0.2205065,0.9339074
@@ -1419,16 +2541,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 11
-	sym = 13
-	sym = 14
-	sym = 15
-	sym = 16
+	sym = 20
+	sym = 22
+	sym = 23
+	sym = 24
+	sym = 25
 	srfN = srfAttach, 0
 	mass = 0.08
-	temp = -40.64174
+	temp = -82.70794
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1493,9 +2615,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 1509876029
-	mid = 3845924988
-	launchID = 3
+	uid = 3412836872
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 2.49594449996948E-07,0.185688018798828,1.42528116703033
 	rotation = -0.1662567,0.7041436,-0.1586307,0.6718459
@@ -1505,16 +2627,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 11
-	sym = 12
-	sym = 14
-	sym = 15
-	sym = 16
+	sym = 20
+	sym = 21
+	sym = 23
+	sym = 24
+	sym = 25
 	srfN = srfAttach, 0
 	mass = 0.08
-	temp = -40.59845
+	temp = -82.6115
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1579,9 +2701,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 652207254
-	mid = 3845924988
-	launchID = 3
+	uid = 4153998156
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 1.23432946205139,0.185688018798828,0.712640225887299
 	rotation = -0.2232978,0.9457292,-0.05424985,0.2297637
@@ -1591,16 +2713,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 15
-	sym = 16
+	sym = 20
+	sym = 21
+	sym = 22
+	sym = 24
+	sym = 25
 	srfN = srfAttach, 0
 	mass = 0.08
-	temp = -40.55525
+	temp = -82.51543
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1665,9 +2787,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3753556776
-	mid = 3845924988
-	launchID = 3
+	uid = 361009478
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 1.23432946205139,0.185688018798828,-0.712640702724457
 	rotation = -0.2205065,0.9339073,0.06466719,-0.2738834
@@ -1677,16 +2799,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 16
+	sym = 20
+	sym = 21
+	sym = 22
+	sym = 23
+	sym = 25
 	srfN = srfAttach, 0
 	mass = 0.08
-	temp = -40.51218
+	temp = -82.41954
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1751,9 +2873,9 @@ PART
 PART
 {
 	name = vernierEngine
-	uid = 3558475924
-	mid = 3845924988
-	launchID = 3
+	uid = 717504770
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 1.30385160446167E-07,0.185688018798828,-1.42528092861176
 	rotation = -0.1586307,0.6718459,0.1662567,-0.7041436
@@ -1763,16 +2885,16 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 11
-	sym = 12
-	sym = 13
-	sym = 14
-	sym = 15
+	sym = 20
+	sym = 21
+	sym = 22
+	sym = 23
+	sym = 24
 	srfN = srfAttach, 0
 	mass = 0.08
-	temp = -40.4692
+	temp = -82.32388
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1837,9 +2959,9 @@ PART
 PART
 {
 	name = rtg
-	uid = 2284760505
-	mid = 3845924988
-	launchID = 3
+	uid = 1142840845
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = -1.02543652057648,0.235988616943359,6.05359673500061E-08
 	rotation = -0.6015164,-0.3717231,-0.6015164,0.3717231
@@ -1849,18 +2971,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 18
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 22
+	sym = 27
+	sym = 28
+	sym = 29
+	sym = 30
+	sym = 31
 	srfN = srfAttach, 0
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -40.42432
+	temp = -82.22417
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -1934,9 +3056,9 @@ PART
 PART
 {
 	name = rtg
-	uid = 111877202
-	mid = 3845924988
-	launchID = 3
+	uid = 54095814
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = -0.512718379497528,0.235988616943359,0.888054430484772
 	rotation = -0.8216867,-0.1360601,-0.2201703,0.5077832
@@ -1946,18 +3068,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
-	sym = 19
-	sym = 20
-	sym = 21
-	sym = 22
+	sym = 26
+	sym = 28
+	sym = 29
+	sym = 30
+	sym = 31
 	srfN = srfAttach, 0
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -40.37878
+	temp = -82.12268
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2031,9 +3153,9 @@ PART
 PART
 {
 	name = rtg
-	uid = 388417879
-	mid = 3845924988
-	launchID = 3
+	uid = 1622662353
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 0.512718617916107,0.235988616943359,0.888054311275482
 	rotation = -0.8216867,0.1360601,0.2201703,0.5077832
@@ -2043,18 +3165,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
-	sym = 18
-	sym = 20
-	sym = 21
-	sym = 22
+	sym = 26
+	sym = 27
+	sym = 29
+	sym = 30
+	sym = 31
 	srfN = srfAttach, 0
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -40.33332
+	temp = -82.02145
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2128,9 +3250,9 @@ PART
 PART
 {
 	name = rtg
-	uid = 3937037779
-	mid = 3845924988
-	launchID = 3
+	uid = 1039296916
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 1.02543640136719,0.235988616943359,-1.59256160259247E-07
 	rotation = -0.6015164,0.3717231,0.6015164,0.371723
@@ -2140,18 +3262,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
-	sym = 18
-	sym = 19
-	sym = 21
-	sym = 22
+	sym = 26
+	sym = 27
+	sym = 28
+	sym = 30
+	sym = 31
 	srfN = srfAttach, 0
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -40.28803
+	temp = -81.92044
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2225,9 +3347,9 @@ PART
 PART
 {
 	name = rtg
-	uid = 3451294123
-	mid = 3845924988
-	launchID = 3
+	uid = 298857799
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 0.512718319892883,0.235988616943359,-0.888054609298706
 	rotation = -0.2201702,0.5077832,0.8216867,0.13606
@@ -2237,18 +3359,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
-	sym = 18
-	sym = 19
-	sym = 20
-	sym = 22
+	sym = 26
+	sym = 27
+	sym = 28
+	sym = 29
+	sym = 31
 	srfN = srfAttach, 0
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -40.24281
+	temp = -81.81973
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2322,9 +3444,9 @@ PART
 PART
 {
 	name = rtg
-	uid = 1236402820
-	mid = 3845924988
-	launchID = 3
+	uid = 1817530586
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = -0.512718379497528,0.235988616943359,-0.888054370880127
 	rotation = 0.2201702,0.5077832,0.8216867,-0.1360601
@@ -2334,18 +3456,18 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 17
-	sym = 18
-	sym = 19
-	sym = 20
-	sym = 21
+	sym = 26
+	sym = 27
+	sym = 28
+	sym = 29
+	sym = 30
 	srfN = srfAttach, 0
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -40.19769
+	temp = -81.71921
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
@@ -2418,11 +3540,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 159559669.083698
+	Stage = False, 0
 	Gear = True, 0
 	Light = False, 0
-	RCS = True, 161689023.89908
-	SAS = True, 161689503.065546
+	RCS = True, 159535255.53087
+	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -2449,9 +3571,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.00145888
-	yaw = 0.006835128
-	roll = -0.000813898
+	pitch = 0
+	yaw = 0
+	roll = 0
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0

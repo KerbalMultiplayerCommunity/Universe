@@ -1,44 +1,44 @@
-pid = 96e7a842eb4e48dcab29af4db276b2ad
-name = Ast. YSB-863
-type = SpaceObject
+pid = bbe1ae2966c3475a857b81a8cd045419
+name = Asteroid catcher Debris
+type = Debris
 sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 97.1400521099567
-lct = 161689455.18552
+met = 25.9000138938427
+lct = 161689630.067791
 root = 0
-lat = -22.8733862607478
-lon = -0.757462514840086
-alt = 18847729.6993893
+lat = 0.0793077744467793
+lon = -192.221300229186
+alt = 160552.863155975
 hgt = -1
-nrm = 0.6128026,0.7891234,-0.04192017
-rot = -0.8844838,-0.237325,-0.2245406,0.3330868
-CoM = 0.6461509,36.97,-1.038269
+nrm = 0.01600091,-0.6980639,-0.7158567
+rot = 0.6623781,0.1036954,0.6311668,-0.3900398
+CoM = -0.0001576141,0.8061036,-6.740743E-06
 stg = 0
 prst = False
 ref = 0
 ctrl = False
 cPch = 0
 cHdg = 0
-cMod = 3
+cMod = -1
 ORBIT
 {
-	SMA = 46065183.8724842
-	ECC = 0.664264985463645
-	INC = 145.956148612049
-	LPE = 163.116096156913
-	LAN = 184.731792404628
-	MNA = 0.18819267733442
-	EPH = 161689552.365572
+	SMA = 755160.369392793
+	ECC = 0.00771269674869834
+	INC = 0.0797960137841829
+	LPE = 298.651988897655
+	LAN = 39.7544895433985
+	MNA = 2.75098010469814
+	EPH = 161689656.027805
 	REF = 1
 }
 PART
 {
 	name = trussAdapter
-	uid = 885623161
-	mid = 3845924988
-	launchID = 3
+	uid = 1901575719
+	mid = 2906901331
+	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -52,9 +52,54 @@ PART
 	attN = None, -1
 	attN = top, 1
 	mass = 0.25
-	temp = -40.31588
+	temp = -43.55807
 	expt = 0.5
-	state = 1
+	state = 0
+	connected = False
+	attached = False
+	flag = Squad/Flags/default
+	rTrf = trussAdapter
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = trussAdapter
+	uid = 1622048643
+	mid = 2906901331
+	launchID = 2
+	parent = 0
+	position = 0,1.29874038696289,0
+	rotation = 0,0,-1,0
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = bottom, 2
+	attN = top, 0
+	mass = 0.25
+	temp = -43.49792
+	expt = 0.5
+	state = 0
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
@@ -80,55 +125,10 @@ PART
 }
 PART
 {
-	name = trussAdapter
-	uid = 2093730881
-	mid = 3845924988
-	launchID = 3
-	parent = 0
-	position = 0,1.29874038696289,0
-	rotation = 0,0,-1,0
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = bottom, 2
-	attN = top, 0
-	mass = 0.25
-	temp = -40.2626
-	expt = 0.5
-	state = 1
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = trussAdapter
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
 	name = GrapplingDevice
-	uid = 739337187
-	mid = 3845924988
-	launchID = 3
+	uid = 4217776747
+	mid = 2906901331
+	launchID = 2
 	parent = 1
 	position = 0,1.85039901733398,0
 	rotation = 0,0,0,1
@@ -141,10 +141,10 @@ PART
 	srfN = None, -1
 	attN = top, 1
 	mass = 0.075
-	temp = -40.1795
+	temp = -43.40363
 	expt = 0.5
-	state = 1
-	connected = True
+	state = 0
+	connected = False
 	attached = True
 	flag = Squad/Flags/default
 	rTrf = GrapplingDevice
@@ -159,16 +159,16 @@ PART
 	{
 		name = ModuleGrappleNode
 		isEnabled = True
-		state = Grappled
-		dockUId = 1189304663
-		grapplePos = -23.06796,-24.81411,4.54779
-		grappleOrt = 0.6563584,0.7457386,-0.1143131
-		grappleOrt2 = 0.2392003,-0.3493992,-0.9059268
+		state = Disabled
+		dockUId = 0
+		grapplePos = 0,0,0
+		grappleOrt = 0,1,0
+		grappleOrt2 = 0,0,0
 		EVENTS
 		{
 			Release
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Release
 				guiName = Release
@@ -212,7 +212,7 @@ PART
 			}
 			SetLoose
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Free Pivot
 				guiName = Free Pivot
@@ -244,36 +244,24 @@ PART
 				actionGroup = None
 			}
 		}
-		DOCKEDVESSEL
-		{
-			vesselName = Asteroid catcher
-			vesselType = 6
-			rootUId = 4148957116
-		}
-		DOCKEDVESSEL_Other
-		{
-			vesselName = Ast. YSB-863
-			vesselType = 1
-			rootUId = 1189304663
-		}
 	}
 	MODULE
 	{
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		status = Locked
-		animSwitch = False
-		animTime = 1
-		animSpeed = 1
+		animSwitch = True
+		animTime = 0
+		animSpeed = -1
 		EVENTS
 		{
 			Toggle
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Toggle
-				guiName = Disarm
+				guiName = Arm
 				category = Toggle
 				guiActiveUnfocused = True
 				unfocusedRange = 5
@@ -335,104 +323,13 @@ PART
 		}
 	}
 }
-PART
-{
-	name = PotatoRoid
-	uid = 1189304663
-	mid = 1189304663
-	launchID = 0
-	parent = 2
-	position = 0.646003842353821,36.9773635864258,-1.03809452056885
-	rotation = -0.1255944,-0.1764817,-0.3322755,-0.9179724
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = 0
-	sidx = 0
-	attm = 0
-	srfN = None, -1
-	attN = grapple, 2
-	mass = 2869.145
-	temp = -40.1909
-	expt = 0.1
-	state = 1
-	connected = True
-	attached = True
-	flag = 
-	rTrf = PotatoRoid (Ast. YSB-863)
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleAsteroid
-		isEnabled = True
-		seed = 24660593
-		AsteroidName = Ast. YSB-863
-		prefabBaseURL = Procedural/PA_E
-		EVENTS
-		{
-			MakeTarget
-			{
-				active = True
-				guiActive = True
-				guiIcon = Target Center of Mass
-				guiName = Target Center of Mass
-				category = Target Center of Mass
-				guiActiveUnfocused = True
-				unfocusedRange = 500
-				externalToEVAOnly = False
-			}
-			TakeSampleEVAEvent
-			{
-				active = True
-				guiActive = False
-				guiIcon = Take Sample
-				guiName = Take Sample
-				category = Take Sample
-				guiActiveUnfocused = True
-				unfocusedRange = 41.175
-				externalToEVAOnly = True
-			}
-			RenameAsteroidEvent
-			{
-				active = True
-				guiActive = True
-				guiIcon = Rename Asteroid
-				guiName = Rename Asteroid
-				category = Rename Asteroid
-				guiActiveUnfocused = True
-				unfocusedRange = 41.175
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
 ACTIONGROUPS
 {
-	Stage = True, 159559669.083698
+	Stage = False, 0
 	Gear = True, 0
 	Light = False, 0
-	RCS = True, 161689023.89908
-	SAS = False, 161689327.719243
+	RCS = True, 159535255.53087
+	SAS = False, 0
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
