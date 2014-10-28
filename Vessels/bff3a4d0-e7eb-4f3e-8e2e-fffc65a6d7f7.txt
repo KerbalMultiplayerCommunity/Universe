@@ -5,32 +5,32 @@ sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 278.320149302483
+met = 480.858304232359
 lct = 161700121.782575
 root = 0
-lat = 0.441374416527695
-lon = 305.15722003482
-alt = 113206.054251899
+lat = 1.17063652440024
+lon = -22.1250283222394
+alt = 113891.508397729
 hgt = -1
-nrm = -0.9985405,0.04158588,0.03445941
-rot = 0.3143491,0.6833726,0.5536784,-0.3572491
-CoM = -0.02840035,-0.9648183,-0.007593868
+nrm = -0.9430408,0.3284909,-0.05260956
+rot = -0.2223204,-0.7127601,-0.6050196,0.2765829
+CoM = -0.02784284,-0.955016,-0.007456185
 stg = 1
 prst = False
 ref = 4144876144
 ctrl = True
-cPch = 0.3379997
-cHdg = -0.04599991
+cPch = 0.224
+cHdg = 1.594
 cMod = 0
 ORBIT
 {
-	SMA = 692243.922694634
-	ECC = 0.030406833823591
-	INC = 1.33498809711428
-	LPE = 204.357573281057
-	LAN = 73.5015669353097
-	MNA = 3.04803759894503
-	EPH = 161700400.142724
+	SMA = 710859.876282063
+	ECC = 0.00427327643188976
+	INC = 1.45129046422763
+	LPE = 237.460421263801
+	LAN = 75.1374266062345
+	MNA = 3.07667275492544
+	EPH = 161700602.680879
 	REF = 1
 }
 PART
@@ -52,13 +52,13 @@ PART
 	attN = bottom, 3
 	attN = top, 1
 	mass = 0.04
-	temp = -184.0822
+	temp = -203.497
 	expt = 0
 	state = 0
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = probeCoreOcto2
+	rTrf = probeCoreOcto2 (first mp craft)
 	modCost = 0
 	EVENTS
 	{
@@ -104,7 +104,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Operational
+		stateString = Not enough ElectricCharge
 		WheelState = Active
 		EVENTS
 		{
@@ -169,6 +169,7 @@ PART
 		}
 		Orbited
 		{
+			at = Kerbin
 		}
 		SubOrbited
 		{
@@ -178,7 +179,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0
+		amount = 10
 		maxAmount = 10
 		flowState = True
 		isTweakable = True
@@ -205,7 +206,7 @@ PART
 	attN = bottom, 0
 	attN = top, 2
 	mass = 0.05
-	temp = -193.7572
+	temp = -201.4905
 	expt = 0.5
 	state = 0
 	connected = True
@@ -223,7 +224,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Operational
+		stateString = Not enough ElectricCharge
 		WheelState = Active
 		EVENTS
 		{
@@ -285,7 +286,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 1
 	mass = 0.1
-	temp = -196.6408
+	temp = -200.502
 	expt = 0.5
 	state = 0
 	connected = True
@@ -303,7 +304,7 @@ PART
 	{
 		name = ModuleDockingNode
 		isEnabled = True
-		state = Disabled
+		state = Ready
 		dockUId = 0
 		dockNodeIdx = 0
 		EVENTS
@@ -414,8 +415,8 @@ PART
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		status = Locked
-		animSwitch = True
-		animTime = 0
+		animSwitch = False
+		animTime = 1
 		animSpeed = 1
 		EVENTS
 		{
@@ -425,7 +426,7 @@ PART
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Toggle
-				guiName = Open Shield
+				guiName = Close Shield
 				category = Toggle
 				guiActiveUnfocused = True
 				unfocusedRange = 5
@@ -460,7 +461,7 @@ PART
 	attN = top, 0
 	attN = None, -1
 	mass = 0.4
-	temp = -155.9601
+	temp = -206.6356
 	expt = 0.5
 	state = 0
 	connected = True
@@ -505,7 +506,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -178.6033
+	temp = -202.9715
 	expt = 0.5
 	state = 0
 	connected = True
@@ -578,7 +579,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -178.434
+	temp = -202.7495
 	expt = 0.5
 	state = 0
 	connected = True
@@ -651,7 +652,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -178.2672
+	temp = -202.5275
 	expt = 0.5
 	state = 0
 	connected = True
@@ -724,7 +725,7 @@ PART
 	sym = 6
 	srfN = srfAttach, 3
 	mass = 0.05
-	temp = -178.0973
+	temp = -202.3055
 	expt = 0.5
 	state = 0
 	connected = True
@@ -790,7 +791,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 1
+	sidx = 0
 	attm = 1
 	sym = 9
 	sym = 10
@@ -799,7 +800,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 3
 	mass = 0.09
-	temp = -48.80672
+	temp = -202.0835
 	expt = 0.5
 	state = 1
 	connected = True
@@ -821,7 +822,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -886,7 +887,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 2
+	sidx = 1
 	attm = 1
 	sym = 8
 	sym = 10
@@ -895,7 +896,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 3
 	mass = 0.09
-	temp = -48.63858
+	temp = -201.8615
 	expt = 0.5
 	state = 1
 	connected = True
@@ -917,7 +918,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -982,7 +983,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 3
+	sidx = 2
 	attm = 1
 	sym = 8
 	sym = 9
@@ -991,7 +992,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 3
 	mass = 0.09
-	temp = -48.47078
+	temp = -201.6396
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1013,7 +1014,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -1078,7 +1079,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 4
+	sidx = 3
 	attm = 1
 	sym = 8
 	sym = 9
@@ -1087,7 +1088,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 3
 	mass = 0.09
-	temp = -48.30328
+	temp = -201.4176
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1109,7 +1110,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -1174,7 +1175,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 5
+	sidx = 4
 	attm = 1
 	sym = 8
 	sym = 9
@@ -1183,7 +1184,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 3
 	mass = 0.09
-	temp = -48.13623
+	temp = -201.198
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1205,7 +1206,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -1270,7 +1271,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 6
+	sidx = 5
 	attm = 1
 	sym = 8
 	sym = 9
@@ -1279,7 +1280,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 3
 	mass = 0.09
-	temp = -47.96962
+	temp = -200.9768
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1301,7 +1302,7 @@ PART
 		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 1
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -1373,7 +1374,7 @@ PART
 	sym = 17
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -176.4912
+	temp = -200.7619
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1390,7 +1391,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 379.414926240982
+		amount = 400
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -1418,7 +1419,7 @@ PART
 	sym = 17
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -176.3138
+	temp = -200.5296
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1435,7 +1436,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 379.414926240982
+		amount = 400
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -1463,7 +1464,7 @@ PART
 	sym = 17
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -176.1401
+	temp = -200.3013
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1480,7 +1481,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 379.414926240982
+		amount = 400
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -1508,7 +1509,7 @@ PART
 	sym = 16
 	srfN = srfAttach, 3
 	mass = 0.02
-	temp = -175.9678
+	temp = -200.0706
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1525,7 +1526,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 379.414926240982
+		amount = 400
 		maxAmount = 400
 		flowState = True
 		isTweakable = True
@@ -1553,7 +1554,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 3
 	mass = 0.35
-	temp = -176.2453
+	temp = -199.851
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1571,15 +1572,15 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, -0.7071068, 0.7071068)
-		stateString = RETRACTED
+		currentRotation = (-0.5128185, -0.5128133, -0.486843, 0.4868509)
+		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
 		EVENTS
 		{
 			Extend
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Extend Panels
 				guiName = Extend Panels
@@ -1590,7 +1591,7 @@ PART
 			}
 			Retract
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Retract Panels
 				guiName = Retract Panels
@@ -1637,7 +1638,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 3
 	mass = 0.35
-	temp = -176.0817
+	temp = -199.6353
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1655,15 +1656,15 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, -0.7071068, 0.7071068)
-		stateString = RETRACTED
+		currentRotation = (-0.4513811, -0.4513873, -0.5442921, 0.5442893)
+		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
 		EVENTS
 		{
 			Extend
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Extend Panels
 				guiName = Extend Panels
@@ -1674,7 +1675,7 @@ PART
 			}
 			Retract
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Retract Panels
 				guiName = Retract Panels
@@ -1721,7 +1722,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 3
 	mass = 0.35
-	temp = -175.9191
+	temp = -199.4196
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1739,15 +1740,15 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, -0.7071068, 0.7071068)
-		stateString = RETRACTED
+		currentRotation = (-0.4868492, -0.4868444, -0.5128124, 0.5128195)
+		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
 		EVENTS
 		{
 			Extend
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Extend Panels
 				guiName = Extend Panels
@@ -1758,7 +1759,7 @@ PART
 			}
 			Retract
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Retract Panels
 				guiName = Retract Panels
@@ -1805,7 +1806,7 @@ PART
 	sym = 20
 	srfN = srfAttach, 3
 	mass = 0.35
-	temp = -175.7555
+	temp = -199.204
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1823,15 +1824,15 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, -0.7071068, 0.7071068)
-		stateString = RETRACTED
+		currentRotation = (-0.5442837, -0.544297, -0.4513916, 0.4513777)
+		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 1
 		EVENTS
 		{
 			Extend
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiIcon = Extend Panels
 				guiName = Extend Panels
@@ -1842,7 +1843,7 @@ PART
 			}
 			Retract
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Retract Panels
 				guiName = Retract Panels
@@ -1889,7 +1890,7 @@ PART
 	sym = 25
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -175.991
+	temp = -199.0137
 	expt = 0.5
 	state = 0
 	connected = True
@@ -1996,7 +1997,7 @@ PART
 	sym = 25
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -175.838
+	temp = -198.8047
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2103,7 +2104,7 @@ PART
 	sym = 25
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -175.6836
+	temp = -198.6024
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2210,7 +2211,7 @@ PART
 	sym = 24
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -175.5293
+	temp = -198.4001
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2317,7 +2318,7 @@ PART
 	sym = 29
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -174.6836
+	temp = -198.1369
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2424,7 +2425,7 @@ PART
 	sym = 29
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -174.5187
+	temp = -197.9165
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2531,7 +2532,7 @@ PART
 	sym = 29
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -174.3519
+	temp = -197.6945
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2638,7 +2639,7 @@ PART
 	sym = 28
 	srfN = srfAttach, 3
 	mass = 0.015
-	temp = -174.1861
+	temp = -197.4764
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2744,7 +2745,7 @@ PART
 	attN = top, 31
 	attN = None, -1
 	mass = 0.05
-	temp = -180.5384
+	temp = -198.4651
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2888,7 +2889,7 @@ PART
 	attN = bottom, 32
 	attN = top, 30
 	mass = 0.05
-	temp = -193.573
+	temp = -200.029
 	expt = 0.5
 	state = 0
 	connected = True
@@ -2971,7 +2972,7 @@ PART
 	attN = top, 31
 	attN = None, -1
 	mass = 0.4
-	temp = -199.7442
+	temp = -201.1727
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2988,7 +2989,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 361.302324646925
+		amount = 342.334008396601
 		maxAmount = 750
 		flowState = True
 		isTweakable = True
@@ -3011,10 +3012,10 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_3; pos: 0.06419111,0.7732185,0.0540917; dir: 0.08237979,0.9941693,0.06957706; rot: 5.135406E-09,0.7071068,0.7071068,-1.466806E-08
+	cData = tgt: RCSTank1-2_3; pos: 0.06413299,0.7732396,0.05411569; dir: 0.08237979,0.9941693,0.06957706; rot: 0.09229603,-0.7010574,-0.7010575,-0.09229584
 	srfN = srfAttach, 32
 	mass = 0.05
-	temp = -199.6599
+	temp = -200.3457
 	expt = 0
 	state = 1
 	connected = True
@@ -3044,13 +3045,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_3; pos: -0.5122771,-0.1236905,0.005395906; dir: -0.9719916,-0.234793,0.01022404
+	cData = tgt: RCSTank1-2_3; pos: -0.5122688,-0.1237242,0.005404274; dir: -0.9719916,-0.234793,0.01022404
 	sym = 35
 	sym = 36
 	sym = 37
 	srfN = srfAttach, 32
 	mass = 0.05
-	temp = -199.4343
+	temp = -200.1237
 	expt = 0
 	state = 1
 	connected = True
@@ -3080,13 +3081,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_3; pos: -0.5122709,-0.1237515,0.005464067; dir: -0.9719916,-0.234793,0.01022404
+	cData = tgt: RCSTank1-2_3; pos: -0.5122591,-0.123762,0.005351535; dir: -0.9719916,-0.234793,0.01022404
 	sym = 34
 	sym = 36
 	sym = 37
 	srfN = srfAttach, 32
 	mass = 0.05
-	temp = -199.2123
+	temp = -199.9017
 	expt = 0
 	state = 1
 	connected = True
@@ -3116,13 +3117,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_3; pos: -0.5122562,-0.1238608,0.005386333; dir: -0.9719916,-0.234793,0.01022404
+	cData = tgt: RCSTank1-2_3; pos: -0.5122743,-0.1237868,0.005376791; dir: -0.9719916,-0.234793,0.01022404
 	sym = 34
 	sym = 35
 	sym = 37
 	srfN = srfAttach, 32
 	mass = 0.05
-	temp = -198.991
+	temp = -199.6797
 	expt = 0
 	state = 1
 	connected = True
@@ -3152,13 +3153,13 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: RCSTank1-2_3; pos: -0.5122641,-0.1237427,0.005292689; dir: -0.9719916,-0.234793,0.01022404
+	cData = tgt: RCSTank1-2_3; pos: -0.512276,-0.1237356,0.005414551; dir: -0.9719916,-0.234793,0.01022404
 	sym = 34
 	sym = 35
 	sym = 36
 	srfN = srfAttach, 32
 	mass = 0.05
-	temp = -198.7704
+	temp = -199.4576
 	expt = 0
 	state = 1
 	connected = True
@@ -3203,19 +3204,19 @@ DISCOVERY
 }
 FLIGHTPLAN
 {
-	MANEUVER
-	{
-		UT = 161700356.446114
-		dV = 0,0,1231.61769059914
-	}
+}
+TARGET
+{
+	type = Vessel
+	vesselID = 0af279fd-4c3c-4b5c-b1cf-868744815354
 }
 CTRLSTATE
 {
-	pitch = -0.05451491
-	yaw = 1
-	roll = -0.002500678
+	pitch = -0.001216513
+	yaw = -0.0003054933
+	roll = -0.0003819608
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }
