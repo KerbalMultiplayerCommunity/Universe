@@ -3,34 +3,34 @@ name = dunaPlane One
 type = Ship
 sit = LANDED
 landed = True
-landedAt = Runway
+landedAt = KSC_Runway_Section_2
 splashed = False
-met = 923991.906035483
+met = 475883.198885232
 lct = 161779798.000021
 root = 0
-lat = -0.0508435272536656
-lon = -74.5949447741226
-alt = 68.9424439169234
-hgt = 1.090167
-nrm = -0.001182375,0.00452915,-0.9999893
-rot = 0.09462883,-0.0916232,-0.7190905,0.6823193
-CoM = 0.00259924,-2.009559,0.02425792
+lat = -0.0508435052276633
+lon = 285.405055222788
+alt = 68.8857583134668
+hgt = 1.146949
+nrm = -0.0005645984,0.002635592,-0.9999962
+rot = 0.09550624,-0.0920835,-0.7190431,0.6821848
+CoM = 0.00383253,-1.988951,0.03618503
 stg = 0
 prst = False
 ref = 575635562
-ctrl = False
-cPch = 0.214
-cHdg = 1.429999
+ctrl = True
+cPch = 0
+cHdg = 0
 cMod = 0
 ORBIT
 {
-	SMA = 300813.126799389
-	ECC = 0.994822883362711
-	INC = 0.0508337930432495
-	LPE = 89.954432883956
-	LAN = 326.329203563945
-	MNA = 3.14159265358979
-	EPH = 162703789.946057
+	SMA = 300813.093359607
+	ECC = 0.994822890102507
+	INC = 0.0508339427112236
+	LPE = 89.9710131932114
+	LAN = 57.8037569476267
+	MNA = 3.14159010692089
+	EPH = 162255681.238906
 	REF = 1
 }
 PART
@@ -51,7 +51,7 @@ PART
 	srfN = None, -1
 	attN = bottom, 1
 	mass = 1.25
-	temp = 18.3631
+	temp = 5.589625
 	expt = 0.5
 	state = 1
 	connected = True
@@ -114,7 +114,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -318,21 +318,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0
+		amount = 48.3809533822986
 		maxAmount = 50
 		flowState = True
 		isTweakable = True
@@ -369,7 +358,7 @@ PART
 	attN = top, 0
 	attN = bottom, 13
 	mass = 0.5
-	temp = 18.57006
+	temp = 5.66258
 	expt = 0.5
 	state = 1
 	connected = True
@@ -383,21 +372,10 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 239.017800083063
+		amount = 0
 		maxAmount = 360
 		flowState = True
 		isTweakable = True
@@ -407,7 +385,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 292.132859646112
+		amount = 0
 		maxAmount = 440
 		flowState = True
 		isTweakable = True
@@ -432,7 +410,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 1E-05
-	temp = 18.27632
+	temp = 5.548613
 	expt = 0.5
 	state = 1
 	connected = True
@@ -450,7 +428,7 @@ PART
 	{
 		name = ModuleCommand
 		isEnabled = True
-		controlSrcStatusText = Not Enough ElectricCharge (0.0/0.0)
+		controlSrcStatusText = Operational
 		EVENTS
 		{
 			MakeReference
@@ -540,7 +518,7 @@ PART
 				unlockTechs = 
 				touchdownSpeed
 				{
-					val = 0.5
+					_val = 0.5
 					_text = 0.5
 				}
 				limitGearsStage
@@ -557,11 +535,12 @@ PART
 			MechJebModuleDockingAutopilot
 			{
 				forceRol = False
+				overrideSafeDistance = False
 				unlockParts = 
 				unlockTechs = 
 				rol
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 			}
@@ -589,6 +568,7 @@ PART
 			}
 			MechJebModuleLandingGuidance
 			{
+				landingSiteIdx = 0
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -625,12 +605,12 @@ PART
 				unlockTechs = 
 				heading
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 				speed
 				{
-					val = 10
+					_val = 10
 					_text = 10
 				}
 			}
@@ -670,27 +650,43 @@ PART
 				unlockTechs = flightControl
 				srfHdg
 				{
-					val = 90
+					_val = 90
 					_text = 90
 				}
 				srfPit
 				{
-					val = 90
+					_val = 90
 					_text = 90
 				}
 				srfRol
 				{
-					val = 0
+					_val = 0
+					_text = 0
+				}
+				srfVelYaw
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelPit
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelRol
+				{
+					_val = 0
 					_text = 0
 				}
 				rol
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 			}
 			MechJebModuleSpaceplaneGuidance
 			{
+				runwayIndex = 0
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -705,7 +701,7 @@ PART
 				unlockTechs = advFlightControl
 				phaseAngle
 				{
-					val = 0
+					_val = 0
 					_text = 0
 				}
 			}
@@ -762,7 +758,7 @@ PART
 				unlockTechs = 
 				maxThrottle
 				{
-					val = 1
+					_val = 1
 					_text = 100
 				}
 			}
@@ -772,7 +768,7 @@ PART
 				unlockTechs = 
 				Tf
 				{
-					val = 1
+					_val = 1
 					_text = 1
 				}
 			}
@@ -795,14 +791,14 @@ PART
 			{
 				markUT = 161779798.000021
 				deltaVExpended = 626.442526521849
-				dragLosses = 986.655834644828
-				gravityLosses = -4574943.96568759
+				dragLosses = NaN
+				gravityLosses = -4576598.63505876
 				steeringLosses = 344.264479107921
 				markLatitude = -0.0485967489627749
 				markLongitude = -74.723403324853
 				markAltitude = 70.5483835870284
 				markBodyIndex = 1
-				maxDragGees = 35.9906956483032
+				maxDragGees = NaN
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -847,21 +843,10 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0
+		amount = 3.38095338225036
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -887,7 +872,7 @@ PART
 	sym = 4
 	srfN = srfAttach, 1
 	mass = 0.075
-	temp = 18.25381
+	temp = 5.546548
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1026,17 +1011,6 @@ PART
 	MODULE
 	{
 		name = FXModuleConstrainPosition
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
 		isEnabled = True
 		EVENTS
 		{
@@ -1064,7 +1038,7 @@ PART
 	sym = 3
 	srfN = srfAttach, 1
 	mass = 0.075
-	temp = 18.23816
+	temp = 5.545176
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1203,17 +1177,6 @@ PART
 	MODULE
 	{
 		name = FXModuleConstrainPosition
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
 		isEnabled = True
 		EVENTS
 		{
@@ -1241,7 +1204,7 @@ PART
 	sym = 8
 	srfN = srfAttach, 1
 	mass = 0.1
-	temp = 18.22552
+	temp = 5.549057
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1254,17 +1217,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -1285,7 +1237,7 @@ PART
 	sym = 9
 	srfN = srfAttach, 5
 	mass = 0.02
-	temp = 18.12592
+	temp = 5.535292
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1301,89 +1253,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -1405,7 +1296,7 @@ PART
 	sym = 10
 	srfN = srfAttach, 5
 	mass = 0.02
-	temp = 18.10713
+	temp = 5.53462
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1421,89 +1312,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -1525,7 +1355,7 @@ PART
 	sym = 5
 	srfN = srfAttach, 1
 	mass = 0.1
-	temp = 18.21174
+	temp = 5.547471
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1538,17 +1368,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARWingAerodynamicModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -1569,7 +1388,7 @@ PART
 	sym = 6
 	srfN = srfAttach, 8
 	mass = 0.02
-	temp = 18.12013
+	temp = 5.535133
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1585,89 +1404,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -1689,7 +1447,7 @@ PART
 	sym = 7
 	srfN = srfAttach, 8
 	mass = 0.02
-	temp = 18.10259
+	temp = 5.534509
 	expt = 0.1
 	state = 1
 	connected = True
@@ -1705,89 +1463,28 @@ PART
 	}
 	MODULE
 	{
-		name = FARControllableSurface
+		name = ModuleControlSurface
 		isEnabled = True
-		pitchaxis = True
-		yawaxis = True
-		rollaxis = True
-		isFlap = False
-		isSpoiler = False
-		flapDeflectionLevel = 2
-		maxdeflect = 20
-		maxdeflectFlap = 15
-		pitchaxis_UIEditor
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		ignorePitch_UIFlight
 		{
 			controlEnabled = True
 		}
-		yawaxis_UIEditor
+		ignoreYaw_UIFlight
 		{
 			controlEnabled = True
 		}
-		rollaxis_UIEditor
+		ignoreRoll_UIFlight
 		{
 			controlEnabled = True
-		}
-		isFlap_UIEditor
-		{
-			controlEnabled = True
-		}
-		isSpoiler_UIEditor
-		{
-			controlEnabled = True
-		}
-		maxdeflect_UIEditor
-		{
-			controlEnabled = True
-			minValue = -15
-			maxValue = 30
-			stepIncrement = 0.5
-		}
-		maxdeflectFlap_UIEditor
-		{
-			controlEnabled = True
-			minValue = -30
-			maxValue = 85
-			stepIncrement = 0.5
 		}
 		EVENTS
 		{
-			DeflectMore
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect more
-				guiName = Deflect more
-				category = Deflect more
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeflectLess
-			{
-				active = False
-				guiActive = True
-				guiIcon = Deflect less
-				guiName = Deflect less
-				category = Deflect less
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			ActivateSpoiler
-			{
-				actionGroup = Brakes
-			}
-			IncreaseDeflect
-			{
-				actionGroup = None
-			}
-			DecreaseDeflect
-			{
-				actionGroup = None
-			}
 		}
 	}
 }
@@ -1809,7 +1506,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 1
 	mass = 0.075
-	temp = 18.18743
+	temp = 5.540703
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1948,17 +1645,6 @@ PART
 	MODULE
 	{
 		name = FXModuleConstrainPosition
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
 		isEnabled = True
 		EVENTS
 		{
@@ -1986,7 +1672,7 @@ PART
 	sym = 11
 	srfN = srfAttach, 1
 	mass = 0.075
-	temp = 18.17118
+	temp = 5.539269
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2125,17 +1811,6 @@ PART
 	MODULE
 	{
 		name = FXModuleConstrainPosition
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
 		isEnabled = True
 		EVENTS
 		{
@@ -2165,7 +1840,7 @@ PART
 	attN = top2, 1
 	attN = None, -1
 	mass = 1.5
-	temp = 18.14415
+	temp = 5.537527
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2184,10 +1859,10 @@ PART
 		name = ModuleEnginesFX
 		isEnabled = True
 		staged = True
-		flameout = False
+		flameout = True
 		EngineIgnited = True
 		engineShutdown = False
-		currentThrottle = 0
+		currentThrottle = 1
 		thrustPercentage = 100
 		manuallyOverridden = False
 		thrustPercentage_UIFlight
@@ -2326,17 +2001,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -2366,7 +2030,7 @@ PART
 	sym = 15
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 18.14587
+	temp = 5.536778
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2620,17 +2284,6 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
 		}
 		ACTIONS
 		{
@@ -2655,7 +2308,7 @@ PART
 	sym = 14
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 18.12629
+	temp = 5.534978
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2914,17 +2567,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -2944,7 +2586,7 @@ PART
 	sym = 17
 	srfN = srfAttach, 1
 	mass = 0.1
-	temp = 18.10717
+	temp = 5.533544
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3050,17 +2692,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -3082,7 +2713,7 @@ PART
 	sym = 16
 	srfN = srfAttach, 1
 	mass = 0.1
-	temp = 18.09054
+	temp = 5.532062
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3188,17 +2819,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -3220,7 +2840,7 @@ PART
 	sym = 19
 	srfN = srfAttach, 1
 	mass = 0.1
-	temp = 18.07398
+	temp = 5.530601
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3326,17 +2946,6 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -3358,7 +2967,7 @@ PART
 	sym = 18
 	srfN = srfAttach, 1
 	mass = 0.1
-	temp = 18.05743
+	temp = 5.529128
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3466,17 +3075,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -3495,7 +3093,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 18.04165
+	temp = 5.527805
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3508,17 +3106,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3538,7 +3125,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 18.02267
+	temp = 5.52581
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3551,17 +3138,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3581,7 +3157,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 18.00255
+	temp = 5.523739
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3594,17 +3170,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3624,7 +3189,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 17.98235
+	temp = 5.521747
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3637,17 +3202,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3667,7 +3221,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 17.96265
+	temp = 5.519894
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3680,17 +3234,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3710,7 +3253,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 17.94406
+	temp = 5.518238
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3723,17 +3266,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3753,7 +3285,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 17.92768
+	temp = 5.516953
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3766,17 +3298,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3796,7 +3317,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 17.91408
+	temp = 5.516071
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3809,17 +3330,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 }
 PART
@@ -3839,7 +3349,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 1
 	mass = 0.005
-	temp = 17.90572
+	temp = 5.515934
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3901,17 +3411,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -3930,7 +3429,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 0
 	mass = 0.005
-	temp = 18.17242
+	temp = 5.538356
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4189,17 +3688,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
@@ -4219,7 +3707,7 @@ PART
 	sym = 31
 	srfN = srfAttach, 0
 	mass = 0.15
-	temp = 18.152
+	temp = 5.5366
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4344,7 +3832,7 @@ PART
 	sym = 30
 	srfN = srfAttach, 0
 	mass = 0.15
-	temp = 18.13373
+	temp = 5.534948
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4469,7 +3957,7 @@ PART
 	sym = 33
 	srfN = srfAttach, 0
 	mass = 0.15
-	temp = 18.11547
+	temp = 5.533351
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4594,7 +4082,7 @@ PART
 	sym = 32
 	srfN = srfAttach, 0
 	mass = 0.15
-	temp = 18.09774
+	temp = 5.531754
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4719,7 +4207,7 @@ PART
 	sym = 35
 	srfN = srfAttach, 0
 	mass = 0.15
-	temp = 18.07986
+	temp = 5.530113
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4844,7 +4332,7 @@ PART
 	sym = 34
 	srfN = srfAttach, 0
 	mass = 0.15
-	temp = 18.06198
+	temp = 5.528498
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4968,7 +4456,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 0
 	mass = 0.005
-	temp = 18.04175
+	temp = 5.526318
 	expt = 0.5
 	state = 1
 	connected = True
@@ -4982,26 +4470,15 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 ACTIONGROUPS
 {
-	Stage = False, 161779832.48004
-	Gear = False, 161779931.220093
+	Stage = False, 0.04
+	Gear = False, 0.04
 	Light = False, 0
 	RCS = False, 0
-	SAS = True, 161779799.180022
-	Brakes = True, 161780009.200134
+	SAS = True, 0.04
+	Brakes = True, 0.04
 	Abort = False, 0
 	Custom01 = False, 0
 	Custom02 = False, 0
@@ -5012,7 +4489,7 @@ ACTIONGROUPS
 	Custom07 = False, 0
 	Custom08 = False, 0
 	Custom09 = False, 0
-	Custom10 = False, 161779939.840097
+	Custom10 = False, 0.04
 }
 DISCOVERY
 {
@@ -5027,9 +4504,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = -0.03484746
-	yaw = -0.000260865
-	roll = 0.01489016
+	pitch = 0.02849427
+	yaw = -0.003020025
+	roll = 0.005605106
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
