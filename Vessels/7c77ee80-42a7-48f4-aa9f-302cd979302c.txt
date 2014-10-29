@@ -5,32 +5,32 @@ sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 107603260.256672
+met = 107623895.11804
 lct = 54167724.8217888
 root = 0
-lat = -0.0615064584588648
-lon = -154.001732823385
-alt = 2807137.95545435
+lat = -0.00490406066591719
+lon = -149.846102088129
+alt = 2809950.88763029
 hgt = -1
-nrm = 0.8436742,0.5067993,0.1771113
-rot = 0.3743135,-0.2631563,-0.8426032,-0.2840038
-CoM = 6.850778,-7.165403,2.597223
+nrm = 0.01063825,-0.6812551,-0.7319691
+rot = -0.500232,-0.381689,-0.774532,0.06466686
+CoM = 6.861201,-7.164888,2.591506
 stg = 3
 prst = False
-ref = 591116513
+ref = 1205069243
 ctrl = True
-cPch = -0.5040003
-cHdg = 1.974
-cMod = 0
+cPch = 0.249969
+cHdg = -1.27349
+cMod = 2
 ORBIT
 {
-	SMA = 3439657.26974049
-	ECC = 0.0099226194935698
-	INC = 0.27436196450404
-	LPE = 210.786172998208
-	LAN = 257.142948997822
-	MNA = 5.97747366655624
-	EPH = 161770985.118461
+	SMA = 3439635.96624233
+	ECC = 0.00992926439507138
+	INC = 0.274631412292058
+	LPE = 210.922623020766
+	LAN = 257.145054659438
+	MNA = 5.77066274952341
+	EPH = 161791619.999829
 	REF = 1
 }
 PART
@@ -115,7 +115,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -231,10 +231,10 @@ PART
 		{
 			StoreDataExternalEvent
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = 
-				guiName = Store Experiments (0)
+				guiName = Store Experiments (1)
 				category = 
 				guiActiveUnfocused = True
 				unfocusedRange = 1.6
@@ -401,7 +401,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -1208,7 +1208,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.6975306, 0.6976383, -0.1158472, 0.1154618)
+		currentRotation = (0.6956115, 0.6956215, 0.1267516, -0.1271592)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -1301,7 +1301,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.5050411, 0.5053288, -0.4948996, 0.4946219)
+		currentRotation = (-0.1271337, -0.1267329, -0.6955951, 0.695646)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -1445,6 +1445,51 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
+			MechJebModuleWaypointWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWarpHelper
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+				phaseAngle
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleJokeObscurePanel
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleSpaceplaneGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
 			MechJebModuleSmartASS
 			{
 				mode = ORBITAL
@@ -1475,64 +1520,19 @@ PART
 					_text = 0
 				}
 			}
-			MechJebModuleSpaceplaneAutopilot
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = 
 			}
-			MechJebModuleStageStats
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = 
 			}
-			MechJebModuleSpaceplaneGuidance
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = unmannedTech
 			}
-			MechJebModuleRendezvousGuidance
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = advUnmanned
 			}
-			MechJebModuleRendezvousAutopilotWindow
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = True
-				StabilityControl = False
-				LimitAcceleration = False
-				unlockParts = 
-				unlockTechs = 
-				heading
-				{
-					val = 0
-					_text = 0
-				}
-				speed
-				{
-					val = 10
-					_text = 10
-				}
-			}
-			MechJebModuleSettings
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRoverWindow
-			{
-				unlockParts = 
-				unlockTechs = fieldScience
-			}
-			MechJebModuleTargetController
+			MechJebModuleWaypointHelpWindow
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -1542,63 +1542,26 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleWaypointHelpWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleThrustWindow
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
 			MechJebModuleTranslatron
 			{
 				trans_spd = 0
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleWaypointWindow
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleWarpHelper
+			MechJebModuleThrustWindow
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
-				phaseAngle
-				{
-					val = 0
-					_text = 0
-				}
 			}
-			MechJebModuleRendezvousAutopilot
+			MechJebModuleTargetController
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleJokeObscurePanel
+			MechJebModuleSettings
 			{
 				unlockParts = 
 				unlockTechs = 
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
 			}
 			MechJebModuleLandingAutopilot
 			{
@@ -1668,27 +1631,64 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleRCSBalancerWindow
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					val = 0
+					_text = 0
+				}
+				speed
+				{
+					val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleAttitudeAdjustment
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleLandingGuidance
+			MechJebModuleRendezvousAutopilotWindow
 			{
 				unlockParts = 
-				unlockTechs = unmannedTech
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
 			}
 			MechJebModuleLandingPredictions
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
+			MechJebModuleLandingGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
 			MechJebModuleNodeEditor
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleManeuverPlanner
+			MechJebModuleRCSBalancerWindow
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
@@ -1739,7 +1739,7 @@ PART
 				markUT = 161770933.065061
 				deltaVExpended = 0
 				dragLosses = 0
-				gravityLosses = -0.0729417985285482
+				gravityLosses = -0.304086108024027
 				steeringLosses = 0
 				markLatitude = -0.00572171364002466
 				markLongitude = -15.4029446820163
@@ -2471,7 +2471,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.09501112,0.0127206,0.006624102; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.09552515,0.01219877,0.00664139; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 23
 	sym = 24
 	sym = 25
@@ -2507,7 +2507,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.08928163,0.01911105,0.001110185; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.0895483,0.01909686,0.001408684; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 22
 	sym = 24
 	sym = 25
@@ -2543,7 +2543,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.09295165,0.01380533,-0.00510057; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.09287477,0.01374535,-0.005085721; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 22
 	sym = 23
 	sym = 25
@@ -2579,7 +2579,7 @@ PART
 	sqor = -1
 	sidx = -1
 	attm = 1
-	cData = tgt: largeAdapter2_26; pos: -0.09901238,0.007413519,0.0001382272; dir: -0.9904972,0.1375295,0.0009075517
+	cData = tgt: largeAdapter2_26; pos: -0.09905071,0.007376505,0.0001475003; dir: -0.9904972,0.1375295,0.0009075517
 	sym = 22
 	sym = 23
 	sym = 24
@@ -2658,7 +2658,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 2
+	sidx = 0
 	attm = 0
 	srfN = None, -1
 	attN = top, 26
@@ -2887,7 +2887,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.058130323449756
+		amount = 0.0599707973099911
 		maxAmount = 0.0999999977648258
 		flowState = True
 		isTweakable = False
@@ -3425,7 +3425,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (-0.6520991, -0.6521901, -0.2733923, 0.273261)
+		currentRotation = (-0.4129398, -0.4128406, 0.5739834, -0.5740963)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -3518,7 +3518,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (-0.2733094, -0.2733459, -0.6522152, 0.6520731)
+		currentRotation = (-0.2733089, -0.2733469, -0.6522152, 0.652073)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -5247,7 +5247,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -5371,10 +5371,10 @@ PART
 		{
 			StoreDataExternalEvent
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = 
-				guiName = Store Experiments (0)
+				guiName = Store Experiments (1)
 				category = 
 				guiActiveUnfocused = True
 				unfocusedRange = 2
@@ -5382,10 +5382,10 @@ PART
 			}
 			CollectDataExternalEvent
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = 
-				guiName = Take Data (0)
+				guiName = Take Data (1)
 				category = 
 				guiActiveUnfocused = True
 				unfocusedRange = 2
@@ -5842,7 +5842,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 1
+	sidx = 0
 	attm = 1
 	sym = 56
 	sym = 57
@@ -5947,7 +5947,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 2
+	sidx = 1
 	attm = 1
 	sym = 55
 	sym = 57
@@ -6052,7 +6052,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 3
+	sidx = 2
 	attm = 1
 	sym = 55
 	sym = 56
@@ -6157,7 +6157,7 @@ PART
 	istg = 1
 	dstg = 0
 	sqor = 1
-	sidx = 4
+	sidx = 3
 	attm = 1
 	sym = 55
 	sym = 56
@@ -6262,7 +6262,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 3
+	sidx = 1
 	attm = 1
 	sym = 60
 	srfN = srfAttach, 50
@@ -6387,7 +6387,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 4
+	sidx = 2
 	attm = 1
 	sym = 59
 	srfN = srfAttach, 50
@@ -6547,7 +6547,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -7854,7 +7854,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -7994,7 +7994,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -8110,10 +8110,10 @@ PART
 		{
 			StoreDataExternalEvent
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = 
-				guiName = Store Experiments (0)
+				guiName = Store Experiments (1)
 				category = 
 				guiActiveUnfocused = True
 				unfocusedRange = 2
@@ -8299,7 +8299,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 0
+	sidx = 3
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
@@ -8481,7 +8481,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0298923966087417
+		amount = 0.0420316970414563
 		maxAmount = 2
 		flowState = True
 		isTweakable = False
@@ -8502,7 +8502,7 @@ PART
 	istg = 0
 	dstg = 1
 	sqor = 0
-	sidx = 5
+	sidx = 4
 	attm = 0
 	srfN = None, -1
 	attN = bottom, 79
@@ -8706,14 +8706,14 @@ PART
 	istg = 1
 	dstg = 2
 	sqor = 1
-	sidx = 0
+	sidx = 4
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
 	attN = top2, 80
 	attN = None, -1
 	mass = 8
-	temp = -199.3178
+	temp = -40.18229
 	expt = 0.5
 	state = 1
 	connected = True
@@ -8888,7 +8888,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0298923966087417
+		amount = 0.0420316970414563
 		maxAmount = 0.239999994635582
 		flowState = True
 		isTweakable = False
@@ -10340,7 +10340,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.6932408, 0.6930568, 0.1398962, -0.139709)
+		currentRotation = (0.1942162, 0.1942718, 0.680015, -0.6797927)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -10433,7 +10433,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0.1397309, 0.1399122, 0.6930689, -0.693221)
+		currentRotation = (0.6798083, 0.6800029, 0.1942708, -0.1942056)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -11024,7 +11024,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -11163,7 +11163,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -11279,10 +11279,10 @@ PART
 		{
 			StoreDataExternalEvent
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = 
-				guiName = Store Experiments (0)
+				guiName = Store Experiments (1)
 				category = 
 				guiActiveUnfocused = True
 				unfocusedRange = 2
@@ -11468,7 +11468,7 @@ PART
 	istg = 0
 	dstg = 0
 	sqor = 0
-	sidx = 1
+	sidx = 5
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
@@ -11650,7 +11650,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0203064290088693
+		amount = 0.0279392286671507
 		maxAmount = 2
 		flowState = True
 		isTweakable = False
@@ -13102,7 +13102,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (-0.6926013, -0.6923746, 0.142986, -0.1430944)
+		currentRotation = (-0.6138581, -0.6136079, 0.3511556, -0.3512169)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -13195,7 +13195,7 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (-0.41726, -0.4174679, -0.5707542, 0.5708365)
+		currentRotation = (0.3511996, 0.3511638, -0.6136237, 0.6138476)
 		stateString = EXTENDED
 		storedAnimationTime = 0
 		storedAnimationSpeed = 0
@@ -16532,7 +16532,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -16648,10 +16648,10 @@ PART
 		{
 			StoreDataExternalEvent
 			{
-				active = False
+				active = True
 				guiActive = False
 				guiIcon = 
-				guiName = Store Experiments (0)
+				guiName = Store Experiments (1)
 				category = 
 				guiActiveUnfocused = True
 				unfocusedRange = 2
@@ -17824,7 +17824,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -18966,9 +18966,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = 0.0002923004
-	yaw = -6.293177E-05
-	roll = 3.726673E-05
+	pitch = -0.004854943
+	yaw = 0.002745719
+	roll = 0.002421592
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
