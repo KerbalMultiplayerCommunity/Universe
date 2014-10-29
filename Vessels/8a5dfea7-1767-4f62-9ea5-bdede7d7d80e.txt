@@ -1,44 +1,44 @@
-pid = 40b0d2e016d943dda91db02244fd6a17
-name = Duna Lander Rover
+pid = 8a5dfea717674f629ea5bdede7d7d80e
+name = Duna Mission FiftyThree Rover
 type = Rover
 sit = LANDED
 landed = True
 landedAt = 
 splashed = False
-met = 4347821.25442952
-lct = 157428842.544647
+met = 0.240000128746033
+lct = 161776660.679075
 root = 0
-lat = 3.28199069703779
-lon = -202.592726687247
-alt = 953.04816301394
-hgt = 0.1395375
-nrm = -0.9999537,-0.004902244,0.008272886
-rot = 0.1732456,-0.3095709,0.00265355,-0.934957
-CoM = 1.666198E-09,-1.400821E-08,-4.799829E-09
+lat = 3.4187911826396
+lon = -202.660638426226
+alt = 810.901722647017
+hgt = 0.09329224
+nrm = -0.007841051,-0.1519322,0.9883598
+rot = -0.5001172,-0.05864166,0.8565134,0.1132636
+CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-cPch = 0.222
-cHdg = -0.564
-cMod = 0
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 160557.17503628
-	ECC = 0.998995360122603
-	INC = 3.2819966772877
-	LPE = 270.109752687074
-	LAN = 229.107697482804
-	MNA = 3.14163044400874
-	EPH = 161776663.839077
+	SMA = 160462.917265765
+	ECC = 0.999293691434237
+	INC = 34.3247857918385
+	LPE = 186.065888778757
+	LAN = 314.114443202745
+	MNA = 3.15068661277237
+	EPH = 161776660.979075
 	REF = 6
 }
 PART
 {
 	name = seatExternalCmd
-	uid = 4079668969
-	mid = 1456413370
-	launchID = 2
+	uid = 1695200209
+	mid = 147915194
+	launchID = 4
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -50,13 +50,13 @@ PART
 	attm = 1
 	srfN = None, -1
 	mass = 0.05
-	temp = -30.67586
+	temp = -30.53519
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = seatExternalCmd (Duna Lander Rover)
+	rTrf = seatExternalCmd
 	modCost = 0
 	EVENTS
 	{
@@ -102,17 +102,24 @@ PART
 		}
 		Flew
 		{
+			at = Kerbin
 			at = Duna
 		}
 		FlewBy
 		{
+			at = Kerbin
+			at = Sun
+			at = Duna
 		}
 		Orbited
 		{
+			at = Kerbin
+			at = Sun
 			at = Duna
 		}
 		SubOrbited
 		{
+			at = Kerbin
 			at = Duna
 		}
 	}
@@ -120,12 +127,12 @@ PART
 ACTIONGROUPS
 {
 	Stage = False, 0.06
-	Gear = True, 0
+	Gear = True, 0.06
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 0.06
-	Brakes = False, 0.06
-	Abort = False, 0
+	RCS = False, 0.06
+	SAS = True, 161776624.119055
+	Brakes = False, 161776636.779062
+	Abort = True, 0.06
 	Custom01 = False, 0
 	Custom02 = False, 0
 	Custom03 = False, 0

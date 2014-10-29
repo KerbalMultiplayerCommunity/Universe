@@ -1,47 +1,47 @@
-pid = 40b0d2e016d943dda91db02244fd6a17
-name = Duna Lander Rover
+pid = 9cf3f8151af3446d8f457b1671db3d23
+name = Duna Mission FiftyThree Rover
 type = Rover
 sit = LANDED
 landed = True
 landedAt = 
 splashed = False
-met = 4347821.25442952
-lct = 157428842.544647
+met = 0.240000128746033
+lct = 161776660.679075
 root = 0
-lat = 3.28199069703779
-lon = -202.592726687247
-alt = 953.04816301394
-hgt = 0.1395375
-nrm = -0.9999537,-0.004902244,0.008272886
-rot = 0.1732456,-0.3095709,0.00265355,-0.934957
-CoM = 1.666198E-09,-1.400821E-08,-4.799829E-09
+lat = 3.41911160401103
+lon = -202.660741962132
+alt = 810.623044357693
+hgt = 0.09268605
+nrm = -3.46303E-05,-0.1456732,0.9893326
+rot = 0.4969621,0.0605487,-0.856995,-0.1221557
+CoM = 0,0,0
 stg = 0
 prst = False
 ref = 0
 ctrl = False
-cPch = 0.222
-cHdg = -0.564
-cMod = 0
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 160557.17503628
-	ECC = 0.998995360122603
-	INC = 3.2819966772877
-	LPE = 270.109752687074
-	LAN = 229.107697482804
-	MNA = 3.14163044400874
-	EPH = 161776663.839077
+	SMA = 160462.273937917
+	ECC = 0.999300942643478
+	INC = 35.678130093836
+	LPE = 185.864130803801
+	LAN = 314.360603003165
+	MNA = 3.15111241553092
+	EPH = 161776660.979075
 	REF = 6
 }
 PART
 {
 	name = seatExternalCmd
-	uid = 4079668969
-	mid = 1456413370
-	launchID = 2
+	uid = 545210846
+	mid = 147915194
+	launchID = 4
 	parent = 0
 	position = 0,0,0
-	rotation = 0,0,0,1
+	rotation = 0,0,0,1.000001
 	mirror = 1,1,1
 	istg = 0
 	dstg = 0
@@ -50,13 +50,13 @@ PART
 	attm = 1
 	srfN = None, -1
 	mass = 0.05
-	temp = -30.67586
+	temp = -30.53387
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = seatExternalCmd (Duna Lander Rover)
+	rTrf = seatExternalCmd
 	modCost = 0
 	EVENTS
 	{
@@ -102,17 +102,24 @@ PART
 		}
 		Flew
 		{
+			at = Kerbin
 			at = Duna
 		}
 		FlewBy
 		{
+			at = Kerbin
+			at = Sun
+			at = Duna
 		}
 		Orbited
 		{
+			at = Kerbin
+			at = Sun
 			at = Duna
 		}
 		SubOrbited
 		{
+			at = Kerbin
 			at = Duna
 		}
 	}
@@ -120,12 +127,12 @@ PART
 ACTIONGROUPS
 {
 	Stage = False, 0.06
-	Gear = True, 0
+	Gear = True, 0.06
 	Light = False, 0
-	RCS = False, 0
-	SAS = True, 0.06
-	Brakes = False, 0.06
-	Abort = False, 0
+	RCS = False, 0.06
+	SAS = True, 161776624.119055
+	Brakes = False, 161776636.779062
+	Abort = True, 0.06
 	Custom01 = False, 0
 	Custom02 = False, 0
 	Custom03 = False, 0
