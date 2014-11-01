@@ -1,36 +1,36 @@
 pid = 7967028372614df4977c52a31b185761
 name = Asteroid catcher
 type = Ship
-sit = ORBITING
+sit = ESCAPING
 landed = False
 landedAt = 
 splashed = False
-met = 26977.4393069744
+met = 27990.0217205584
 lct = 232421820.830779
 root = 0
-lat = -34.1211813673165
-lon = 153.293166574476
-alt = 10197260.625581
+lat = -36.6111451009384
+lon = 131.109576016554
+alt = 10091044.5103116
 hgt = -1
-nrm = -0.8239629,-0.1965197,-0.5314745
-rot = 0.8000702,0.5294821,0.1387987,0.2455026
-CoM = -8.500418E-06,-5.862037,-9.539643E-06
-stg = 0
+nrm = -0.08797815,0.05971926,-0.9943309
+rot = -0.5595683,0.6836766,0.1266081,0.4510434
+CoM = -0.3938882,21.0157,-0.3269104
+stg = 1
 prst = False
-ref = 3376090475
+ref = 1276133709
 ctrl = True
-cPch = -0.4860001
-cHdg = 4.091999
-cMod = 0
+cPch = -0.02792747
+cHdg = 2.820162
+cMod = 1
 ORBIT
 {
-	SMA = 5781234.05268187
-	ECC = 0.867657156378501
-	INC = 134.930157488314
-	LPE = 52.5008076095174
-	LAN = 308.239891008734
-	MNA = 3.12972156062142
-	EPH = 232448798.310086
+	SMA = -14741282.0386699
+	ECC = 1.72077786083593
+	INC = 134.960214447694
+	LPE = 245.442744914272
+	LAN = 308.302484149212
+	MNA = -0.0520334107253678
+	EPH = 232449810.9125
 	REF = 1
 }
 PART
@@ -52,7 +52,7 @@ PART
 	attN = bottom, 4
 	attN = top, 1
 	mass = 4
-	temp = -201.6516
+	temp = -43.67081
 	expt = 0.5
 	state = 1
 	connected = True
@@ -311,6 +311,7 @@ PART
 		}
 		FlewBy
 		{
+			at = Kerbin
 		}
 		Orbited
 		{
@@ -335,7 +336,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 149.999041798844
+		amount = 150
 		maxAmount = 150
 		flowState = True
 		isTweakable = True
@@ -372,7 +373,7 @@ PART
 	attN = bottom, 0
 	attN = top, 2
 	mass = 0.25
-	temp = -200.5089
+	temp = -43.4401
 	expt = 0.5
 	state = 1
 	connected = True
@@ -417,7 +418,7 @@ PART
 	attN = bottom, 3
 	attN = top, 1
 	mass = 0.25
-	temp = -199.9999
+	temp = -43.33724
 	expt = 0.5
 	state = 1
 	connected = True
@@ -461,7 +462,7 @@ PART
 	srfN = None, -1
 	attN = top, 2
 	mass = 0.075
-	temp = -199.5074
+	temp = -43.23826
 	expt = 0.5
 	state = 1
 	connected = True
@@ -479,16 +480,16 @@ PART
 	{
 		name = ModuleGrappleNode
 		isEnabled = True
-		state = Disabled
-		dockUId = 0
-		grapplePos = 0,0,0
-		grappleOrt = 0,1,0
-		grappleOrt2 = 0,0,0
+		state = Grappled
+		dockUId = 426666077
+		grapplePos = -10.97808,13.15879,5.615684
+		grappleOrt = 0.5917128,-0.7325326,-0.3365599
+		grappleOrt2 = 0.8057593,0.5504061,0.2186459
 		EVENTS
 		{
 			Release
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Release
 				guiName = Release
@@ -532,7 +533,7 @@ PART
 			}
 			SetLoose
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiIcon = Free Pivot
 				guiName = Free Pivot
@@ -564,24 +565,36 @@ PART
 				actionGroup = None
 			}
 		}
+		DOCKEDVESSEL
+		{
+			vesselName = Asteroid catcher
+			vesselType = 6
+			rootUId = 3376090475
+		}
+		DOCKEDVESSEL_Other
+		{
+			vesselName = Ast. WQA-419
+			vesselType = 1
+			rootUId = 426666077
+		}
 	}
 	MODULE
 	{
 		name = ModuleAnimateGeneric
 		isEnabled = True
 		status = Locked
-		animSwitch = True
-		animTime = 0
-		animSpeed = -1
+		animSwitch = False
+		animTime = 1
+		animSpeed = 1
 		EVENTS
 		{
 			Toggle
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Toggle
-				guiName = Arm
+				guiName = Disarm
 				category = Toggle
 				guiActiveUnfocused = True
 				unfocusedRange = 5
@@ -662,7 +675,7 @@ PART
 	attN = top, 0
 	attN = bottom, 5
 	mass = 0.9
-	temp = -202.7894
+	temp = -43.90411
 	expt = 0.5
 	state = 1
 	connected = True
@@ -727,7 +740,7 @@ PART
 	attN = top, 4
 	attN = bottom, 6
 	mass = 10
-	temp = -200.8526
+	temp = -43.5089
 	expt = 0.5
 	state = 1
 	connected = True
@@ -755,7 +768,7 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 4810.44389989195
+		amount = 3444.65253609979
 		maxAmount = 6480
 		flowState = True
 		isTweakable = True
@@ -765,7 +778,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 5879.43067696609
+		amount = 4210.12779389207
 		maxAmount = 7920
 		flowState = True
 		isTweakable = True
@@ -793,7 +806,7 @@ PART
 	attN = top2, 5
 	attN = None, -1
 	mass = 8
-	temp = -199.4896
+	temp = -40.69898
 	expt = 0.5
 	state = 1
 	connected = True
@@ -968,7 +981,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 0.0825766440368779
+		amount = 0.0611372031812244
 		maxAmount = 0.239999994635582
 		flowState = True
 		isTweakable = False
@@ -998,7 +1011,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 5
 	mass = 0.08
-	temp = -199.8594
+	temp = -43.30832
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1084,7 +1097,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 5
 	mass = 0.08
-	temp = -199.7828
+	temp = -43.29287
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1170,7 +1183,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 5
 	mass = 0.08
-	temp = -199.7064
+	temp = -43.27716
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1256,7 +1269,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 5
 	mass = 0.08
-	temp = -199.63
+	temp = -43.26169
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1342,7 +1355,7 @@ PART
 	sym = 12
 	srfN = srfAttach, 5
 	mass = 0.08
-	temp = -199.5538
+	temp = -43.24638
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1428,7 +1441,7 @@ PART
 	sym = 11
 	srfN = srfAttach, 5
 	mass = 0.08
-	temp = -199.4776
+	temp = -43.2311
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1510,7 +1523,7 @@ PART
 	sym = 14
 	srfN = srfAttach, 5
 	mass = 0.5625
-	temp = -199.4155
+	temp = -43.21852
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1601,7 +1614,7 @@ PART
 	sym = 13
 	srfN = srfAttach, 5
 	mass = 0.5625
-	temp = -199.3524
+	temp = -43.20552
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1691,7 +1704,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 4
 	mass = 1E-05
-	temp = -200.7961
+	temp = -43.49767
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2053,10 +2066,10 @@ PART
 			MechJebModuleFlightRecorder
 			{
 				markUT = 232421820.830779
-				deltaVExpended = 5025.74395976249
+				deltaVExpended = 5775.77145869962
 				dragLosses = 2.13246165226001
-				gravityLosses = 1056.63183830806
-				steeringLosses = 535.435435706167
+				gravityLosses = 1084.19743809408
+				steeringLosses = 630.311370456579
 				markLatitude = -0.0972153706172595
 				markLongitude = -74.5576727188978
 				markAltitude = 106.649388120812
@@ -2097,6 +2110,7 @@ PART
 		}
 		FlewBy
 		{
+			at = Kerbin
 		}
 		Orbited
 		{
@@ -2121,7 +2135,7 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 4.999041798844
+		amount = 5
 		maxAmount = 5
 		flowState = True
 		isTweakable = True
@@ -2151,7 +2165,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 4
 	mass = 0.08
-	temp = -200.5883
+	temp = -43.45549
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2237,7 +2251,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 4
 	mass = 0.08
-	temp = -200.3767
+	temp = -43.4129
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2323,7 +2337,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 4
 	mass = 0.08
-	temp = -200.1654
+	temp = -43.37029
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2409,7 +2423,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 4
 	mass = 0.08
-	temp = -199.9547
+	temp = -43.32739
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2495,7 +2509,7 @@ PART
 	sym = 21
 	srfN = srfAttach, 4
 	mass = 0.08
-	temp = -199.7443
+	temp = -43.28493
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2581,7 +2595,7 @@ PART
 	sym = 20
 	srfN = srfAttach, 4
 	mass = 0.08
-	temp = -199.5345
+	temp = -43.24274
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2669,7 +2683,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -199.3126
+	temp = -43.19818
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2766,7 +2780,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -199.0903
+	temp = -43.15262
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2863,7 +2877,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -198.8685
+	temp = -43.10785
 	expt = 0.5
 	state = 1
 	connected = True
@@ -2960,7 +2974,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -198.6471
+	temp = -43.06333
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3057,7 +3071,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -198.4262
+	temp = -43.01839
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3154,7 +3168,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.08
-	temp = -198.206
+	temp = -42.97436
 	expt = 0.5
 	state = 1
 	connected = True
@@ -3227,13 +3241,104 @@ PART
 		}
 	}
 }
+PART
+{
+	name = PotatoRoid
+	uid = 426666077
+	mid = 426666077
+	launchID = 0
+	parent = 3
+	position = -0.403246730566025,22.4442710876465,-0.37541589140892
+	rotation = -0.69392,-0.3574887,0.6202754,0.0770428
+	mirror = 1,1,1
+	istg = 0
+	dstg = 0
+	sqor = 0
+	sidx = 0
+	attm = 0
+	srfN = None, -1
+	attN = grapple, 3
+	mass = 1262.835
+	temp = -40.57286
+	expt = 0.1
+	state = 1
+	connected = True
+	attached = True
+	flag = 
+	rTrf = PotatoRoid (Ast. WQA-419)
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAsteroid
+		isEnabled = True
+		seed = 44211165
+		AsteroidName = Ast. WQA-419
+		prefabBaseURL = Procedural/PA_E
+		EVENTS
+		{
+			MakeTarget
+			{
+				active = True
+				guiActive = True
+				guiIcon = Target Center of Mass
+				guiName = Target Center of Mass
+				category = Target Center of Mass
+				guiActiveUnfocused = True
+				unfocusedRange = 500
+				externalToEVAOnly = False
+			}
+			TakeSampleEVAEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = Take Sample
+				guiName = Take Sample
+				category = Take Sample
+				guiActiveUnfocused = True
+				unfocusedRange = 29.50356
+				externalToEVAOnly = True
+			}
+			RenameAsteroidEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Asteroid
+				guiName = Rename Asteroid
+				category = Rename Asteroid
+				guiActiveUnfocused = True
+				unfocusedRange = 29.50356
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
 ACTIONGROUPS
 {
 	Stage = True, 232422119.728393
 	Gear = True, 0
 	Light = False, 0
-	RCS = False, 232422179.168425
-	SAS = False, 232422180.768425
+	RCS = True, 232448987.280602
+	SAS = True, 232449722.152452
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -3257,22 +3362,17 @@ DISCOVERY
 }
 FLIGHTPLAN
 {
-	MANEUVER
-	{
-		UT = 232448825.037532
-		dV = -139.654999271785,0.0502436481920228,728.59868091766
-	}
 }
 TARGET
 {
-	type = Vessel
-	vesselID = ab03d45a-524e-4db0-abc0-983af82de650
+	type = Generic
+	tgtId = PotatoRoid (Ast. WQA-419) Vessel CoM Marker
 }
 CTRLSTATE
 {
-	pitch = 0.08318713
-	yaw = -0.04429845
-	roll = -0.0002745667
+	pitch = 0
+	yaw = 0
+	roll = 0
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
