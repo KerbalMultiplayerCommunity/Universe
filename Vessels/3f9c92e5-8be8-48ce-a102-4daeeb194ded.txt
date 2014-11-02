@@ -1,274 +1,77 @@
-pid = 07ae1afd75f049f8ac632ceecf5cda97
-name = KineticDeath
+pid = 3f9c92e58be848cea1024daeeb194ded
+name = Minimus Rover launcher v2 Probe
 type = Probe
-sit = ORBITING
+sit = SUB_ORBITAL
 landed = False
 landedAt = 
 splashed = False
-met = 1410.28714132309
-lct = 276603816.965027
+met = 27.01997423172
+lct = 276604575.496365
 root = 0
-lat = -0.0647420634170817
-lon = -268.028721630176
-alt = 149920.864482491
+lat = -0.755546205974864
+lon = 291.767995219509
+alt = 89026.0684267689
 hgt = -1
-nrm = 0.8250167,0.005964206,-0.5650769
-rot = 0.5850835,0.6640899,0.3244141,-0.3337925
-CoM = 7.842274E-06,-9.266887,-7.630267E-07
-stg = 2
+nrm = 0.05760228,-0.03078859,0.9978648
+rot = 0.5900653,0.7786972,0.1030502,0.1866396
+CoM = -1.23526E-05,-6.810421,-4.047393E-05
+stg = 4
 prst = False
-ref = 594662657
+ref = 0
 ctrl = True
-cPch = 0.438
-cHdg = -0.9359999
-cMod = 0
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 744638.384737769
-	ECC = 0.0780246553384384
-	INC = 0.953301807440848
-	LPE = 283.556057381519
-	LAN = -56.0259401958061
-	MNA = 4.69910397543134
-	EPH = 276605227.292168
+	SMA = 369430.166318215
+	ECC = 0.875207649381264
+	INC = 4.49571388879902
+	LPE = 11.9387514172333
+	LAN = 127.597920394738
+	MNA = 2.85708411844489
+	EPH = 276604602.556339
 	REF = 1
 }
 PART
 {
-	name = probeStackLarge
-	uid = 594662657
-	mid = 3631955369
-	launchID = 2
+	name = KW3mExpandedFairingBase
+	uid = 1891742720
+	mid = 1401652993
+	launchID = 12
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = bottom, 3
-	attN = top, 1
-	mass = 0.5
-	temp = -200.0789
-	expt = 0
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = probeStackLarge (KineticDeath)
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = Operational
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleReactionWheel
-		isEnabled = True
-		stateString = Not enough ElectricCharge
-		WheelState = Active
-		EVENTS
-		{
-			OnToggle
-			{
-				active = True
-				guiActive = True
-				guiIcon = Toggle Torque
-				guiName = Toggle Torque
-				category = Toggle Torque
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			Activate
-			{
-				actionGroup = None
-			}
-			Deactivate
-			{
-				actionGroup = None
-			}
-			Toggle
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSAS
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Surfaced
-		{
-		}
-		Flew
-		{
-			at = Kerbin
-		}
-		FlewBy
-		{
-		}
-		Orbited
-		{
-			at = Kerbin
-		}
-		SubOrbited
-		{
-			at = Kerbin
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 29.9998611111031
-		maxAmount = 30
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	name = strutCube
-	uid = 753810218
-	mid = 3631955369
-	launchID = 2
-	parent = 0
-	position = 0,0.318733215332031,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 0
-	dstg = 0
-	sqor = -1
-	sidx = -1
-	attm = 0
-	srfN = None, -1
-	attN = top, 2
-	attN = bottom, 0
-	mass = 0.001
-	temp = -199.4901
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = strutCube
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = stackDecouplerMini
-	uid = 2775517388
-	mid = 3631955369
-	launchID = 2
-	parent = 1
-	position = 0,0.523384094238281,0
-	rotation = 0,0,0,-1
-	mirror = 1,1,1
-	istg = 1
 	dstg = 1
-	sqor = 1
-	sidx = 8
+	sqor = 0
+	sidx = 6
 	attm = 0
 	srfN = None, -1
-	attN = bottom, 1
+	attN = bottom, 7
 	attN = None, -1
-	mass = 0.015
-	temp = -198.9775
+	attN = None, -1
+	attN = None, -1
+	attN = None, -1
+	attN = None, -1
+	attN = connect4, 1
+	attN = connect5, 5
+	attN = connect6, 3
+	attN = None, -1
+	attN = None, -1
+	attN = None, -1
+	attN = None, -1
+	attN = None, -1
+	attN = None, -1
+	mass = 2
+	temp = -198.2156
 	expt = 0.5
-	state = 0
-	connected = True
+	state = 1
+	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = stackDecouplerMini
+	rTrf = KW3mExpandedFairingBase
 	modCost = 0
 	EVENTS
 	{
@@ -303,173 +106,33 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
-	name = KW3mFairingBase
-	uid = 2235880342
-	mid = 3631955369
-	launchID = 2
+	name = KW3mExpandedFairingCone
+	uid = 1033274305
+	mid = 1401652993
+	launchID = 12
 	parent = 0
-	position = 0,-1.29249572753906,0
-	rotation = 0,0,0,1
+	position = -6.84448707488627E-07,7.22061920166016,2.98023508094047E-07
+	rotation = 0,-1,0,0
 	mirror = 1,1,1
-	istg = 1
-	dstg = 1
-	sqor = 1
-	sidx = 10
-	attm = 0
-	srfN = None, -1
-	attN = bottom, 4
-	attN = top, 0
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	attN = None, -1
-	mass = 2
-	temp = -199.5092
-	expt = 0.5
-	state = 0
-	connected = True
-	attached = True
-	flag = Squad/Flags/default
-	rTrf = KW3mFairingBase
-	modCost = 0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	MODULE
-	{
-		name = ModuleDecouple
-		isEnabled = True
-		isDecoupled = False
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = FARPayloadFairingModule
-		isEnabled = True
-		EVENTS
-		{
-			FairingShapeChanged
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	name = size3Decoupler
-	uid = 4177798054
-	mid = 3631955369
-	launchID = 2
-	parent = 3
-	position = 0,-1.72664642333984,0
-	rotation = 0,0,0,1
-	mirror = 1,1,1
-	istg = 1
+	istg = 0
 	dstg = 3
-	sqor = 1
-	sidx = 11
+	sqor = 0
+	sidx = 3
 	attm = 0
 	srfN = None, -1
-	attN = top, 3
-	attN = bottom, 5
-	mass = 0.8
-	temp = -199.4659
+	attN = bottom, 0
+	attN = connect, 2
+	mass = 0.4
+	temp = -197.4297
 	expt = 0.5
-	state = 0
+	state = 1
 	connected = True
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = size3Decoupler
+	rTrf = KW3mExpandedFairingCone
 	modCost = 0
 	EVENTS
 	{
@@ -479,7 +142,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDecouple
+		name = ModuleAnchoredDecoupler
 		isEnabled = True
 		isDecoupled = False
 		EVENTS
@@ -504,27 +167,16 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
-	name = KWFuelAdapter5x3
-	uid = 2532617566
-	mid = 3631955369
-	launchID = 2
-	parent = 4
-	position = 0,-3.34945678710938,0
-	rotation = 0,0,0,1
+	name = KW3mExpandedFairingWall
+	uid = 3206455090
+	mid = 1401652993
+	launchID = 12
+	parent = 1
+	position = -1.67986195265257E-06,1.97061920166016,3.87430560522262E-07
+	rotation = 0,-1,0,0
 	mirror = 1,1,1
 	istg = 4
 	dstg = 4
@@ -532,10 +184,234 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 4
-	attN = bottom, 10
+	attN = None, -1
+	attN = top, 1
+	mass = 0.1
+	temp = -197.4297
+	expt = 0.5
+	state = 0
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mExpandedFairingWall
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	name = KW3mExpandedFairingCone
+	uid = 3842411052
+	mid = 1401652993
+	launchID = 12
+	parent = 0
+	position = 1.72954173649487E-06,7.22061920166016,0.000865311245433986
+	rotation = -2.22636E-14,0.5000003,2.13865E-14,0.8660257
+	mirror = 1,1,1
+	istg = 0
+	dstg = 3
+	sqor = 0
+	sidx = 4
+	attm = 0
+	srfN = None, -1
+	attN = bottom, 0
+	attN = connect, 4
+	mass = 0.4
+	temp = -197.4297
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mExpandedFairingCone
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = KW3mExpandedFairingWall
+	uid = 659489334
+	mid = 1401652993
+	launchID = 12
+	parent = 3
+	position = 2.79049072560156E-06,1.97061920166016,0.000864595989696682
+	rotation = -6.75513E-08,0.5000003,1.170023E-07,0.8660257
+	mirror = 1,1,1
+	istg = 4
+	dstg = 4
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = top, 3
+	mass = 0.1
+	temp = -197.4297
+	expt = 0.5
+	state = 0
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mExpandedFairingWall
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	name = KW3mExpandedFairingCone
+	uid = 3379258721
+	mid = 1401652993
+	launchID = 12
+	parent = 0
+	position = 7.31162970168953E-07,7.22061920166016,-0.000865311245433986
+	rotation = 3.031634E-14,-0.5000004,1.61757E-14,0.8660259
+	mirror = 1,1,1
+	istg = 0
+	dstg = 3
+	sqor = 0
+	sidx = 5
+	attm = 0
+	srfN = None, -1
+	attN = bottom, 0
+	attN = connect, 6
+	mass = 0.4
+	temp = -197.4297
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mExpandedFairingCone
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	name = KW3mExpandedFairingWall
+	uid = 1492436800
+	mid = 1401652993
+	launchID = 12
+	parent = 5
+	position = 5.10610789206112E-07,1.97061920166016,-0.000865609268657863
+	rotation = 2.321091E-14,-0.5000004,9.070266E-15,0.8660259
+	mirror = 1,1,1
+	istg = 4
+	dstg = 4
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = top, 5
+	mass = 0.1
+	temp = -197.4297
+	expt = 0.5
+	state = 0
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = KW3mExpandedFairingWall
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	name = KWFuelAdapter5x3
+	uid = 4125192872
+	mid = 1401652993
+	launchID = 12
+	parent = 0
+	position = 3.05630408092838E-07,-1.18625259399414,-8.94070524282142E-08
+	rotation = 9.553196E-08,-0.7071071,-9.553196E-08,-0.7071071
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = top, 0
+	attN = bottom, 12
 	mass = 2.9
-	temp = -199.6273
+	temp = -198.1609
 	expt = 0.5
 	state = 1
 	connected = True
@@ -548,17 +424,6 @@ PART
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
 	}
 	RESOURCE
 	{
@@ -584,24 +449,24 @@ PART
 PART
 {
 	name = rtg
-	uid = 361347684
-	mid = 3631955369
-	launchID = 2
-	parent = 5
-	position = -2.01191663742065,-4.09753799438477,1.20401382446289E-05
-	rotation = -0.567039,-0.4224533,-0.567039,0.4224533
+	uid = 3505979379
+	mid = 1401652993
+	launchID = 12
+	parent = 7
+	position = 1.18028556244099E-05,-1.93432998657227,2.01192140579224
+	rotation = 0.8019147,1.083407E-07,-8.071559E-08,-0.5974395
 	mirror = 1,1,1
-	istg = 4
-	dstg = 4
+	istg = 2
+	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 8
-	srfN = srfAttach, 5
-	attN = top, 7
+	sym = 10
+	srfN = srfAttach, 7
+	attN = top, 9
 	attN = None, -1
 	mass = 0.08
-	temp = -199.3507
+	temp = -197.8422
 	expt = 0.5
 	state = 1
 	connected = True
@@ -662,38 +527,27 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
 	name = probeCoreSphere
-	uid = 843830048
-	mid = 3631955369
-	launchID = 2
-	parent = 6
-	position = -1.3745756149292,-4.28785705566406,1.20401382446289E-05
-	rotation = 2.761446E-09,-3.706558E-09,-0.8019143,0.5974392
+	uid = 3171467547
+	mid = 1401652993
+	launchID = 12
+	parent = 8
+	position = 1.17052704808884E-05,-2.12465286254883,1.37457776069641
+	rotation = 0.5670394,-0.4224534,0.5670393,-0.4224536
 	mirror = 1,1,1
-	istg = 4
-	dstg = 4
+	istg = 2
+	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 9
+	sym = 11
 	srfN = None, -1
-	attN = bottom, 6
+	attN = bottom, 8
 	mass = 0.05
-	temp = -198.9137
+	temp = -197.3982
 	expt = 0
 	state = 1
 	connected = True
@@ -745,7 +599,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -810,28 +664,16 @@ PART
 		}
 		Orbited
 		{
-			at = Kerbin
 		}
 		SubOrbited
 		{
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9.9998611111031
+		amount = 9.99967702936057
 		maxAmount = 10
 		flowState = True
 		isTweakable = True
@@ -842,24 +684,24 @@ PART
 PART
 {
 	name = rtg
-	uid = 495419316
-	mid = 3631955369
-	launchID = 2
-	parent = 5
-	position = 2.01191425323486,-4.09753799438477,0
-	rotation = -0.567039,0.4224533,0.567039,0.4224532
+	uid = 3601247850
+	mid = 1401652993
+	launchID = 12
+	parent = 7
+	position = 6.00897124058974E-07,-1.93432998657227,-2.01191830635071
+	rotation = 8.071558E-08,-0.5974395,-0.8019147,1.71561E-07
 	mirror = 1,1,1
-	istg = 4
-	dstg = 4
+	istg = 2
+	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 1
-	sym = 6
-	srfN = srfAttach, 5
-	attN = top, 9
+	sym = 8
+	srfN = srfAttach, 7
+	attN = top, 11
 	attN = None, -1
 	mass = 0.08
-	temp = -199.2144
+	temp = -197.7081
 	expt = 0.5
 	state = 1
 	connected = True
@@ -920,38 +762,27 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 }
 PART
 {
 	name = probeCoreSphere
-	uid = 1079307551
-	mid = 3631955369
-	launchID = 2
-	parent = 8
-	position = 1.37457537651062,-4.28785705566406,0
-	rotation = -0.8019143,0.5974392,-2.29538E-08,-5.348391E-08
+	uid = 805211862
+	mid = 1401652993
+	launchID = 12
+	parent = 10
+	position = 4.77234550544381E-07,-2.12465286254883,-1.37457799911499
+	rotation = 0.5670394,-0.4224533,-0.5670392,0.4224536
 	mirror = 1,1,1
-	istg = 4
-	dstg = 4
+	istg = 2
+	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 0
-	sym = 7
+	sym = 9
 	srfN = None, -1
-	attN = bottom, 8
+	attN = bottom, 10
 	mass = 0.05
-	temp = -198.8469
+	temp = -197.3334
 	expt = 0
 	state = 1
 	connected = True
@@ -1003,7 +834,7 @@ PART
 	{
 		name = ModuleReactionWheel
 		isEnabled = True
-		stateString = Not enough ElectricCharge
+		stateString = Operational
 		WheelState = Active
 		EVENTS
 		{
@@ -1068,28 +899,16 @@ PART
 		}
 		Orbited
 		{
-			at = Kerbin
 		}
 		SubOrbited
 		{
 			at = Kerbin
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 9.9998611111031
+		amount = 9.99967702936057
 		maxAmount = 10
 		flowState = True
 		isTweakable = True
@@ -1100,23 +919,23 @@ PART
 PART
 {
 	name = KW5mtankL1.5
-	uid = 614701428
-	mid = 3631955369
-	launchID = 2
-	parent = 5
-	position = 0,-8.1844596862793,0
-	rotation = 0,0,0,1
+	uid = 3782072279
+	mid = 1401652993
+	launchID = 12
+	parent = 7
+	position = 1.61206901339028E-06,-6.021240234375,-8.94070524282142E-08
+	rotation = 9.553196E-08,-0.7071071,-9.553196E-08,-0.7071071
 	mirror = 1,1,1
-	istg = 4
-	dstg = 4
+	istg = 2
+	dstg = 2
 	sqor = -1
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = top, 5
-	attN = bottom, 11
+	attN = top, 7
+	attN = bottom, 13
 	mass = 12.7
-	temp = -198.942
+	temp = -197.4235
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1130,21 +949,10 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 6695.63265010338
+		amount = 9729.95588625952
 		maxAmount = 10368
 		flowState = True
 		isTweakable = True
@@ -1154,7 +962,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 8183.55080060507
+		amount = 11892.1682678674
 		maxAmount = 12672
 		flowState = True
 		isTweakable = True
@@ -1165,24 +973,24 @@ PART
 PART
 {
 	name = KW5mengineTitanV
-	uid = 681085264
-	mid = 3631955369
-	launchID = 2
-	parent = 10
-	position = 0,-15.6093673706055,0
-	rotation = 0,0,0,1
+	uid = 320940574
+	mid = 1401652993
+	launchID = 12
+	parent = 12
+	position = 3.61832098860759E-06,-13.4461612701416,-8.94070524282142E-08
+	rotation = 9.553196E-08,-0.7071071,-9.553196E-08,-0.7071071
 	mirror = 1,1,1
-	istg = 2
-	dstg = 4
-	sqor = 2
-	sidx = 0
+	istg = 0
+	dstg = 2
+	sqor = 0
+	sidx = 7
 	attm = 0
 	srfN = None, -1
 	attN = None, -1
-	attN = top2, 10
+	attN = top2, 12
 	attN = None, -1
 	mass = 22
-	temp = -198.9512
+	temp = -197.4031
 	expt = 0.5
 	state = 1
 	connected = True
@@ -1343,17 +1151,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = FARBasicDragModel
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -1367,11 +1164,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 276604053.455848
+	Stage = True, 276604486.19645
 	Gear = True, 0
 	Light = False, 0
-	RCS = False, 276603872.284974
-	SAS = True, 276603908.60494
+	RCS = False, 0
+	SAS = True, 276604409.436524
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -1398,9 +1195,9 @@ FLIGHTPLAN
 }
 CTRLSTATE
 {
-	pitch = -0.0002638948
-	yaw = -0.002348908
-	roll = -0.0005157029
+	pitch = 0.2781337
+	yaw = -1
+	roll = 0.09972083
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
