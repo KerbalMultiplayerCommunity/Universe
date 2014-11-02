@@ -1,21 +1,21 @@
-pid = 74670072c5dd4d4aaefdab2c7d46f44c
-name = Minimus Rover launcher v2 Probe
-type = Probe
-sit = SUB_ORBITAL
+pid = 489fc1ed064e4e18970dbdeccbc9f153
+name = KineticDeath Probe Debris
+type = Debris
+sit = ORBITING
 landed = False
 landedAt = 
 splashed = False
-met = 75.3999280929565
-lct = 276603757.631918
+met = 37.6799640655518
+lct = 276604091.755812
 root = 0
-lat = -0.290278214110396
-lon = 295.616910420076
-alt = 84608.6544943555
+lat = 0.348260700767936
+lon = -55.8277850922659
+alt = 143784.117631873
 hgt = -1
-nrm = 0.1421985,0.9890919,-0.03843072
-rot = 0.3809203,0.6670638,-0.6401802,0.009756817
-CoM = -0.0002191243,-0.4956105,-0.0001044417
-stg = 6
+nrm = -0.3248003,0.4106575,-0.8519772
+rot = 0.09189582,0.2389917,0.6180356,-0.7432834
+CoM = -0.3072153,0.05031355,-0.2575199
+stg = 2
 prst = False
 ref = 0
 ctrl = False
@@ -24,21 +24,21 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 376266.400866122
-	ECC = 0.820909071828625
-	INC = 1.03268636015474
-	LPE = 15.264179098457
-	LAN = 111.956448437169
-	MNA = 3.24928976895752
-	EPH = 276603833.051846
+	SMA = 747965.50638501
+	ECC = 0.0706916235245666
+	INC = 1.44657581032491
+	LPE = 284.415659709019
+	LAN = -52.1528561199215
+	MNA = 1.42122713201313
+	EPH = 276604129.475776
 	REF = 1
 }
 PART
 {
-	name = stackDecoupler
-	uid = 714917238
-	mid = 1618742301
-	launchID = 10
+	name = radialDecoupler
+	uid = 3089130552
+	mid = 3631955369
+	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
@@ -46,19 +46,17 @@ PART
 	istg = 0
 	dstg = 1
 	sqor = 0
-	sidx = 5
-	attm = 0
+	sidx = 8
+	attm = 1
 	srfN = None, -1
-	attN = bottom, 1
-	attN = None, -1
-	mass = 0.05
-	temp = -93.96545
+	mass = 0.025
+	temp = -42.01892
 	expt = 0.5
 	state = 1
 	connected = False
-	attached = True
+	attached = False
 	flag = Squad/Flags/default
-	rTrf = stackDecoupler
+	rTrf = radialDecoupler
 	modCost = 0
 	EVENTS
 	{
@@ -68,7 +66,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDecouple
+		name = ModuleAnchoredDecoupler
 		isEnabled = True
 		isDecoupled = True
 		EVENTS
@@ -115,33 +113,44 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
-	name = trussPiece1x
-	uid = 2721461099
-	mid = 1618742301
-	launchID = 10
+	name = structuralPanel1
+	uid = 3566134153
+	mid = 3631955369
+	launchID = 2
 	parent = 0
-	position = 8.23830248464219E-09,-0.6922607421875,0
-	rotation = 0,0,-1.421086E-14,1
+	position = -0.407854288816452,0.0670013427734375,-0.34187588095665
+	rotation = 0.3535534,0.6123725,-0.6123725,0.3535534
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
 	sqor = -1
 	sidx = -1
-	attm = 0
-	srfN = None, -1
+	attm = 1
+	srfN = srfAttach, 0
 	attN = None, -1
-	attN = top, 0
-	mass = 0.125
-	temp = -93.74914
+	attN = None, -1
+	mass = 0.075
+	temp = -41.91714
 	expt = 0.5
-	state = 1
-	connected = True
+	state = 0
+	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = trussPiece1x
+	rTrf = structuralPanel1
 	modCost = 0
 	EVENTS
 	{
@@ -149,14 +158,25 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 ACTIONGROUPS
 {
-	Stage = False, 276603755.53192
+	Stage = True, 276604053.455848
 	Gear = True, 0
 	Light = False, 0
-	RCS = False, 276603727.891947
-	SAS = True, 276603604.092065
+	RCS = False, 276603872.284974
+	SAS = True, 276603908.60494
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
