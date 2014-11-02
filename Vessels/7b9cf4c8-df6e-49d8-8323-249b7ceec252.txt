@@ -1,20 +1,20 @@
-pid = 57c36c88c69747b5a7b1c77baff42ab9
-name = KineticDeath Debris
+pid = 7b9cf4c8df6e49d88323249b7ceec252
+name = KineticDeath Probe Debris
 type = Debris
 sit = SUB_ORBITAL
 landed = False
 landedAt = 
 splashed = False
-met = 0.339999675750732
-lct = 276604053.455848
+met = 0.239999771118164
+lct = 276604396.816852
 root = 0
-lat = 0.108042746468934
-lon = -66.8452789248087
-alt = 132334.060662254
+lat = 0.613554421323834
+lon = -378.183179487566
+alt = 181782.006198282
 hgt = -1
-nrm = -0.7324528,-0.5957162,-0.3295988
-rot = -0.02107779,-0.6385075,-0.6871281,0.3460045
-CoM = 0.004102973,-0.4348518,-0.009633772
+nrm = 0.09791975,0.8954664,0.4342257
+rot = 0.6865693,0.2522475,0.4848695,-0.4794742
+CoM = -0.3102754,0.05004618,-0.2596787
 stg = 2
 prst = False
 ref = 0
@@ -24,41 +24,39 @@ cHdg = 0
 cMod = -1
 ORBIT
 {
-	SMA = 476942.799556739
-	ECC = 0.541446067554929
-	INC = 0.803872791283313
-	LPE = 192.375023552601
-	LAN = -58.225705361813
-	MNA = 2.91289073339464
-	EPH = 276604053.855848
+	SMA = 696501.335851266
+	ECC = 0.12263442086284
+	INC = 2.59893691595308
+	LPE = 349.183321311423
+	LAN = -162.473310882472
+	MNA = 3.07865938878822
+	EPH = 276604397.116852
 	REF = 1
 }
 PART
 {
-	name = KW3mFairingCone
-	uid = 204057593
+	name = radialDecoupler
+	uid = 2364930372
 	mid = 3631955369
 	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
-	istg = 2
+	istg = 0
 	dstg = 1
-	sqor = 2
-	sidx = 1
-	attm = 0
+	sqor = 0
+	sidx = 3
+	attm = 1
 	srfN = None, -1
-	attN = connect, 1
-	attN = None, -1
-	mass = 0.4
-	temp = -191.0338
+	mass = 0.025
+	temp = -194.5821
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = False
 	flag = Squad/Flags/default
-	rTrf = KW3mFairingCone
+	rTrf = radialDecoupler
 	modCost = 0
 	EVENTS
 	{
@@ -95,17 +93,17 @@ PART
 	}
 	MODULE
 	{
-		name = FARPayloadFairingModule
+		name = ModuleTestSubject
 		isEnabled = True
 		EVENTS
 		{
-			FairingShapeChanged
+			RunTestEvent
 			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -129,58 +127,36 @@ PART
 }
 PART
 {
-	name = KW3mFairingWall
-	uid = 1946476770
+	name = structuralPanel1
+	uid = 1516468255
 	mid = 3631955369
 	launchID = 2
 	parent = 0
-	position = -2.45869216541905E-07,-3.75,4.25857848540545E-07
-	rotation = 0,0,0,1
+	position = -0.4078548848629,0.0670013427734375,-0.341876029968262
+	rotation = 0.3535534,0.6123725,-0.6123725,0.3535534
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
 	sqor = -1
 	sidx = -1
-	attm = 0
-	srfN = None, -1
+	attm = 1
+	srfN = srfAttach, 0
 	attN = None, -1
-	attN = top, 0
-	mass = 0.05
-	temp = -190.9393
+	attN = None, -1
+	mass = 0.075
+	temp = -194.1879
 	expt = 0.5
-	state = 1
+	state = 0
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = KW3mFairingWall
+	rTrf = structuralPanel1
 	modCost = 0
 	EVENTS
 	{
 	}
 	ACTIONS
 	{
-	}
-	MODULE
-	{
-		name = FARPayloadFairingModule
-		isEnabled = True
-		EVENTS
-		{
-			FairingShapeChanged
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
 	}
 	MODULE
 	{
@@ -196,7 +172,7 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = False, 276603947.964902
+	Stage = False, 276604286.336958
 	Gear = True, 0
 	Light = False, 0
 	RCS = False, 276603872.284974
@@ -233,5 +209,5 @@ CTRLSTATE
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
-	mainThrottle = 1
+	mainThrottle = 0
 }

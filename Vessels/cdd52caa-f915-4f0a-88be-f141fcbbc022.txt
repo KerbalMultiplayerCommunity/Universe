@@ -1,42 +1,42 @@
-pid = c469f8f34b8c432cac68cc9284b00f8a
+pid = cdd52caaf9154f0a88bef141fcbbc022
 name = KineticDeath Probe Debris
 type = Debris
-sit = ORBITING
+sit = SUB_ORBITAL
 landed = False
 landedAt = 
 splashed = False
-met = 201.485761940479
-lct = 276604091.755812
+met = 0.239999771118164
+lct = 276604396.816852
 root = 0
-lat = 0.960081940750336
-lon = -32.4145177038792
-alt = 173035.243360584
+lat = 0.614586497253271
+lon = -378.183459623703
+alt = 181789.617311353
 hgt = -1
-nrm = 0.6495231,0.4667494,-0.6002207
-rot = 0.3965437,0.09627869,-0.5263858,0.7459232
-CoM = -0.3058952,0.0502647,-0.2564012
+nrm = -0.2351575,0.7757436,-0.5855961
+rot = 0.4571572,0.4381799,-0.7552148,0.1692816
+CoM = -0.3100238,0.05001435,-0.2595088
 stg = 2
 prst = False
 ref = 0
 ctrl = False
-cPch = 0.2
-cHdg = 0.3
-cMod = 0
+cPch = 0
+cHdg = 0
+cMod = -1
 ORBIT
 {
-	SMA = 739317.365156537
-	ECC = 0.085639276157978
-	INC = 1.5002986277413
-	LPE = 273.547437665435
-	LAN = 308.137492689393
-	MNA = 2.05997440864657
-	EPH = 276604293.281574
+	SMA = 690507.10517687
+	ECC = 0.133872236774996
+	INC = 1.23385927181105
+	LPE = 338.058056833733
+	LAN = -146.248254511914
+	MNA = 2.96216492968679
+	EPH = 276604397.116852
 	REF = 1
 }
 PART
 {
 	name = radialDecoupler
-	uid = 234343966
+	uid = 4218061576
 	mid = 3631955369
 	launchID = 2
 	parent = 0
@@ -46,17 +46,17 @@ PART
 	istg = 0
 	dstg = 1
 	sqor = 0
-	sidx = 0
+	sidx = 6
 	attm = 1
 	srfN = None, -1
 	mass = 0.025
-	temp = -36.62532
+	temp = -198.5887
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = False
 	flag = Squad/Flags/default
-	rTrf = radialDecoupler (KineticDeath Probe Debris)
+	rTrf = radialDecoupler
 	modCost = 0
 	EVENTS
 	{
@@ -113,16 +113,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	name = structuralPanel1
-	uid = 2515118750
+	uid = 1514311344
 	mid = 3631955369
 	launchID = 2
 	parent = 0
-	position = -0.407855331897736,0.0670013427734375,-0.341875493526459
-	rotation = 0.3535534,0.6123726,-0.6123726,0.3535534
+	position = -0.407854974269867,0.0670013427734375,-0.341874957084656
+	rotation = 0.3535534,0.6123725,-0.6123725,0.3535534
 	mirror = 1,1,1
 	istg = 2
 	dstg = 2
@@ -133,7 +144,7 @@ PART
 	attN = None, -1
 	attN = None, -1
 	mass = 0.075
-	temp = -36.58955
+	temp = -198.4524
 	expt = 0.5
 	state = 0
 	connected = False
@@ -147,10 +158,21 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 ACTIONGROUPS
 {
-	Stage = True, 276604053.455848
+	Stage = False, 276604286.336958
 	Gear = True, 0
 	Light = False, 0
 	RCS = False, 276603872.284974

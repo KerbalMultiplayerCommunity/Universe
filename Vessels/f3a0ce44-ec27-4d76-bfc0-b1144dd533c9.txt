@@ -1,64 +1,64 @@
-pid = 9a7467427722411a8b362d358ecd743e
+pid = f3a0ce44ec274d76bfc0b1144dd533c9
 name = KineticDeath Probe
 type = Probe
 sit = SUB_ORBITAL
 landed = False
 landedAt = 
 splashed = False
-met = 150.409476876259
-lct = 276604082.735821
+met = 117.339888095856
+lct = 276604279.476964
 root = 0
-lat = -0.327181595285734
-lon = 312.736324239904
-alt = 173735.171343205
+lat = 0.615269328826552
+lon = -378.216791424893
+alt = 181778.328374246
 hgt = -1
-nrm = -0.8554981,-0.15286,-0.4947289
-rot = -0.04804006,-0.604655,-0.6785315,0.4143424
-CoM = 3.834272E-05,0.6453361,8.502362E-05
+nrm = -0.4841008,0.8372437,0.2543023
+rot = -0.2541635,0.126668,-0.8275633,0.4842471
+CoM = -0.002905164,0.606407,0.001256731
 stg = 0
 prst = False
 ref = 0
 ctrl = True
-cPch = 0.514
-cHdg = 0.8280002
+cPch = 0.6134391
+cHdg = -1.941992
 cMod = 0
 ORBIT
 {
-	SMA = 438256.777816061
-	ECC = 0.77088725023962
-	INC = 6.30694119388965
-	LPE = 5.42370681767516
-	LAN = 149.106928343821
-	MNA = 2.93213078339902
-	EPH = 276604233.205298
+	SMA = 693486.468151622
+	ECC = 0.128095852710038
+	INC = 1.90192411351303
+	LPE = 346.682943204146
+	LAN = -157.289634998999
+	MNA = 3.01719420221739
+	EPH = 276604396.856852
 	REF = 1
 }
 PART
 {
 	name = liquidEngineMini
-	uid = 3716112251
+	uid = 297390805
 	mid = 3631955369
 	launchID = 2
 	parent = 0
 	position = 0,0,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
-	istg = 0
+	istg = 1
 	dstg = 0
-	sqor = 0
+	sqor = 1
 	sidx = 0
 	attm = 0
 	srfN = None, -1
 	attN = top, 1
 	attN = None, -1
 	mass = 0.1
-	temp = -175.5057
+	temp = -199.3735
 	expt = 0.5
 	state = 1
 	connected = False
 	attached = True
 	flag = Squad/Flags/default
-	rTrf = liquidEngineMini (KineticDeath Probe)
+	rTrf = liquidEngineMini
 	modCost = 0
 	EVENTS
 	{
@@ -71,7 +71,7 @@ PART
 		name = ModuleEnginesFX
 		isEnabled = True
 		staged = True
-		flameout = True
+		flameout = False
 		EngineIgnited = True
 		engineShutdown = False
 		currentThrottle = 0
@@ -213,11 +213,22 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	name = miniFuelTank
-	uid = 1464462375
+	uid = 2221497661
 	mid = 3631955369
 	launchID = 2
 	parent = 0
@@ -233,7 +244,7 @@ PART
 	attN = top, 2
 	attN = bottom, 0
 	mass = 0.015
-	temp = -175.3653
+	temp = -201.4464
 	expt = 0.5
 	state = 1
 	connected = True
@@ -247,10 +258,21 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 0.0144889853103053
+		amount = 5.735
 		maxAmount = 5.735
 		flowState = True
 		isTweakable = True
@@ -260,7 +282,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 0
+		amount = 7
 		maxAmount = 7
 		flowState = True
 		isTweakable = True
@@ -271,7 +293,7 @@ PART
 PART
 {
 	name = miniFuelTank
-	uid = 3508883192
+	uid = 2344752824
 	mid = 3631955369
 	launchID = 2
 	parent = 1
@@ -287,7 +309,7 @@ PART
 	attN = top, 3
 	attN = bottom, 1
 	mass = 0.015
-	temp = -175.3327
+	temp = -200.4518
 	expt = 0.5
 	state = 1
 	connected = True
@@ -301,10 +323,21 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 0
+		amount = 1.53708150773327
 		maxAmount = 5.735
 		flowState = True
 		isTweakable = True
@@ -314,7 +347,7 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 0
+		amount = 1.86921048454742
 		maxAmount = 7
 		flowState = True
 		isTweakable = True
@@ -325,7 +358,7 @@ PART
 PART
 {
 	name = sasModule
-	uid = 2762441006
+	uid = 1493316939
 	mid = 3631955369
 	launchID = 2
 	parent = 2
@@ -341,7 +374,7 @@ PART
 	attN = bottom, 2
 	attN = top, 4
 	mass = 0.05
-	temp = -175.3517
+	temp = -200.3157
 	expt = 0.5
 	state = 1
 	connected = True
@@ -402,15 +435,26 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	name = probeCoreOcto2
-	uid = 3526189821
+	uid = 1227256167
 	mid = 3631955369
 	launchID = 2
 	parent = 3
-	position = 0,0.940376281738281,0
+	position = 0,0.940383911132813,0
 	rotation = 0,0,0,1
 	mirror = 1,1,1
 	istg = 0
@@ -422,7 +466,7 @@ PART
 	attN = bottom, 3
 	attN = top, 5
 	mass = 0.04
-	temp = -175.43
+	temp = -200.5005
 	expt = 0
 	state = 1
 	connected = True
@@ -546,6 +590,17 @@ PART
 			at = Kerbin
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -560,7 +615,7 @@ PART
 PART
 {
 	name = rtg
-	uid = 257315682
+	uid = 2103985529
 	mid = 3631955369
 	launchID = 2
 	parent = 4
@@ -573,10 +628,10 @@ PART
 	sidx = -1
 	attm = 0
 	srfN = None, -1
-	attN = None, -1
+	attN = top, 6
 	attN = bottom, 4
 	mass = 0.08
-	temp = -174.9929
+	temp = -200.252
 	expt = 0.5
 	state = 1
 	connected = True
@@ -637,15 +692,120 @@ PART
 			}
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = stackDecouplerMini
+	uid = 206164131
+	mid = 3631955369
+	launchID = 2
+	parent = 5
+	position = 0,1.73094940185547,0
+	rotation = 0,0,0,-1
+	mirror = 1,1,1
+	istg = 0
+	dstg = 1
+	sqor = 0
+	sidx = 0
+	attm = 0
+	srfN = None, -1
+	attN = bottom, 5
+	attN = None, -1
+	mass = 0.015
+	temp = -199.8655
+	expt = 0.5
+	state = 1
+	connected = True
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = stackDecouplerMini
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = True
+		EVENTS
+		{
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 }
 PART
 {
 	name = mumech.MJ2.AR202
-	uid = 1226510261
+	uid = 1070557674
 	mid = 3631955369
 	launchID = 2
 	parent = 4
-	position = -0.109919637441635,0.991065979003906,0
+	position = -0.109919637441635,0.991073608398438,0
 	rotation = -2.107343E-08,-2.107343E-08,-0.7071068,0.7071068
 	mirror = 1,1,1
 	istg = 0
@@ -655,7 +815,7 @@ PART
 	attm = 1
 	srfN = srfAttach, 4
 	mass = 1E-05
-	temp = -174.8098
+	temp = -199.7143
 	expt = 0.5
 	state = 1
 	connected = True
@@ -725,108 +885,79 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleSmartASS
-			{
-				mode = TARGET
-				target = TARGET_PLUS
-				advReference = INERTIAL
-				advDirection = FORWARD
-				forceRol = False
-				unlockParts = 
-				unlockTechs = flightControl
-				srfHdg
-				{
-					_val = 90
-					_text = 90
-				}
-				srfPit
-				{
-					_val = 90
-					_text = 90
-				}
-				srfRol
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelYaw
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelPit
-				{
-					_val = 0
-					_text = 0
-				}
-				srfVelRol
-				{
-					_val = 0
-					_text = 0
-				}
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleSpaceplaneAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleStageStats
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
 			MechJebModuleSpaceplaneGuidance
 			{
-				runwayIndex = 0
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
-			MechJebModuleRendezvousGuidance
+			MechJebModuleInfoItems
 			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleRendezvousAutopilotWindow
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = True
-				StabilityControl = False
-				LimitAcceleration = False
 				unlockParts = 
 				unlockTechs = 
-				heading
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleDockingGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = False
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
 				{
-					_val = 0
+					val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
 					_text = 0
 				}
-				speed
+				limitChutesStage
 				{
-					_val = 10
-					_text = 10
+					val = 0
+					_text = 0
 				}
+			}
+			MechJebModuleJokeObscurePanel
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentPathEditor
+			{
+				unlockParts = 
+				unlockTechs = 
 			}
 			MechJebModuleSettings
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleRoverWindow
+			MechJebModuleCustomInfoWindow
 			{
-				unlockParts = 
-				unlockTechs = fieldScience
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
 			}
 			MechJebModuleTargetController
 			{
@@ -843,22 +974,10 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
-			MechJebModuleCustomInfoWindow
-			{
-			}
 			MechJebModuleThrustWindow
 			{
 				unlockParts = 
 				unlockTechs = advFlightControl
-			}
-			MechJebModuleCustomInfoWindow
-			{
 			}
 			MechJebModuleTranslatron
 			{
@@ -866,7 +985,110 @@ PART
 				unlockParts = 
 				unlockTechs = advFlightControl
 			}
-			MechJebModuleWaypointWindow
+			MechJebModuleRendezvousAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					val = 0
+					_text = 0
+				}
+				speed
+				{
+					val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleAttitudeAdjustment
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
+			}
+			MechJebModuleRendezvousGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSmartASS
+			{
+				mode = ORBITAL
+				target = OFF
+				advReference = INERTIAL
+				advDirection = FORWARD
+				forceRol = False
+				unlockParts = 
+				unlockTechs = flightControl
+				srfHdg
+				{
+					val = 90
+					_text = 90
+				}
+				srfPit
+				{
+					val = 90
+					_text = 90
+				}
+				srfRol
+				{
+					val = 0
+					_text = 0
+				}
+				rol
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleNodeExecutor
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -877,90 +1099,11 @@ PART
 				unlockTechs = advFlightControl
 				phaseAngle
 				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleRendezvousAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleJokeObscurePanel
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = advFlightControl
-			}
-			MechJebModuleLandingAutopilot
-			{
-				deployGears = True
-				deployChutes = False
-				unlockParts = 
-				unlockTechs = 
-				touchdownSpeed
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				limitGearsStage
-				{
-					val = 0
-					_text = 0
-				}
-				limitChutesStage
-				{
 					val = 0
 					_text = 0
 				}
 			}
-			MechJebModuleAscentPathEditor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleDockingGuidance
-			{
-				unlockParts = 
-				unlockTechs = advUnmanned
-			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = False
-				overrideSafeDistance = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleInfoItems
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = flightControl
-			}
-			MechJebModuleAscentGuidance
-			{
-				unlockParts = 
-				unlockTechs = unmannedTech
-			}
-			MechJebModuleNodeExecutor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentAutopilot
+			MechJebModuleWaypointWindow
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -972,7 +1115,6 @@ PART
 			}
 			MechJebModuleLandingGuidance
 			{
-				landingSiteIdx = 0
 				unlockParts = 
 				unlockTechs = unmannedTech
 			}
@@ -1003,7 +1145,7 @@ PART
 				unlockTechs = 
 				maxThrottle
 				{
-					_val = 1
+					val = 1
 					_text = 100
 				}
 			}
@@ -1013,7 +1155,7 @@ PART
 				unlockTechs = 
 				Tf
 				{
-					_val = 1
+					val = 1
 					_text = 1
 				}
 			}
@@ -1034,16 +1176,16 @@ PART
 			}
 			MechJebModuleFlightRecorder
 			{
-				markUT = 276603816.965027
-				deltaVExpended = 5412.95911531978
-				dragLosses = 3.6374931140595
-				gravityLosses = 1386.0912165243
-				steeringLosses = 2760.39322091053
-				markLatitude = -0.0970580617422183
-				markLongitude = -74.5576637622945
-				markAltitude = 122.91159050751
+				markUT = 276604082.755821
+				deltaVExpended = 143.265646299481
+				dragLosses = 0
+				gravityLosses = 76.6629742462799
+				steeringLosses = 229.498351338236
+				markLatitude = 0.0163944835054781
+				markLongitude = -6.29649071628509
+				markAltitude = 13645.0287625014
 				markBodyIndex = 1
-				maxDragGees = 0.0492222221246541
+				maxDragGees = 0
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -1089,6 +1231,17 @@ PART
 			at = Kerbin
 		}
 	}
+	MODULE
+	{
+		name = FARBasicDragModel
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -1102,11 +1255,11 @@ PART
 }
 ACTIONGROUPS
 {
-	Stage = True, 276604100.435804
+	Stage = True, 276604396.816852
 	Gear = True, 0
 	Light = False, 0
 	RCS = False, 276603872.284974
-	SAS = False, 276604173.615734
+	SAS = True, 276603908.60494
 	Brakes = False, 0
 	Abort = False, 0
 	Custom01 = False, 0
@@ -1138,9 +1291,9 @@ TARGET
 }
 CTRLSTATE
 {
-	pitch = 0
-	yaw = 0
-	roll = 0
+	pitch = 0.03128779
+	yaw = 0.03650301
+	roll = -1
 	trimPitch = 0
 	trimYaw = 0
 	trimRoll = 0
