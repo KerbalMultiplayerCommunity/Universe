@@ -1,0 +1,481 @@
+pid = 165382efe75440489037e6d785bd9cf4
+name = Jebs Crib 1.2 Debris
+type = Debris
+sit = ORBITING
+landed = False
+landedAt = 
+splashed = False
+met = 123.939881801605
+lct = 282974161.968504
+root = 0
+lat = -0.0436843233172408
+lon = -243.636025326861
+alt = 116867.407104536
+hgt = -1
+nrm = 0.9897445,0.06318901,-0.1281136
+rot = -0.5713251,0.1852044,-0.7883289,-0.1335087
+CoM = -1.230066,-0.5240397,-0.005855334
+stg = 2
+prst = False
+ref = 0
+ctrl = False
+cPch = 0
+cHdg = 0
+cMod = -1
+ORBIT
+{
+	SMA = 716174.891516772
+	ECC = 0.00124974626388922
+	INC = 0.299413697389755
+	LPE = 47.7730034521902
+	LAN = 275.292322064722
+	MNA = 2.45256648360212
+	EPH = 282974285.948386
+	REF = 1
+}
+PART
+{
+	name = radialDecoupler2
+	uid = 328098065
+	mid = 727477637
+	launchID = 1
+	parent = 0
+	position = 0,0,0
+	rotation = 0,0,0,1
+	mirror = 1,1,1
+	istg = 1
+	dstg = 1
+	sqor = 1
+	sidx = 0
+	attm = 1
+	srfN = None, -1
+	mass = 0.05
+	temp = -166.3384
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = False
+	flag = Squad/Flags/default
+	rTrf = radialDecoupler2
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = True
+		EVENTS
+		{
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	name = fuelTank.long
+	uid = 327735365
+	mid = 727477637
+	launchID = 1
+	parent = 0
+	position = -1.24511098861694,0.106800079345703,8.79459889802092E-07
+	rotation = 1.15745E-06,0,-1.765938E-05,1
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	srfN = srfAttach, 0
+	attN = top, 2
+	attN = bottom, 4
+	mass = 0.5
+	temp = -166.3848
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = fuelTank.long
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 253.305162147448
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 309.595177758819
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = fuelTankSmall
+	uid = 1956828290
+	mid = 727477637
+	launchID = 1
+	parent = 1
+	position = -1.24502491950989,2.53704833984375,5.8862551668426E-06
+	rotation = -1.166863E-05,-0.7071068,-1.330552E-05,0.7071069
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 0
+	srfN = None, -1
+	attN = None, -1
+	attN = bottom, 1
+	mass = 0.125
+	temp = -166.1006
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = fuelTankSmall
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 0
+		maxAmount = 90
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 110
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	name = strutConnector
+	uid = 65365268
+	mid = 727477637
+	launchID = 1
+	parent = 2
+	position = -1.64702582359314,2.0216178894043,-0.401975840330124
+	rotation = -5.769049E-06,-0.3826835,-1.684825E-05,0.9238796
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	cData = tgt: fuelTank.long_1; pos: -0.05109662,-0.06119496,-0.0006549354; dir: -0.6410525,-0.7674538,-0.008141143
+	srfN = srfAttach, 2
+	mass = 0.05
+	temp = -165.7571
+	expt = 0
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = strutConnector
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	name = liquidEngine
+	uid = 3046554695
+	mid = 727477637
+	launchID = 1
+	parent = 1
+	position = -1.24521088600159,-2.68252182006836,-6.15389399172273E-06
+	rotation = -1.166863E-05,-0.7071068,-1.330552E-05,0.7071069
+	mirror = 1,1,1
+	istg = 1
+	dstg = 2
+	sqor = 1
+	sidx = 2
+	attm = 0
+	srfN = None, -1
+	attN = top, 1
+	attN = None, -1
+	mass = 1.25
+	temp = -165.794
+	expt = 0.5
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = liquidEngine
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = True
+		flameout = False
+		EngineIgnited = True
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0.139999996870756
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	name = strutConnector
+	uid = 3507552592
+	mid = 727477637
+	launchID = 1
+	parent = 1
+	position = -0.629053831100464,0.897449493408203,-0.165063068270683
+	rotation = 0.3019058,-0.9040397,0.3019207,0.02022851
+	mirror = 1,1,1
+	istg = 2
+	dstg = 2
+	sqor = -1
+	sidx = -1
+	attm = 1
+	srfN = srfAttach, 1
+	mass = 0.05
+	temp = -165.6362
+	expt = 0
+	state = 1
+	connected = False
+	attached = True
+	flag = Squad/Flags/default
+	rTrf = strutConnector
+	modCost = 0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+ACTIONGROUPS
+{
+	Stage = False, 0
+	Gear = True, 0
+	Light = False, 282947571.867174
+	RCS = True, 282947653.170012
+	SAS = True, 282974149.108517
+	Brakes = False, 0
+	Abort = False, 0
+	Custom01 = False, 0
+	Custom02 = False, 0
+	Custom03 = False, 0
+	Custom04 = False, 0
+	Custom05 = False, 0
+	Custom06 = False, 0
+	Custom07 = False, 0
+	Custom08 = False, 0
+	Custom09 = False, 0
+	Custom10 = False, 0
+}
+DISCOVERY
+{
+	state = -1
+	lastObservedTime = 0
+	lifetime = Infinity
+	refTime = Infinity
+	size = 2
+}
+FLIGHTPLAN
+{
+}
+CTRLSTATE
+{
+	pitch = 0
+	yaw = 0
+	roll = 0
+	trimPitch = 0
+	trimYaw = 0
+	trimRoll = 0
+	mainThrottle = 0
+}
